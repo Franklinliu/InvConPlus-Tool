@@ -1,8 +1,3 @@
-original result: 11 invariants, smt-simplified result: 5 invariants
-approve(spender,value):
-Requires		msg.sender != address(0)
-Requires		spender != address(0)
-Ensures		_allowances[msg.sender][spender] == value
-Ensures		VeriSol.Old(_totalSupply) == _totalSupply
-NewCommunityERC:
-Ensures		VeriSol.SumMapping(_balances) == _totalSupply
+version https://git-lfs.github.com/spec/v1
+oid sha256:054dec645891363d6c8b2e69e678ba01a5ae4473d948068d2d130bca66ed720a
+size 333

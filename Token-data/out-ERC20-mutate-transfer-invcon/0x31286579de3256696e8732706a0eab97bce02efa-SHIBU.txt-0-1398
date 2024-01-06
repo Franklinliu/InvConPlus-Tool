@@ -1,16 +1,3 @@
-Invariants with True value:8
-Invariants with False value:0
-
-True Invariants:
-approve(spender,value): Requires spender != address(0)
-approve(spender,value): Requires msg.sender != address(0)
-approve(spender,value): Ensures VeriSol.Old(_totalSupply) == _totalSupply
-approve(spender,value): Ensures value == _allowances[msg.sender][spender]
-approve(spender,value): Ensures !(VeriSol.Old(_allowances[msg.sender][spender]) == 0 ) || ( VeriSol.Old(_allowances[msg.sender][spender]) <= _allowances[msg.sender][spender])
-approve(spender,value): Ensures !(VeriSol.Old(_allowances[msg.sender][spender]) == value ) || ( VeriSol.Old(_allowances[msg.sender][spender]) == _allowances[msg.sender][spender])
-approve(spender,value): Ensures !(VeriSol.Old(_allowances[msg.sender][spender]) == 0 ) || ( VeriSol.Old(_allowances[msg.sender][spender]) != _allowances[msg.sender][spender] || _allowances[msg.sender][spender] != 115792089237316195423570985008687907853269984665640564039457584007913129639935)
-SHIBU: Ensures VeriSol.ContractInvariant(_totalSupply == VeriSol.SumMapping(_balances))
-
-False Invariants:
-
- // ./gambit_out_transfer/mutants/1398/verisol_test
+version https://git-lfs.github.com/spec/v1
+oid sha256:2e79deea6acaa4ea401a1ab4e085b0ca88f35a19e77cdee5678d811b346ca90b
+size 1144

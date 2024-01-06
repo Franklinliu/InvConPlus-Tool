@@ -1,28 +1,3 @@
-Invariants with True value:19
-Invariants with False value:1
-
-True Invariants:
-transfer(recipient,amount): Requires msg.sender != address(0)
-transfer(recipient,amount): Requires recipient != address(0)
-transfer(recipient,amount): Requires VeriSol.Old(_balances[msg.sender]) >= amount
-transfer(recipient,amount): Ensures VeriSol.Old(_balances[msg.sender]) >= _balances[msg.sender]
-transfer(recipient,amount): Ensures VeriSol.SumMapping(_balances) == VeriSol.Old(VeriSol.SumMapping(_balances))
-transfer(recipient,amount): Ensures _balances[recipient] >= amount
-transfer(recipient,amount): Ensures _balances[recipient] >= VeriSol.Old(_balances[recipient])
-transfer(recipient,amount): Ensures VeriSol.Old(_totalSupply) == _totalSupply
-approve(spender,value): Requires msg.sender != address(0)
-approve(spender,value): Ensures _allowances[msg.sender][spender] == value
-approve(spender,value): Ensures VeriSol.Old(_totalSupply) == _totalSupply
-burn(value): Requires msg.sender != address(0)
-burn(value): Requires value <= VeriSol.Old(_balances[msg.sender])
-burn(value): Requires value <= VeriSol.Old(_totalSupply)
-burn(value): Ensures VeriSol.Old(_balances[msg.sender]) >= _balances[msg.sender]
-burn(value): Ensures VeriSol.SumMapping(_balances) <= VeriSol.Old(VeriSol.SumMapping(_balances))
-burn(value): Ensures VeriSol.Old(_totalSupply) >= _totalSupply
-burn(value): Ensures _decimals == VeriSol.Old(uint256(_decimals))
-TokenMintERC20Token: Ensures VeriSol.ContractInvariant(_totalSupply == VeriSol.SumMapping(_balances))
-
-False Invariants:
-approve(spender,value): Requires spender != address(0)
-
- // ./gambit_out_approve/mutants/837/verisol_test
+version https://git-lfs.github.com/spec/v1
+oid sha256:eb4bdf02c02b4d85e47280133145067ce87fc3dc96346738a0d6632a555a6c0a
+size 1639

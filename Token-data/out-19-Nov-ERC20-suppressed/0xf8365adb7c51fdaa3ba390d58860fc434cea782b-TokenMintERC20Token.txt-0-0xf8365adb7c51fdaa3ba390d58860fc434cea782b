@@ -1,25 +1,3 @@
-original result: 32 invariants, smt-simplified result: 20 invariants
-transfer(recipient,amount):
-Requires		msg.sender != address(0)
-Requires		recipient != address(0)
-Requires		VeriSol.Old(_balances[msg.sender]) >= amount
-Ensures		VeriSol.Old(_balances[msg.sender]) >= _balances[msg.sender]
-Ensures		VeriSol.SumMapping(_balances) == VeriSol.Old(VeriSol.SumMapping(_balances))
-Ensures		_balances[recipient] >= amount
-Ensures		_balances[recipient] >= VeriSol.Old(_balances[recipient])
-Ensures		VeriSol.Old(_totalSupply) == _totalSupply
-approve(spender,value):
-Requires		msg.sender != address(0)
-Requires		spender != address(0)
-Ensures		_allowances[msg.sender][spender] == value
-Ensures		VeriSol.Old(_totalSupply) == _totalSupply
-burn(value):
-Requires		msg.sender != address(0)
-Requires		value <= VeriSol.Old(_balances[msg.sender])
-Requires		value <= VeriSol.Old(_totalSupply)
-Ensures		VeriSol.Old(_balances[msg.sender]) >= _balances[msg.sender]
-Ensures		VeriSol.SumMapping(_balances) <= VeriSol.Old(VeriSol.SumMapping(_balances))
-Ensures		VeriSol.Old(_totalSupply) >= _totalSupply
-Ensures		_decimals == VeriSol.Old(uint256(_decimals))
-TokenMintERC20Token:
-Ensures		_totalSupply == VeriSol.SumMapping(_balances)
+version https://git-lfs.github.com/spec/v1
+oid sha256:2cbc8db4b65ca6f202756b1da4050b94496009a647d340cef004372fe4aa8f11
+size 1208

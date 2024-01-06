@@ -1,10 +1,3 @@
-original result: 27 invariants, smt-simplified result: 7 invariants
-approve(spender,value):
-Requires		spender != address(0)
-Requires		msg.sender != address(0)
-Ensures		_allowances[msg.sender][spender] == value
-Ensures		_totalSupply == VeriSol.Old(_totalSupply)
-Ensures		VeriSol.Old(_allowances[msg.sender][spender]) == 0 => _allowances[msg.sender][spender] >= VeriSol.Old(_allowances[msg.sender][spender])
-Ensures		VeriSol.Old(_allowances[msg.sender][spender]) == value => _allowances[msg.sender][spender] == VeriSol.Old(_allowances[msg.sender][spender])
-TokenMintERC20Token:
-Ensures		_totalSupply == VeriSol.SumMapping(_balances)
+version https://git-lfs.github.com/spec/v1
+oid sha256:3877ff3daf995f6cd09b98568684ddf1f97752e11266e95f03e6152e19189806
+size 631

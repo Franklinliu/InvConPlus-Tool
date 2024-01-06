@@ -1,22 +1,3 @@
-Invariants with True value:6
-Invariants with False value:10
-
-True Invariants:
-setApprovalForAll(to,approved): Requires msg.sender != address(0)
-setApprovalForAll(to,approved): Requires msg.sender != to
-setApprovalForAll(to,approved): Ensures approved == _operatorApprovals[msg.sender][to]
-setApprovalForAll(to,approved): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) == VeriSol.SumMapping(_ownedTokensCount)
-setApprovalForAll(to,approved): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.SumMapping(_ownedTokensCount)
-setApprovalForAll(to,approved): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= VeriSol.SumMapping(_ownedTokensCount)
-
-False Invariants:
-setApprovalForAll(to,approved): Requires approved == true
-setApprovalForAll(to,approved): Requires VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > 0
-setApprovalForAll(to,approved): Requires VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) == 159
-setApprovalForAll(to,approved): Requires VeriSol.Old(_operatorApprovals[msg.sender][to]) == false
-setApprovalForAll(to,approved): Requires to != address(0)
-setApprovalForAll(to,approved): Requires approved != VeriSol.Old(_operatorApprovals[msg.sender][to])
-setApprovalForAll(to,approved): Ensures VeriSol.SumMapping(_ownedTokensCount) > 0
-setApprovalForAll(to,approved): Ensures VeriSol.SumMapping(_ownedTokensCount) == 159
-setApprovalForAll(to,approved): Ensures _operatorApprovals[msg.sender][to] == true
-setApprovalForAll(to,approved): Ensures VeriSol.Old(_operatorApprovals[msg.sender][to]) != _operatorApprovals[msg.sender][to]
+version https://git-lfs.github.com/spec/v1
+oid sha256:1cb04cc0b5f3c85f16e64e7030a79129ad33bf9e83957609c58a4cbed00518a7
+size 1590

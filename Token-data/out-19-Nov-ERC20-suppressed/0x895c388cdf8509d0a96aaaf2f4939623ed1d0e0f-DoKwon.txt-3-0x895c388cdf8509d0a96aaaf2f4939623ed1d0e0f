@@ -1,13 +1,3 @@
-original result: 30 invariants, smt-simplified result: 10 invariants
-approve(spender,value):
-Requires		msg.sender != address(0)
-Requires		spender != address(0)
-Ensures		VeriSol.Old(_totalSupply) == _totalSupply
-Ensures		value == _allowances[msg.sender][spender]
-Ensures		VeriSol.Old(_allowances[msg.sender][spender]) == 0 => _allowances[msg.sender][spender] >= VeriSol.Old(_allowances[msg.sender][spender])
-Ensures		value == VeriSol.Old(_allowances[msg.sender][spender]) => _allowances[msg.sender][spender] == VeriSol.Old(_allowances[msg.sender][spender])
-Ensures		value >= VeriSol.Old(_allowances[msg.sender][spender]) && value != VeriSol.Old(_allowances[msg.sender][spender]) => _allowances[msg.sender][spender] > VeriSol.Old(_allowances[msg.sender][spender])
-Ensures		value > VeriSol.Old(_allowances[msg.sender][spender]) && VeriSol.Old(_allowances[msg.sender][spender]) == 0 => _allowances[msg.sender][spender] > 0
-Ensures		value != VeriSol.Old(_allowances[msg.sender][spender]) && VeriSol.Old(_allowances[msg.sender][spender]) == 0 => _allowances[msg.sender][spender] > VeriSol.Old(_allowances[msg.sender][spender])
-DoKwon:
-Ensures		_totalSupply == VeriSol.SumMapping(_balances)
+version https://git-lfs.github.com/spec/v1
+oid sha256:4c4ac7a8ef67739244889027b778e445bdd8e94ea5f2008609325074f64e6012
+size 1184

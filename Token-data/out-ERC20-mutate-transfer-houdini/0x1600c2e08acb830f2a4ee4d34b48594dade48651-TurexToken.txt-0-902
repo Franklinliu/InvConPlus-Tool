@@ -1,24 +1,3 @@
-Invariants with True value:16
-Invariants with False value:0
-
-True Invariants:
-unfreeze(): Requires VeriSol.Old(unfrozen) == false
-unfreeze(): Requires VeriSol.Old(owner) != address(0)
-unfreeze(): Requires msg.sender != address(0)
-unfreeze(): Requires VeriSol.Old(owner) == msg.sender
-unfreeze(): Ensures unfrozen == true
-unfreeze(): Ensures owner != address(0)
-unfreeze(): Ensures VeriSol.Old(totalSupply_) == totalSupply_
-unfreeze(): Ensures VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances))
-unfreeze(): Ensures VeriSol.Old(owner) == owner
-unfreeze(): Ensures owner == msg.sender
-transfer(_to,_value): Requires _to != address(0)
-transfer(_to,_value): Requires msg.sender != address(0)
-transfer(_to,_value): Ensures VeriSol.Old(totalSupply_) == totalSupply_
-transfer(_to,_value): Ensures VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances))
-transfer(_to,_value): Ensures VeriSol.Old(owner) == owner
-TurexToken: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == totalSupply_)
-
-False Invariants:
-
- // ./gambit_out_transfer/mutants/902/verisol_test
+version https://git-lfs.github.com/spec/v1
+oid sha256:a6c76428e5b24b76d9715bcd70b4c0da04e03b44e1fc2ca86fed4efd0eab537f
+size 1106

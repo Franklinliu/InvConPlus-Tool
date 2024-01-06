@@ -1,33 +1,3 @@
-[
-    {
-        "func": "approve(spender,value)",
-        "type": "PptType.EXIT",
-        "executionType": "TxType.NORMAL",
-        "preconditions": [
-            "VeriSol.Requires(msg.sender != address(0))",
-            "VeriSol.Requires(spender != address(0))"
-        ],
-        "postconditions": [
-            "VeriSol.Ensures(_totalSupply == VeriSol.Old(_totalSupply))",
-            "VeriSol.Ensures(value == _allowances[msg.sender][spender])",
-            "VeriSol.Ensures(!(VeriSol.Old(_allowances[msg.sender][spender]) == 0 ) || ( VeriSol.Old(_allowances[msg.sender][spender]) <= _allowances[msg.sender][spender]))",
-            "VeriSol.Ensures(!(VeriSol.Old(_allowances[msg.sender][spender]) == value ) || ( VeriSol.Old(_allowances[msg.sender][spender]) == _allowances[msg.sender][spender]))",
-            "VeriSol.Ensures(!(VeriSol.Old(_allowances[msg.sender][spender]) < value ) || ( _allowances[msg.sender][spender] > 0))",
-            "VeriSol.Ensures(!(VeriSol.Old(_allowances[msg.sender][spender]) <= value && VeriSol.Old(_allowances[msg.sender][spender]) != value ) || ( _allowances[msg.sender][spender] > 0))",
-            "VeriSol.Ensures(!(VeriSol.Old(_allowances[msg.sender][spender]) <= value && VeriSol.Old(_allowances[msg.sender][spender]) != value ) || ( VeriSol.Old(_allowances[msg.sender][spender]) < _allowances[msg.sender][spender]))"
-        ],
-        "falsified_preconditions": [],
-        "falsified_postconditions": []
-    },
-    {
-        "func": null,
-        "type": "PptType.CONTRACT",
-        "executionType": "TxType.NORMAL",
-        "preconditions": [],
-        "postconditions": [
-            "VeriSol.Ensures(VeriSol.SumMapping(_balances) == _totalSupply)"
-        ],
-        "falsified_preconditions": [],
-        "falsified_postconditions": []
-    }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:d3bd3cf51141e34f05175955e01c2fcb339223e79f233c0a42b6a30ba21d0c20
+size 1796

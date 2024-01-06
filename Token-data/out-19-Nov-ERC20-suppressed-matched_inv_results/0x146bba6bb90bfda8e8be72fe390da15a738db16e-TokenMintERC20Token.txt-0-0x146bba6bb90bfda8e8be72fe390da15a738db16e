@@ -1,22 +1,3 @@
-[
-    [
-        "spender != address(0)",
-        "spender != address(0)"
-    ],
-    [
-        "msg.sender != address(0)",
-        "msg.sender != address(0)"
-    ],
-    [
-        "_allowances[msg.sender][spender] == value",
-        "_allowances[msg.sender][spender] == value"
-    ],
-    [
-        "VeriSol.Old(_totalSupply) == _totalSupply",
-        "_totalSupply == VeriSol.Old(_totalSupply)"
-    ],
-    [
-        "VeriSol.SumMapping(_balances) == _totalSupply",
-        "_totalSupply == VeriSol.SumMapping(_balances)"
-    ]
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:1295332164222de4d39805c7756c93e3c3e6c76beffb747ca665d2fdaaecd4f0
+size 526

@@ -1,13 +1,3 @@
-original result: 33 invariants, smt-simplified result: 10 invariants
-transfer(to,value):
-Requires		msg.sender != address(0)
-Requires		to != address(0)
-Requires		VeriSol.Old(_paused) == false
-Ensures		_paused == false
-Ensures		VeriSol.Old(_totalSupply) == _totalSupply
-Ensures		VeriSol.SumMapping(_balances) == VeriSol.Old(VeriSol.SumMapping(_balances))
-Ensures		value == VeriSol.Old(VeriSol.SumMapping(_balances)) => value == VeriSol.SumMapping(_balances)
-Ensures		value < VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.SumMapping(_balances) > 0
-PhunToken:
-Ensures		_decimals == 18
-Ensures		VeriSol.SumMapping(_balances) == _totalSupply
+version https://git-lfs.github.com/spec/v1
+oid sha256:e38cc42e14b842de83e5cf7bb4f79dc625dd1452c119abe5dc2974ac8814b5f6
+size 644

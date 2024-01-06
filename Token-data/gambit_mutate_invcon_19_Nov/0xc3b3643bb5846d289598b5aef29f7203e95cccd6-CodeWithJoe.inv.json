@@ -1,36 +1,3 @@
-[
-    {
-        "func": "approve(spender,tokens)",
-        "type": "PptType.EXIT",
-        "executionType": "TxType.NORMAL",
-        "preconditions": [
-            "VeriSol.Requires(msg.sender != address(0))"
-        ],
-        "postconditions": [
-            "VeriSol.Ensures(tokens == allowed[msg.sender][spender])",
-            "VeriSol.Ensures(_totalSupply == VeriSol.Old(_totalSupply))",
-            "VeriSol.Ensures(decimals == VeriSol.Old(uint256(decimals)))",
-            "VeriSol.Ensures(!(VeriSol.Old(allowed[msg.sender][spender]) == 0 ) || ( VeriSol.Old(allowed[msg.sender][spender]) <= allowed[msg.sender][spender]))",
-            "VeriSol.Ensures(!(tokens == VeriSol.Old(allowed[msg.sender][spender]) ) || ( VeriSol.Old(allowed[msg.sender][spender]) == allowed[msg.sender][spender]))",
-            "VeriSol.Ensures(!(tokens >= VeriSol.Old(allowed[msg.sender][spender]) && tokens != VeriSol.Old(allowed[msg.sender][spender]) ) || ( VeriSol.Old(allowed[msg.sender][spender]) < allowed[msg.sender][spender]))"
-        ],
-        "falsified_preconditions": [],
-        "falsified_postconditions": []
-    },
-    {
-        "func": null,
-        "type": "PptType.CONTRACT",
-        "executionType": "TxType.NORMAL",
-        "preconditions": [],
-        "postconditions": [
-            "VeriSol.Ensures(VeriSol.SumMapping(balances) > 0)",
-            "VeriSol.Ensures(decimals == 18)",
-            "VeriSol.Ensures(_totalSupply == 100000000000000000000000000)",
-            "VeriSol.Ensures(VeriSol.SumMapping(balances) > decimals)",
-            "VeriSol.Ensures(VeriSol.SumMapping(balances) >= _totalSupply)",
-            "VeriSol.Ensures(decimals < _totalSupply)"
-        ],
-        "falsified_preconditions": [],
-        "falsified_postconditions": []
-    }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:a158a69e310880e7bf298ab934611436b97f310c9366bf68ad11f46963fab80b
+size 1767

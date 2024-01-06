@@ -1,18 +1,3 @@
-original result: 26 invariants, smt-simplified result: 15 invariants
-transfer(_to,_value):
-Requires		VeriSol.Old(LockList[msg.sender]) == false
-Requires		msg.sender != address(0)
-Requires		_to != address(0)
-Requires		VeriSol.Old(LockList[_to]) == false
-Ensures		LockList[_to] == false
-Ensures		LockList[msg.sender] == false
-Ensures		VeriSol.Old(totalSupply) == totalSupply
-Ensures		balanceOf[_to] >= _value
-Ensures		balanceOf[_to] >= VeriSol.Old(balanceOf[_to])
-Ensures		VeriSol.Old(VeriSol.SumMapping(LockedTokens)) == VeriSol.SumMapping(LockedTokens)
-Ensures		VeriSol.SumMapping(balanceOf) == VeriSol.Old(VeriSol.SumMapping(balanceOf))
-Ensures		decimals == VeriSol.Old(uint256(decimals))
-TERRAN:
-Ensures		decimals == 18
-Ensures		owner != address(0)
-Ensures		totalSupply == VeriSol.SumMapping(balanceOf)
+version https://git-lfs.github.com/spec/v1
+oid sha256:95edb64b4087cbc9c9231cac266cc1259e99acf0ecdccb2f7543e3e76e538489
+size 805

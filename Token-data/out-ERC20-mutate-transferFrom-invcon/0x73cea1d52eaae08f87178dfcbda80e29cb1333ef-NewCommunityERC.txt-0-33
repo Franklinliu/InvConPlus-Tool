@@ -1,15 +1,3 @@
-Invariants with True value:7
-Invariants with False value:0
-
-True Invariants:
-approve(spender,value): Requires msg.sender != address(0)
-approve(spender,value): Requires spender != address(0)
-approve(spender,value): Ensures _allowances[msg.sender][spender] == value
-approve(spender,value): Ensures VeriSol.Old(_totalSupply) == _totalSupply
-approve(spender,value): Ensures !(VeriSol.Old(_allowances[msg.sender][spender]) == value ) || ( VeriSol.Old(_allowances[msg.sender][spender]) == _allowances[msg.sender][spender])
-approve(spender,value): Ensures !(VeriSol.Old(_allowances[msg.sender][spender]) == 0 ) || ( VeriSol.Old(_allowances[msg.sender][spender]) <= _allowances[msg.sender][spender])
-NewCommunityERC: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(_balances) == _totalSupply)
-
-False Invariants:
-
- // ./gambit_out_transferFrom/mutants/33/verisol_test
+version https://git-lfs.github.com/spec/v1
+oid sha256:3b4ff67142e439581f2b1e23659719e7fadc2322ac04b27b20f213a9b4a7c303
+size 863

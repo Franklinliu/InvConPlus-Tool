@@ -1,20 +1,3 @@
-Invariants with True value:12
-Invariants with False value:0
-
-True Invariants:
-approve(spender,tokens): Requires msg.sender != address(0)
-approve(spender,tokens): Ensures _totalSupply == VeriSol.Old(_totalSupply)
-approve(spender,tokens): Ensures VeriSol.Old(uint256(decimals)) == decimals
-approve(spender,tokens): Ensures allowed[msg.sender][spender] == tokens
-transfer(to,tokens): Requires msg.sender != address(0)
-transfer(to,tokens): Requires VeriSol.Old(balances[msg.sender]) >= tokens
-transfer(to,tokens): Ensures VeriSol.Old(balances[msg.sender]) >= balances[msg.sender]
-transfer(to,tokens): Ensures balances[to] >= VeriSol.Old(balances[to])
-transfer(to,tokens): Ensures balances[to] >= tokens
-transfer(to,tokens): Ensures _totalSupply == VeriSol.Old(_totalSupply)
-transfer(to,tokens): Ensures VeriSol.Old(uint256(decimals)) == decimals
-transfer(to,tokens): Ensures VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances))
-
-False Invariants:
-
- // ./gambit_out_transfer/mutants/1096/verisol_test
+version https://git-lfs.github.com/spec/v1
+oid sha256:649d9469585925285126cb6d4304bedb2badc24bb3f2232e09c9a431e52a33f0
+size 1016

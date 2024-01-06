@@ -1,33 +1,3 @@
-[
-    {
-        "func": "approve(spender,tokens)",
-        "type": "PptType.EXIT",
-        "executionType": "TxType.NORMAL",
-        "preconditions": [
-            "VeriSol.Requires(msg.sender != address(0))"
-        ],
-        "postconditions": [
-            "VeriSol.Ensures(VeriSol.Old(_totalSupply) == _totalSupply)",
-            "VeriSol.Ensures(decimals == VeriSol.Old(uint256(decimals)))",
-            "VeriSol.Ensures(allowed[msg.sender][spender] == tokens)"
-        ],
-        "falsified_preconditions": [],
-        "falsified_postconditions": []
-    },
-    {
-        "func": null,
-        "type": "PptType.CONTRACT",
-        "executionType": "TxType.NORMAL",
-        "preconditions": [],
-        "postconditions": [
-            "VeriSol.Ensures(VeriSol.SumMapping(balances) == 1000000000000000000000000000000)",
-            "VeriSol.Ensures(decimals == 18)",
-            "VeriSol.Ensures(_totalSupply == 1000000000000000000000000000000)",
-            "VeriSol.Ensures(VeriSol.SumMapping(balances) > decimals)",
-            "VeriSol.Ensures(VeriSol.SumMapping(balances) == _totalSupply)",
-            "VeriSol.Ensures(decimals < _totalSupply)"
-        ],
-        "falsified_preconditions": [],
-        "falsified_postconditions": []
-    }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:5566401b72cba7b41c9d370ace7f8fd758dc487ff3fed5475a8182d97758ab96
+size 1249

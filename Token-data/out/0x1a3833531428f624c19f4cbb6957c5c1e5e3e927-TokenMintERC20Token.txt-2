@@ -1,24 +1,3 @@
-Invariants with True value:10
-Invariants with False value:8
-
-True Invariants:
-approve(spender,value): VeriSol.Requires(msg.sender!=address(0))
-approve(spender,value): VeriSol.Ensures(value == _allowances[msg.sender][spender])
-approve(spender,value): VeriSol.Ensures(value >= _allowances[msg.sender][spender])
-approve(spender,value): VeriSol.Ensures(value <= _allowances[msg.sender][spender])
-approve(spender,value): VeriSol.Ensures(_totalSupply == VeriSol.Old(_totalSupply))
-approve(spender,value): VeriSol.Ensures(_totalSupply >= VeriSol.Old(_totalSupply))
-approve(spender,value): VeriSol.Ensures(_totalSupply <= VeriSol.Old(_totalSupply))
-TokenMintERC20Token: VeriSol.ContractInvariant(_totalSupply == VeriSol.SumMapping(_balances))
-TokenMintERC20Token: VeriSol.ContractInvariant(_totalSupply >= VeriSol.SumMapping(_balances))
-TokenMintERC20Token: VeriSol.ContractInvariant(_totalSupply <= VeriSol.SumMapping(_balances))
-
-False Invariants:
-approve(spender,value): VeriSol.Ensures(!(spender!=address(0)) || (_allowances[msg.sender][spender]>0 || VeriSol.SumMapping(_balances) != VeriSol.Old(_allowances[msg.sender][spender])))
-approve(spender,value): VeriSol.Ensures(!(spender!=address(0)) || (VeriSol.SumMapping(_balances) != VeriSol.Old(_allowances[msg.sender][spender]) || VeriSol.SumMapping(_balances) != _allowances[msg.sender][spender]))
-approve(spender,value): VeriSol.Ensures(!(spender!=address(0)) || (VeriSol.SumMapping(_balances) != _allowances[msg.sender][spender] || VeriSol.Old(_allowances[msg.sender][spender]) != _totalSupply))
-approve(spender,value): VeriSol.Ensures(!(spender!=address(0)) || (VeriSol.Old(_allowances[msg.sender][spender]) != _totalSupply || VeriSol.Old(_allowances[msg.sender][spender]) <= _allowances[msg.sender][spender]))
-approve(spender,value): VeriSol.Ensures(!(spender!=address(0)) || (VeriSol.Old(_allowances[msg.sender][spender]) <= _allowances[msg.sender][spender] || _totalSupply != _allowances[msg.sender][spender]))
-approve(spender,value): VeriSol.Ensures(!(spender!=address(0)) || (_totalSupply != _allowances[msg.sender][spender] || _allowances[msg.sender][spender] != VeriSol.Old(_totalSupply)))
-approve(spender,value): VeriSol.Ensures(!(spender!=address(0)) || (_allowances[msg.sender][spender] != VeriSol.Old(_totalSupply) || _allowances[msg.sender][spender] != VeriSol.Old(VeriSol.SumMapping(_balances))))
-approve(spender,value): VeriSol.Ensures(!(spender!=address(0) && spender != msg.sender) || (_allowances[msg.sender][spender] != VeriSol.Old(VeriSol.SumMapping(_balances))))
+version https://git-lfs.github.com/spec/v1
+oid sha256:a2f71ea900f8756875dfc5522cdedaffcdb8ad6e535817b4ce71e96bf4ec84b8
+size 2533

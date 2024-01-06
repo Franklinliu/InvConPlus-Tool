@@ -1,26 +1,3 @@
-Invariants with True value:14
-Invariants with False value:4
-
-True Invariants:
-approve(spender,tokens): Requires msg.sender != address(0)
-approve(spender,tokens): Ensures decimals == VeriSol.Old(uint256(decimals))
-approve(spender,tokens): Ensures VeriSol.Old(_totalSupply) == _totalSupply
-approve(spender,tokens): Ensures allowed[msg.sender][spender] == tokens
-transfer(to,tokens): Requires msg.sender != address(0)
-transfer(to,tokens): Requires VeriSol.Old(balances[msg.sender]) >= tokens
-transfer(to,tokens): Ensures VeriSol.Old(balances[to]) <= balances[to]
-transfer(to,tokens): Ensures decimals == VeriSol.Old(uint256(decimals))
-transfer(to,tokens): Ensures VeriSol.Old(VeriSol.SumMapping(balances)) == VeriSol.SumMapping(balances)
-transfer(to,tokens): Ensures VeriSol.Old(_totalSupply) == _totalSupply
-transfer(to,tokens): Ensures balances[to] >= tokens
-transfer(to,tokens): Ensures VeriSol.Old(balances[msg.sender]) >= balances[msg.sender]
-BLOCKYDOGE: Ensures VeriSol.ContractInvariant(decimals == 18)
-BLOCKYDOGE: Ensures VeriSol.ContractInvariant(_totalSupply == VeriSol.SumMapping(balances))
-
-False Invariants:
-BLOCKYDOGE: Ensures VeriSol.ContractInvariant(_totalSupply == 100000000000000000000000000000)
-BLOCKYDOGE: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == 100000000000000000000000000000)
-BLOCKYDOGE: Ensures VeriSol.ContractInvariant(decimals < _totalSupply)
-BLOCKYDOGE: Ensures VeriSol.ContractInvariant(decimals < VeriSol.SumMapping(balances))
-
- // ./gambit_out_transfer/mutants/1200/verisol_test
+version https://git-lfs.github.com/spec/v1
+oid sha256:5a1ddece903819ee8a0dbad09ac8f38af91948db08dfe6958ebf26f0ee39053e
+size 1532

@@ -1,29 +1,3 @@
-Invariants with True value:18
-Invariants with False value:3
-
-True Invariants:
-renounceOwnership(): Requires msg.sender != address(0)
-renounceOwnership(): Requires VeriSol.Old(_owner) != address(0)
-renounceOwnership(): Requires msg.sender == VeriSol.Old(_owner)
-renounceOwnership(): Ensures _owner == address(0)
-renounceOwnership(): Ensures _pendingowner == VeriSol.Old(_pendingowner)
-renounceOwnership(): Ensures _owner != msg.sender
-renounceOwnership(): Ensures _owner != VeriSol.Old(_owner)
-transfer(recipient,amount): Requires msg.sender != address(0)
-transfer(recipient,amount): Requires recipient != address(0)
-transfer(recipient,amount): Requires VeriSol.Old(paused) == false
-transfer(recipient,amount): Ensures paused == false
-transfer(recipient,amount): Ensures _pendingowner == VeriSol.Old(_pendingowner)
-transfer(recipient,amount): Ensures amount <= _balances[recipient]
-transfer(recipient,amount): Ensures VeriSol.Old(_balances[recipient]) <= _balances[recipient]
-transfer(recipient,amount): Ensures _owner == VeriSol.Old(_owner)
-transfer(recipient,amount): Ensures _decimals == VeriSol.Old(uint256(_decimals))
-transfer(recipient,amount): Ensures _totalSupply == VeriSol.Old(_totalSupply)
-ArtEdu: Ensures VeriSol.ContractInvariant(_decimals == 18)
-
-False Invariants:
-transfer(recipient,amount): Requires amount <= VeriSol.Old(_balances[msg.sender])
-transfer(recipient,amount): Ensures VeriSol.Old(VeriSol.SumMapping(_balances)) == VeriSol.SumMapping(_balances)
-transfer(recipient,amount): Ensures VeriSol.Old(_balances[msg.sender]) >= _balances[msg.sender]
-
- // ./gambit_out_transfer/mutants/1318/verisol_test
+version https://git-lfs.github.com/spec/v1
+oid sha256:d77ba27e134caf0bf2b09b5085c2f06ab59840d9b2baca3e735339e14ae68965
+size 1620

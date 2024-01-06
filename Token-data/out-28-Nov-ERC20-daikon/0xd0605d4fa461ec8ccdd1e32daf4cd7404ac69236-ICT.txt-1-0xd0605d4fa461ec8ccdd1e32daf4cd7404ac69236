@@ -1,22 +1,3 @@
-Invariants with True value:0
-Invariants with False value:16
-
-True Invariants:
-
-False Invariants:
-transfer(to,value): Ensures value <= _balances[msg.sender] => _balances[msg.sender] >= 0
-transfer(to,value): Ensures value <= _balances[msg.sender] => VeriSol.Old(_balances[to]) >= 0
-transfer(to,value): Ensures value <= _balances[msg.sender] => value < VeriSol.SumMapping(_balances)
-transfer(to,value): Ensures value <= _balances[msg.sender] => value <= _balances[to]
-transfer(to,value): Ensures value <= _balances[msg.sender] => value <= VeriSol.Old(_balances[msg.sender])
-transfer(to,value): Ensures value <= _balances[msg.sender] => VeriSol.Old(value) < VeriSol.SumMapping(_balances)
-transfer(to,value): Ensures value <= _balances[msg.sender] => VeriSol.Old(value) <= _balances[to]
-transfer(to,value): Ensures value <= _balances[msg.sender] => _balances[msg.sender] < VeriSol.Old(_balances[msg.sender])
-transfer(to,value): Ensures value <= _balances[msg.sender] => _balances[msg.sender] >= 0
-transfer(to,value): Ensures value <= _balances[msg.sender] => VeriSol.Old(_balances[to]) >= 0
-transfer(to,value): Ensures value <= _balances[msg.sender] => value < VeriSol.SumMapping(_balances)
-transfer(to,value): Ensures value <= _balances[msg.sender] => value <= _balances[to]
-transfer(to,value): Ensures value <= _balances[msg.sender] => value <= VeriSol.Old(_balances[msg.sender])
-transfer(to,value): Ensures value <= _balances[msg.sender] => VeriSol.Old(value) < VeriSol.SumMapping(_balances)
-transfer(to,value): Ensures value <= _balances[msg.sender] => VeriSol.Old(value) <= _balances[to]
-transfer(to,value): Ensures value <= _balances[msg.sender] => _balances[msg.sender] < VeriSol.Old(_balances[msg.sender])
+version https://git-lfs.github.com/spec/v1
+oid sha256:5859ba19b8ee2ff1401fa0fa2fe5795c8b5aa31b9d948451e3080b2d39f26194
+size 1709

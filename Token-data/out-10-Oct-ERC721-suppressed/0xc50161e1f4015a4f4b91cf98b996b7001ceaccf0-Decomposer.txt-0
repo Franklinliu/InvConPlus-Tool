@@ -1,16 +1,3 @@
-original result: 15 invariants, smt-simplified result: 13 invariants
-setApprovalForAll(to,approved):
-Requires		msg.sender != address(0)
-Requires		to != msg.sender
-Ensures		VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) == VeriSol.SumMapping(_ownedTokensCount)
-Ensures		_operatorApprovals[msg.sender][to] == approved
-transferFrom(from,to,tokenId):
-Requires		from != address(0)
-Requires		to != address(0)
-Requires		msg.sender != address(0)
-Ensures		_tokenOwner[tokenId] != address(0)
-Ensures		_ownedTokensCount[to] > 0
-Ensures		_ownedTokensCount[from] <= VeriSol.Old(_ownedTokensCount[from])
-Ensures		VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= VeriSol.SumMapping(_ownedTokensCount)
-Ensures		to == _tokenOwner[tokenId]
-Ensures		_ownedTokensCount[to] >= VeriSol.Old(_ownedTokensCount[to])
+version https://git-lfs.github.com/spec/v1
+oid sha256:0a424f85fab295ff47195dcd7b5519c9cbad6133c6c94a837d551490ec0db975
+size 800

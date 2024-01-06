@@ -1,17 +1,3 @@
-[
-    {
-        "func": "approve(spender,tokens)",
-        "type": "PptType.EXIT",
-        "executionType": "TxType.NORMAL",
-        "preconditions": [
-            "VeriSol.Requires(msg.sender != address(0))"
-        ],
-        "postconditions": [
-            "VeriSol.Ensures(_totalSupply == VeriSol.Old(_totalSupply))",
-            "VeriSol.Ensures(decimals == VeriSol.Old(uint256(decimals)))",
-            "VeriSol.Ensures(allowed[msg.sender][spender] == tokens)"
-        ],
-        "falsified_preconditions": [],
-        "falsified_postconditions": []
-    }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:0afb887c03f01179d835549f16ac433c42dfaacd819e60ac79271ec866c1ad64
+size 563

@@ -1,11 +1,3 @@
-original result: 28 invariants, smt-simplified result: 8 invariants
-approve(spender,value):
-Requires		spender != address(0)
-Requires		msg.sender != address(0)
-Ensures		VeriSol.Old(_totalSupply) == _totalSupply
-Ensures		value == _allowances[msg.sender][spender]
-Ensures		VeriSol.Old(_allowances[msg.sender][spender]) == 0 => VeriSol.Old(_allowances[msg.sender][spender]) <= _allowances[msg.sender][spender]
-Ensures		VeriSol.Old(_allowances[msg.sender][spender]) == value => VeriSol.Old(_allowances[msg.sender][spender]) == _allowances[msg.sender][spender]
-Ensures		VeriSol.Old(_allowances[msg.sender][spender]) <= value && VeriSol.Old(_allowances[msg.sender][spender]) != value => VeriSol.Old(_allowances[msg.sender][spender]) < _allowances[msg.sender][spender]
-Oliveira:
-Ensures		_totalSupply == VeriSol.SumMapping(_balances)
+version https://git-lfs.github.com/spec/v1
+oid sha256:72cc173fe464cbff0fb8b67a4fb29977c29493991c19124ab2e32b46f5458344
+size 826

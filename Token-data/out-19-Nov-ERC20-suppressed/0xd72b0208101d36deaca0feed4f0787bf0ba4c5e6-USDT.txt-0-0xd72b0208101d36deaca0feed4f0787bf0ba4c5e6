@@ -1,22 +1,3 @@
-original result: 39 invariants, smt-simplified result: 18 invariants
-approve(spender,tokens):
-Requires		msg.sender != address(0)
-Ensures		allowed[msg.sender][spender] == tokens
-Ensures		decimals == VeriSol.Old(uint256(decimals))
-Ensures		VeriSol.Old(_totalSupply) == _totalSupply
-transfer(to,tokens):
-Requires		msg.sender != address(0)
-Requires		tokens <= VeriSol.Old(balances[msg.sender])
-Ensures		balances[to] >= tokens
-Ensures		balances[to] >= VeriSol.Old(balances[to])
-Ensures		VeriSol.Old(balances[msg.sender]) >= balances[msg.sender]
-Ensures		decimals == VeriSol.Old(uint256(decimals))
-Ensures		VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances))
-Ensures		VeriSol.Old(_totalSupply) == _totalSupply
-USDT:
-Ensures		_totalSupply == 30910302000000000000
-Ensures		decimals == 6
-Ensures		VeriSol.SumMapping(balances) == 30910302000000000000
-Ensures		_totalSupply > decimals
-Ensures		_totalSupply == VeriSol.SumMapping(balances)
-Ensures		decimals < VeriSol.SumMapping(balances)
+version https://git-lfs.github.com/spec/v1
+oid sha256:3e74cdb3d559082e7aab62b93d05e952ad7417d8fe231e92356bb90d21829db1
+size 999

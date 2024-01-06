@@ -1,20 +1,3 @@
-Invariants with True value:12
-Invariants with False value:0
-
-True Invariants:
-approve(spender,tokens): Requires msg.sender != address(0)
-approve(spender,tokens): Ensures decimals == VeriSol.Old(uint256(decimals))
-approve(spender,tokens): Ensures tokens == allowed[msg.sender][spender]
-approve(spender,tokens): Ensures VeriSol.Old(_totalSupply) == _totalSupply
-approve(spender,tokens): Ensures !(tokens == VeriSol.Old(allowed[msg.sender][spender]) ) || ( allowed[msg.sender][spender] == VeriSol.Old(allowed[msg.sender][spender]))
-approve(spender,tokens): Ensures !(VeriSol.Old(allowed[msg.sender][spender]) == 0 ) || ( allowed[msg.sender][spender] >= VeriSol.Old(allowed[msg.sender][spender]))
-LUCKY: Ensures VeriSol.ContractInvariant(decimals == 18)
-LUCKY: Ensures VeriSol.ContractInvariant(_totalSupply == 1000000000000000000000000000000)
-LUCKY: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == 1000000000000000000000000000000)
-LUCKY: Ensures VeriSol.ContractInvariant(decimals < _totalSupply)
-LUCKY: Ensures VeriSol.ContractInvariant(decimals < VeriSol.SumMapping(balances))
-LUCKY: Ensures VeriSol.ContractInvariant(_totalSupply == VeriSol.SumMapping(balances))
-
-False Invariants:
-
- // ./gambit_out_approve/mutants/1678/verisol_test
+version https://git-lfs.github.com/spec/v1
+oid sha256:d23cfdad847e22380ba015fec8dcadf9d809b0e5c7cfbe2a8d410c38088296e2
+size 1251

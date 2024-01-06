@@ -1,13 +1,3 @@
-original result: 11 invariants, smt-simplified result: 11 invariants
-transfer(_to,_value):
-Ensures		totalSupply_ == VeriSol.Old(totalSupply_)
-Ensures		owner == VeriSol.Old(owner)
-Ensures		unfrozen == VeriSol.Old(unfrozen)
-Ensures		_to == VeriSol.Old(_to)
-Ensures		_value == VeriSol.Old(_value)
-Ensures		msg.sender == VeriSol.Old(msg.sender)
-Ensures		block.timestamp == VeriSol.Old(block.timestamp)
-Ensures		balances[msg.sender] >= 0
-Ensures		_value <= balances[_to]
-Ensures		_value <= VeriSol.Old(balances[msg.sender])
-Ensures		VeriSol.Old(_value) <= balances[_to]
+version https://git-lfs.github.com/spec/v1
+oid sha256:94c027d237e3bbedf9d5adfc90898ed37ff37c4aef4aba6d2caa98cc99737835
+size 565

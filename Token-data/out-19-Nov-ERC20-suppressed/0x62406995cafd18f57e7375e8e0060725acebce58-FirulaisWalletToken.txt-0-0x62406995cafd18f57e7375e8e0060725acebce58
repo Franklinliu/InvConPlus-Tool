@@ -1,31 +1,3 @@
-original result: 38 invariants, smt-simplified result: 26 invariants
-transfer(recipient,amount):
-Requires		msg.sender != address(0)
-Requires		recipient != address(0)
-Requires		amount <= VeriSol.Old(_balances[msg.sender])
-Ensures		_balances[recipient] >= amount
-Ensures		_balances[recipient] >= VeriSol.Old(_balances[recipient])
-Ensures		_balances[msg.sender] <= VeriSol.Old(_balances[msg.sender])
-Ensures		_totalSupply == VeriSol.Old(_totalSupply)
-Ensures		VeriSol.Old(VeriSol.SumMapping(_balances)) == VeriSol.SumMapping(_balances)
-approve(spender,value):
-Requires		msg.sender != address(0)
-Requires		spender != address(0)
-Ensures		_totalSupply == VeriSol.Old(_totalSupply)
-Ensures		_allowances[msg.sender][spender] == value
-transferFrom(sender,recipient,amount):
-Requires		msg.sender != address(0)
-Requires		sender != address(0)
-Requires		recipient != address(0)
-Requires		amount <= VeriSol.Old(_balances[sender])
-Requires		amount <= VeriSol.Old(_allowances[sender][msg.sender])
-Requires		VeriSol.Old(_balances[sender]) != VeriSol.Old(_allowances[sender][msg.sender])
-Requires		VeriSol.Old(_allowances[sender][msg.sender]) != VeriSol.Old(_balances[recipient])
-Ensures		_balances[recipient] >= amount
-Ensures		_balances[recipient] >= VeriSol.Old(_balances[recipient])
-Ensures		_totalSupply == VeriSol.Old(_totalSupply)
-Ensures		VeriSol.Old(_balances[sender]) >= _balances[sender]
-Ensures		VeriSol.Old(_allowances[sender][msg.sender]) >= _allowances[sender][msg.sender]
-Ensures		VeriSol.Old(VeriSol.SumMapping(_balances)) >= VeriSol.SumMapping(_balances)
-FirulaisWalletToken:
-Ensures		VeriSol.SumMapping(_balances) == _totalSupply
+version https://git-lfs.github.com/spec/v1
+oid sha256:34e92b7599d4d0916885e74a4f31c8283819e90b26c2b646081de809be23728f
+size 1631

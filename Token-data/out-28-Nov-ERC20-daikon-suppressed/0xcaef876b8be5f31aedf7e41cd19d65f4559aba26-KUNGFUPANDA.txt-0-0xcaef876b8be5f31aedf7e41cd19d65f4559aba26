@@ -1,16 +1,3 @@
-original result: 14 invariants, smt-simplified result: 14 invariants
-approve(spender,tokens):
-Requires		decimals == _totalSupply
-Requires		decimals == allowed[spender][msg.sender]
-Requires		_totalSupply == allowed[spender][msg.sender]
-Requires		decimals == 0
-Requires		_totalSupply == 0
-Requires		tokens == 115792089237316195423570985008687907853269984665640564039457584007913129639935
-Requires		decimals < tokens
-Requires		decimals < block.timestamp
-Requires		decimals <= VeriSol.Old(VeriSol.SumMapping(balances))
-Requires		_totalSupply < tokens
-Requires		_totalSupply < block.timestamp
-Requires		_totalSupply <= VeriSol.Old(VeriSol.SumMapping(balances))
-Ensures		decimals == VeriSol.Old(_totalSupply)
-Ensures		decimals == VeriSol.Old(allowed[spender][msg.sender])
+version https://git-lfs.github.com/spec/v1
+oid sha256:56acdb7c9c9662ed47704613ebdeb25ff4d4837023b0ee2c5887130eebcbbf5b
+size 766

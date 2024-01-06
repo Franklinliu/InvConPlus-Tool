@@ -1,33 +1,3 @@
-original result: 31 invariants, smt-simplified result: 31 invariants
-approve(spender,value):
-Requires		_totalSupply == _allowances[spender][msg.sender]
-Requires		_totalSupply == 0
-Requires		value == 115792089237316195423570985008687907853269984665640564039457584007913129639935
-Requires		_totalSupply < value
-Requires		_totalSupply < block.timestamp
-Requires		_totalSupply <= VeriSol.Old(VeriSol.SumMapping(_balances))
-Ensures		_totalSupply == VeriSol.Old(_totalSupply)
-Ensures		_totalSupply == VeriSol.Old(_allowances[spender][msg.sender])
-Ensures		spender == VeriSol.Old(spender)
-Ensures		value == VeriSol.Old(value)
-Ensures		value == _allowances[msg.sender][spender]
-Ensures		msg.sender == VeriSol.Old(msg.sender)
-Ensures		block.timestamp == VeriSol.Old(block.timestamp)
-Ensures		VeriSol.Old(value) == _allowances[msg.sender][spender]
-Ensures		VeriSol.SumMapping(_balances) == VeriSol.Old(VeriSol.SumMapping(_balances))
-Ensures		_totalSupply == 0
-Ensures		value == 115792089237316195423570985008687907853269984665640564039457584007913129639935
-Ensures		_allowances[msg.sender][spender] == 115792089237316195423570985008687907853269984665640564039457584007913129639935
-Ensures		VeriSol.Old(_allowances[spender][msg.sender]) == 0
-Ensures		_totalSupply < value
-Ensures		_totalSupply < block.timestamp
-Ensures		_totalSupply < VeriSol.Old(value)
-Ensures		_totalSupply < VeriSol.Old(block.timestamp)
-Ensures		_totalSupply <= VeriSol.SumMapping(_balances)
-Ensures		_totalSupply <= VeriSol.Old(VeriSol.SumMapping(_balances))
-Ensures		_totalSupply < _balances[msg.sender]
-Ensures		_totalSupply < _allowances[msg.sender][spender]
-Ensures		block.timestamp < VeriSol.Old(value)
-Ensures		block.timestamp < _balances[msg.sender]
-Ensures		VeriSol.Old(spender) != VeriSol.Old(msg.sender)
-Ensures		VeriSol.Old(block.timestamp) < _balances[msg.sender]
+version https://git-lfs.github.com/spec/v1
+oid sha256:171c8dbc8c687114828c2c53787e594083105d9dbaab6e6ce81c12683c48a774
+size 1837

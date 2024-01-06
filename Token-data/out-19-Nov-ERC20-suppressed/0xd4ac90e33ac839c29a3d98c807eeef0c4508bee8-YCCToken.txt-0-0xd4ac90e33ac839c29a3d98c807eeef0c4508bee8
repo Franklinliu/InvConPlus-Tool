@@ -1,14 +1,3 @@
-original result: 21 invariants, smt-simplified result: 11 invariants
-transfer(to,tokens):
-Requires		msg.sender != address(0)
-Ensures		VeriSol.Old(uint256(decimals)) == decimals
-Ensures		VeriSol.Old(balances[to]) <= balances[to]
-Ensures		tokens <= balances[to]
-Ensures		_totalSupply == VeriSol.Old(_totalSupply)
-YCCToken:
-Ensures		decimals == 8
-Ensures		_totalSupply == 1000000000000000000
-Ensures		VeriSol.SumMapping(balances) > 0
-Ensures		decimals < _totalSupply
-Ensures		decimals < VeriSol.SumMapping(balances)
-Ensures		_totalSupply >= VeriSol.SumMapping(balances)
+version https://git-lfs.github.com/spec/v1
+oid sha256:7e0561d6e2942e5f7593d21127245725bb6541aef336476de9d7a59b1aa18ef1
+size 567

@@ -1,28 +1,3 @@
-[
-    {
-        "func": "approve(spender,value)",
-        "type": "PptType.EXIT",
-        "executionType": "TxType.NORMAL",
-        "preconditions": [
-            "VeriSol.Requires(msg.sender != address(0))",
-            "VeriSol.Requires(spender != address(0))"
-        ],
-        "postconditions": [
-            "VeriSol.Ensures(value == _allowances[msg.sender][spender])",
-            "VeriSol.Ensures(VeriSol.Old(_totalSupply) == _totalSupply)"
-        ],
-        "falsified_preconditions": [],
-        "falsified_postconditions": []
-    },
-    {
-        "func": null,
-        "type": "PptType.CONTRACT",
-        "executionType": "TxType.NORMAL",
-        "preconditions": [],
-        "postconditions": [
-            "VeriSol.Ensures(VeriSol.SumMapping(_balances) <= _totalSupply)"
-        ],
-        "falsified_preconditions": [],
-        "falsified_postconditions": []
-    }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:1beb4b4d60dc80a072ccc8e662b683ccf735b892956e85a7ac1f8319ba90dd94
+size 881

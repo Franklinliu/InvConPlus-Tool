@@ -1,22 +1,3 @@
-Invariants with True value:8
-Invariants with False value:6
-
-True Invariants:
-transfer(to,tokens): Requires msg.sender != address(0)
-transfer(to,tokens): Requires tokens <= VeriSol.Old(balances[msg.sender])
-transfer(to,tokens): Ensures _totalSupply == VeriSol.Old(_totalSupply)
-transfer(to,tokens): Ensures decimals == VeriSol.Old(uint256(decimals))
-transfer(to,tokens): Ensures balances[msg.sender] <= VeriSol.Old(balances[msg.sender])
-TetherUSD: Ensures VeriSol.ContractInvariant(_totalSupply == 100000000000000000000000000)
-TetherUSD: Ensures VeriSol.ContractInvariant(decimals == 18)
-TetherUSD: Ensures VeriSol.ContractInvariant(_totalSupply > decimals)
-
-False Invariants:
-transfer(to,tokens): Ensures tokens <= balances[to]
-transfer(to,tokens): Ensures VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances))
-transfer(to,tokens): Ensures balances[to] >= VeriSol.Old(balances[to])
-TetherUSD: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == 100000000000000000000000000)
-TetherUSD: Ensures VeriSol.ContractInvariant(_totalSupply == VeriSol.SumMapping(balances))
-TetherUSD: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) > decimals)
-
- // ./gambit_out_transfer/mutants/993/verisol_test
+version https://git-lfs.github.com/spec/v1
+oid sha256:4f55471206cadfd1edf219f1a00bc69814e5fa8a39b5eac59abbb66d688ad90c
+size 1236

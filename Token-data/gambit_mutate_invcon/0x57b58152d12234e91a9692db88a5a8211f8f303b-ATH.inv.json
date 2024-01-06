@@ -1,36 +1,3 @@
-[
-    {
-        "func": "approve(spender,amount)",
-        "type": "PptType.EXIT",
-        "executionType": "TxType.NORMAL",
-        "preconditions": [
-            "VeriSol.Requires(msg.sender != address(0))"
-        ],
-        "postconditions": [
-            "VeriSol.Ensures(oneHundredPercent == VeriSol.Old(oneHundredPercent))",
-            "VeriSol.Ensures(decimals == VeriSol.Old(uint256(decimals)))",
-            "VeriSol.Ensures(amount == allowed[msg.sender][spender])",
-            "VeriSol.Ensures(VeriSol.Old(_totalSupply) == _totalSupply)",
-            "VeriSol.Ensures(!(VeriSol.Old(allowed[msg.sender][spender]) == 0 ) || ( VeriSol.Old(allowed[msg.sender][spender]) <= allowed[msg.sender][spender]))",
-            "VeriSol.Ensures(!(VeriSol.Old(allowed[msg.sender][spender]) == amount ) || ( VeriSol.Old(allowed[msg.sender][spender]) == allowed[msg.sender][spender]))",
-            "VeriSol.Ensures(!(VeriSol.Old(allowed[msg.sender][spender]) < amount ) || ( allowed[msg.sender][spender] > 0))",
-            "VeriSol.Ensures(!(VeriSol.Old(allowed[msg.sender][spender]) == 0 ) || ( VeriSol.Old(allowed[msg.sender][spender]) != allowed[msg.sender][spender] || allowed[msg.sender][spender] != 115792089237316195423570985008687907853269984665640564039457584007913129639935))"
-        ],
-        "falsified_preconditions": [],
-        "falsified_postconditions": []
-    },
-    {
-        "func": null,
-        "type": "PptType.CONTRACT",
-        "executionType": "TxType.NORMAL",
-        "preconditions": [],
-        "postconditions": [
-            "VeriSol.Ensures(decimals == 18)",
-            "VeriSol.Ensures(oneHundredPercent == 100)",
-            "VeriSol.Ensures(decimals < oneHundredPercent)",
-            "VeriSol.Ensures(VeriSol.SumMapping(balances) == _totalSupply)"
-        ],
-        "falsified_preconditions": [],
-        "falsified_postconditions": []
-    }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:05719174cd633e8b156077699dc66515ac3001e6f3783c360f6bec9c4672670d
+size 1881

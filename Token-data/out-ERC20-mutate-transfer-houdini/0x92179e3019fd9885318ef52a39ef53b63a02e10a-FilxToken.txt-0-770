@@ -1,15 +1,3 @@
-Invariants with True value:6
-Invariants with False value:1
-
-True Invariants:
-transfer(_to,_value): Requires msg.sender != address(0)
-transfer(_to,_value): Ensures balanceOf[_to] >= VeriSol.Old(balanceOf[_to])
-transfer(_to,_value): Ensures VeriSol.Old(totalSupply) == totalSupply
-transfer(_to,_value): Ensures VeriSol.Old(balanceOf[msg.sender]) >= balanceOf[msg.sender]
-transfer(_to,_value): Ensures VeriSol.SumMapping(balanceOf) == VeriSol.Old(VeriSol.SumMapping(balanceOf))
-FilxToken: Ensures VeriSol.ContractInvariant(totalSupply == VeriSol.SumMapping(balanceOf))
-
-False Invariants:
-transfer(_to,_value): Requires _value <= VeriSol.Old(balanceOf[msg.sender])
-
- // ./gambit_out_transfer/mutants/770/verisol_test
+version https://git-lfs.github.com/spec/v1
+oid sha256:59df92568c3bf2ba8d1b4f125c6796824902b5fcf08b20ba7d3e9b95c2dd7430
+size 712

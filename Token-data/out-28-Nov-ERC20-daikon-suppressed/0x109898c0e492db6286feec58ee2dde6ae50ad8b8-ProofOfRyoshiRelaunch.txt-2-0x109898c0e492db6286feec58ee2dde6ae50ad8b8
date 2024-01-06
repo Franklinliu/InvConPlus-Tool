@@ -1,33 +1,3 @@
-original result: 32 invariants, smt-simplified result: 29 invariants
-transfer(recipient,amount):
-Ensures		_totalSupply == VeriSol.Old(_totalSupply)
-Ensures		recipient == VeriSol.Old(recipient)
-Ensures		amount == VeriSol.Old(amount)
-Ensures		msg.sender == VeriSol.Old(msg.sender)
-Ensures		block.timestamp == VeriSol.Old(block.timestamp)
-Ensures		VeriSol.SumMapping(_balances) == VeriSol.Old(VeriSol.SumMapping(_balances))
-Ensures		amount <= _balances[recipient]
-Ensures		VeriSol.Old(amount) <= _balances[recipient]
-Ensures		amount < _balances[msg.sender] => _balances[msg.sender] >= 1
-Ensures		amount < _balances[msg.sender] => amount < VeriSol.Old(_balances[msg.sender])
-approve(spender,value):
-Ensures		_totalSupply == VeriSol.Old(_totalSupply)
-Ensures		spender == VeriSol.Old(spender)
-Ensures		value == VeriSol.Old(value)
-Ensures		value == _allowances[msg.sender][spender]
-Ensures		msg.sender == VeriSol.Old(msg.sender)
-Ensures		block.timestamp == VeriSol.Old(block.timestamp)
-Ensures		VeriSol.Old(value) == _allowances[msg.sender][spender]
-transferFrom(sender,recipient,amount):
-Ensures		_totalSupply == VeriSol.Old(_totalSupply)
-Ensures		sender == VeriSol.Old(sender)
-Ensures		recipient == VeriSol.Old(recipient)
-Ensures		amount == VeriSol.Old(amount)
-Ensures		msg.sender == VeriSol.Old(msg.sender)
-Ensures		block.timestamp == VeriSol.Old(block.timestamp)
-Ensures		amount <= _balances[recipient]
-Ensures		amount <= VeriSol.Old(_balances[sender])
-Ensures		VeriSol.Old(amount) <= _balances[recipient]
-Ensures		 - ( amount ) - _allowances[sender][msg.sender] + VeriSol.Old(_allowances[sender][msg.sender]) == 0
-Ensures		 - ( VeriSol.Old(amount) ) - _allowances[sender][msg.sender] + VeriSol.Old(_allowances[sender][msg.sender]) == 0
-Ensures		amount < _allowances[sender][msg.sender] => amount < VeriSol.Old(_allowances[sender][msg.sender])
+version https://git-lfs.github.com/spec/v1
+oid sha256:ffa605cf6eab2fce332bab2f15d53153df2e79f26ac3cd37f54942018bd36019
+size 1841

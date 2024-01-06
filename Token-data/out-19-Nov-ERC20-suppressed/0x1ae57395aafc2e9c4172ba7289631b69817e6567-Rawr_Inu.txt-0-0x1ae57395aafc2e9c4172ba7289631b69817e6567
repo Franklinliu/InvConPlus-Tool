@@ -1,6 +1,3 @@
-original result: 10 invariants, smt-simplified result: 4 invariants
-approve(spender,tokens):
-Requires		msg.sender != address(0)
-Ensures		_totalSupply == VeriSol.Old(_totalSupply)
-Ensures		decimals == VeriSol.Old(uint256(decimals))
-Ensures		allowed[msg.sender][spender] == tokens
+version https://git-lfs.github.com/spec/v1
+oid sha256:81b0f50fb99889fcd259f2bbe486d2c593fe5a86811ef23e4ae8ce3f7249de7d
+size 279

@@ -1,35 +1,3 @@
-[
-    {
-        "func": "transfer(recipient,amount)",
-        "type": "PptType.EXIT",
-        "executionType": "TxType.NORMAL",
-        "preconditions": [
-            "VeriSol.Requires(msg.sender != address(0))",
-            "VeriSol.Requires(recipient != address(0))",
-            "VeriSol.Requires(VeriSol.Old(stopped) == false)"
-        ],
-        "postconditions": [
-            "VeriSol.Ensures(stopped == false)",
-            "VeriSol.Ensures(VeriSol.Old(VeriSol.SumMapping(_lockTimes)) == VeriSol.SumMapping(_lockTimes))",
-            "VeriSol.Ensures(_owner == VeriSol.Old(_owner))",
-            "VeriSol.Ensures(VeriSol.SumMapping(_balances) == VeriSol.Old(VeriSol.SumMapping(_balances)))",
-            "VeriSol.Ensures(_totalSupply == VeriSol.Old(_totalSupply))",
-            "VeriSol.Ensures(_decimals == VeriSol.Old(uint256(_decimals)))",
-            "VeriSol.Ensures(VeriSol.Old(VeriSol.SumMapping(_lockAmounts)) == VeriSol.SumMapping(_lockAmounts))"
-        ],
-        "falsified_preconditions": [],
-        "falsified_postconditions": []
-    },
-    {
-        "func": null,
-        "type": "PptType.CONTRACT",
-        "executionType": "TxType.NORMAL",
-        "preconditions": [],
-        "postconditions": [
-            "VeriSol.Ensures(_owner != address(0))",
-            "VeriSol.Ensures(VeriSol.SumMapping(_balances) == _totalSupply)"
-        ],
-        "falsified_preconditions": [],
-        "falsified_postconditions": []
-    }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:b3385b9a3a8572ffb9f52746513089663665d6daadbd8c831b4772aa6457090e
+size 1449

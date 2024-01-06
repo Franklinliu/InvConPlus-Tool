@@ -1,21 +1,3 @@
-Invariants with True value:9
-Invariants with False value:4
-
-True Invariants:
-approve(spender,tokens): Requires msg.sender != address(0)
-approve(spender,tokens): Ensures VeriSol.Old(uint256(decimals)) == decimals
-approve(spender,tokens): Ensures allowed[msg.sender][spender] == tokens
-approve(spender,tokens): Ensures VeriSol.Old(_totalSupply) == _totalSupply
-approve(spender,tokens): Ensures !(VeriSol.Old(allowed[msg.sender][spender]) == 0 ) || ( allowed[msg.sender][spender] >= VeriSol.Old(allowed[msg.sender][spender]))
-approve(spender,tokens): Ensures !(VeriSol.Old(allowed[msg.sender][spender]) == tokens ) || ( allowed[msg.sender][spender] == VeriSol.Old(allowed[msg.sender][spender]))
-approve(spender,tokens): Ensures !(VeriSol.Old(allowed[msg.sender][spender]) == 0 ) || ( allowed[msg.sender][spender] != VeriSol.Old(allowed[msg.sender][spender]) || allowed[msg.sender][spender] != 115792089237316195423570985008687907853269984665640564039457584007913129639935)
-SpaceGoblin: Ensures VeriSol.ContractInvariant(decimals == 4)
-SpaceGoblin: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == _totalSupply)
-
-False Invariants:
-SpaceGoblin: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == 70000000000000)
-SpaceGoblin: Ensures VeriSol.ContractInvariant(_totalSupply == 70000000000000)
-SpaceGoblin: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) > decimals)
-SpaceGoblin: Ensures VeriSol.ContractInvariant(decimals < _totalSupply)
-
- // ./gambit_out_approve/mutants/582/verisol_test
+version https://git-lfs.github.com/spec/v1
+oid sha256:86396ff8288bbde7aba272ced2be0019bbd8d5773aaf670bc19b6772c9b2b1bc
+size 1528

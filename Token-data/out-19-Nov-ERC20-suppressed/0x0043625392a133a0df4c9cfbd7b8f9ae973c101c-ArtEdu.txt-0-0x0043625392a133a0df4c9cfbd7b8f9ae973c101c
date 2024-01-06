@@ -1,25 +1,3 @@
-original result: 28 invariants, smt-simplified result: 21 invariants
-renounceOwnership():
-Requires		msg.sender != address(0)
-Requires		VeriSol.Old(_owner) != address(0)
-Requires		msg.sender == VeriSol.Old(_owner)
-Ensures		_owner == address(0)
-Ensures		_pendingowner == VeriSol.Old(_pendingowner)
-Ensures		_owner != msg.sender
-Ensures		_owner != VeriSol.Old(_owner)
-transfer(recipient,amount):
-Requires		msg.sender != address(0)
-Requires		recipient != address(0)
-Requires		VeriSol.Old(paused) == false
-Requires		amount <= VeriSol.Old(_balances[msg.sender])
-Ensures		paused == false
-Ensures		_pendingowner == VeriSol.Old(_pendingowner)
-Ensures		amount <= _balances[recipient]
-Ensures		VeriSol.Old(_balances[recipient]) <= _balances[recipient]
-Ensures		_owner == VeriSol.Old(_owner)
-Ensures		_decimals == VeriSol.Old(uint256(_decimals))
-Ensures		VeriSol.Old(VeriSol.SumMapping(_balances)) == VeriSol.SumMapping(_balances)
-Ensures		_totalSupply == VeriSol.Old(_totalSupply)
-Ensures		VeriSol.Old(_balances[msg.sender]) >= _balances[msg.sender]
-ArtEdu:
-Ensures		_decimals == 18
+version https://git-lfs.github.com/spec/v1
+oid sha256:df61534ea1e83b459f635f9d3cfc26d28960ce14601d68233c66bbd4ef95e49b
+size 1072

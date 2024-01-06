@@ -1,22 +1,3 @@
-[
-    [
-        "_totalSupply == VeriSol.Old(_totalSupply)",
-        "_totalSupply == VeriSol.Old(_totalSupply)"
-    ],
-    [
-        "_totalSupply == VeriSol.Old(_totalSupply)",
-        "_totalSupply == VeriSol.Old(_totalSupply)"
-    ],
-    [
-        "value == _allowances[msg.sender][spender]",
-        "_allowances[msg.sender][spender] == value"
-    ],
-    [
-        "_totalSupply == VeriSol.Old(_totalSupply)",
-        "_totalSupply == VeriSol.Old(_totalSupply)"
-    ],
-    [
-        "- ( amount ) - _allowances[sender][msg.sender] + VeriSol.Old(_allowances[sender][msg.sender]) == 0",
-        "_allowances[sender][msg.sender] == VeriSol.Old(_allowances[sender][msg.sender]) - amount"
-    ]
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:5b6d9eb9b80f6d23dc4f256b05cbe8e51cee973d8ef31b1f3dd095bd54f6242e
+size 696

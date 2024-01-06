@@ -1,26 +1,3 @@
-Invariants with True value:13
-Invariants with False value:5
-
-True Invariants:
-approve(spender,tokens): Requires msg.sender != address(0)
-approve(spender,tokens): Ensures decimals == VeriSol.Old(uint256(decimals))
-approve(spender,tokens): Ensures allowed[msg.sender][spender] == tokens
-approve(spender,tokens): Ensures _totalSupply == VeriSol.Old(_totalSupply)
-transfer(to,tokens): Requires msg.sender != address(0)
-transfer(to,tokens): Ensures decimals == VeriSol.Old(uint256(decimals))
-transfer(to,tokens): Ensures tokens <= balances[to]
-transfer(to,tokens): Ensures _totalSupply == VeriSol.Old(_totalSupply)
-transfer(to,tokens): Ensures balances[to] >= VeriSol.Old(balances[to])
-BlackCock: Ensures VeriSol.ContractInvariant(decimals == 18)
-BlackCock: Ensures VeriSol.ContractInvariant(_totalSupply == 69420000000000000000000000)
-BlackCock: Ensures VeriSol.ContractInvariant(decimals < VeriSol.SumMapping(balances))
-BlackCock: Ensures VeriSol.ContractInvariant(decimals < _totalSupply)
-
-False Invariants:
-transfer(to,tokens): Requires tokens <= VeriSol.Old(balances[msg.sender])
-transfer(to,tokens): Ensures VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances))
-transfer(to,tokens): Ensures VeriSol.Old(balances[msg.sender]) >= balances[msg.sender]
-BlackCock: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == 69420000000000000000000000)
-BlackCock: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == _totalSupply)
-
- // ./gambit_out_transfer/mutants/767/verisol_test
+version https://git-lfs.github.com/spec/v1
+oid sha256:8387ba18d8fcee2d57e0d97b129867dead2d1b868ddd76c1064b4b8fbe2e07aa
+size 1517

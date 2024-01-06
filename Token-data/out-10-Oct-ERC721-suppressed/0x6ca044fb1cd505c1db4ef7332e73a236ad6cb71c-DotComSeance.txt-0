@@ -1,6 +1,3 @@
-original result: 6 invariants, smt-simplified result: 4 invariants
-setApprovalForAll(to,approved):
-Requires		msg.sender != address(0)
-Requires		msg.sender != to
-Ensures		approved == _operatorApprovals[msg.sender][to]
-Ensures		VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) == VeriSol.SumMapping(_ownedTokensCount)
+version https://git-lfs.github.com/spec/v1
+oid sha256:2d24897acc6e94a2b1803d7a29ca8fc0910d057a0381ddbcec5022b1adf22454
+size 318

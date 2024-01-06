@@ -1,9 +1,3 @@
-original result: 6 invariants, smt-simplified result: 6 invariants
-setApprovalForAll(to,approved):
-Requires		msg.sender != address(0)
-Requires		msg.sender != to
-Ensures		_operatorApprovals[msg.sender][to] == approved
-transferFrom(from,to,tokenId):
-Requires		from != address(0)
-Requires		msg.sender != address(0)
-Requires		to != address(0)
+version https://git-lfs.github.com/spec/v1
+oid sha256:a5007efe3005d3dca256baa198df454c41fffa3504b659d918882146049c3516
+size 339

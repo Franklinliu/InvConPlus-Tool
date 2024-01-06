@@ -1,26 +1,3 @@
-Invariants with True value:12
-Invariants with False value:6
-
-True Invariants:
-approve(spender,tokens): Requires msg.sender != address(0)
-approve(spender,tokens): Ensures allowed[msg.sender][spender] == tokens
-approve(spender,tokens): Ensures _totalSupply == VeriSol.Old(_totalSupply)
-approve(spender,tokens): Ensures decimals == VeriSol.Old(uint256(decimals))
-transfer(to,tokens): Requires msg.sender != address(0)
-transfer(to,tokens): Requires tokens <= VeriSol.Old(balances[msg.sender])
-transfer(to,tokens): Ensures balances[msg.sender] <= VeriSol.Old(balances[msg.sender])
-transfer(to,tokens): Ensures _totalSupply == VeriSol.Old(_totalSupply)
-transfer(to,tokens): Ensures decimals == VeriSol.Old(uint256(decimals))
-Blobfish: Ensures VeriSol.ContractInvariant(decimals == 0)
-Blobfish: Ensures VeriSol.ContractInvariant(_totalSupply == 1000000000000)
-Blobfish: Ensures VeriSol.ContractInvariant(decimals < _totalSupply)
-
-False Invariants:
-transfer(to,tokens): Ensures VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances))
-transfer(to,tokens): Ensures VeriSol.Old(balances[to]) <= balances[to]
-transfer(to,tokens): Ensures balances[to] >= tokens
-Blobfish: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == 1000000000000)
-Blobfish: Ensures VeriSol.ContractInvariant(decimals < VeriSol.SumMapping(balances))
-Blobfish: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == _totalSupply)
-
- // ./gambit_out_transfer/mutants/98/verisol_test
+version https://git-lfs.github.com/spec/v1
+oid sha256:2fd7bb9a4643283f5a3c157bde095ec0436960008bd3c6549482bd140f877aa4
+size 1483

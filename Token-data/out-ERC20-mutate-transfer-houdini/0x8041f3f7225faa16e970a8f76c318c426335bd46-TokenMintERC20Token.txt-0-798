@@ -1,21 +1,3 @@
-Invariants with True value:13
-Invariants with False value:0
-
-True Invariants:
-transfer(recipient,amount): Requires msg.sender != address(0)
-transfer(recipient,amount): Requires recipient != address(0)
-transfer(recipient,amount): Requires VeriSol.Old(_balances[msg.sender]) >= amount
-transfer(recipient,amount): Ensures VeriSol.Old(VeriSol.SumMapping(_balances)) == VeriSol.SumMapping(_balances)
-transfer(recipient,amount): Ensures VeriSol.Old(_balances[msg.sender]) >= _balances[msg.sender]
-transfer(recipient,amount): Ensures _balances[recipient] >= amount
-transfer(recipient,amount): Ensures _balances[recipient] >= VeriSol.Old(_balances[recipient])
-transfer(recipient,amount): Ensures VeriSol.Old(_totalSupply) == _totalSupply
-approve(spender,value): Requires msg.sender != address(0)
-approve(spender,value): Requires spender != address(0)
-approve(spender,value): Ensures _allowances[msg.sender][spender] == value
-approve(spender,value): Ensures VeriSol.Old(_totalSupply) == _totalSupply
-TokenMintERC20Token: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(_balances) == _totalSupply)
-
-False Invariants:
-
- // ./gambit_out_transfer/mutants/798/verisol_test
+version https://git-lfs.github.com/spec/v1
+oid sha256:0537b5c088a4e2e89516d72b3c89c9afb194a95a474298e937434f9f8e28daf5
+size 1163

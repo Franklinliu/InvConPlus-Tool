@@ -1,14 +1,3 @@
-original result: 12 invariants, smt-simplified result: 12 invariants
-approve(spender,value):
-Requires		_totalSupply == _allowances[spender][msg.sender]
-Requires		_totalSupply == 0
-Requires		_totalSupply < value
-Requires		_totalSupply < block.timestamp
-Requires		_totalSupply <= VeriSol.Old(VeriSol.SumMapping(_balances))
-Ensures		_totalSupply == VeriSol.Old(_totalSupply)
-Ensures		_totalSupply == VeriSol.Old(_allowances[spender][msg.sender])
-Ensures		spender == VeriSol.Old(spender)
-Ensures		value == VeriSol.Old(value)
-Ensures		value == _allowances[msg.sender][spender]
-Ensures		msg.sender == VeriSol.Old(msg.sender)
-Ensures		block.timestamp == VeriSol.Old(block.timestamp)
+version https://git-lfs.github.com/spec/v1
+oid sha256:1d1850c3beb2e7491252f3985f24aaa0b7e6bf507f2284e067fe6d454f4d56a2
+size 676

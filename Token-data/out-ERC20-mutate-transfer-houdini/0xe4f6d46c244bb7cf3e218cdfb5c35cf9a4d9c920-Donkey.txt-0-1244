@@ -1,26 +1,3 @@
-Invariants with True value:18
-Invariants with False value:0
-
-True Invariants:
-approve(spender,tokens): Requires msg.sender != address(0)
-approve(spender,tokens): Ensures VeriSol.Old(_totalSupply) == _totalSupply
-approve(spender,tokens): Ensures tokens == allowed[msg.sender][spender]
-approve(spender,tokens): Ensures decimals == VeriSol.Old(uint256(decimals))
-transfer(to,tokens): Requires msg.sender != address(0)
-transfer(to,tokens): Requires tokens <= VeriSol.Old(balances[msg.sender])
-transfer(to,tokens): Ensures VeriSol.Old(_totalSupply) == _totalSupply
-transfer(to,tokens): Ensures tokens <= balances[to]
-transfer(to,tokens): Ensures decimals == VeriSol.Old(uint256(decimals))
-transfer(to,tokens): Ensures VeriSol.Old(VeriSol.SumMapping(balances)) == VeriSol.SumMapping(balances)
-transfer(to,tokens): Ensures VeriSol.Old(balances[to]) <= balances[to]
-transfer(to,tokens): Ensures VeriSol.Old(balances[msg.sender]) >= balances[msg.sender]
-Donkey: Ensures VeriSol.ContractInvariant(decimals == 18)
-Donkey: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == 10000000000000000000000000)
-Donkey: Ensures VeriSol.ContractInvariant(_totalSupply == 10000000000000000000000000)
-Donkey: Ensures VeriSol.ContractInvariant(decimals < VeriSol.SumMapping(balances))
-Donkey: Ensures VeriSol.ContractInvariant(decimals < _totalSupply)
-Donkey: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == _totalSupply)
-
-False Invariants:
-
- // ./gambit_out_transfer/mutants/1244/verisol_test
+version https://git-lfs.github.com/spec/v1
+oid sha256:ad814928d6df2d652cdb9f808a35ccd6726aaa016655576c689e099231584893
+size 1500

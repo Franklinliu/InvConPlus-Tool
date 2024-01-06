@@ -1,21 +1,3 @@
-Invariants with True value:10
-Invariants with False value:3
-
-True Invariants:
-approve(spender,tokens): Requires msg.sender != address(0)
-approve(spender,tokens): Ensures VeriSol.Old(uint256(decimals)) == decimals
-approve(spender,tokens): Ensures VeriSol.Old(_totalSupply) == _totalSupply
-approve(spender,tokens): Ensures tokens == allowed[msg.sender][spender]
-approve(spender,tokens): Ensures !(tokens == VeriSol.Old(allowed[msg.sender][spender]) ) || ( VeriSol.Old(allowed[msg.sender][spender]) == allowed[msg.sender][spender])
-approve(spender,tokens): Ensures !(VeriSol.Old(allowed[msg.sender][spender]) == 0 ) || ( VeriSol.Old(allowed[msg.sender][spender]) <= allowed[msg.sender][spender])
-approve(spender,tokens): Ensures !(tokens >= VeriSol.Old(allowed[msg.sender][spender]) && tokens != VeriSol.Old(allowed[msg.sender][spender]) ) || ( VeriSol.Old(allowed[msg.sender][spender]) < allowed[msg.sender][spender])
-KUNGFUPANDA: Ensures VeriSol.ContractInvariant(_totalSupply == 1000000000000000000000000000000)
-KUNGFUPANDA: Ensures VeriSol.ContractInvariant(decimals == 18)
-KUNGFUPANDA: Ensures VeriSol.ContractInvariant(_totalSupply > decimals)
-
-False Invariants:
-KUNGFUPANDA: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == 1000000000000000000000000000000)
-KUNGFUPANDA: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == _totalSupply)
-KUNGFUPANDA: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) > decimals)
-
- // ./gambit_out_approve/mutants/119/verisol_test
+version https://git-lfs.github.com/spec/v1
+oid sha256:710991941ad15bfd0cfcedd7ec29e73e93b3ea331bed8c619b2c573e3faa8261
+size 1509

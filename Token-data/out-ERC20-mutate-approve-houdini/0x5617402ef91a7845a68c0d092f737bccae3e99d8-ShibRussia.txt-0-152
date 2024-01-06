@@ -1,18 +1,3 @@
-Invariants with True value:9
-Invariants with False value:1
-
-True Invariants:
-approve(spender,tokens): Requires msg.sender != address(0)
-approve(spender,tokens): Ensures _totalSupply == VeriSol.Old(_totalSupply)
-approve(spender,tokens): Ensures allowed[msg.sender][spender] == tokens
-approve(spender,tokens): Ensures decimals == VeriSol.Old(uint256(decimals))
-ShibRussia: Ensures VeriSol.ContractInvariant(_totalSupply == 10000000000000000000000000000000)
-ShibRussia: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == 10000000000000000000000000000000)
-ShibRussia: Ensures VeriSol.ContractInvariant(_totalSupply == VeriSol.SumMapping(balances))
-ShibRussia: Ensures VeriSol.ContractInvariant(_totalSupply > decimals)
-ShibRussia: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) > decimals)
-
-False Invariants:
-ShibRussia: Ensures VeriSol.ContractInvariant(decimals == 18)
-
- // ./gambit_out_approve/mutants/152/verisol_test
+version https://git-lfs.github.com/spec/v1
+oid sha256:63af2081425aaa9c7a366c0a3583d042cc5b0c097de9f3b0e0bf8a90d8ee5925
+size 948

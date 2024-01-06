@@ -1,30 +1,3 @@
-original result: 62 invariants, smt-simplified result: 25 invariants
-approve(spender,value):
-Requires		spender != address(0)
-Requires		msg.sender != address(0)
-Ensures		value == _allowances[msg.sender][spender]
-Ensures		VeriSol.Old(_totalSupply) == _totalSupply
-Ensures		value == VeriSol.Old(_allowances[msg.sender][spender]) => _allowances[msg.sender][spender] == VeriSol.Old(_allowances[msg.sender][spender])
-Ensures		VeriSol.Old(_allowances[msg.sender][spender]) == 0 => _allowances[msg.sender][spender] >= VeriSol.Old(_allowances[msg.sender][spender])
-increaseAllowance(spender,addedValue):
-Requires		spender != address(0)
-Requires		msg.sender != address(0)
-Ensures		VeriSol.Old(VeriSol.SumMapping(_balances)) <= VeriSol.SumMapping(_balances)
-Ensures		_allowances[msg.sender][spender] >= VeriSol.Old(_allowances[msg.sender][spender])
-Ensures		_allowances[msg.sender][spender] >= addedValue
-Ensures		VeriSol.Old(_totalSupply) == _totalSupply
-Ensures		addedValue + VeriSol.Old(_allowances[msg.sender][spender]) == _allowances[msg.sender][spender]
-Ensures		VeriSol.Old(_allowances[msg.sender][spender]) != addedValue => _allowances[msg.sender][spender] > 0
-decreaseAllowance(spender,subtractedValue):
-Requires		spender != address(0)
-Requires		msg.sender != address(0)
-Requires		subtractedValue <= VeriSol.Old(_allowances[msg.sender][spender])
-Ensures		VeriSol.Old(VeriSol.SumMapping(_balances)) >= VeriSol.SumMapping(_balances)
-Ensures		_allowances[msg.sender][spender] <= VeriSol.Old(_allowances[msg.sender][spender])
-Ensures		VeriSol.Old(_totalSupply) == _totalSupply
-Ensures		VeriSol.Old(_allowances[msg.sender][spender]) - subtractedValue == _allowances[msg.sender][spender]
-Ensures		subtractedValue != VeriSol.Old(_allowances[msg.sender][spender]) => _allowances[msg.sender][spender] > 0
-Ensures		VeriSol.Old(_allowances[msg.sender][spender]) > 0 => _allowances[msg.sender][spender] != subtractedValue || _allowances[msg.sender][spender] < VeriSol.Old(_allowances[msg.sender][spender])
-Ensures		VeriSol.Old(_allowances[msg.sender][spender]) > 0 => _allowances[msg.sender][spender] > subtractedValue || _allowances[msg.sender][spender] != subtractedValue || _allowances[msg.sender][spender] < VeriSol.Old(_allowances[msg.sender][spender]) || _allowances[msg.sender][spender] != VeriSol.Old(_allowances[msg.sender][spender])
-TokenMintERC20Token:
-Ensures		_totalSupply == VeriSol.SumMapping(_balances)
+version https://git-lfs.github.com/spec/v1
+oid sha256:fed99a40c8b55a3ad6be10ee8a06b9e486edbd653de3b5fcb9ce6386da7998c4
+size 2405

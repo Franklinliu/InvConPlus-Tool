@@ -1,34 +1,3 @@
-[
-    [
-        "msg.sender != address(0)",
-        "msg.sender != address(0)"
-    ],
-    [
-        "_totalSupply == VeriSol.Old(_totalSupply)",
-        "_totalSupply == VeriSol.Old(_totalSupply)"
-    ],
-    [
-        "to == msg.sender => balances[msg.sender] == VeriSol.Old(balances[msg.sender])",
-        "to == msg.sender => balances[msg.sender] == VeriSol.Old(balances[msg.sender])"
-    ],
-    [
-        "to == msg.sender => balances[msg.sender] == VeriSol.Old(balances[to])",
-        "to == msg.sender => balances[msg.sender] == VeriSol.Old(balances[to])"
-    ],
-    [
-        "to == msg.sender => balances[to] == VeriSol.Old(balances[msg.sender])",
-        "to == msg.sender => balances[to] == VeriSol.Old(balances[msg.sender])"
-    ],
-    [
-        "to == msg.sender => balances[to] == VeriSol.Old(balances[to])",
-        "to == msg.sender => balances[to] == VeriSol.Old(balances[to])"
-    ],
-    [
-        "to != msg.sender => VeriSol.Old(balances[msg.sender]) - balances[msg.sender] == tokens",
-        "to != msg.sender => balances[msg.sender] == VeriSol.Old(balances[msg.sender]) - tokens"
-    ],
-    [
-        "VeriSol.SumMapping(balances) == _totalSupply",
-        "_totalSupply == VeriSol.SumMapping(balances)"
-    ]
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:f3322df61e195c36189f40463ed8a70bb77f3eb8760fd2a1d46c1edb1749295d
+size 1232

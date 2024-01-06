@@ -1,26 +1,3 @@
-Invariants with True value:17
-Invariants with False value:1
-
-True Invariants:
-approve(spender,tokens): Requires msg.sender != address(0)
-approve(spender,tokens): Ensures _totalSupply == VeriSol.Old(_totalSupply)
-approve(spender,tokens): Ensures tokens == allowed[msg.sender][spender]
-approve(spender,tokens): Ensures decimals == VeriSol.Old(uint256(decimals))
-transfer(to,tokens): Requires msg.sender != address(0)
-transfer(to,tokens): Requires tokens <= VeriSol.Old(balances[msg.sender])
-transfer(to,tokens): Ensures _totalSupply == VeriSol.Old(_totalSupply)
-transfer(to,tokens): Ensures balances[msg.sender] <= VeriSol.Old(balances[msg.sender])
-transfer(to,tokens): Ensures tokens <= balances[to]
-transfer(to,tokens): Ensures VeriSol.Old(balances[to]) <= balances[to]
-transfer(to,tokens): Ensures VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances))
-transfer(to,tokens): Ensures decimals == VeriSol.Old(uint256(decimals))
-PubgCoin: Ensures VeriSol.ContractInvariant(_totalSupply == 600000000000000000000)
-PubgCoin: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == 600000000000000000000)
-PubgCoin: Ensures VeriSol.ContractInvariant(decimals < _totalSupply)
-PubgCoin: Ensures VeriSol.ContractInvariant(decimals < VeriSol.SumMapping(balances))
-PubgCoin: Ensures VeriSol.ContractInvariant(_totalSupply == VeriSol.SumMapping(balances))
-
-False Invariants:
-PubgCoin: Ensures VeriSol.ContractInvariant(decimals == 4)
-
- // ./gambit_out_approve/mutants/1020/verisol_test
+version https://git-lfs.github.com/spec/v1
+oid sha256:4ee18df2c6973e84f03c190fe175d72d444c63c2c1aeb317cb40ac2cd0019777
+size 1500

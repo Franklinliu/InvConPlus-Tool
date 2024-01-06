@@ -1,33 +1,3 @@
-[
-    {
-        "func": "approve(spender,value)",
-        "type": "PptType.EXIT",
-        "executionType": "TxType.NORMAL",
-        "preconditions": [
-            "VeriSol.Requires(spender != address(0))",
-            "VeriSol.Requires(msg.sender != address(0))"
-        ],
-        "postconditions": [
-            "VeriSol.Ensures(_allowances[msg.sender][spender] == value)",
-            "VeriSol.Ensures(_totalSupply == VeriSol.Old(_totalSupply))",
-            "VeriSol.Ensures(!(value != VeriSol.Old(_allowances[msg.sender][spender]) ) || ( _allowances[msg.sender][spender] != VeriSol.Old(_allowances[msg.sender][spender])))",
-            "VeriSol.Ensures(!(VeriSol.Old(_allowances[msg.sender][spender]) == 0 ) || ( _allowances[msg.sender][spender] >= VeriSol.Old(_allowances[msg.sender][spender])))",
-            "VeriSol.Ensures(!(VeriSol.Old(_allowances[msg.sender][spender]) == 0 && value != VeriSol.Old(_allowances[msg.sender][spender]) ) || ( _allowances[msg.sender][spender] > 0))",
-            "VeriSol.Ensures(!(VeriSol.Old(_allowances[msg.sender][spender]) == 0 && value != VeriSol.Old(_allowances[msg.sender][spender]) ) || ( _allowances[msg.sender][spender] > VeriSol.Old(_allowances[msg.sender][spender])))",
-            "VeriSol.Ensures(!(VeriSol.Old(_allowances[msg.sender][spender]) > 0 ) || ( _allowances[msg.sender][spender] > 0 || _allowances[msg.sender][spender] != VeriSol.Old(_allowances[msg.sender][spender])))"
-        ],
-        "falsified_preconditions": [],
-        "falsified_postconditions": []
-    },
-    {
-        "func": null,
-        "type": "PptType.CONTRACT",
-        "executionType": "TxType.NORMAL",
-        "preconditions": [],
-        "postconditions": [
-            "VeriSol.Ensures(VeriSol.SumMapping(_balances) == _totalSupply)"
-        ],
-        "falsified_preconditions": [],
-        "falsified_postconditions": []
-    }
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:0cd30857aa1a60ada2a5fc04aff20c170e06dbfd80275da19b3aeddf4394e6d0
+size 1869

@@ -1,15 +1,3 @@
-original result: 41 invariants, smt-simplified result: 12 invariants
-approve(spender,tokens):
-Requires		msg.sender != address(0)
-Ensures		VeriSol.Old(uint256(decimals)) == decimals
-Ensures		allowed[msg.sender][spender] == tokens
-Ensures		VeriSol.Old(_totalSupply) == _totalSupply
-Ensures		VeriSol.Old(allowed[msg.sender][spender]) == 0 => allowed[msg.sender][spender] >= VeriSol.Old(allowed[msg.sender][spender])
-Ensures		VeriSol.Old(allowed[msg.sender][spender]) == tokens => allowed[msg.sender][spender] == VeriSol.Old(allowed[msg.sender][spender])
-SpaceGoblin:
-Ensures		VeriSol.SumMapping(balances) == 70000000000000
-Ensures		decimals == 4
-Ensures		_totalSupply == 70000000000000
-Ensures		VeriSol.SumMapping(balances) > decimals
-Ensures		VeriSol.SumMapping(balances) == _totalSupply
-Ensures		decimals < _totalSupply
+version https://git-lfs.github.com/spec/v1
+oid sha256:6aee8a374ebde2b72f51548ee2862d0f375148a017c27f810e3650f7d0bcf124
+size 819

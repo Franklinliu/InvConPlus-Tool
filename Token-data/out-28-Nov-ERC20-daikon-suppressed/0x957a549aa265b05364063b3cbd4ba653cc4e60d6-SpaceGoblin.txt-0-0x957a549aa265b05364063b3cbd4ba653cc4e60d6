@@ -1,33 +1,3 @@
-original result: 31 invariants, smt-simplified result: 31 invariants
-approve(spender,tokens):
-Requires		decimals == _totalSupply
-Requires		decimals == allowed[spender][msg.sender]
-Requires		_totalSupply == allowed[spender][msg.sender]
-Requires		decimals == 0
-Requires		_totalSupply == 0
-Requires		tokens == 115792089237316195423570985008687907853269984665640564039457584007913129639935
-Requires		decimals < tokens
-Requires		decimals < block.timestamp
-Requires		decimals <= VeriSol.Old(VeriSol.SumMapping(balances))
-Requires		_totalSupply < tokens
-Requires		_totalSupply < block.timestamp
-Requires		_totalSupply <= VeriSol.Old(VeriSol.SumMapping(balances))
-Ensures		decimals == _totalSupply
-Ensures		decimals == VeriSol.Old(decimals)
-Ensures		decimals == VeriSol.Old(_totalSupply)
-Ensures		decimals == VeriSol.Old(allowed[spender][msg.sender])
-Ensures		_totalSupply == VeriSol.Old(decimals)
-Ensures		_totalSupply == VeriSol.Old(_totalSupply)
-Ensures		_totalSupply == VeriSol.Old(allowed[spender][msg.sender])
-Ensures		spender == VeriSol.Old(spender)
-Ensures		tokens == VeriSol.Old(tokens)
-Ensures		tokens == allowed[msg.sender][spender]
-Ensures		msg.sender == VeriSol.Old(msg.sender)
-Ensures		block.timestamp == VeriSol.Old(block.timestamp)
-Ensures		VeriSol.Old(tokens) == allowed[msg.sender][spender]
-Ensures		VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances))
-Ensures		decimals == 0
-Ensures		_totalSupply == 0
-Ensures		tokens == 115792089237316195423570985008687907853269984665640564039457584007913129639935
-Ensures		decimals < VeriSol.Old(tokens)
-Ensures		decimals < VeriSol.Old(block.timestamp)
+version https://git-lfs.github.com/spec/v1
+oid sha256:44ddf9b9abfedea011d924d2a542be48c5fed5283478ab3afeeb8383abe557de
+size 1621

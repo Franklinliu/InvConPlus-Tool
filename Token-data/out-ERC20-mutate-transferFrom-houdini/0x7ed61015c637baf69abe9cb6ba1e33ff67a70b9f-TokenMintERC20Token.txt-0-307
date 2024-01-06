@@ -1,13 +1,3 @@
-Invariants with True value:5
-Invariants with False value:0
-
-True Invariants:
-approve(spender,value): Requires msg.sender != address(0)
-approve(spender,value): Requires spender != address(0)
-approve(spender,value): Ensures value == _allowances[msg.sender][spender]
-approve(spender,value): Ensures VeriSol.Old(_totalSupply) == _totalSupply
-TokenMintERC20Token: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(_balances) == _totalSupply)
-
-False Invariants:
-
- // ./gambit_out_transferFrom/mutants/307/verisol_test
+version https://git-lfs.github.com/spec/v1
+oid sha256:f5ec862e5db8082e90e8159de8684d5fa676175e86acc89cd3a09dddb049d0ff
+size 514

@@ -1,34 +1,3 @@
-[
-    [
-        "msg.sender != address(0)",
-        "msg.sender != address(0)"
-    ],
-    [
-        "recipient != address(0)",
-        "recipient != address(0)"
-    ],
-    [
-        "VeriSol.Old(_totalSupply) == _totalSupply",
-        "_totalSupply == VeriSol.Old(_totalSupply)"
-    ],
-    [
-        "msg.sender != recipient => amount + _balances[msg.sender] == VeriSol.Old(_balances[msg.sender])",
-        "recipient != msg.sender => _balances[msg.sender] == VeriSol.Old(_balances[msg.sender]) - amount"
-    ],
-    [
-        "msg.sender == recipient => _balances[msg.sender] == VeriSol.Old(_balances[recipient])",
-        "recipient == msg.sender => _balances[msg.sender] == VeriSol.Old(_balances[recipient])"
-    ],
-    [
-        "msg.sender == recipient => VeriSol.Old(_balances[msg.sender]) == _balances[recipient]",
-        "recipient == msg.sender => _balances[recipient] == VeriSol.Old(_balances[msg.sender])"
-    ],
-    [
-        "msg.sender == recipient => _balances[msg.sender] == VeriSol.Old(_balances[msg.sender])",
-        "recipient == msg.sender => _balances[msg.sender] == VeriSol.Old(_balances[msg.sender])"
-    ],
-    [
-        "msg.sender == recipient => VeriSol.Old(_balances[recipient]) == _balances[recipient]",
-        "recipient == msg.sender => _balances[recipient] == VeriSol.Old(_balances[recipient])"
-    ]
-]
+version https://git-lfs.github.com/spec/v1
+oid sha256:9ba89a9a765f886b29197518ff05ea002668bd1c86bbe40270641c109feb8375
+size 1336

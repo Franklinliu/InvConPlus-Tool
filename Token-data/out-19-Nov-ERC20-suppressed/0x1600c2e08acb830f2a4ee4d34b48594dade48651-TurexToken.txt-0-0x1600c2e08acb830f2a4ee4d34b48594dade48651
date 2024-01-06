@@ -1,20 +1,3 @@
-original result: 26 invariants, smt-simplified result: 16 invariants
-unfreeze():
-Requires		VeriSol.Old(unfrozen) == false
-Requires		VeriSol.Old(owner) != address(0)
-Requires		msg.sender != address(0)
-Requires		VeriSol.Old(owner) == msg.sender
-Ensures		unfrozen == true
-Ensures		owner != address(0)
-Ensures		VeriSol.Old(totalSupply_) == totalSupply_
-Ensures		VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances))
-Ensures		VeriSol.Old(owner) == owner
-Ensures		owner == msg.sender
-transfer(_to,_value):
-Requires		_to != address(0)
-Requires		msg.sender != address(0)
-Ensures		VeriSol.Old(totalSupply_) == totalSupply_
-Ensures		VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances))
-Ensures		VeriSol.Old(owner) == owner
-TurexToken:
-Ensures		VeriSol.SumMapping(balances) == totalSupply_
+version https://git-lfs.github.com/spec/v1
+oid sha256:2fe70d76d60a2d3d6c52979c3ca2346c9d74e412115079bc52f2104d7631076e
+size 820

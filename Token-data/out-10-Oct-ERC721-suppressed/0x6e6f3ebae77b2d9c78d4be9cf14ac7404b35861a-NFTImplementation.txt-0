@@ -1,18 +1,3 @@
-original result: 14 invariants, smt-simplified result: 14 invariants
-setApprovalForAll(to,approved):
-Requires		msg.sender != address(0)
-Requires		to != msg.sender
-Ensures		VeriSol.Old(initialized) == initialized
-Ensures		initializing == VeriSol.Old(initializing)
-transferFrom(from,to,tokenId):
-Requires		from != address(0)
-Requires		to != address(0)
-Requires		msg.sender != address(0)
-Ensures		VeriSol.Old(initialized) == initialized
-Ensures		initializing == VeriSol.Old(initializing)
-safeTransferFrom(from,to,tokenId):
-Requires		from != address(0)
-Requires		to != address(0)
-Requires		msg.sender != address(0)
-Ensures		VeriSol.Old(initialized) == initialized
-Ensures		initializing == VeriSol.Old(initializing)
+version https://git-lfs.github.com/spec/v1
+oid sha256:968ad210507d78fe442be684e8978267a094018bf4bd0fcd53a670c10dbe582d
+size 711
