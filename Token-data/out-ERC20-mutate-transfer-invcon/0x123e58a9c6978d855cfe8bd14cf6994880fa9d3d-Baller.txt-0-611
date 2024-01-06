@@ -1,0 +1,54 @@
+Invariants with True value:43
+Invariants with False value:3
+
+True Invariants:
+approve(spender,tokens): Requires msg.sender != address(0)
+approve(spender,tokens): Ensures tokens == allowed[msg.sender][spender]
+approve(spender,tokens): Ensures _totalSupply == VeriSol.Old(_totalSupply)
+approve(spender,tokens): Ensures decimals == VeriSol.Old(uint256(decimals))
+approve(spender,tokens): Ensures !(VeriSol.Old(allowed[msg.sender][spender]) == 0 ) || ( allowed[msg.sender][spender] >= VeriSol.Old(allowed[msg.sender][spender]))
+approve(spender,tokens): Ensures !(tokens == VeriSol.Old(allowed[msg.sender][spender]) ) || ( allowed[msg.sender][spender] == VeriSol.Old(allowed[msg.sender][spender]))
+approve(spender,tokens): Ensures !(tokens >= VeriSol.Old(allowed[msg.sender][spender]) && tokens != VeriSol.Old(allowed[msg.sender][spender]) ) || ( allowed[msg.sender][spender] > VeriSol.Old(allowed[msg.sender][spender]))
+transfer(to,tokens): Requires msg.sender != address(0)
+transfer(to,tokens): Requires tokens <= VeriSol.Old(balances[msg.sender])
+transfer(to,tokens): Ensures tokens <= balances[to]
+transfer(to,tokens): Ensures _totalSupply == VeriSol.Old(_totalSupply)
+transfer(to,tokens): Ensures decimals == VeriSol.Old(uint256(decimals))
+transfer(to,tokens): Ensures balances[msg.sender] <= VeriSol.Old(balances[msg.sender])
+transfer(to,tokens): Ensures !(VeriSol.Old(balances[to]) != 0 ) || ( balances[to] > 0)
+transfer(to,tokens): Ensures VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances))
+transfer(to,tokens): Ensures !(tokens != VeriSol.Old(balances[to]) ) || ( balances[to] > 0)
+transfer(to,tokens): Ensures !(tokens > VeriSol.Old(balances[to]) ) || ( balances[msg.sender] < VeriSol.Old(balances[msg.sender]))
+transfer(to,tokens): Ensures !(tokens > VeriSol.Old(balances[to]) ) || ( VeriSol.Old(balances[to]) < balances[to])
+transfer(to,tokens): Ensures !(tokens > VeriSol.Old(balances[to]) ) || ( VeriSol.Old(balances[msg.sender]) - balances[msg.sender] == tokens)
+transfer(to,tokens): Ensures !(tokens != VeriSol.Old(balances[msg.sender]) ) || ( balances[msg.sender] > 0)
+transfer(to,tokens): Ensures !(tokens == VeriSol.Old(VeriSol.SumMapping(balances)) ) || ( tokens == VeriSol.SumMapping(balances))
+transfer(to,tokens): Ensures !(tokens < VeriSol.Old(VeriSol.SumMapping(balances)) ) || ( VeriSol.SumMapping(balances) > 0)
+transfer(to,tokens): Ensures !(to != msg.sender ) || ( VeriSol.Old(balances[msg.sender]) - balances[msg.sender] == tokens)
+transfer(to,tokens): Ensures !(VeriSol.Old(balances[to]) != VeriSol.Old(balances[msg.sender]) ) || ( VeriSol.Old(balances[msg.sender]) - balances[msg.sender] == tokens)
+transfer(to,tokens): Ensures !(VeriSol.Old(balances[to]) == VeriSol.Old(VeriSol.SumMapping(balances)) ) || ( VeriSol.Old(balances[to]) == VeriSol.SumMapping(balances))
+transfer(to,tokens): Ensures !(VeriSol.Old(balances[msg.sender]) < VeriSol.Old(VeriSol.SumMapping(balances)) ) || ( balances[msg.sender] < VeriSol.SumMapping(balances))
+transfer(to,tokens): Ensures !(VeriSol.Old(balances[msg.sender]) < VeriSol.Old(VeriSol.SumMapping(balances)) ) || ( balances[msg.sender] < VeriSol.Old(VeriSol.SumMapping(balances)))
+transfer(to,tokens): Ensures !(VeriSol.Old(balances[msg.sender]) == VeriSol.Old(VeriSol.SumMapping(balances)) ) || ( VeriSol.Old(balances[msg.sender]) == VeriSol.SumMapping(balances))
+transfer(to,tokens): Ensures !(VeriSol.Old(balances[to]) == 0 ) || ( balances[msg.sender] >= VeriSol.Old(balances[to]))
+transfer(to,tokens): Ensures !(to == msg.sender ) || ( balances[msg.sender] == VeriSol.Old(balances[to]))
+transfer(to,tokens): Ensures !(VeriSol.Old(balances[to]) == 0 ) || ( VeriSol.Old(balances[msg.sender]) >= balances[to])
+transfer(to,tokens): Ensures !(to == msg.sender ) || ( VeriSol.Old(balances[msg.sender]) == balances[to])
+transfer(to,tokens): Ensures !(VeriSol.Old(balances[to]) == 0 ) || ( tokens == balances[to])
+transfer(to,tokens): Ensures !(to == msg.sender ) || ( tokens <= balances[msg.sender])
+transfer(to,tokens): Ensures !(to == msg.sender ) || ( balances[msg.sender] == balances[to])
+transfer(to,tokens): Ensures !(to == msg.sender ) || ( balances[msg.sender] == VeriSol.Old(balances[msg.sender]))
+transfer(to,tokens): Ensures !(to == msg.sender ) || ( VeriSol.Old(balances[to]) == balances[to])
+transfer(to,tokens): Ensures !(tokens > VeriSol.Old(balances[to]) && tokens == VeriSol.Old(balances[msg.sender]) ) || ( tokens != balances[msg.sender])
+transfer(to,tokens): Ensures !(tokens > VeriSol.Old(balances[to]) && tokens == VeriSol.Old(balances[msg.sender]) ) || ( balances[msg.sender] != balances[to])
+transfer(to,tokens): Ensures !(tokens > 0 ) || ( VeriSol.Old(balances[to]) != balances[to] || VeriSol.Old(balances[msg.sender]) <= VeriSol.SumMapping(balances) || VeriSol.Old(balances[msg.sender]) <= VeriSol.SumMapping(balances) || VeriSol.Old(balances[msg.sender]) >= balances[to])
+Baller: Ensures VeriSol.ContractInvariant(decimals == 18)
+Baller: Ensures VeriSol.ContractInvariant(_totalSupply == 1000000000000000000000000000000)
+Baller: Ensures VeriSol.ContractInvariant(decimals < _totalSupply)
+
+False Invariants:
+Baller: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == 1000000000000000000000000000000)
+Baller: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) > decimals)
+Baller: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == _totalSupply)
+
+ // ./gambit_out_transfer/mutants/611/verisol_test

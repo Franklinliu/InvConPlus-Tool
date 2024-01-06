@@ -1,0 +1,22 @@
+original result: 39 invariants, smt-simplified result: 18 invariants
+approve(spender,tokens):
+Requires		msg.sender != address(0)
+Ensures		tokens == allowed[msg.sender][spender]
+Ensures		VeriSol.Old(uint256(decimals)) == decimals
+Ensures		VeriSol.Old(_totalSupply) == _totalSupply
+transfer(to,tokens):
+Requires		msg.sender != address(0)
+Requires		tokens <= VeriSol.Old(balances[msg.sender])
+Ensures		balances[to] >= tokens
+Ensures		balances[to] >= VeriSol.Old(balances[to])
+Ensures		VeriSol.Old(balances[msg.sender]) >= balances[msg.sender]
+Ensures		VeriSol.Old(uint256(decimals)) == decimals
+Ensures		VeriSol.Old(_totalSupply) == _totalSupply
+Ensures		VeriSol.Old(VeriSol.SumMapping(balances)) == VeriSol.SumMapping(balances)
+NudesToken:
+Ensures		decimals == 18
+Ensures		VeriSol.SumMapping(balances) == 690000069000000000000000000
+Ensures		_totalSupply == 690000069000000000000000000
+Ensures		decimals < VeriSol.SumMapping(balances)
+Ensures		decimals < _totalSupply
+Ensures		VeriSol.SumMapping(balances) == _totalSupply

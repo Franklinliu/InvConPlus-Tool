@@ -1,0 +1,25 @@
+Invariants with True value:8
+Invariants with False value:11
+
+True Invariants:
+setApprovalForAll(to,approved): Requires msg.sender != address(0)
+setApprovalForAll(to,approved): Requires msg.sender != to
+setApprovalForAll(to,approved): Ensures approved == _operatorApprovals[msg.sender][to]
+setApprovalForAll(to,approved): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) == VeriSol.SumMapping(_ownedTokensCount)
+setApprovalForAll(to,approved): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.SumMapping(_ownedTokensCount)
+setApprovalForAll(to,approved): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= VeriSol.SumMapping(_ownedTokensCount)
+setApprovalForAll(to,approved): Ensures approved != VeriSol.Old(_operatorApprovals[msg.sender][to]) => VeriSol.Old(_operatorApprovals[msg.sender][to]) != _operatorApprovals[msg.sender][to]
+setApprovalForAll(to,approved): Ensures approved != VeriSol.Old(_operatorApprovals[msg.sender][to]) => VeriSol.Old(_operatorApprovals[msg.sender][to]) != _operatorApprovals[msg.sender][to]
+
+False Invariants:
+setApprovalForAll(to,approved): Ensures VeriSol.Old(_operatorApprovals[msg.sender][to]) == false => _operatorApprovals[msg.sender][to] == true || VeriSol.Old(_operatorApprovals[msg.sender][to]) != _operatorApprovals[msg.sender][to]
+setApprovalForAll(to,approved): Ensures _operatorApprovals[msg.sender][to] == true || VeriSol.Old(_operatorApprovals[msg.sender][to]) != _operatorApprovals[msg.sender][to]
+setApprovalForAll(to,approved): Ensures VeriSol.Old(_operatorApprovals[msg.sender][to]) == false && to != address(0) => VeriSol.Old(_operatorApprovals[msg.sender][to]) != _operatorApprovals[msg.sender][to]
+setApprovalForAll(to,approved): Ensures to != address(0) && approved != VeriSol.Old(_operatorApprovals[msg.sender][to]) => _operatorApprovals[msg.sender][to] == true
+setApprovalForAll(to,approved): Ensures to != address(0) => VeriSol.Old(_operatorApprovals[msg.sender][to]) != _operatorApprovals[msg.sender][to] || _operatorApprovals[msg.sender][to] == true
+setApprovalForAll(to,approved): Ensures VeriSol.Old(_operatorApprovals[msg.sender][to]) != _operatorApprovals[msg.sender][to] || _operatorApprovals[msg.sender][to] == true
+setApprovalForAll(to,approved): Ensures approved != VeriSol.Old(_operatorApprovals[msg.sender][to]) && approved != VeriSol.Old(_operatorApprovals[msg.sender][to]) => _operatorApprovals[msg.sender][to] == true
+setApprovalForAll(to,approved): Ensures VeriSol.Old(_operatorApprovals[msg.sender][to]) == false => _operatorApprovals[msg.sender][to] == true || VeriSol.Old(_operatorApprovals[msg.sender][to]) != _operatorApprovals[msg.sender][to]
+setApprovalForAll(to,approved): Ensures _operatorApprovals[msg.sender][to] == true || VeriSol.Old(_operatorApprovals[msg.sender][to]) != _operatorApprovals[msg.sender][to]
+setApprovalForAll(to,approved): Ensures to != address(0) => _operatorApprovals[msg.sender][to] == true || VeriSol.Old(_operatorApprovals[msg.sender][to]) != _operatorApprovals[msg.sender][to]
+setApprovalForAll(to,approved): Ensures _operatorApprovals[msg.sender][to] == true || VeriSol.Old(_operatorApprovals[msg.sender][to]) != _operatorApprovals[msg.sender][to]

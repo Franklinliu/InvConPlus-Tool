@@ -1,0 +1,93 @@
+Invariants with True value:42
+Invariants with False value:45
+
+True Invariants:
+approve(spender,tokens): Requires msg.sender != address(0)
+approve(spender,tokens): Ensures VeriSol.Old(uint256(decimals)) == decimals
+approve(spender,tokens): Ensures VeriSol.Old(uint256(decimals)) >= decimals
+approve(spender,tokens): Ensures VeriSol.Old(uint256(decimals)) <= decimals
+approve(spender,tokens): Ensures VeriSol.Old(_totalSupply) == _totalSupply
+approve(spender,tokens): Ensures VeriSol.Old(_totalSupply) >= _totalSupply
+approve(spender,tokens): Ensures VeriSol.Old(_totalSupply) <= _totalSupply
+approve(spender,tokens): Ensures tokens == allowed[msg.sender][spender]
+approve(spender,tokens): Ensures tokens >= allowed[msg.sender][spender]
+approve(spender,tokens): Ensures tokens <= allowed[msg.sender][spender]
+approve(spender,tokens): Ensures tokens >= VeriSol.Old(allowed[msg.sender][spender]) => VeriSol.Old(allowed[msg.sender][spender]) <= allowed[msg.sender][spender]
+approve(spender,tokens): Ensures tokens >= VeriSol.Old(allowed[msg.sender][spender]) => VeriSol.Old(allowed[msg.sender][spender]) <= allowed[msg.sender][spender]
+approve(spender,tokens): Ensures VeriSol.Old(allowed[msg.sender][spender]) == 0 => VeriSol.Old(allowed[msg.sender][spender]) <= allowed[msg.sender][spender]
+approve(spender,tokens): Ensures tokens > VeriSol.Old(allowed[msg.sender][spender]) => VeriSol.Old(allowed[msg.sender][spender]) <= allowed[msg.sender][spender]
+approve(spender,tokens): Ensures tokens == VeriSol.Old(allowed[msg.sender][spender]) => VeriSol.Old(allowed[msg.sender][spender]) <= allowed[msg.sender][spender]
+approve(spender,tokens): Ensures VeriSol.Old(allowed[msg.sender][spender]) == 0 => VeriSol.Old(allowed[msg.sender][spender]) <= allowed[msg.sender][spender]
+approve(spender,tokens): Ensures tokens > VeriSol.Old(allowed[msg.sender][spender]) => VeriSol.Old(allowed[msg.sender][spender]) <= allowed[msg.sender][spender]
+approve(spender,tokens): Ensures tokens > VeriSol.Old(allowed[msg.sender][spender]) => VeriSol.Old(allowed[msg.sender][spender]) < allowed[msg.sender][spender]
+approve(spender,tokens): Ensures tokens > VeriSol.Old(allowed[msg.sender][spender]) => VeriSol.Old(allowed[msg.sender][spender]) != allowed[msg.sender][spender]
+approve(spender,tokens): Ensures tokens != VeriSol.Old(allowed[msg.sender][spender]) => VeriSol.Old(allowed[msg.sender][spender]) != allowed[msg.sender][spender]
+approve(spender,tokens): Ensures tokens > VeriSol.Old(allowed[msg.sender][spender]) => VeriSol.Old(allowed[msg.sender][spender]) < allowed[msg.sender][spender]
+approve(spender,tokens): Ensures tokens > VeriSol.Old(allowed[msg.sender][spender]) => VeriSol.Old(allowed[msg.sender][spender]) != allowed[msg.sender][spender]
+approve(spender,tokens): Ensures tokens != VeriSol.Old(allowed[msg.sender][spender]) => VeriSol.Old(allowed[msg.sender][spender]) != allowed[msg.sender][spender]
+approve(spender,tokens): Ensures tokens == VeriSol.Old(allowed[msg.sender][spender]) => VeriSol.Old(allowed[msg.sender][spender]) <= allowed[msg.sender][spender]
+approve(spender,tokens): Ensures tokens == VeriSol.Old(allowed[msg.sender][spender]) => VeriSol.Old(allowed[msg.sender][spender]) == allowed[msg.sender][spender]
+approve(spender,tokens): Ensures tokens == VeriSol.Old(allowed[msg.sender][spender]) => VeriSol.Old(allowed[msg.sender][spender]) == allowed[msg.sender][spender]
+approve(spender,tokens): Ensures tokens >= VeriSol.Old(allowed[msg.sender][spender]) && tokens != VeriSol.Old(allowed[msg.sender][spender]) => VeriSol.Old(allowed[msg.sender][spender]) < allowed[msg.sender][spender]
+KUNGFUPANDA: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) > 0)
+KUNGFUPANDA: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == 1000000000000000000000000000000)
+KUNGFUPANDA: Ensures VeriSol.ContractInvariant(_totalSupply > 0)
+KUNGFUPANDA: Ensures VeriSol.ContractInvariant(_totalSupply == 1000000000000000000000000000000)
+KUNGFUPANDA: Ensures VeriSol.ContractInvariant(decimals > 0)
+KUNGFUPANDA: Ensures VeriSol.ContractInvariant(decimals == 18)
+KUNGFUPANDA: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == _totalSupply)
+KUNGFUPANDA: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) >= _totalSupply)
+KUNGFUPANDA: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) <= _totalSupply)
+KUNGFUPANDA: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) >= decimals)
+KUNGFUPANDA: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) > decimals)
+KUNGFUPANDA: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) != decimals)
+KUNGFUPANDA: Ensures VeriSol.ContractInvariant(_totalSupply >= decimals)
+KUNGFUPANDA: Ensures VeriSol.ContractInvariant(_totalSupply > decimals)
+KUNGFUPANDA: Ensures VeriSol.ContractInvariant(_totalSupply != decimals)
+
+False Invariants:
+approve(spender,tokens): Ensures spender != address(0) => allowed[msg.sender][spender] > 0 || allowed[msg.sender][spender] == 115792089237316195423570985008687907853269984665640564039457584007913129639935
+approve(spender,tokens): Ensures allowed[msg.sender][spender] > 0 || allowed[msg.sender][spender] == 115792089237316195423570985008687907853269984665640564039457584007913129639935
+approve(spender,tokens): Ensures spender != address(0) => allowed[msg.sender][spender] == 115792089237316195423570985008687907853269984665640564039457584007913129639935 || VeriSol.Old(allowed[msg.sender][spender]) <= allowed[msg.sender][spender]
+approve(spender,tokens): Ensures allowed[msg.sender][spender] == 115792089237316195423570985008687907853269984665640564039457584007913129639935 || VeriSol.Old(allowed[msg.sender][spender]) <= allowed[msg.sender][spender]
+approve(spender,tokens): Ensures spender != address(0) => VeriSol.Old(allowed[msg.sender][spender]) <= allowed[msg.sender][spender] || VeriSol.Old(allowed[msg.sender][spender]) < allowed[msg.sender][spender]
+approve(spender,tokens): Ensures VeriSol.Old(allowed[msg.sender][spender]) <= allowed[msg.sender][spender] || VeriSol.Old(allowed[msg.sender][spender]) < allowed[msg.sender][spender]
+approve(spender,tokens): Ensures spender != address(0) => VeriSol.Old(allowed[msg.sender][spender]) < allowed[msg.sender][spender] || VeriSol.Old(allowed[msg.sender][spender]) != allowed[msg.sender][spender]
+approve(spender,tokens): Ensures VeriSol.Old(allowed[msg.sender][spender]) < allowed[msg.sender][spender] || VeriSol.Old(allowed[msg.sender][spender]) != allowed[msg.sender][spender]
+approve(spender,tokens): Ensures spender != address(0) => VeriSol.Old(allowed[msg.sender][spender]) != allowed[msg.sender][spender] || allowed[msg.sender][spender] != 115792089237316195423570985008687907853269984665640564039457584007913129639935
+approve(spender,tokens): Ensures VeriSol.Old(allowed[msg.sender][spender]) != allowed[msg.sender][spender] || allowed[msg.sender][spender] != 115792089237316195423570985008687907853269984665640564039457584007913129639935
+approve(spender,tokens): Ensures spender != address(0) => allowed[msg.sender][spender] != 115792089237316195423570985008687907853269984665640564039457584007913129639935 || VeriSol.Old(allowed[msg.sender][spender]) == allowed[msg.sender][spender]
+approve(spender,tokens): Ensures allowed[msg.sender][spender] != 115792089237316195423570985008687907853269984665640564039457584007913129639935 || VeriSol.Old(allowed[msg.sender][spender]) == allowed[msg.sender][spender]
+approve(spender,tokens): Ensures spender != address(0) && msg.sender != spender => VeriSol.Old(allowed[msg.sender][spender]) == allowed[msg.sender][spender]
+approve(spender,tokens): Ensures msg.sender != spender && tokens >= VeriSol.Old(allowed[msg.sender][spender]) => allowed[msg.sender][spender] > 0
+approve(spender,tokens): Ensures msg.sender != spender && tokens >= VeriSol.Old(allowed[msg.sender][spender]) => allowed[msg.sender][spender] == 115792089237316195423570985008687907853269984665640564039457584007913129639935
+approve(spender,tokens): Ensures msg.sender != spender => VeriSol.Old(allowed[msg.sender][spender]) <= allowed[msg.sender][spender] || allowed[msg.sender][spender] > 0
+approve(spender,tokens): Ensures VeriSol.Old(allowed[msg.sender][spender]) <= allowed[msg.sender][spender] || allowed[msg.sender][spender] > 0
+approve(spender,tokens): Ensures msg.sender != spender => VeriSol.Old(allowed[msg.sender][spender]) < allowed[msg.sender][spender] || allowed[msg.sender][spender] == 115792089237316195423570985008687907853269984665640564039457584007913129639935
+approve(spender,tokens): Ensures VeriSol.Old(allowed[msg.sender][spender]) < allowed[msg.sender][spender] || allowed[msg.sender][spender] == 115792089237316195423570985008687907853269984665640564039457584007913129639935
+approve(spender,tokens): Ensures msg.sender != spender && VeriSol.Old(allowed[msg.sender][spender]) == 0 => allowed[msg.sender][spender] != 115792089237316195423570985008687907853269984665640564039457584007913129639935
+approve(spender,tokens): Ensures msg.sender != spender && VeriSol.Old(allowed[msg.sender][spender]) == 0 => VeriSol.Old(allowed[msg.sender][spender]) == allowed[msg.sender][spender]
+approve(spender,tokens): Ensures tokens >= VeriSol.Old(allowed[msg.sender][spender]) && tokens > VeriSol.Old(allowed[msg.sender][spender]) => allowed[msg.sender][spender] > 0
+approve(spender,tokens): Ensures tokens >= VeriSol.Old(allowed[msg.sender][spender]) && tokens > VeriSol.Old(allowed[msg.sender][spender]) => allowed[msg.sender][spender] == 115792089237316195423570985008687907853269984665640564039457584007913129639935
+approve(spender,tokens): Ensures tokens >= VeriSol.Old(allowed[msg.sender][spender]) => VeriSol.Old(allowed[msg.sender][spender]) != allowed[msg.sender][spender] || VeriSol.Old(allowed[msg.sender][spender]) < allowed[msg.sender][spender]
+approve(spender,tokens): Ensures VeriSol.Old(allowed[msg.sender][spender]) != allowed[msg.sender][spender] || VeriSol.Old(allowed[msg.sender][spender]) < allowed[msg.sender][spender]
+approve(spender,tokens): Ensures tokens >= VeriSol.Old(allowed[msg.sender][spender]) => allowed[msg.sender][spender] != 115792089237316195423570985008687907853269984665640564039457584007913129639935 || VeriSol.Old(allowed[msg.sender][spender]) != allowed[msg.sender][spender]
+approve(spender,tokens): Ensures allowed[msg.sender][spender] != 115792089237316195423570985008687907853269984665640564039457584007913129639935 || VeriSol.Old(allowed[msg.sender][spender]) != allowed[msg.sender][spender]
+approve(spender,tokens): Ensures tokens >= VeriSol.Old(allowed[msg.sender][spender]) && spender == address(0) => VeriSol.Old(allowed[msg.sender][spender]) == allowed[msg.sender][spender]
+approve(spender,tokens): Ensures spender != address(0) && msg.sender == spender => allowed[msg.sender][spender] > 0
+approve(spender,tokens): Ensures spender != address(0) && VeriSol.Old(allowed[msg.sender][spender]) != 0 => allowed[msg.sender][spender] == 115792089237316195423570985008687907853269984665640564039457584007913129639935
+approve(spender,tokens): Ensures msg.sender != spender && tokens == VeriSol.Old(allowed[msg.sender][spender]) => allowed[msg.sender][spender] == 115792089237316195423570985008687907853269984665640564039457584007913129639935
+approve(spender,tokens): Ensures tokens >= VeriSol.Old(allowed[msg.sender][spender]) => allowed[msg.sender][spender] == 115792089237316195423570985008687907853269984665640564039457584007913129639935 || VeriSol.Old(allowed[msg.sender][spender]) == allowed[msg.sender][spender]
+approve(spender,tokens): Ensures allowed[msg.sender][spender] == 115792089237316195423570985008687907853269984665640564039457584007913129639935 || VeriSol.Old(allowed[msg.sender][spender]) == allowed[msg.sender][spender]
+approve(spender,tokens): Ensures VeriSol.Old(allowed[msg.sender][spender]) == 0 => allowed[msg.sender][spender] == 115792089237316195423570985008687907853269984665640564039457584007913129639935 || VeriSol.Old(allowed[msg.sender][spender]) == allowed[msg.sender][spender]
+approve(spender,tokens): Ensures allowed[msg.sender][spender] == 115792089237316195423570985008687907853269984665640564039457584007913129639935 || VeriSol.Old(allowed[msg.sender][spender]) == allowed[msg.sender][spender]
+approve(spender,tokens): Ensures tokens > VeriSol.Old(allowed[msg.sender][spender]) => allowed[msg.sender][spender] == 115792089237316195423570985008687907853269984665640564039457584007913129639935 || VeriSol.Old(allowed[msg.sender][spender]) == allowed[msg.sender][spender]
+approve(spender,tokens): Ensures allowed[msg.sender][spender] == 115792089237316195423570985008687907853269984665640564039457584007913129639935 || VeriSol.Old(allowed[msg.sender][spender]) == allowed[msg.sender][spender]
+approve(spender,tokens): Ensures tokens != VeriSol.Old(allowed[msg.sender][spender]) => allowed[msg.sender][spender] == 115792089237316195423570985008687907853269984665640564039457584007913129639935 || VeriSol.Old(allowed[msg.sender][spender]) == allowed[msg.sender][spender]
+approve(spender,tokens): Ensures allowed[msg.sender][spender] == 115792089237316195423570985008687907853269984665640564039457584007913129639935 || VeriSol.Old(allowed[msg.sender][spender]) == allowed[msg.sender][spender]
+approve(spender,tokens): Ensures spender == address(0) => allowed[msg.sender][spender] == 115792089237316195423570985008687907853269984665640564039457584007913129639935 || VeriSol.Old(allowed[msg.sender][spender]) == allowed[msg.sender][spender]
+approve(spender,tokens): Ensures allowed[msg.sender][spender] == 115792089237316195423570985008687907853269984665640564039457584007913129639935 || VeriSol.Old(allowed[msg.sender][spender]) == allowed[msg.sender][spender]
+approve(spender,tokens): Ensures msg.sender == spender => allowed[msg.sender][spender] == 115792089237316195423570985008687907853269984665640564039457584007913129639935 || VeriSol.Old(allowed[msg.sender][spender]) == allowed[msg.sender][spender]
+approve(spender,tokens): Ensures allowed[msg.sender][spender] == 115792089237316195423570985008687907853269984665640564039457584007913129639935 || VeriSol.Old(allowed[msg.sender][spender]) == allowed[msg.sender][spender]
+approve(spender,tokens): Ensures VeriSol.Old(allowed[msg.sender][spender]) != 0 => allowed[msg.sender][spender] == 115792089237316195423570985008687907853269984665640564039457584007913129639935 || VeriSol.Old(allowed[msg.sender][spender]) == allowed[msg.sender][spender]
+approve(spender,tokens): Ensures allowed[msg.sender][spender] == 115792089237316195423570985008687907853269984665640564039457584007913129639935 || VeriSol.Old(allowed[msg.sender][spender]) == allowed[msg.sender][spender]

@@ -1,0 +1,23 @@
+Invariants with True value:11
+Invariants with False value:4
+
+True Invariants:
+approve(spender,tokens): Requires msg.sender != address(0)
+approve(spender,tokens): Ensures decimals == VeriSol.Old(uint256(decimals))
+approve(spender,tokens): Ensures _totalSupply == VeriSol.Old(_totalSupply)
+approve(spender,tokens): Ensures tokens == allowed[msg.sender][spender]
+transfer(to,tokens): Requires msg.sender != address(0)
+transfer(to,tokens): Ensures decimals == VeriSol.Old(uint256(decimals))
+transfer(to,tokens): Ensures _totalSupply == VeriSol.Old(_totalSupply)
+EnergyEfficientEthereum: Ensures VeriSol.ContractInvariant(_totalSupply == 1000000000000000000000000000)
+EnergyEfficientEthereum: Ensures VeriSol.ContractInvariant(decimals == 18)
+EnergyEfficientEthereum: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) <= _totalSupply)
+EnergyEfficientEthereum: Ensures VeriSol.ContractInvariant(_totalSupply > decimals)
+
+False Invariants:
+transfer(to,tokens): Ensures tokens <= balances[to]
+transfer(to,tokens): Ensures balances[to] >= VeriSol.Old(balances[to])
+EnergyEfficientEthereum: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) > 0)
+EnergyEfficientEthereum: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) > decimals)
+
+ // ./gambit_out_transfer/mutants/1113/verisol_test

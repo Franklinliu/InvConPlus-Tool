@@ -1,0 +1,21 @@
+Invariants with True value:12
+Invariants with False value:1
+
+True Invariants:
+approve(spender,tokens): Requires msg.sender != address(0)
+approve(spender,tokens): Ensures _totalSupply == VeriSol.Old(_totalSupply)
+approve(spender,tokens): Ensures decimals == VeriSol.Old(uint256(decimals))
+approve(spender,tokens): Ensures !(VeriSol.Old(allowed[msg.sender][spender]) == 0 ) || ( allowed[msg.sender][spender] >= VeriSol.Old(allowed[msg.sender][spender]))
+approve(spender,tokens): Ensures !(VeriSol.Old(allowed[msg.sender][spender]) == tokens ) || ( allowed[msg.sender][spender] == VeriSol.Old(allowed[msg.sender][spender]))
+approve(spender,tokens): Ensures !(VeriSol.Old(allowed[msg.sender][spender]) == 0 ) || ( allowed[msg.sender][spender] != VeriSol.Old(allowed[msg.sender][spender]) || allowed[msg.sender][spender] != 115792089237316195423570985008687907853269984665640564039457584007913129639935)
+AlphaWolf: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == 1000000000000000000000000000000)
+AlphaWolf: Ensures VeriSol.ContractInvariant(_totalSupply == 1000000000000000000000000000000)
+AlphaWolf: Ensures VeriSol.ContractInvariant(decimals == 18)
+AlphaWolf: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == _totalSupply)
+AlphaWolf: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) > decimals)
+AlphaWolf: Ensures VeriSol.ContractInvariant(_totalSupply > decimals)
+
+False Invariants:
+approve(spender,tokens): Ensures allowed[msg.sender][spender] == tokens
+
+ // ./gambit_out_approve/mutants/145/verisol_test

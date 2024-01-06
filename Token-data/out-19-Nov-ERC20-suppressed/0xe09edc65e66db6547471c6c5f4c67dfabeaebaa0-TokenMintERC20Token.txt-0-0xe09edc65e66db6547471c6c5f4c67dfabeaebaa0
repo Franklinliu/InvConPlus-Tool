@@ -1,0 +1,25 @@
+original result: 30 invariants, smt-simplified result: 20 invariants
+transfer(recipient,amount):
+Requires		msg.sender != address(0)
+Requires		recipient != address(0)
+Requires		amount <= VeriSol.Old(_balances[msg.sender])
+Ensures		VeriSol.Old(_totalSupply) == _totalSupply
+Ensures		VeriSol.SumMapping(_balances) == VeriSol.Old(VeriSol.SumMapping(_balances))
+Ensures		VeriSol.Old(_balances[recipient]) <= _balances[recipient]
+Ensures		amount <= _balances[recipient]
+Ensures		VeriSol.Old(_balances[msg.sender]) >= _balances[msg.sender]
+approve(spender,value):
+Requires		msg.sender != address(0)
+Requires		spender != address(0)
+Ensures		_allowances[msg.sender][spender] == value
+Ensures		VeriSol.Old(_totalSupply) == _totalSupply
+burn(value):
+Requires		msg.sender != address(0)
+Requires		VeriSol.Old(_totalSupply) >= value
+Requires		value <= VeriSol.Old(_balances[msg.sender])
+Ensures		VeriSol.Old(_totalSupply) >= _totalSupply
+Ensures		_decimals == VeriSol.Old(uint256(_decimals))
+Ensures		VeriSol.SumMapping(_balances) <= VeriSol.Old(VeriSol.SumMapping(_balances))
+Ensures		VeriSol.Old(_balances[msg.sender]) >= _balances[msg.sender]
+TokenMintERC20Token:
+Ensures		VeriSol.SumMapping(_balances) <= _totalSupply

@@ -1,0 +1,33 @@
+Invariants with True value:7
+Invariants with False value:20
+
+True Invariants:
+setApprovalForAll(to,approved): Requires msg.sender != address(0)
+setApprovalForAll(to,approved): Requires msg.sender != to
+transferFrom(from,to,tokenId): Requires from != address(0)
+transferFrom(from,to,tokenId): Requires msg.sender != address(0)
+transferFrom(from,to,tokenId): Requires to != address(0)
+transferFrom(from,to,tokenId): Ensures _tokenOwner[tokenId] != address(0)
+transferFrom(from,to,tokenId): Ensures _tokenOwner[tokenId] == to
+
+False Invariants:
+transferFrom(from,to,tokenId): Requires VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0)
+transferFrom(from,to,tokenId): Requires tokenId > 0
+transferFrom(from,to,tokenId): Requires from != VeriSol.Old(address(_tokenApprovals[tokenId]))
+transferFrom(from,to,tokenId): Requires from != to
+transferFrom(from,to,tokenId): Requires msg.sender != VeriSol.Old(address(_tokenApprovals[tokenId]))
+transferFrom(from,to,tokenId): Requires msg.sender != to
+transferFrom(from,to,tokenId): Requires VeriSol.Old(address(_tokenApprovals[tokenId])) != to
+transferFrom(from,to,tokenId): Requires VeriSol.Old(address(_tokenOwner[tokenId])) != to
+transferFrom(from,to,tokenId): Ensures address(_tokenApprovals[tokenId]) == address(0)
+transferFrom(from,to,tokenId): Ensures from != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures from != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures msg.sender != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures msg.sender != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures _tokenOwner[tokenId] != VeriSol.Old(address(_tokenApprovals[tokenId]))
+transferFrom(from,to,tokenId): Ensures _tokenOwner[tokenId] != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures _tokenOwner[tokenId] != VeriSol.Old(address(_tokenOwner[tokenId]))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures _tokenApprovals[tokenId] != to
+setApprovalForAll(to,approved): Requires approved == true
+setApprovalForAll(to,approved): Requires to != address(0)

@@ -1,0 +1,773 @@
+Invariants with True value:244
+Invariants with False value:523
+
+True Invariants:
+setApprovalForAll(to,approved): Requires msg.sender != address(0)
+setApprovalForAll(to,approved): Requires to != msg.sender
+setApprovalForAll(to,approved): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) == VeriSol.SumMapping(_ownedTokensCount)
+setApprovalForAll(to,approved): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.SumMapping(_ownedTokensCount)
+setApprovalForAll(to,approved): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= VeriSol.SumMapping(_ownedTokensCount)
+setApprovalForAll(to,approved): Ensures _operatorApprovals[msg.sender][to] == approved
+setApprovalForAll(to,approved): Ensures VeriSol.Old(_operatorApprovals[msg.sender][to]) != approved => VeriSol.Old(_operatorApprovals[msg.sender][to]) != _operatorApprovals[msg.sender][to]
+setApprovalForAll(to,approved): Ensures VeriSol.Old(_operatorApprovals[msg.sender][to]) != approved => VeriSol.Old(_operatorApprovals[msg.sender][to]) != _operatorApprovals[msg.sender][to]
+transferFrom(from,to,tokenId): Requires from != address(0)
+transferFrom(from,to,tokenId): Requires to != address(0)
+transferFrom(from,to,tokenId): Requires msg.sender != address(0)
+transferFrom(from,to,tokenId): Ensures _tokenOwner[tokenId] != address(0)
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[to] > 0
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] <= VeriSol.Old(_ownedTokensCount[from])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures to == _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[to] >= VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => address(_tokenApprovals[tokenId]) == address(0)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => from != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => to != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => VeriSol.Old(address(_tokenApprovals[tokenId])) != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => VeriSol.Old(address(_tokenApprovals[tokenId])) == _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _tokenOwner[tokenId] != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _tokenApprovals[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] == 0
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[to] == 1
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => address(_tokenApprovals[tokenId]) == address(0)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => VeriSol.SumMapping(_ownedTokensCount) > 0
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] <= VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] < VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] != VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] == _ownedTokensCount[to] - 1
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] <= _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] < _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] != _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] <= tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] < tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] != tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] == VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] >= VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] <= VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => from != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => from != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => to != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => VeriSol.Old(address(_tokenApprovals[tokenId])) != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => VeriSol.Old(address(_tokenApprovals[tokenId])) == _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _tokenOwner[tokenId] != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _tokenOwner[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _tokenOwner[tokenId] != VeriSol.Old(address(_tokenOwner[tokenId]))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[to] >= VeriSol.Old(_ownedTokensCount[from])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[to] <= tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[to] < tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[to] != tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[to] == VeriSol.Old(_ownedTokensCount[to]) + 1
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[to] > VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[to] != VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[to] <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[to] < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[to] != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _tokenApprovals[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => VeriSol.Old(_ownedTokensCount[from]) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => VeriSol.Old(_ownedTokensCount[from]) < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => VeriSol.Old(_ownedTokensCount[from]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => tokenId >= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => tokenId > VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => tokenId != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => VeriSol.Old(_ownedTokensCount[to]) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => VeriSol.Old(_ownedTokensCount[to]) < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => VeriSol.Old(_ownedTokensCount[to]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != to => from != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures from != to => from != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures from != to => _tokenOwner[tokenId] != VeriSol.Old(address(_tokenOwner[tokenId]))
+transferFrom(from,to,tokenId): Ensures from != to => _ownedTokensCount[to] == VeriSol.Old(_ownedTokensCount[to]) + 1
+transferFrom(from,to,tokenId): Ensures from != to => _ownedTokensCount[to] > VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures from != to => _ownedTokensCount[to] != VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) => address(_tokenApprovals[tokenId]) == address(0)
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) => from != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) => to != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) => _tokenOwner[tokenId] != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) => _tokenApprovals[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) => VeriSol.SumMapping(_ownedTokensCount) > 0
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] <= VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) => VeriSol.Old(_ownedTokensCount[from]) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) => VeriSol.SumMapping(_ownedTokensCount) > 0
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] <= VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] < VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] != VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) => VeriSol.Old(_ownedTokensCount[from]) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) => VeriSol.Old(_ownedTokensCount[from]) < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) => VeriSol.Old(_ownedTokensCount[from]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => VeriSol.Old(_ownedTokensCount[from]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => tokenId >= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) < tokenId => tokenId >= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) < tokenId => tokenId > VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) < tokenId => tokenId != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != tokenId => tokenId != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[to]) => VeriSol.SumMapping(_ownedTokensCount) > 0
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(_ownedTokensCount[to]) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[to]) => VeriSol.SumMapping(_ownedTokensCount) > 0
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(_ownedTokensCount[to]) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(_ownedTokensCount[to]) < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(_ownedTokensCount[to]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(_ownedTokensCount[to]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures to != VeriSol.Old(address(_tokenApprovals[tokenId])) => from != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures to != VeriSol.Old(address(_tokenApprovals[tokenId])) => VeriSol.Old(address(_tokenApprovals[tokenId])) != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures to != msg.sender => _tokenOwner[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures to != msg.sender => _tokenApprovals[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures to != VeriSol.Old(address(_tokenOwner[tokenId])) => from != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures to != VeriSol.Old(address(_tokenOwner[tokenId])) => from != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures to != VeriSol.Old(address(_tokenOwner[tokenId])) => _tokenOwner[tokenId] != VeriSol.Old(address(_tokenOwner[tokenId]))
+transferFrom(from,to,tokenId): Ensures to != VeriSol.Old(address(_tokenOwner[tokenId])) => _ownedTokensCount[to] == VeriSol.Old(_ownedTokensCount[to]) + 1
+transferFrom(from,to,tokenId): Ensures to != VeriSol.Old(address(_tokenOwner[tokenId])) => _ownedTokensCount[to] > VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures to != VeriSol.Old(address(_tokenOwner[tokenId])) => _ownedTokensCount[to] != VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[from]) <= tokenId => _ownedTokensCount[from] <= tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[from]) < tokenId => _ownedTokensCount[from] <= tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[from]) < tokenId => _ownedTokensCount[from] < tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[from]) < tokenId => _ownedTokensCount[from] != tokenId
+transferFrom(from,to,tokenId): Ensures tokenId > VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] <= tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] == 0
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[to] == 1
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => address(_tokenApprovals[tokenId]) == address(0)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => address(_tokenApprovals[tokenId]) == address(0)
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) => address(_tokenApprovals[tokenId]) == address(0)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => VeriSol.SumMapping(_ownedTokensCount) > 0
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) => VeriSol.SumMapping(_ownedTokensCount) > 0
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) => VeriSol.SumMapping(_ownedTokensCount) > 0
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[to]) => VeriSol.SumMapping(_ownedTokensCount) > 0
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[to]) => VeriSol.SumMapping(_ownedTokensCount) > 0
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] <= VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] <= VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] <= VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] < VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] < VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] != VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] != VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] == _ownedTokensCount[to] - 1
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] <= _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] < _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] != _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] <= tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[from]) <= tokenId => _ownedTokensCount[from] <= tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[from]) < tokenId => _ownedTokensCount[from] <= tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] < tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[from]) < tokenId => _ownedTokensCount[from] < tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] != tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[from]) < tokenId => _ownedTokensCount[from] != tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] == VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] >= VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] <= VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[from] != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => from != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures from != to => from != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures to != VeriSol.Old(address(_tokenOwner[tokenId])) => from != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => from != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => from != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures from != to => from != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) => from != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures to != VeriSol.Old(address(_tokenApprovals[tokenId])) => from != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures to != VeriSol.Old(address(_tokenOwner[tokenId])) => from != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => to != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => to != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) => to != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => VeriSol.Old(address(_tokenApprovals[tokenId])) != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => VeriSol.Old(address(_tokenApprovals[tokenId])) != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures to != VeriSol.Old(address(_tokenApprovals[tokenId])) => VeriSol.Old(address(_tokenApprovals[tokenId])) != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => VeriSol.Old(address(_tokenApprovals[tokenId])) == _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => VeriSol.Old(address(_tokenApprovals[tokenId])) == _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _tokenOwner[tokenId] != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _tokenOwner[tokenId] != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) => _tokenOwner[tokenId] != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _tokenOwner[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures to != msg.sender => _tokenOwner[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _tokenOwner[tokenId] != VeriSol.Old(address(_tokenOwner[tokenId]))
+transferFrom(from,to,tokenId): Ensures from != to => _tokenOwner[tokenId] != VeriSol.Old(address(_tokenOwner[tokenId]))
+transferFrom(from,to,tokenId): Ensures to != VeriSol.Old(address(_tokenOwner[tokenId])) => _tokenOwner[tokenId] != VeriSol.Old(address(_tokenOwner[tokenId]))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[to] >= VeriSol.Old(_ownedTokensCount[from])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[to] <= tokenId
+transferFrom(from,to,tokenId): Ensures tokenId > VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] <= tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[to] < tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[to] != tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[to] == VeriSol.Old(_ownedTokensCount[to]) + 1
+transferFrom(from,to,tokenId): Ensures from != to => _ownedTokensCount[to] == VeriSol.Old(_ownedTokensCount[to]) + 1
+transferFrom(from,to,tokenId): Ensures to != VeriSol.Old(address(_tokenOwner[tokenId])) => _ownedTokensCount[to] == VeriSol.Old(_ownedTokensCount[to]) + 1
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[to] > VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures from != to => _ownedTokensCount[to] > VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures to != VeriSol.Old(address(_tokenOwner[tokenId])) => _ownedTokensCount[to] > VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[to] != VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures from != to => _ownedTokensCount[to] != VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures to != VeriSol.Old(address(_tokenOwner[tokenId])) => _ownedTokensCount[to] != VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[to] <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[to] < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _ownedTokensCount[to] != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _tokenApprovals[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => _tokenApprovals[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) => _tokenApprovals[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures to != msg.sender => _tokenApprovals[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => VeriSol.Old(_ownedTokensCount[from]) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) => VeriSol.Old(_ownedTokensCount[from]) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) => VeriSol.Old(_ownedTokensCount[from]) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => VeriSol.Old(_ownedTokensCount[from]) < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) => VeriSol.Old(_ownedTokensCount[from]) < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => VeriSol.Old(_ownedTokensCount[from]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) => VeriSol.Old(_ownedTokensCount[from]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => VeriSol.Old(_ownedTokensCount[from]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => tokenId >= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => tokenId >= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) < tokenId => tokenId >= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => tokenId > VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) < tokenId => tokenId > VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => tokenId != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) < tokenId => tokenId != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != tokenId => tokenId != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => VeriSol.Old(_ownedTokensCount[to]) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(_ownedTokensCount[to]) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(_ownedTokensCount[to]) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => VeriSol.Old(_ownedTokensCount[to]) < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(_ownedTokensCount[to]) < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) == 0 => VeriSol.Old(_ownedTokensCount[to]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(_ownedTokensCount[to]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(_ownedTokensCount[to]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(_ownedTokensCount[to]) <= VeriSol.SumMapping(_ownedTokensCount)
+
+False Invariants:
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _ownedTokensCount[from] == 0 || _ownedTokensCount[to] == 1
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] == 0 || _ownedTokensCount[to] == 1
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _ownedTokensCount[to] == 1 || VeriSol.SumMapping(_ownedTokensCount) > 0
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[to] == 1 || VeriSol.SumMapping(_ownedTokensCount) > 0
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => VeriSol.SumMapping(_ownedTokensCount) > 0 || _ownedTokensCount[from] <= VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures VeriSol.SumMapping(_ownedTokensCount) > 0 || _ownedTokensCount[from] <= VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _ownedTokensCount[from] <= VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) || _ownedTokensCount[from] < VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] <= VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) || _ownedTokensCount[from] < VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _ownedTokensCount[from] < VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) || _ownedTokensCount[from] != VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] < VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) || _ownedTokensCount[from] != VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _ownedTokensCount[from] != VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) || _ownedTokensCount[from] == _ownedTokensCount[to] - 1
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] != VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) || _ownedTokensCount[from] == _ownedTokensCount[to] - 1
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _ownedTokensCount[from] == _ownedTokensCount[to] - 1 || _ownedTokensCount[from] <= _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] == _ownedTokensCount[to] - 1 || _ownedTokensCount[from] <= _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _ownedTokensCount[from] <= _ownedTokensCount[to] || _ownedTokensCount[from] < _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] <= _ownedTokensCount[to] || _ownedTokensCount[from] < _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _ownedTokensCount[from] < _ownedTokensCount[to] || _ownedTokensCount[from] != _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] < _ownedTokensCount[to] || _ownedTokensCount[from] != _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _ownedTokensCount[from] != _ownedTokensCount[to] || _ownedTokensCount[from] <= tokenId
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] != _ownedTokensCount[to] || _ownedTokensCount[from] <= tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _ownedTokensCount[from] <= tokenId || _ownedTokensCount[from] < tokenId
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] <= tokenId || _ownedTokensCount[from] < tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _ownedTokensCount[from] < tokenId || _ownedTokensCount[from] != tokenId
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] < tokenId || _ownedTokensCount[from] != tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _ownedTokensCount[from] != tokenId || _ownedTokensCount[from] == VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] != tokenId || _ownedTokensCount[from] == VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _ownedTokensCount[from] == VeriSol.Old(_ownedTokensCount[to]) || _ownedTokensCount[from] >= VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] == VeriSol.Old(_ownedTokensCount[to]) || _ownedTokensCount[from] >= VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _ownedTokensCount[from] <= VeriSol.Old(_ownedTokensCount[to]) || _ownedTokensCount[from] <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] <= VeriSol.Old(_ownedTokensCount[to]) || _ownedTokensCount[from] <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _ownedTokensCount[from] <= VeriSol.SumMapping(_ownedTokensCount) || _ownedTokensCount[from] < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] <= VeriSol.SumMapping(_ownedTokensCount) || _ownedTokensCount[from] < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _ownedTokensCount[from] < VeriSol.SumMapping(_ownedTokensCount) || _ownedTokensCount[from] != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] < VeriSol.SumMapping(_ownedTokensCount) || _ownedTokensCount[from] != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _ownedTokensCount[from] != VeriSol.SumMapping(_ownedTokensCount) || from != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] != VeriSol.SumMapping(_ownedTokensCount) || from != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => from != _tokenOwner[tokenId] || VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures from != _tokenOwner[tokenId] || VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= _ownedTokensCount[to] || VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= _ownedTokensCount[to] || VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > _ownedTokensCount[to] || VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > _ownedTokensCount[to] || VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != _ownedTokensCount[to] || _tokenOwner[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != _ownedTokensCount[to] || _tokenOwner[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _tokenOwner[tokenId] != msg.sender || _tokenOwner[tokenId] != VeriSol.Old(address(_tokenOwner[tokenId]))
+transferFrom(from,to,tokenId): Ensures _tokenOwner[tokenId] != msg.sender || _tokenOwner[tokenId] != VeriSol.Old(address(_tokenOwner[tokenId]))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _ownedTokensCount[to] >= VeriSol.Old(_ownedTokensCount[from]) || _ownedTokensCount[to] <= tokenId
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[to] >= VeriSol.Old(_ownedTokensCount[from]) || _ownedTokensCount[to] <= tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _ownedTokensCount[to] <= tokenId || _ownedTokensCount[to] < tokenId
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[to] <= tokenId || _ownedTokensCount[to] < tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _ownedTokensCount[to] < tokenId || _ownedTokensCount[to] != tokenId
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[to] < tokenId || _ownedTokensCount[to] != tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _ownedTokensCount[to] != tokenId || _ownedTokensCount[to] == VeriSol.Old(_ownedTokensCount[to]) + 1
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[to] != tokenId || _ownedTokensCount[to] == VeriSol.Old(_ownedTokensCount[to]) + 1
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _ownedTokensCount[to] == VeriSol.Old(_ownedTokensCount[to]) + 1 || _ownedTokensCount[to] > VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[to] == VeriSol.Old(_ownedTokensCount[to]) + 1 || _ownedTokensCount[to] > VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _ownedTokensCount[to] > VeriSol.Old(_ownedTokensCount[to]) || _ownedTokensCount[to] != VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[to] > VeriSol.Old(_ownedTokensCount[to]) || _ownedTokensCount[to] != VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _ownedTokensCount[to] != VeriSol.Old(_ownedTokensCount[to]) || _ownedTokensCount[to] <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[to] != VeriSol.Old(_ownedTokensCount[to]) || _ownedTokensCount[to] <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _ownedTokensCount[to] <= VeriSol.SumMapping(_ownedTokensCount) || _ownedTokensCount[to] < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[to] <= VeriSol.SumMapping(_ownedTokensCount) || _ownedTokensCount[to] < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _ownedTokensCount[to] < VeriSol.SumMapping(_ownedTokensCount) || _ownedTokensCount[to] != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[to] < VeriSol.SumMapping(_ownedTokensCount) || _ownedTokensCount[to] != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _ownedTokensCount[to] != VeriSol.SumMapping(_ownedTokensCount) || VeriSol.Old(_ownedTokensCount[from]) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[to] != VeriSol.SumMapping(_ownedTokensCount) || VeriSol.Old(_ownedTokensCount[from]) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => VeriSol.Old(_ownedTokensCount[from]) <= VeriSol.SumMapping(_ownedTokensCount) || VeriSol.Old(_ownedTokensCount[from]) < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[from]) <= VeriSol.SumMapping(_ownedTokensCount) || VeriSol.Old(_ownedTokensCount[from]) < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => VeriSol.Old(_ownedTokensCount[from]) < VeriSol.SumMapping(_ownedTokensCount) || VeriSol.Old(_ownedTokensCount[from]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[from]) < VeriSol.SumMapping(_ownedTokensCount) || VeriSol.Old(_ownedTokensCount[from]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => VeriSol.Old(_ownedTokensCount[from]) != VeriSol.SumMapping(_ownedTokensCount) || tokenId >= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[from]) != VeriSol.SumMapping(_ownedTokensCount) || tokenId >= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => tokenId >= VeriSol.SumMapping(_ownedTokensCount) || tokenId > VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures tokenId >= VeriSol.SumMapping(_ownedTokensCount) || tokenId > VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => tokenId > VeriSol.SumMapping(_ownedTokensCount) || tokenId != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures tokenId > VeriSol.SumMapping(_ownedTokensCount) || tokenId != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => tokenId != VeriSol.SumMapping(_ownedTokensCount) || VeriSol.Old(_ownedTokensCount[to]) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures tokenId != VeriSol.SumMapping(_ownedTokensCount) || VeriSol.Old(_ownedTokensCount[to]) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => VeriSol.Old(_ownedTokensCount[to]) <= VeriSol.SumMapping(_ownedTokensCount) || VeriSol.Old(_ownedTokensCount[to]) < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) <= VeriSol.SumMapping(_ownedTokensCount) || VeriSol.Old(_ownedTokensCount[to]) < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => VeriSol.Old(_ownedTokensCount[to]) < VeriSol.SumMapping(_ownedTokensCount) || VeriSol.Old(_ownedTokensCount[to]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) < VeriSol.SumMapping(_ownedTokensCount) || VeriSol.Old(_ownedTokensCount[to]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) && tokenId > 0 => VeriSol.Old(_ownedTokensCount[to]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from != to => _ownedTokensCount[from] == 0
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from != to => _ownedTokensCount[to] == 1
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from != to => address(_tokenApprovals[tokenId]) == address(0)
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from != to => VeriSol.SumMapping(_ownedTokensCount) > 0
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from != to => _ownedTokensCount[from] <= VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from != to => _ownedTokensCount[from] < VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from != to => _ownedTokensCount[from] != VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from != to => _ownedTokensCount[from] == _ownedTokensCount[to] - 1
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from != to => _ownedTokensCount[from] <= _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from != to => _ownedTokensCount[from] < _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from != to => _ownedTokensCount[from] != _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from != to => _ownedTokensCount[from] <= tokenId
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from != to => _ownedTokensCount[from] < tokenId
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from != to => _ownedTokensCount[from] != tokenId
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from != to => _ownedTokensCount[from] == VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from != to => _ownedTokensCount[from] >= VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from != to => _ownedTokensCount[from] <= VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from != to => _ownedTokensCount[from] <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from != to => _ownedTokensCount[from] < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from != to => _ownedTokensCount[from] != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from != VeriSol.Old(address(_tokenApprovals[tokenId])) => from != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from == msg.sender => from != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from == msg.sender => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from == msg.sender => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from == msg.sender => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from == msg.sender => to != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from == msg.sender => VeriSol.Old(address(_tokenApprovals[tokenId])) != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from == msg.sender => VeriSol.Old(address(_tokenApprovals[tokenId])) == _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from == msg.sender => _tokenOwner[tokenId] != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from == msg.sender => _tokenOwner[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from == msg.sender => _tokenOwner[tokenId] != VeriSol.Old(address(_tokenOwner[tokenId]))
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from == msg.sender => _ownedTokensCount[to] >= VeriSol.Old(_ownedTokensCount[from])
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from == msg.sender => _ownedTokensCount[to] <= tokenId
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from == msg.sender => _ownedTokensCount[to] < tokenId
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from == msg.sender => _ownedTokensCount[to] != tokenId
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from == msg.sender => _ownedTokensCount[to] == VeriSol.Old(_ownedTokensCount[to]) + 1
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from == msg.sender => _ownedTokensCount[to] > VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from == msg.sender => _ownedTokensCount[to] != VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from == msg.sender => _ownedTokensCount[to] <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from == msg.sender => _ownedTokensCount[to] < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from == msg.sender => _ownedTokensCount[to] != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from == msg.sender => _tokenApprovals[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from == msg.sender => VeriSol.Old(_ownedTokensCount[from]) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from == msg.sender => VeriSol.Old(_ownedTokensCount[from]) < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from == msg.sender => VeriSol.Old(_ownedTokensCount[from]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from == msg.sender => tokenId >= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from == msg.sender => tokenId > VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from == msg.sender => tokenId != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from == msg.sender => VeriSol.Old(_ownedTokensCount[to]) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from == msg.sender => VeriSol.Old(_ownedTokensCount[to]) < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures tokenId > 0 && from == msg.sender => VeriSol.Old(_ownedTokensCount[to]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] == 0
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[to] == 1
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) => address(_tokenApprovals[tokenId]) == address(0)
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => VeriSol.SumMapping(_ownedTokensCount) > 0
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] <= VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] < VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] != VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] == _ownedTokensCount[to] - 1
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] <= _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] < _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] != _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] <= tokenId
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] < tokenId
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] != tokenId
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] == VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] >= VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] <= VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[from] != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => to != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => VeriSol.Old(address(_tokenApprovals[tokenId])) != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => VeriSol.Old(address(_tokenApprovals[tokenId])) == _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => _tokenOwner[tokenId] != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => _tokenOwner[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[to] >= VeriSol.Old(_ownedTokensCount[from])
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[to] <= tokenId
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[to] < tokenId
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[to] != tokenId
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[to] <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[to] < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => _ownedTokensCount[to] != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => _tokenApprovals[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => VeriSol.Old(_ownedTokensCount[from]) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) => VeriSol.Old(_ownedTokensCount[from]) < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => VeriSol.Old(_ownedTokensCount[from]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != tokenId => tokenId >= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != tokenId => tokenId > VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[to]) => tokenId != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(_ownedTokensCount[to]) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != to && VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(_ownedTokensCount[to]) < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != to && to != VeriSol.Old(address(_tokenApprovals[tokenId])) => VeriSol.Old(_ownedTokensCount[to]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && to != msg.sender => _ownedTokensCount[from] == 0
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && to != msg.sender => _ownedTokensCount[to] == 1
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && to != msg.sender => VeriSol.SumMapping(_ownedTokensCount) > 0
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && to != msg.sender => _ownedTokensCount[from] <= VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && to != msg.sender => _ownedTokensCount[from] < VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && to != msg.sender => _ownedTokensCount[from] != VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && to != msg.sender => _ownedTokensCount[from] == _ownedTokensCount[to] - 1
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && to != msg.sender => _ownedTokensCount[from] <= _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && to != msg.sender => _ownedTokensCount[from] < _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && to != msg.sender => _ownedTokensCount[from] != _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && to != msg.sender => _ownedTokensCount[from] <= tokenId
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && to != msg.sender => _ownedTokensCount[from] < tokenId
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && to != msg.sender => _ownedTokensCount[from] != tokenId
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && to != msg.sender => _ownedTokensCount[from] == VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && to != msg.sender => _ownedTokensCount[from] >= VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && to != msg.sender => _ownedTokensCount[from] <= VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && to != msg.sender => _ownedTokensCount[from] <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && to != msg.sender => _ownedTokensCount[from] < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && to != msg.sender => _ownedTokensCount[from] != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && to != msg.sender => from != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && to != msg.sender => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && to != msg.sender => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && to != msg.sender => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && to != msg.sender => VeriSol.Old(address(_tokenApprovals[tokenId])) != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && to != msg.sender => VeriSol.Old(address(_tokenApprovals[tokenId])) == _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && to != VeriSol.Old(address(_tokenOwner[tokenId])) => _tokenOwner[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && VeriSol.Old(address(_tokenApprovals[tokenId])) != msg.sender => _tokenOwner[tokenId] != VeriSol.Old(address(_tokenOwner[tokenId]))
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && VeriSol.Old(address(_tokenApprovals[tokenId])) != msg.sender => _ownedTokensCount[to] >= VeriSol.Old(_ownedTokensCount[from])
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && VeriSol.Old(address(_tokenApprovals[tokenId])) != msg.sender => _ownedTokensCount[to] <= tokenId
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && VeriSol.Old(address(_tokenApprovals[tokenId])) != msg.sender => _ownedTokensCount[to] < tokenId
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && VeriSol.Old(address(_tokenApprovals[tokenId])) != msg.sender => _ownedTokensCount[to] != tokenId
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && VeriSol.Old(address(_tokenApprovals[tokenId])) != msg.sender => _ownedTokensCount[to] == VeriSol.Old(_ownedTokensCount[to]) + 1
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && VeriSol.Old(address(_tokenApprovals[tokenId])) != msg.sender => _ownedTokensCount[to] > VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && VeriSol.Old(address(_tokenApprovals[tokenId])) != msg.sender => _ownedTokensCount[to] != VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && VeriSol.Old(address(_tokenApprovals[tokenId])) != msg.sender => _ownedTokensCount[to] <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && VeriSol.Old(address(_tokenApprovals[tokenId])) != msg.sender => _ownedTokensCount[to] < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && VeriSol.Old(address(_tokenApprovals[tokenId])) != msg.sender => _ownedTokensCount[to] != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && VeriSol.Old(address(_tokenApprovals[tokenId])) != msg.sender => VeriSol.Old(_ownedTokensCount[from]) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && VeriSol.Old(address(_tokenApprovals[tokenId])) != msg.sender => VeriSol.Old(_ownedTokensCount[from]) < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && VeriSol.Old(address(_tokenApprovals[tokenId])) != msg.sender => VeriSol.Old(_ownedTokensCount[from]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && VeriSol.Old(address(_tokenApprovals[tokenId])) != msg.sender => tokenId >= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && VeriSol.Old(address(_tokenApprovals[tokenId])) != msg.sender => tokenId > VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && VeriSol.Old(address(_tokenApprovals[tokenId])) != msg.sender => tokenId != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && VeriSol.Old(address(_tokenApprovals[tokenId])) != msg.sender => VeriSol.Old(_ownedTokensCount[to]) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && VeriSol.Old(address(_tokenApprovals[tokenId])) != msg.sender => VeriSol.Old(_ownedTokensCount[to]) < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != VeriSol.Old(address(_tokenApprovals[tokenId])) && VeriSol.Old(address(_tokenApprovals[tokenId])) != msg.sender => VeriSol.Old(_ownedTokensCount[to]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) <= tokenId => _ownedTokensCount[from] == 0
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) <= tokenId => _ownedTokensCount[to] == 1
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) <= tokenId => address(_tokenApprovals[tokenId]) == address(0)
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) <= tokenId => VeriSol.SumMapping(_ownedTokensCount) > 0
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) <= tokenId => _ownedTokensCount[from] <= VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) <= tokenId => _ownedTokensCount[from] < VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) <= tokenId => _ownedTokensCount[from] != VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) <= tokenId => _ownedTokensCount[from] == _ownedTokensCount[to] - 1
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) <= tokenId => _ownedTokensCount[from] <= _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) <= tokenId => _ownedTokensCount[from] < _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) <= tokenId => _ownedTokensCount[from] != _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => _ownedTokensCount[from] <= tokenId
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => _ownedTokensCount[from] < tokenId
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => _ownedTokensCount[from] != tokenId
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => _ownedTokensCount[from] == VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => _ownedTokensCount[from] >= VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => _ownedTokensCount[from] <= VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => _ownedTokensCount[from] <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => _ownedTokensCount[from] < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => _ownedTokensCount[from] != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => from != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => from != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => to != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => VeriSol.Old(address(_tokenApprovals[tokenId])) != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => VeriSol.Old(address(_tokenApprovals[tokenId])) == _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => _tokenOwner[tokenId] != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => _tokenOwner[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => _tokenOwner[tokenId] != VeriSol.Old(address(_tokenOwner[tokenId]))
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => _ownedTokensCount[to] >= VeriSol.Old(_ownedTokensCount[from])
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => _ownedTokensCount[to] <= tokenId
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => _ownedTokensCount[to] < tokenId
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => _ownedTokensCount[to] != tokenId
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => _ownedTokensCount[to] == VeriSol.Old(_ownedTokensCount[to]) + 1
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => _ownedTokensCount[to] > VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => _ownedTokensCount[to] != VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => _ownedTokensCount[to] <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => _ownedTokensCount[to] < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => _ownedTokensCount[to] != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => _tokenApprovals[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => VeriSol.Old(_ownedTokensCount[from]) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => VeriSol.Old(_ownedTokensCount[from]) < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => VeriSol.Old(_ownedTokensCount[from]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => tokenId >= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => tokenId > VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => tokenId != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => VeriSol.Old(_ownedTokensCount[to]) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => VeriSol.Old(_ownedTokensCount[to]) < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from == msg.sender && VeriSol.Old(_ownedTokensCount[from]) != tokenId => VeriSol.Old(_ownedTokensCount[to]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] == 0
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] == 1
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => address(_tokenApprovals[tokenId]) == address(0)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] < VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] != VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] == _ownedTokensCount[to] - 1
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] <= _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] < _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] != _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] <= tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] < tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] != tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] == VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] >= VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] <= VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => from != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => from != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => to != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(address(_tokenApprovals[tokenId])) != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(address(_tokenApprovals[tokenId])) == _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => _tokenOwner[tokenId] != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => _tokenOwner[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => _tokenOwner[tokenId] != VeriSol.Old(address(_tokenOwner[tokenId]))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] >= VeriSol.Old(_ownedTokensCount[from])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] <= tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] < tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] != tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] == VeriSol.Old(_ownedTokensCount[to]) + 1
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] > VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] != VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => _tokenApprovals[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(_ownedTokensCount[from]) < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(_ownedTokensCount[from]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => tokenId >= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => tokenId > VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => tokenId != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(_ownedTokensCount[to]) < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= VeriSol.Old(_ownedTokensCount[from]) && VeriSol.Old(_ownedTokensCount[from]) >= VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(_ownedTokensCount[to]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] == 0
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] == 1
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => address(_tokenApprovals[tokenId]) == address(0)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] == _ownedTokensCount[to] - 1
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] <= _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] < _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] != _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] <= tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] < tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] != tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] == VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] >= VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] <= VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => from != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => from != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => to != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(address(_tokenApprovals[tokenId])) != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(address(_tokenApprovals[tokenId])) == _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => _tokenOwner[tokenId] != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => _tokenOwner[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => _tokenOwner[tokenId] != VeriSol.Old(address(_tokenOwner[tokenId]))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] >= VeriSol.Old(_ownedTokensCount[from])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] <= tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] < tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] != tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] == VeriSol.Old(_ownedTokensCount[to]) + 1
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] > VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] != VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => _tokenApprovals[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => tokenId >= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => tokenId > VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => tokenId != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(_ownedTokensCount[to]) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(_ownedTokensCount[to]) < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > VeriSol.Old(_ownedTokensCount[from]) && tokenId >= VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(_ownedTokensCount[to]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] == 0
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] == 1
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => address(_tokenApprovals[tokenId]) == address(0)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => VeriSol.SumMapping(_ownedTokensCount) > 0
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] <= VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] < VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] != VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] == _ownedTokensCount[to] - 1
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] <= _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] < _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] != _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] <= tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] < tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] != tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] == VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] >= VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] <= VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[from] != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => from != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => from != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => to != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(address(_tokenApprovals[tokenId])) != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(address(_tokenApprovals[tokenId])) == _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => _tokenOwner[tokenId] != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => _tokenOwner[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => _tokenOwner[tokenId] != VeriSol.Old(address(_tokenOwner[tokenId]))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId > VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] >= VeriSol.Old(_ownedTokensCount[from])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId != VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] <= tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId != VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] < tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId != VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] != tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId != VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] == VeriSol.Old(_ownedTokensCount[to]) + 1
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId != VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] > VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId != VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] != VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId != VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId != VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId != VeriSol.Old(_ownedTokensCount[to]) => _ownedTokensCount[to] != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId != VeriSol.Old(_ownedTokensCount[to]) => _tokenApprovals[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId != VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(_ownedTokensCount[from]) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId != VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(_ownedTokensCount[from]) < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId != VeriSol.Old(_ownedTokensCount[to]) => tokenId >= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId != VeriSol.Old(_ownedTokensCount[to]) => tokenId > VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId != VeriSol.Old(_ownedTokensCount[to]) => tokenId != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId != VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(_ownedTokensCount[to]) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId != VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(_ownedTokensCount[to]) < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != VeriSol.Old(_ownedTokensCount[from]) && tokenId != VeriSol.Old(_ownedTokensCount[to]) => VeriSol.Old(_ownedTokensCount[to]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId && VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _ownedTokensCount[from] == 0
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => _ownedTokensCount[to] == 1 || _ownedTokensCount[from] == 0
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[to] == 1 || _ownedTokensCount[from] == 0
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => address(_tokenApprovals[tokenId]) == address(0) || _ownedTokensCount[to] == 1
+transferFrom(from,to,tokenId): Ensures address(_tokenApprovals[tokenId]) == address(0) || _ownedTokensCount[to] == 1
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => VeriSol.SumMapping(_ownedTokensCount) > 0 || address(_tokenApprovals[tokenId]) == address(0)
+transferFrom(from,to,tokenId): Ensures VeriSol.SumMapping(_ownedTokensCount) > 0 || address(_tokenApprovals[tokenId]) == address(0)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => _ownedTokensCount[from] <= VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) || VeriSol.SumMapping(_ownedTokensCount) > 0
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] <= VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) || VeriSol.SumMapping(_ownedTokensCount) > 0
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => _ownedTokensCount[from] < VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) || _ownedTokensCount[from] <= VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] < VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) || _ownedTokensCount[from] <= VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => _ownedTokensCount[from] != VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) || _ownedTokensCount[from] < VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] != VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) || _ownedTokensCount[from] < VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => _ownedTokensCount[from] == _ownedTokensCount[to] - 1 || _ownedTokensCount[from] != VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] == _ownedTokensCount[to] - 1 || _ownedTokensCount[from] != VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => _ownedTokensCount[from] <= _ownedTokensCount[to] || _ownedTokensCount[from] == _ownedTokensCount[to] - 1
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] <= _ownedTokensCount[to] || _ownedTokensCount[from] == _ownedTokensCount[to] - 1
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => _ownedTokensCount[from] < _ownedTokensCount[to] || _ownedTokensCount[from] <= _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] < _ownedTokensCount[to] || _ownedTokensCount[from] <= _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => _ownedTokensCount[from] != _ownedTokensCount[to] || _ownedTokensCount[from] < _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] != _ownedTokensCount[to] || _ownedTokensCount[from] < _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => _ownedTokensCount[from] <= tokenId || _ownedTokensCount[from] != _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] <= tokenId || _ownedTokensCount[from] != _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => _ownedTokensCount[from] < tokenId || _ownedTokensCount[from] <= tokenId
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] < tokenId || _ownedTokensCount[from] <= tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => _ownedTokensCount[from] != tokenId || _ownedTokensCount[from] < tokenId
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] != tokenId || _ownedTokensCount[from] < tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => _ownedTokensCount[from] == VeriSol.Old(_ownedTokensCount[to]) || _ownedTokensCount[from] != tokenId
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] == VeriSol.Old(_ownedTokensCount[to]) || _ownedTokensCount[from] != tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => _ownedTokensCount[from] >= VeriSol.Old(_ownedTokensCount[to]) || _ownedTokensCount[from] == VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] >= VeriSol.Old(_ownedTokensCount[to]) || _ownedTokensCount[from] == VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => _ownedTokensCount[from] <= VeriSol.SumMapping(_ownedTokensCount) || _ownedTokensCount[from] <= VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] <= VeriSol.SumMapping(_ownedTokensCount) || _ownedTokensCount[from] <= VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => _ownedTokensCount[from] < VeriSol.SumMapping(_ownedTokensCount) || _ownedTokensCount[from] <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] < VeriSol.SumMapping(_ownedTokensCount) || _ownedTokensCount[from] <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => _ownedTokensCount[from] != VeriSol.SumMapping(_ownedTokensCount) || _ownedTokensCount[from] < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] != VeriSol.SumMapping(_ownedTokensCount) || _ownedTokensCount[from] < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => from != _tokenOwner[tokenId] || _ownedTokensCount[from] != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures from != _tokenOwner[tokenId] || _ownedTokensCount[from] != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => from != _tokenApprovals[tokenId] || from != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures from != _tokenApprovals[tokenId] || from != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= _ownedTokensCount[to] || from != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= _ownedTokensCount[to] || from != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > _ownedTokensCount[to] || VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > _ownedTokensCount[to] || VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) >= _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != _ownedTokensCount[to] || VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != _ownedTokensCount[to] || VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) > _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => to != _tokenApprovals[tokenId] || VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures to != _tokenApprovals[tokenId] || VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) != _ownedTokensCount[to]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => VeriSol.Old(address(_tokenApprovals[tokenId])) != _tokenOwner[tokenId] || to != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) != _tokenOwner[tokenId] || to != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => VeriSol.Old(address(_tokenApprovals[tokenId])) == _tokenApprovals[tokenId] || VeriSol.Old(address(_tokenApprovals[tokenId])) != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenApprovals[tokenId])) == _tokenApprovals[tokenId] || VeriSol.Old(address(_tokenApprovals[tokenId])) != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => _tokenOwner[tokenId] != _tokenApprovals[tokenId] || VeriSol.Old(address(_tokenApprovals[tokenId])) == _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures _tokenOwner[tokenId] != _tokenApprovals[tokenId] || VeriSol.Old(address(_tokenApprovals[tokenId])) == _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => _tokenOwner[tokenId] != msg.sender || _tokenOwner[tokenId] != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures _tokenOwner[tokenId] != msg.sender || _tokenOwner[tokenId] != _tokenApprovals[tokenId]
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => _tokenOwner[tokenId] != VeriSol.Old(address(_tokenOwner[tokenId])) || _tokenOwner[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures _tokenOwner[tokenId] != VeriSol.Old(address(_tokenOwner[tokenId])) || _tokenOwner[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => _ownedTokensCount[to] <= tokenId || _ownedTokensCount[to] >= VeriSol.Old(_ownedTokensCount[from])
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[to] <= tokenId || _ownedTokensCount[to] >= VeriSol.Old(_ownedTokensCount[from])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => _ownedTokensCount[to] < tokenId || _ownedTokensCount[to] <= tokenId
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[to] < tokenId || _ownedTokensCount[to] <= tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => _ownedTokensCount[to] != tokenId || _ownedTokensCount[to] < tokenId
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[to] != tokenId || _ownedTokensCount[to] < tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => _ownedTokensCount[to] == VeriSol.Old(_ownedTokensCount[to]) + 1 || _ownedTokensCount[to] != tokenId
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[to] == VeriSol.Old(_ownedTokensCount[to]) + 1 || _ownedTokensCount[to] != tokenId
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => _ownedTokensCount[to] > VeriSol.Old(_ownedTokensCount[to]) || _ownedTokensCount[to] == VeriSol.Old(_ownedTokensCount[to]) + 1
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[to] > VeriSol.Old(_ownedTokensCount[to]) || _ownedTokensCount[to] == VeriSol.Old(_ownedTokensCount[to]) + 1
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => _ownedTokensCount[to] != VeriSol.Old(_ownedTokensCount[to]) || _ownedTokensCount[to] > VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[to] != VeriSol.Old(_ownedTokensCount[to]) || _ownedTokensCount[to] > VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => _ownedTokensCount[to] <= VeriSol.SumMapping(_ownedTokensCount) || _ownedTokensCount[to] != VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[to] <= VeriSol.SumMapping(_ownedTokensCount) || _ownedTokensCount[to] != VeriSol.Old(_ownedTokensCount[to])
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => _ownedTokensCount[to] < VeriSol.SumMapping(_ownedTokensCount) || _ownedTokensCount[to] <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[to] < VeriSol.SumMapping(_ownedTokensCount) || _ownedTokensCount[to] <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => _ownedTokensCount[to] != VeriSol.SumMapping(_ownedTokensCount) || _ownedTokensCount[to] < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[to] != VeriSol.SumMapping(_ownedTokensCount) || _ownedTokensCount[to] < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => _tokenApprovals[tokenId] != msg.sender || _ownedTokensCount[to] != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures _tokenApprovals[tokenId] != msg.sender || _ownedTokensCount[to] != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => VeriSol.Old(_ownedTokensCount[from]) <= VeriSol.SumMapping(_ownedTokensCount) || _tokenApprovals[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[from]) <= VeriSol.SumMapping(_ownedTokensCount) || _tokenApprovals[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => VeriSol.Old(_ownedTokensCount[from]) < VeriSol.SumMapping(_ownedTokensCount) || VeriSol.Old(_ownedTokensCount[from]) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[from]) < VeriSol.SumMapping(_ownedTokensCount) || VeriSol.Old(_ownedTokensCount[from]) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => VeriSol.Old(_ownedTokensCount[from]) != VeriSol.SumMapping(_ownedTokensCount) || VeriSol.Old(_ownedTokensCount[from]) < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[from]) != VeriSol.SumMapping(_ownedTokensCount) || VeriSol.Old(_ownedTokensCount[from]) < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => tokenId > VeriSol.SumMapping(_ownedTokensCount) || VeriSol.Old(_ownedTokensCount[from]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures tokenId > VeriSol.SumMapping(_ownedTokensCount) || VeriSol.Old(_ownedTokensCount[from]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => tokenId != VeriSol.SumMapping(_ownedTokensCount) || tokenId > VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures tokenId != VeriSol.SumMapping(_ownedTokensCount) || tokenId > VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => VeriSol.Old(_ownedTokensCount[to]) <= VeriSol.SumMapping(_ownedTokensCount) || tokenId != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) <= VeriSol.SumMapping(_ownedTokensCount) || tokenId != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => VeriSol.Old(_ownedTokensCount[to]) < VeriSol.SumMapping(_ownedTokensCount) || VeriSol.Old(_ownedTokensCount[to]) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) < VeriSol.SumMapping(_ownedTokensCount) || VeriSol.Old(_ownedTokensCount[to]) <= VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) <= tokenId => VeriSol.Old(_ownedTokensCount[to]) != VeriSol.SumMapping(_ownedTokensCount) || VeriSol.Old(_ownedTokensCount[to]) < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(_ownedTokensCount[to]) != VeriSol.SumMapping(_ownedTokensCount) || VeriSol.Old(_ownedTokensCount[to]) < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) < tokenId => _ownedTokensCount[from] == 0 || VeriSol.Old(_ownedTokensCount[to]) < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[from] == 0 || VeriSol.Old(_ownedTokensCount[to]) < VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) < tokenId => _ownedTokensCount[to] == 1 || VeriSol.Old(_ownedTokensCount[to]) != VeriSol.SumMapping(_ownedTokensCount)
+transferFrom(from,to,tokenId): Ensures _ownedTokensCount[to] == 1 || VeriSol.Old(_ownedTokensCount[to]) != VeriSol.SumMapping(_ownedTokensCount)
+setApprovalForAll(to,approved): Ensures VeriSol.Old(_operatorApprovals[msg.sender][to]) == false => _operatorApprovals[msg.sender][to] == true || VeriSol.Old(_operatorApprovals[msg.sender][to]) != _operatorApprovals[msg.sender][to]
+setApprovalForAll(to,approved): Ensures _operatorApprovals[msg.sender][to] == true || VeriSol.Old(_operatorApprovals[msg.sender][to]) != _operatorApprovals[msg.sender][to]
+setApprovalForAll(to,approved): Ensures VeriSol.Old(_operatorApprovals[msg.sender][to]) == false && to != address(0) => VeriSol.Old(_operatorApprovals[msg.sender][to]) != _operatorApprovals[msg.sender][to]
+setApprovalForAll(to,approved): Ensures to != address(0) && VeriSol.Old(_operatorApprovals[msg.sender][to]) != approved => _operatorApprovals[msg.sender][to] == true
+setApprovalForAll(to,approved): Ensures to != address(0) => VeriSol.Old(_operatorApprovals[msg.sender][to]) != _operatorApprovals[msg.sender][to] || _operatorApprovals[msg.sender][to] == true
+setApprovalForAll(to,approved): Ensures VeriSol.Old(_operatorApprovals[msg.sender][to]) != _operatorApprovals[msg.sender][to] || _operatorApprovals[msg.sender][to] == true
+setApprovalForAll(to,approved): Ensures VeriSol.Old(_operatorApprovals[msg.sender][to]) != approved && VeriSol.Old(_operatorApprovals[msg.sender][to]) != approved => _operatorApprovals[msg.sender][to] == true
+setApprovalForAll(to,approved): Ensures VeriSol.Old(_operatorApprovals[msg.sender][to]) == false => _operatorApprovals[msg.sender][to] == true || VeriSol.Old(_operatorApprovals[msg.sender][to]) != _operatorApprovals[msg.sender][to]
+setApprovalForAll(to,approved): Ensures _operatorApprovals[msg.sender][to] == true || VeriSol.Old(_operatorApprovals[msg.sender][to]) != _operatorApprovals[msg.sender][to]
+setApprovalForAll(to,approved): Ensures to != address(0) => _operatorApprovals[msg.sender][to] == true || VeriSol.Old(_operatorApprovals[msg.sender][to]) != _operatorApprovals[msg.sender][to]
+setApprovalForAll(to,approved): Ensures _operatorApprovals[msg.sender][to] == true || VeriSol.Old(_operatorApprovals[msg.sender][to]) != _operatorApprovals[msg.sender][to]

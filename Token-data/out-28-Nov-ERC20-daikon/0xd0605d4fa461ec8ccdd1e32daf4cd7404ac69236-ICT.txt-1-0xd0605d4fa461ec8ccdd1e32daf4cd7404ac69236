@@ -1,0 +1,22 @@
+Invariants with True value:0
+Invariants with False value:16
+
+True Invariants:
+
+False Invariants:
+transfer(to,value): Ensures value <= _balances[msg.sender] => _balances[msg.sender] >= 0
+transfer(to,value): Ensures value <= _balances[msg.sender] => VeriSol.Old(_balances[to]) >= 0
+transfer(to,value): Ensures value <= _balances[msg.sender] => value < VeriSol.SumMapping(_balances)
+transfer(to,value): Ensures value <= _balances[msg.sender] => value <= _balances[to]
+transfer(to,value): Ensures value <= _balances[msg.sender] => value <= VeriSol.Old(_balances[msg.sender])
+transfer(to,value): Ensures value <= _balances[msg.sender] => VeriSol.Old(value) < VeriSol.SumMapping(_balances)
+transfer(to,value): Ensures value <= _balances[msg.sender] => VeriSol.Old(value) <= _balances[to]
+transfer(to,value): Ensures value <= _balances[msg.sender] => _balances[msg.sender] < VeriSol.Old(_balances[msg.sender])
+transfer(to,value): Ensures value <= _balances[msg.sender] => _balances[msg.sender] >= 0
+transfer(to,value): Ensures value <= _balances[msg.sender] => VeriSol.Old(_balances[to]) >= 0
+transfer(to,value): Ensures value <= _balances[msg.sender] => value < VeriSol.SumMapping(_balances)
+transfer(to,value): Ensures value <= _balances[msg.sender] => value <= _balances[to]
+transfer(to,value): Ensures value <= _balances[msg.sender] => value <= VeriSol.Old(_balances[msg.sender])
+transfer(to,value): Ensures value <= _balances[msg.sender] => VeriSol.Old(value) < VeriSol.SumMapping(_balances)
+transfer(to,value): Ensures value <= _balances[msg.sender] => VeriSol.Old(value) <= _balances[to]
+transfer(to,value): Ensures value <= _balances[msg.sender] => _balances[msg.sender] < VeriSol.Old(_balances[msg.sender])

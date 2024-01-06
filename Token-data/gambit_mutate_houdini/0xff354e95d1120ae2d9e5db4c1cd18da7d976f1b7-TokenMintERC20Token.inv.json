@@ -1,0 +1,40 @@
+[
+    {
+        "func": "approve(spender,value)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "VeriSol.Requires(VeriSol.Old(VeriSol.SumMapping(_balances)) == 2121000000)",
+            "VeriSol.Requires(msg.sender != address(0))",
+            "VeriSol.Requires(VeriSol.Old(_totalSupply) == 2100000000)",
+            "VeriSol.Requires(spender != address(0))",
+            "VeriSol.Requires(VeriSol.Old(Account) != address(0))",
+            "VeriSol.Requires(VeriSol.Old(_allowances[msg.sender][spender]) == 0)",
+            "VeriSol.Requires(value == 115792089237316195423570985008687907853269984665640564039457584007913129639935)",
+            "VeriSol.Requires(VeriSol.Old(VeriSol.SumMapping(_balances)) > VeriSol.Old(_totalSupply))",
+            "VeriSol.Requires(VeriSol.Old(VeriSol.SumMapping(_balances)) > VeriSol.Old(_allowances[msg.sender][spender]))",
+            "VeriSol.Requires(VeriSol.Old(VeriSol.SumMapping(_balances)) < value)",
+            "VeriSol.Requires(msg.sender != spender)",
+            "VeriSol.Requires(msg.sender != VeriSol.Old(Account))",
+            "VeriSol.Requires(VeriSol.Old(_totalSupply) > VeriSol.Old(_allowances[msg.sender][spender]))",
+            "VeriSol.Requires(VeriSol.Old(_totalSupply) < value)",
+            "VeriSol.Requires(spender != VeriSol.Old(Account))",
+            "VeriSol.Requires(VeriSol.Old(_allowances[msg.sender][spender]) <= value)"
+        ],
+        "postconditions": [],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": null,
+        "type": "PptType.CONTRACT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [
+            "VeriSol.Ensures(VeriSol.SumMapping(_balances) == 2121000000)",
+            "VeriSol.Ensures(_totalSupply > 0)"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    }
+]

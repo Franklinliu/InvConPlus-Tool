@@ -1,0 +1,53 @@
+Invariants with True value:45
+Invariants with False value:0
+
+True Invariants:
+transfer(_to,_value): Requires _to != address(0)
+transfer(_to,_value): Requires msg.sender != address(0)
+transfer(_to,_value): Requires _value <= VeriSol.Old(balances[msg.sender])
+transfer(_to,_value): Ensures owner == VeriSol.Old(owner)
+transfer(_to,_value): Ensures decimals == VeriSol.Old(uint256(decimals))
+transfer(_to,_value): Ensures VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances))
+transfer(_to,_value): Ensures VeriSol.Old(totalSupply_) == totalSupply_
+transfer(_to,_value): Ensures VeriSol.Old(newOwner) == newOwner
+transfer(_to,_value): Ensures initialSupply == VeriSol.Old(initialSupply)
+transfer(_to,_value): Ensures _value <= balances[_to]
+transfer(_to,_value): Ensures balances[msg.sender] <= VeriSol.Old(balances[msg.sender])
+transfer(_to,_value): Ensures balances[_to] >= VeriSol.Old(balances[_to])
+Lock(_holder): Requires VeriSol.Old(frozen[_holder]) == false
+Lock(_holder): Requires VeriSol.Old(owner) != address(0)
+Lock(_holder): Requires msg.sender != address(0)
+Lock(_holder): Requires VeriSol.Old(owner) == msg.sender
+Lock(_holder): Ensures owner != address(0)
+Lock(_holder): Ensures frozen[_holder] == true
+Lock(_holder): Ensures owner == VeriSol.Old(owner)
+Lock(_holder): Ensures owner == msg.sender
+Lock(_holder): Ensures decimals == VeriSol.Old(uint256(decimals))
+Lock(_holder): Ensures VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances))
+Lock(_holder): Ensures VeriSol.Old(totalSupply_) == totalSupply_
+Lock(_holder): Ensures VeriSol.Old(newOwner) == newOwner
+Lock(_holder): Ensures initialSupply == VeriSol.Old(initialSupply)
+UnLock(_holder): Requires VeriSol.Old(owner) != address(0)
+UnLock(_holder): Requires msg.sender != address(0)
+UnLock(_holder): Requires VeriSol.Old(owner) == msg.sender
+UnLock(_holder): Ensures owner != address(0)
+UnLock(_holder): Ensures owner == VeriSol.Old(owner)
+UnLock(_holder): Ensures owner == msg.sender
+UnLock(_holder): Ensures decimals == VeriSol.Old(uint256(decimals))
+UnLock(_holder): Ensures VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances))
+UnLock(_holder): Ensures VeriSol.Old(totalSupply_) == totalSupply_
+UnLock(_holder): Ensures VeriSol.Old(newOwner) == newOwner
+UnLock(_holder): Ensures initialSupply == VeriSol.Old(initialSupply)
+Finder: Ensures VeriSol.ContractInvariant(owner != address(0))
+Finder: Ensures VeriSol.ContractInvariant(decimals == 0)
+Finder: Ensures VeriSol.ContractInvariant(initialSupply == 1000000000)
+Finder: Ensures VeriSol.ContractInvariant(decimals <= VeriSol.SumMapping(balances))
+Finder: Ensures VeriSol.ContractInvariant(decimals < initialSupply)
+Finder: Ensures VeriSol.ContractInvariant(decimals <= totalSupply_)
+Finder: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) <= initialSupply)
+Finder: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == totalSupply_)
+Finder: Ensures VeriSol.ContractInvariant(initialSupply >= totalSupply_)
+
+False Invariants:
+
+ // ./gambit_out_transfer/mutants/1234/verisol_test

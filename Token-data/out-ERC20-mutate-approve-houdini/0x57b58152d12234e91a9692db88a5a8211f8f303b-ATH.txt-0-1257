@@ -1,0 +1,17 @@
+Invariants with True value:8
+Invariants with False value:1
+
+True Invariants:
+approve(spender,amount): Requires msg.sender != address(0)
+approve(spender,amount): Ensures oneHundredPercent == VeriSol.Old(oneHundredPercent)
+approve(spender,amount): Ensures decimals == VeriSol.Old(uint256(decimals))
+approve(spender,amount): Ensures VeriSol.Old(_totalSupply) == _totalSupply
+ATH: Ensures VeriSol.ContractInvariant(decimals == 18)
+ATH: Ensures VeriSol.ContractInvariant(oneHundredPercent == 100)
+ATH: Ensures VeriSol.ContractInvariant(decimals < oneHundredPercent)
+ATH: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == _totalSupply)
+
+False Invariants:
+approve(spender,amount): Ensures amount == allowed[msg.sender][spender]
+
+ // ./gambit_out_approve/mutants/1257/verisol_test

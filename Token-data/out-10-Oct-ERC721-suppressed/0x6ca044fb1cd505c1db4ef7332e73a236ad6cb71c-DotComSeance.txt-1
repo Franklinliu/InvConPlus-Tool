@@ -1,0 +1,7 @@
+original result: 8 invariants, smt-simplified result: 5 invariants
+setApprovalForAll(to,approved):
+Requires		msg.sender != address(0)
+Requires		msg.sender != to
+Ensures		approved == _operatorApprovals[msg.sender][to]
+Ensures		VeriSol.Old(VeriSol.SumMapping(_ownedTokensCount)) == VeriSol.SumMapping(_ownedTokensCount)
+Ensures		approved != VeriSol.Old(_operatorApprovals[msg.sender][to]) => VeriSol.Old(_operatorApprovals[msg.sender][to]) != _operatorApprovals[msg.sender][to]

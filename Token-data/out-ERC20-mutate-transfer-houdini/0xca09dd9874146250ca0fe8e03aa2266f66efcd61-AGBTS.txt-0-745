@@ -1,0 +1,39 @@
+Invariants with True value:31
+Invariants with False value:0
+
+True Invariants:
+transferOwnership(newOwner): Requires msg.sender != address(0)
+transferOwnership(newOwner): Requires VeriSol.Old(_owner) != address(0)
+transferOwnership(newOwner): Requires msg.sender == VeriSol.Old(_owner)
+transferOwnership(newOwner): Ensures _owner != address(0)
+transferOwnership(newOwner): Ensures _pendingowner == newOwner
+transferOwnership(newOwner): Ensures msg.sender == _owner
+transferOwnership(newOwner): Ensures _owner == VeriSol.Old(_owner)
+claimOwnership(): Requires msg.sender != address(0)
+claimOwnership(): Requires VeriSol.Old(_pendingowner) != address(0)
+claimOwnership(): Requires msg.sender == VeriSol.Old(_pendingowner)
+claimOwnership(): Ensures _pendingowner != address(0)
+claimOwnership(): Ensures _owner != address(0)
+claimOwnership(): Ensures _pendingowner == msg.sender
+claimOwnership(): Ensures _pendingowner == _owner
+claimOwnership(): Ensures _pendingowner == VeriSol.Old(_pendingowner)
+claimOwnership(): Ensures msg.sender == _owner
+claimOwnership(): Ensures _owner == VeriSol.Old(_pendingowner)
+transfer(recipient,amount): Requires msg.sender != address(0)
+transfer(recipient,amount): Requires recipient != address(0)
+transfer(recipient,amount): Requires VeriSol.Old(paused) == false
+transfer(recipient,amount): Requires VeriSol.Old(_balances[msg.sender]) >= amount
+transfer(recipient,amount): Ensures paused == false
+transfer(recipient,amount): Ensures _pendingowner == VeriSol.Old(_pendingowner)
+transfer(recipient,amount): Ensures VeriSol.Old(_balances[recipient]) <= _balances[recipient]
+transfer(recipient,amount): Ensures _owner == VeriSol.Old(_owner)
+transfer(recipient,amount): Ensures _balances[msg.sender] <= VeriSol.Old(_balances[msg.sender])
+transfer(recipient,amount): Ensures _totalSupply == VeriSol.Old(_totalSupply)
+transfer(recipient,amount): Ensures _decimals == VeriSol.Old(uint256(_decimals))
+transfer(recipient,amount): Ensures amount <= _balances[recipient]
+transfer(recipient,amount): Ensures VeriSol.SumMapping(_balances) == VeriSol.Old(VeriSol.SumMapping(_balances))
+AGBTS: Ensures VeriSol.ContractInvariant(_decimals == 18)
+
+False Invariants:
+
+ // ./gambit_out_transfer/mutants/745/verisol_test

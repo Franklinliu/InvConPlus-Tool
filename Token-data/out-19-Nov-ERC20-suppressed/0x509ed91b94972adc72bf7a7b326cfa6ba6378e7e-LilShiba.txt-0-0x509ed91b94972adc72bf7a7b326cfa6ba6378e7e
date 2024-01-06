@@ -1,0 +1,17 @@
+original result: 23 invariants, smt-simplified result: 13 invariants
+transfer(recipient,amount):
+Requires		recipient != address(0)
+Requires		msg.sender != address(0)
+Requires		amount <= VeriSol.Old(_balances[msg.sender])
+Ensures		_balances[recipient] >= amount
+Ensures		_balances[recipient] >= VeriSol.Old(_balances[recipient])
+Ensures		_balances[msg.sender] <= VeriSol.Old(_balances[msg.sender])
+Ensures		VeriSol.SumMapping(_balances) == VeriSol.Old(VeriSol.SumMapping(_balances))
+Ensures		_totalSupply == VeriSol.Old(_totalSupply)
+approve(spender,value):
+Requires		spender != address(0)
+Requires		msg.sender != address(0)
+Ensures		_allowances[msg.sender][spender] == value
+Ensures		_totalSupply == VeriSol.Old(_totalSupply)
+LilShiba:
+Ensures		VeriSol.SumMapping(_balances) == _totalSupply

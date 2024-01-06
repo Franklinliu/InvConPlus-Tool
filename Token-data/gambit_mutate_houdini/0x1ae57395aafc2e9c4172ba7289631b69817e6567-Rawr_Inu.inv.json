@@ -1,0 +1,17 @@
+[
+    {
+        "func": "approve(spender,tokens)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "VeriSol.Requires(msg.sender != address(0))"
+        ],
+        "postconditions": [
+            "VeriSol.Ensures(_totalSupply == VeriSol.Old(_totalSupply))",
+            "VeriSol.Ensures(decimals == VeriSol.Old(uint256(decimals)))",
+            "VeriSol.Ensures(allowed[msg.sender][spender] == tokens)"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    }
+]

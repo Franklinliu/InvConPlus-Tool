@@ -1,0 +1,17 @@
+original result: 15 invariants, smt-simplified result: 15 invariants
+approve(spender,tokens):
+Requires		decimals == _totalSupply
+Requires		decimals == allowed[spender][msg.sender]
+Requires		_totalSupply == allowed[spender][msg.sender]
+Requires		decimals == 0
+Requires		_totalSupply == 0
+Requires		decimals < tokens
+Requires		decimals < block.timestamp
+Requires		decimals <= VeriSol.Old(VeriSol.SumMapping(balances))
+Requires		_totalSupply < tokens
+Requires		_totalSupply < block.timestamp
+Requires		_totalSupply <= VeriSol.Old(VeriSol.SumMapping(balances))
+Ensures		decimals == _totalSupply
+Ensures		block.timestamp == VeriSol.Old(block.timestamp)
+Ensures		decimals <= VeriSol.SumMapping(balances)
+Ensures		decimals < balances[msg.sender]

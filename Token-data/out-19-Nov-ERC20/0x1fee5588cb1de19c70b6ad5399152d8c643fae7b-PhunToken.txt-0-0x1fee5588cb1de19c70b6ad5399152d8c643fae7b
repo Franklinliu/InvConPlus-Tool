@@ -1,0 +1,66 @@
+Invariants with True value:15
+Invariants with False value:45
+
+True Invariants:
+transfer(to,value): Requires msg.sender != address(0)
+transfer(to,value): Requires to != address(0)
+transfer(to,value): Requires VeriSol.Old(_paused) == false
+transfer(to,value): Ensures _paused == false
+transfer(to,value): Ensures VeriSol.Old(_totalSupply) == _totalSupply
+transfer(to,value): Ensures VeriSol.Old(_totalSupply) >= _totalSupply
+transfer(to,value): Ensures VeriSol.Old(_totalSupply) <= _totalSupply
+transfer(to,value): Ensures VeriSol.SumMapping(_balances) == VeriSol.Old(VeriSol.SumMapping(_balances))
+transfer(to,value): Ensures VeriSol.SumMapping(_balances) >= VeriSol.Old(VeriSol.SumMapping(_balances))
+transfer(to,value): Ensures VeriSol.SumMapping(_balances) <= VeriSol.Old(VeriSol.SumMapping(_balances))
+PhunToken: Ensures VeriSol.ContractInvariant(_decimals > 0)
+PhunToken: Ensures VeriSol.ContractInvariant(_decimals == 18)
+PhunToken: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(_balances) == _totalSupply)
+PhunToken: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(_balances) >= _totalSupply)
+PhunToken: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(_balances) <= _totalSupply)
+
+False Invariants:
+transfer(to,value): Requires VeriSol.Old(_totalSupply) > 0
+transfer(to,value): Requires VeriSol.Old(_totalSupply) == 10000000000000000000000000000
+transfer(to,value): Requires value > 0
+transfer(to,value): Requires VeriSol.Old(VeriSol.SumMapping(_balances)) > 0
+transfer(to,value): Requires VeriSol.Old(VeriSol.SumMapping(_balances)) == 10000000000000000000000000000
+transfer(to,value): Requires msg.sender != to
+transfer(to,value): Requires VeriSol.Old(_totalSupply) >= value
+transfer(to,value): Requires VeriSol.Old(_totalSupply) > value
+transfer(to,value): Requires VeriSol.Old(_totalSupply) != value
+transfer(to,value): Requires VeriSol.Old(_totalSupply) == VeriSol.Old(VeriSol.SumMapping(_balances))
+transfer(to,value): Requires VeriSol.Old(_totalSupply) >= VeriSol.Old(VeriSol.SumMapping(_balances))
+transfer(to,value): Requires VeriSol.Old(_totalSupply) <= VeriSol.Old(VeriSol.SumMapping(_balances))
+transfer(to,value): Requires value <= VeriSol.Old(VeriSol.SumMapping(_balances))
+transfer(to,value): Requires value < VeriSol.Old(VeriSol.SumMapping(_balances))
+transfer(to,value): Requires value != VeriSol.Old(VeriSol.SumMapping(_balances))
+transfer(to,value): Ensures VeriSol.SumMapping(_balances) > 0
+transfer(to,value): Ensures VeriSol.SumMapping(_balances) == 10000000000000000000000000000
+transfer(to,value): Ensures _totalSupply > 0
+transfer(to,value): Ensures _totalSupply == 10000000000000000000000000000
+transfer(to,value): Ensures VeriSol.Old(_totalSupply) == VeriSol.SumMapping(_balances)
+transfer(to,value): Ensures VeriSol.Old(_totalSupply) >= VeriSol.SumMapping(_balances)
+transfer(to,value): Ensures VeriSol.Old(_totalSupply) <= VeriSol.SumMapping(_balances)
+transfer(to,value): Ensures value <= VeriSol.SumMapping(_balances)
+transfer(to,value): Ensures value < VeriSol.SumMapping(_balances)
+transfer(to,value): Ensures value != VeriSol.SumMapping(_balances)
+transfer(to,value): Ensures value <= _totalSupply
+transfer(to,value): Ensures value < _totalSupply
+transfer(to,value): Ensures value != _totalSupply
+transfer(to,value): Ensures VeriSol.SumMapping(_balances) == _totalSupply
+transfer(to,value): Ensures VeriSol.SumMapping(_balances) >= _totalSupply
+transfer(to,value): Ensures VeriSol.SumMapping(_balances) <= _totalSupply
+transfer(to,value): Ensures VeriSol.Old(VeriSol.SumMapping(_balances)) == _totalSupply
+transfer(to,value): Ensures VeriSol.Old(VeriSol.SumMapping(_balances)) >= _totalSupply
+transfer(to,value): Ensures VeriSol.Old(VeriSol.SumMapping(_balances)) <= _totalSupply
+PhunToken: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(_balances) > 0)
+PhunToken: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(_balances) == 10000000000000000000000000000)
+PhunToken: Ensures VeriSol.ContractInvariant(_paused == false)
+PhunToken: Ensures VeriSol.ContractInvariant(_totalSupply > 0)
+PhunToken: Ensures VeriSol.ContractInvariant(_totalSupply == 10000000000000000000000000000)
+PhunToken: Ensures VeriSol.ContractInvariant(_decimals <= VeriSol.SumMapping(_balances))
+PhunToken: Ensures VeriSol.ContractInvariant(_decimals < VeriSol.SumMapping(_balances))
+PhunToken: Ensures VeriSol.ContractInvariant(_decimals != VeriSol.SumMapping(_balances))
+PhunToken: Ensures VeriSol.ContractInvariant(_decimals <= _totalSupply)
+PhunToken: Ensures VeriSol.ContractInvariant(_decimals < _totalSupply)
+PhunToken: Ensures VeriSol.ContractInvariant(_decimals != _totalSupply)

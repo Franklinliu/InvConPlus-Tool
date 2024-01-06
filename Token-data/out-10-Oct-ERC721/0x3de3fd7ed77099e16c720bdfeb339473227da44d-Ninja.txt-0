@@ -1,0 +1,35 @@
+Invariants with True value:8
+Invariants with False value:21
+
+True Invariants:
+setApprovalForAll(to,approved): Requires msg.sender != address(0)
+setApprovalForAll(to,approved): Requires msg.sender != to
+setApprovalForAll(to,approved): Ensures approved == _operatorApprovals[msg.sender][to]
+transferFrom(from,to,tokenId): Requires msg.sender != address(0)
+transferFrom(from,to,tokenId): Requires to != address(0)
+transferFrom(from,to,tokenId): Requires from != address(0)
+transferFrom(from,to,tokenId): Ensures _tokenOwner[tokenId] != address(0)
+transferFrom(from,to,tokenId): Ensures to == _tokenOwner[tokenId]
+
+False Invariants:
+transferFrom(from,to,tokenId): Requires tokenId > 0
+transferFrom(from,to,tokenId): Requires VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0)
+transferFrom(from,to,tokenId): Requires VeriSol.Old(address(_tokenOwner[tokenId])) != to
+transferFrom(from,to,tokenId): Requires msg.sender != to
+transferFrom(from,to,tokenId): Requires msg.sender != VeriSol.Old(address(_tokenApprovals[tokenId]))
+transferFrom(from,to,tokenId): Requires to != from
+transferFrom(from,to,tokenId): Requires to != VeriSol.Old(address(_tokenApprovals[tokenId]))
+transferFrom(from,to,tokenId): Requires from != VeriSol.Old(address(_tokenApprovals[tokenId]))
+transferFrom(from,to,tokenId): Ensures address(_tokenApprovals[tokenId]) == address(0)
+transferFrom(from,to,tokenId): Ensures _tokenApprovals[tokenId] != msg.sender
+transferFrom(from,to,tokenId): Ensures _tokenApprovals[tokenId] != to
+transferFrom(from,to,tokenId): Ensures _tokenApprovals[tokenId] != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures _tokenApprovals[tokenId] != from
+transferFrom(from,to,tokenId): Ensures _tokenApprovals[tokenId] == VeriSol.Old(address(_tokenApprovals[tokenId]))
+transferFrom(from,to,tokenId): Ensures VeriSol.Old(address(_tokenOwner[tokenId])) != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures msg.sender != _tokenOwner[tokenId]
+transferFrom(from,to,tokenId): Ensures _tokenOwner[tokenId] != from
+transferFrom(from,to,tokenId): Ensures _tokenOwner[tokenId] != VeriSol.Old(address(_tokenApprovals[tokenId]))
+setApprovalForAll(to,approved): Requires to != address(0)
+setApprovalForAll(to,approved): Requires approved != VeriSol.Old(_operatorApprovals[msg.sender][to])
+setApprovalForAll(to,approved): Ensures _operatorApprovals[msg.sender][to] != VeriSol.Old(_operatorApprovals[msg.sender][to])

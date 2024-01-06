@@ -1,0 +1,1990 @@
+{
+    "variables": [
+        {
+            "contractName": "BURN",
+            "varName": "_name",
+            "varType": "string",
+            "varBytes": 32,
+            "varValue": "Burn Baby Burn",
+            "varSlot": 0,
+            "varOffset": 0,
+            "byteSize": 14,
+            "toReadSlot": 0
+        },
+        {
+            "contractName": "BURN",
+            "varName": "_symbol",
+            "varType": "string",
+            "varBytes": 32,
+            "varValue": "BURN",
+            "varSlot": 1,
+            "varOffset": 0,
+            "byteSize": 4,
+            "toReadSlot": 1
+        },
+        {
+            "contractName": "BURN",
+            "varName": "_decimals",
+            "varType": "uint8",
+            "varBytes": 1,
+            "varValue": 13,
+            "varSlot": 2,
+            "varOffset": 0
+        },
+        {
+            "contractName": "BURN",
+            "varName": "_balances",
+            "varType": "mapping(address => uint256)",
+            "varBytes": 32,
+            "varValue": {
+                "0x0259d011e2f8b90aa9dbadf264748d7cfd7f97cf": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 42000000000000000000000,
+                    "varSlot": 31781913543573813514819406394923725700729801010235535344753001154121660412832,
+                    "varOffset": 0
+                },
+                "0x18f72620934465e53f2aaec7e6a7c6a15107494b": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 105520119403083456430907,
+                    "varSlot": 82361960120299747480798909336269679706570957931636756633226233186153910135670,
+                    "varOffset": 0
+                },
+                "0x00000000a991c429ee2ec6df19d40fe0c80088b8": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 1,
+                    "varSlot": 70734468628710173015105679877538886042407714716592176190121690704551939504098,
+                    "varOffset": 0
+                },
+                "0xf3ed3dd4f0c156e83f84cffb531a082f6b368c25": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 1,
+                    "varSlot": 4433269022117687893958901841792228101899999241161910118666594853063233739080,
+                    "varOffset": 0
+                },
+                "0x69d86da580df12c353309e51946636c0586c9644": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 0,
+                    "varSlot": 68399272075987809832441899628083753339604604700734546546091057782943765871824,
+                    "varOffset": 0
+                },
+                "0x219b2f8d9fc36ecccf18f6d877784c5bd3031002": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 0,
+                    "varSlot": 54210206556152099451060879285324072090123186848734979856011135029402347847126,
+                    "varOffset": 0
+                },
+                "0xb4c6ca259b15e7bcc3d3c5c7d364a2c4efd42cf0": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 0,
+                    "varSlot": 25635757328779902492864681298869121486711910738930692869713592235151511712840,
+                    "varOffset": 0
+                },
+                "0x00a7f425feec9372d2be854fbbb03978e619de39": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 0,
+                    "varSlot": 25279822438622388097693298493721532466913808748453256169272264185076465449212,
+                    "varOffset": 0
+                },
+                "0x4a395b069e5215560df8eb16fc4969355f762531": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 97161257550729385143957,
+                    "varSlot": 84561946392786462027221066405705939760336292731032010738171911912463903847548,
+                    "varOffset": 0
+                },
+                "0xe8c060f8052e07423f71d445277c61ac5138a2e5": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 1,
+                    "varSlot": 51081268837275619351029795561308942978664830621272821543762004191807343992757,
+                    "varOffset": 0
+                },
+                "0x5161ec41feb889889927bf46fbdd635b0c1043ba": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 0,
+                    "varSlot": 15944665049711610570960605511696130185928958747755671578879133317841613806414,
+                    "varOffset": 0
+                },
+                "0xc3c227d7698ba2040aef6981ca452d88ada423f9": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 0,
+                    "varSlot": 104553497602722623208887861976949732923655385151079856500185601294906212157998,
+                    "varOffset": 0
+                },
+                "0x6fc08615b51f0f39ee5d9d87054ab5a0a4cc206a": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 0,
+                    "varSlot": 46745969999690959014873696849459829974333324346702849122928324980217324198825,
+                    "varOffset": 0
+                },
+                "0xfe243d7de3f5c856aa3ffcede6f1e718946f6ec0": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 0,
+                    "varSlot": 107297546183344098354979711250377088816723681581006565528798442674605300865345,
+                    "varOffset": 0
+                },
+                "0x0abefd6c1743baf49f962c09a68fb1777fdbaf3f": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 0,
+                    "varSlot": 73163690955158036455669350195461277261962515486051382912308139099046333018473,
+                    "varOffset": 0
+                },
+                "0xf7eed3c00621b25ab6bfc11bf856632f83c3f364": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 0,
+                    "varSlot": 23324604818395629860574979582524583839481155098566556899638970671064604560152,
+                    "varOffset": 0
+                },
+                "0x6eb65b661aa63df0748e9d2d8cf1cab273d135b1": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 9935063702959,
+                    "varSlot": 114413354174945909711380303349557597595425287144601491919825825924248172840143,
+                    "varOffset": 0
+                },
+                "0x90e5cdc80034b0c00d26ef0a3aeedc47cedffb78": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 4103615973466,
+                    "varSlot": 39084315775965354127424340970145326552055520507499317176017761806910639542450,
+                    "varOffset": 0
+                },
+                "0x7e34d9f42e6a116b04d3482b12c3abc00a9db48f": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 8157816573727,
+                    "varSlot": 69561751607889313980531617906872101795417693294333317836120037814079486437275,
+                    "varOffset": 0
+                },
+                "0xe015b00fe749bc6c08e76e1b4e4f736c84bb60e1": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 0,
+                    "varSlot": 5032699670949001643572116706010147308851887938059726639914312639197890959464,
+                    "varOffset": 0
+                },
+                "0x2c94fff3c50dc9791285442e993bb063c6955e5e": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 0,
+                    "varSlot": 8710578359650959858427387786736630586237914743828904893733454784482340840571,
+                    "varOffset": 0
+                },
+                "0x686703ad7c7d4b3c5b53ec73631a59913282e8ee": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 5587177526026226028451,
+                    "varSlot": 65483177993488716311100945539241807014864327051429339253494539730458703643290,
+                    "varOffset": 0
+                },
+                "0xdec08cb92a506b88411da9ba290f3694be223c26": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 0,
+                    "varSlot": 100828221934705450471735827382289238841236499685232849488965521402674393645893,
+                    "varOffset": 0
+                },
+                "0x585b6839a241be3dfa60d911affcbc6fb61f6a61": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 4094633322467540932136,
+                    "varSlot": 109727451491125391269358222694881655775905470534021326524371958135293536610967,
+                    "varOffset": 0
+                },
+                "0x67750a25b522703c44d4193453b0b03006a5bf28": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 5411125496588,
+                    "varSlot": 92231000555434121533042015679412872865970750407863191080942721749641797026230,
+                    "varOffset": 0
+                },
+                "0x85b72c6b41501b81ed06bff241783b639f70b2d6": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 9432832537344,
+                    "varSlot": 55551882229150550934687231860955052917325850469255161466928115949327952587097,
+                    "varOffset": 0
+                },
+                "0x23bcedaeffcf18f78a494d23a72d64196a66f8f4": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 0,
+                    "varSlot": 95088526958455714026393287645594943959850273370807832904645294299892911055687,
+                    "varOffset": 0
+                },
+                "0x0cbf97e72bdc2524563e9e6d9eda7bd19880aa07": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 2728400969769919621175,
+                    "varSlot": 68811762797780116774946127146662657640067737598459628277728120755825642013862,
+                    "varOffset": 0
+                },
+                "0xe26cd9c267b002c9dfbd3e933145f09fe2c36968": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 5225240877986,
+                    "varSlot": 45431177883886703002884786605618884829977225825753344645105558808750176650249,
+                    "varOffset": 0
+                },
+                "0xdbcf5b139c1f42417bfcae954bea5c142fa00c1e": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 0,
+                    "varSlot": 55763409076436950521245592554597712866774095755788258694734838775183450747429,
+                    "varOffset": 0
+                },
+                "0x0fa72fb6c3cbeeadcc76a98612d597522addf3bc": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 0,
+                    "varSlot": 65664573937656849855634279902144162567452791976462756923772990471552668731043,
+                    "varOffset": 0
+                },
+                "0x81a317f9a278490cff80b2c7247fa7f1fbdcc2b9": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 0,
+                    "varSlot": 5430946928640318850727281824715076088458188184187622160842764508060672837304,
+                    "varOffset": 0
+                },
+                "0x5ac12feb43e64a37f2238ec721168b05cdc56afd": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 7846959175907,
+                    "varSlot": 72039418708501411812047766758897944669886592988364191486618790764238947725622,
+                    "varOffset": 0
+                },
+                "0xe41739c0156b0ca57a402cbe3beef47bd273070d": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 1427610467308,
+                    "varSlot": 7296114137343446020109743628353588967269770425158536180573037676509901963928,
+                    "varOffset": 0
+                },
+                "0x0269219ad3964da202b00501aa999c3dde4072ac": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 34960348837,
+                    "varSlot": 94167143589270315754504014408851122512490802543788392979837713097441936714343,
+                    "varOffset": 0
+                },
+                "0xb950bc100eba691d076a36c6f3c0d2066e320de8": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 0,
+                    "varSlot": 15696669132392644182140714551728836689285300063444578339931592225795450738046,
+                    "varOffset": 0
+                },
+                "0x219af72385c5219344f11dfa810b3c02bd924459": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 0,
+                    "varSlot": 105477102185350436117485979592638371759352991439294778549573205409233746715245,
+                    "varOffset": 0
+                },
+                "0xda5ea87fdffc163e44afed28284bcfef8016664b": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 2009123062567546797839,
+                    "varSlot": 100595523232661523149472567650396369288062210208170740121911479287584021576868,
+                    "varOffset": 0
+                },
+                "0x912cfc600324dfebcc5e68dc1a214ee0c0e5e1e4": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 0,
+                    "varSlot": 63796799792350983754597031070622490895227257660966784605131221057938095901462,
+                    "varOffset": 0
+                },
+                "0x9b5a6d20571dd3023eaad14f4463f016bb3492df": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 0,
+                    "varSlot": 30636254984422449694629469442194461907131124789307160905296313333972093612437,
+                    "varOffset": 0
+                },
+                "0x007933790a4f00000099e9001629d9fe7775b800": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 1100000,
+                    "varSlot": 41216693083803877490541822395982347530024567847586881716161916038090902756418,
+                    "varOffset": 0
+                },
+                "0x2dbed4ca7fd6f79e0d2ce3eac127a2e07b751cfa": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 6161809811846659002089,
+                    "varSlot": 11694339821967158747906965736727979595404027490493535926509055551701767476472,
+                    "varOffset": 0
+                },
+                "0x5b3f8df40c4a3243aef0eaacca6bbaae8dcfd096": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 28364852032453806945592,
+                    "varSlot": 71578817475929576466323215867619353135665522877972434921806541156331393210838,
+                    "varOffset": 0
+                },
+                "0x25840b9e97dfcf3ad9fd09a77d953fd75054523a": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 22664036180426099706180,
+                    "varSlot": 50819651861429690214373771970468976439448122060672107235668985141776079558994,
+                    "varOffset": 0
+                },
+                "0x4f22f134f1ab44415f34812c9aad0be29f50a94c": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 10517673492156330037241,
+                    "varSlot": 52106639860946645651822453666841970391065437172808571086297763477112251743042,
+                    "varOffset": 0
+                },
+                "0x1941ab85d7d741243cdfbf907e2719cff2ccf57f": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 360000000000000000000,
+                    "varSlot": 92613965417951895327784713475685244234033271939605288905617255814841089918277,
+                    "varOffset": 0
+                },
+                "0x4e73b1b30de6235d90db8f26eca1a1af2ee063e2": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 3890933546643387076593,
+                    "varSlot": 5764285227277421615631252718922622704967839757924592210614075782137603191428,
+                    "varOffset": 0
+                },
+                "0x000000000000000000000000000000000000dead": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 126000000000000000000,
+                    "varSlot": 17265094516866201831300155793405859242639622249583243365137507686980558809900,
+                    "varOffset": 0
+                },
+                "0x9b6a2f0a9e892e540b2a58a330d634dad1e208b3": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 2710934536660368267632,
+                    "varSlot": 80274959316401786172885076752468114136833620051228616380384793622073349934147,
+                    "varOffset": 0
+                },
+                "0x489a3e41b9baa3da50347c6360d75e0d78ef794c": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 6270888735632927796120,
+                    "varSlot": 47511299944088431400100965490350066894876136363145851461988049496559378570524,
+                    "varOffset": 0
+                },
+                "0xa411d77de716a0df7b63adb6fd6c32738a1aa693": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 4999999999995000000,
+                    "varSlot": 89154536904337526628228600223666433439728978916250651451841919227839152833676,
+                    "varOffset": 0
+                },
+                "0x5fa5ebfe2cf5e13c290ba14fc94bf36a48940f83": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": 1299431627874965578423,
+                    "varSlot": 60713358563845099416151104588374599108890875435558263729176833589119588433856,
+                    "varOffset": 0
+                }
+            },
+            "varSlot": 3,
+            "varOffset": 0,
+            "key_var_type": {
+                "contractName": null,
+                "varName": null,
+                "varType": "address",
+                "varBytes": 20,
+                "varValue": null,
+                "varSlot": null,
+                "varOffset": null
+            },
+            "val_var_type": {
+                "contractName": null,
+                "varName": null,
+                "varType": "uint256",
+                "varBytes": 32,
+                "varValue": null,
+                "varSlot": null,
+                "varOffset": null
+            }
+        },
+        {
+            "contractName": "BURN",
+            "varName": "_allowed",
+            "varType": "mapping(address => mapping(address => uint256))",
+            "varBytes": 32,
+            "varValue": {
+                "0x0259d011e2f8b90aa9dbadf264748d7cfd7f97cf": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0xc36442b4a4522e871399cd717abdd847ab11fe88": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564039457584007913129639935,
+                            "varSlot": 28454735073397363358617305819510557178155064930686215852668043716518661739934,
+                            "varOffset": 0
+                        },
+                        "0x7a250d5630b4cf539739df2c5dacb4c659f2488d": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640563874281438079241732999323,
+                            "varSlot": 44197198739945179026330117586748802865088124874002741211569073634160169631175,
+                            "varOffset": 0
+                        },
+                        "0xd9e1ce17f2641f24ae83637ab66a2cca9c378b9f": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640563958789636349726081215494,
+                            "varSlot": 95061171989950132095931107471003264649274705267472470652242687539778702454532,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 80245820217019431670761495764978663305179869546501047699001841697541343660932,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0xf3ed3dd4f0c156e83f84cffb531a082f6b368c25": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x7a250d5630b4cf539739df2c5dacb4c659f2488d": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564034015383435104490766745,
+                            "varSlot": 80776114903118264844175614004981035603516343128344562783558814146849955251787,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 75215155086001322209868551376620628703152097271491372870110473232657821774615,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0x69d86da580df12c353309e51946636c0586c9644": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x7a250d5630b4cf539739df2c5dacb4c659f2488d": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564027912192109801824917723,
+                            "varSlot": 26175057466490216770926751220757057616071323237147566364575523002688108611662,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 68004543191171927855989561663380073263427821352248978143041616502336967586518,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0xb4c6ca259b15e7bcc3d3c5c7d364a2c4efd42cf0": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x7a250d5630b4cf539739df2c5dacb4c659f2488d": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564037421148885400251980690,
+                            "varSlot": 89715672020947049760273922916727481976893624564048043589186282597802044693333,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 88477058115217001168665692972570681982023743507241352415200174724465594465839,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0x219b2f8d9fc36ecccf18f6d877784c5bd3031002": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x68b3465833fb72a70ecdf485e0e4c7bd8665fc45": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564031357583998913129610011,
+                            "varSlot": 70615205601042260461012610946784715810949147033040656150565068125918259258598,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 2228923571373457202832492207241262492269635992786083826771104842807854606760,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0x966fef69a87c4bbb4b77dc8c753e08f10c5fe1bd": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x7a250d5630b4cf539739df2c5dacb4c659f2488d": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564039457406684528819495892,
+                            "varSlot": 70931823662841224233575736909198608034649587881727755311092562113102703419838,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 23387954517042185669369517386960917465304876617998032333075188024085920511860,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0xc3c227d7698ba2040aef6981ca452d88ada423f9": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x7a250d5630b4cf539739df2c5dacb4c659f2488d": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 100000000000000007629769841090291252427219553685503,
+                            "varSlot": 61667303489473471528628450371505314134720485003766208094678519996708005233724,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 110062186769246135439242140521582152019746509951233468057152885656040817776042,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0x6fc08615b51f0f39ee5d9d87054ab5a0a4cc206a": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x68b3465833fb72a70ecdf485e0e4c7bd8665fc45": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564038107584007913129610990,
+                            "varSlot": 57764037024941953140226398354435073256831773016868412609079375833460573690002,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 106152712223018608947745004683999575774016867918946428244111659981930347503580,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0x90e5cdc80034b0c00d26ef0a3aeedc47cedffb78": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x7a250d5630b4cf539739df2c5dacb4c659f2488d": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 4103615973466,
+                            "varSlot": 36088529410354321593988326740667568046795634423752214320247861862940366709244,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 77462653665984730945110639331135161859689662027458813443979240316667708533324,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0x6eb65b661aa63df0748e9d2d8cf1cab273d135b1": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x7a250d5630b4cf539739df2c5dacb4c659f2488d": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 9935063702959,
+                            "varSlot": 98645209126217759467414360854496242393816401131963795298514765820693120386754,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 65386860291928316144944483685100486140396543986049658687786128434353970228547,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0x7e34d9f42e6a116b04d3482b12c3abc00a9db48f": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x7a250d5630b4cf539739df2c5dacb4c659f2488d": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 8157816573727,
+                            "varSlot": 78456819674582421636601739624537027568683704697864655570105676090307520466634,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 85707675404209045666022727472775267904694041864040909670657058150376120313297,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0x0abefd6c1743baf49f962c09a68fb1777fdbaf3f": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x68b3465833fb72a70ecdf485e0e4c7bd8665fc45": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564038855938517602349763011,
+                            "varSlot": 33178813878499165443764007159046596042307839302668000797391666674254500915157,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 61434547257875811412638515451305464202981962606197215947811363811974605263374,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0xe015b00fe749bc6c08e76e1b4e4f736c84bb60e1": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x68b3465833fb72a70ecdf485e0e4c7bd8665fc45": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564037544431297910375597662,
+                            "varSlot": 32009943166621964837872507298797462140546870015655757871332019519907087060730,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 15120860852607503095337488489769562850014549888777189259506041221769158852865,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0x2c94fff3c50dc9791285442e993bb063c6955e5e": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x68b3465833fb72a70ecdf485e0e4c7bd8665fc45": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564038788896607913129631887,
+                            "varSlot": 21244122860027169068433554727176847781074756514446985280063438237114078766290,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 90785995086254464413759046117583222876577425070604500316621594788674491134250,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0xf7eed3c00621b25ab6bfc11bf856632f83c3f364": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x68b3465833fb72a70ecdf485e0e4c7bd8665fc45": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564039002958002837859838888,
+                            "varSlot": 106222471316134171634766879662518227604279129408324410691781943234029003438994,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 36888612684935500436236795166688862980307026078813852667146891229198065141075,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0xfe243d7de3f5c856aa3ffcede6f1e718946f6ec0": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x6fbf1b6a681307f86c2d212f0f6ad72621309ef1": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564039457584007913129639935,
+                            "varSlot": 54504876779512889907208531288659368678752193324924645056000408675747634011957,
+                            "varOffset": 0
+                        },
+                        "0x7a250d5630b4cf539739df2c5dacb4c659f2488d": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564038514062817199587087184,
+                            "varSlot": 59197428532160968199339906636663429481100582925132505617028464426325843813457,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 17134215752873595226095915072729469856435471865243809033644281737627736492599,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0x00a7f425feec9372d2be854fbbb03978e619de39": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x68b3465833fb72a70ecdf485e0e4c7bd8665fc45": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564037885107511059200799803,
+                            "varSlot": 45032574895498385317476114575114789355821387001806770583202380007438035586446,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 88386690858793035094524827744447539549698274773731699955421236645761342524252,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0x585b6839a241be3dfa60d911affcbc6fb61f6a61": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x7a250d5630b4cf539739df2c5dacb4c659f2488d": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564039457584007913129639935,
+                            "varSlot": 106368719769827763971548785037219518396713732416487210189568411038717402765742,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 97790271724800796372981442190845003671620960945827283450146597187315759441213,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0x67750a25b522703c44d4193453b0b03006a5bf28": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x7a250d5630b4cf539739df2c5dacb4c659f2488d": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564035777374747913129639935,
+                            "varSlot": 33757418328132655608263646752515447088411670113878253948420267112108439083791,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 76333621436917506980290952309523646201273982201972348089263437715373881947283,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0x85b72c6b41501b81ed06bff241783b639f70b2d6": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x7a250d5630b4cf539739df2c5dacb4c659f2488d": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564036131887007913129639935,
+                            "varSlot": 41677288838417220082476107598115693748226147725219328317346348381103363217726,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 28524931728977181001757150705216740069146494452393352145799949163546292116873,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0x23bcedaeffcf18f78a494d23a72d64196a66f8f4": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x7a250d5630b4cf539739df2c5dacb4c659f2488d": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564039457584007913129639935,
+                            "varSlot": 69362431435002892303683628949243838022974453229591158386999000245148524178945,
+                            "varOffset": 0
+                        },
+                        "0x68b3465833fb72a70ecdf485e0e4c7bd8665fc45": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564036437507100712433706936,
+                            "varSlot": 52549662617909696305512965942081130734394789159618296093965099692364100487776,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 74871692321244143553899110965357918709818496141830891289218196911674306421935,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0xe26cd9c267b002c9dfbd3e933145f09fe2c36968": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x7a250d5630b4cf539739df2c5dacb4c659f2488d": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564036932478117913129639935,
+                            "varSlot": 110290936100875317693457578833963653123906456931343418649823708895702810623814,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 37068417676727716314165917323891034876940952443531238705335122704811518356009,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0x5ac12feb43e64a37f2238ec721168b05cdc56afd": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x7a250d5630b4cf539739df2c5dacb4c659f2488d": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564037685016307913129639935,
+                            "varSlot": 5024212871190175817517559187109303863283721648270682982511780935310465328358,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 78662958635193987040688421573898285554430772103072460744941595628015164575021,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0xe41739c0156b0ca57a402cbe3beef47bd273070d": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x7a250d5630b4cf539739df2c5dacb4c659f2488d": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564037806155997913129639935,
+                            "varSlot": 885558925647608074171885830385389873884848694267846814649479154540400866547,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 44256237712043446895786906661652810206198523854988739398950907327550974846386,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0x0269219ad3964da202b00501aa999c3dde4072ac": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x7a250d5630b4cf539739df2c5dacb4c659f2488d": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564037985355927913129639935,
+                            "varSlot": 81547787481330016822407610680473548005644640141328072968192578260187660869923,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 40203976895920105222171101483651913271358076949158532706151289061570159977162,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0x0cbf97e72bdc2524563e9e6d9eda7bd19880aa07": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x25553828f22bdd19a20e4f12f052903cb474a335": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564039457584007913129639935,
+                            "varSlot": 16858437603678360336171518994827357757184322206345782611252244210392126799002,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 90470630783850730725095379758080398699678188005026988261244307843063925086183,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0x219af72385c5219344f11dfa810b3c02bd924459": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x68b3465833fb72a70ecdf485e0e4c7bd8665fc45": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564031807584007913129636459,
+                            "varSlot": 61523397600191351101330177038198030094131282450146694072628896245310603317733,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 104278983901270517179847624614756203864436114438047480098212685004457457562161,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0x81a317f9a278490cff80b2c7247fa7f1fbdcc2b9": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x25553828f22bdd19a20e4f12f052903cb474a335": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564036540640245787261632412,
+                            "varSlot": 62234806716890691254076018654765984075443481419320088159837164423511849911294,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 65744544193094047324372460065935571480296510157428614085507190536374825625287,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0xdbcf5b139c1f42417bfcae954bea5c142fa00c1e": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x7a250d5630b4cf539739df2c5dacb4c659f2488d": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564036046057357380397379564,
+                            "varSlot": 17673890573674121342064224649754331214297073866744983842143396856993268880851,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 94295440155764490834528011738463664339940608392658734163922479726376891993866,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0x0fa72fb6c3cbeeadcc76a98612d597522addf3bc": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x7a250d5630b4cf539739df2c5dacb4c659f2488d": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564037316674668762933065721,
+                            "varSlot": 65792737680773786031343291741586963677534029313053181911097368040053739477567,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 11335329738546292230540319699238152172743728338683448335241165004183869696202,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0xb950bc100eba691d076a36c6f3c0d2066e320de8": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x25553828f22bdd19a20e4f12f052903cb474a335": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564038077459669879696237911,
+                            "varSlot": 53868934944958216006596808961964463560581771017508203238976910835679421864029,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 107273399591804992605785088683182059717943496171798707430874011237406763598218,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0x912cfc600324dfebcc5e68dc1a214ee0c0e5e1e4": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x68b3465833fb72a70ecdf485e0e4c7bd8665fc45": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564036421405993078563293780,
+                            "varSlot": 54674683587815418627195465348008545206614329782959194960238919671168527867986,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 47959630987345956593065699659497225778894528243955976540691048796633225573846,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0x9b5a6d20571dd3023eaad14f4463f016bb3492df": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x68b3465833fb72a70ecdf485e0e4c7bd8665fc45": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564031177584007913129638859,
+                            "varSlot": 106728801919283594946445311680807650420397035493697016077674797021905313101552,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 32176790860827952342351207144790683649166492830348650455302808706197436075999,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0x4a395b069e5215560df8eb16fc4969355f762531": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0xd9e1ce17f2641f24ae83637ab66a2cca9c378b9f": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564019907648676545382333873,
+                            "varSlot": 92109596231390310886825174974838979807219846768406086734237299922575008183626,
+                            "varOffset": 0
+                        },
+                        "0x03f7724180aa6b939894b5ca4314783b0b36b329": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564030261923387556977000664,
+                            "varSlot": 81637708858124316850867477062278898262965330298960091584391641858620971978138,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 41251560637777372821187966706381842093966968037264950219761157507131021041775,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0x5161ec41feb889889927bf46fbdd635b0c1043ba": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x68b3465833fb72a70ecdf485e0e4c7bd8665fc45": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564033214820081162510240125,
+                            "varSlot": 100131632261544571449771614547987667893790256130636652173537773896336271666520,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 38626066070415853070128735303862633138775007778143958485458732203379843156177,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                },
+                "0xdec08cb92a506b88411da9ba290f3694be223c26": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "mapping(address => uint256)",
+                    "varBytes": 32,
+                    "varValue": {
+                        "0x68b3465833fb72a70ecdf485e0e4c7bd8665fc45": {
+                            "contractName": null,
+                            "varName": null,
+                            "varType": "uint256",
+                            "varBytes": 32,
+                            "varValue": 115792089237316195423570985008687907853269984665640564034874304554711892721090,
+                            "varSlot": 23561170860695312497716429178042829731212212896727461332031138645913765255368,
+                            "varOffset": 0
+                        }
+                    },
+                    "varSlot": 52854625167425820042467588199989956375372447113103332476348548635652790609873,
+                    "varOffset": null,
+                    "key_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "address",
+                        "varBytes": 20,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    },
+                    "val_var_type": {
+                        "contractName": null,
+                        "varName": null,
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": null,
+                        "varOffset": null
+                    }
+                }
+            },
+            "varSlot": 4,
+            "varOffset": 0,
+            "key_var_type": {
+                "contractName": null,
+                "varName": null,
+                "varType": "address",
+                "varBytes": 20,
+                "varValue": null,
+                "varSlot": null,
+                "varOffset": null
+            },
+            "val_var_type": {
+                "contractName": null,
+                "varName": null,
+                "varType": "mapping(address => uint256)",
+                "varBytes": 32,
+                "varValue": null,
+                "varSlot": null,
+                "varOffset": null,
+                "key_var_type": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "address",
+                    "varBytes": 20,
+                    "varValue": null,
+                    "varSlot": null,
+                    "varOffset": null
+                },
+                "val_var_type": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": null,
+                    "varSlot": null,
+                    "varOffset": null
+                }
+            }
+        },
+        {
+            "contractName": "BURN",
+            "varName": "_totalSupply",
+            "varType": "uint256",
+            "varBytes": 32,
+            "varValue": 341472271849913840618460,
+            "varSlot": 5,
+            "varOffset": 0
+        },
+        {
+            "contractName": "BURN",
+            "varName": "basePercent",
+            "varType": "uint256",
+            "varBytes": 32,
+            "varValue": 100,
+            "varSlot": 6,
+            "varOffset": 0
+        },
+        {
+            "contractName": "BURN",
+            "varName": "_burnStopAmount",
+            "varType": "uint256",
+            "varBytes": 32,
+            "varValue": null,
+            "varSlot": 7,
+            "varOffset": 0
+        },
+        {
+            "contractName": "BURN",
+            "varName": "_lastTokenSupply",
+            "varType": "uint256",
+            "varBytes": 32,
+            "varValue": 1000000000000000,
+            "varSlot": 8,
+            "varOffset": 0
+        }
+    ]
+}

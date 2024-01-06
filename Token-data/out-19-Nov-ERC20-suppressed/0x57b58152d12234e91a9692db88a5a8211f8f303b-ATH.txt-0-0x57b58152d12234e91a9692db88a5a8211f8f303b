@@ -1,0 +1,12 @@
+original result: 23 invariants, smt-simplified result: 9 invariants
+approve(spender,amount):
+Requires		msg.sender != address(0)
+Ensures		oneHundredPercent == VeriSol.Old(oneHundredPercent)
+Ensures		decimals == VeriSol.Old(uint256(decimals))
+Ensures		amount == allowed[msg.sender][spender]
+Ensures		VeriSol.Old(_totalSupply) == _totalSupply
+ATH:
+Ensures		decimals == 18
+Ensures		oneHundredPercent == 100
+Ensures		decimals < oneHundredPercent
+Ensures		VeriSol.SumMapping(balances) == _totalSupply

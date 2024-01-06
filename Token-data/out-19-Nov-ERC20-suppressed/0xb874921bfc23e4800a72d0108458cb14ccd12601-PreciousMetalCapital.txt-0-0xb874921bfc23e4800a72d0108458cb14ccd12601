@@ -1,0 +1,31 @@
+original result: 36 invariants, smt-simplified result: 26 invariants
+transfer(recipient,amount):
+Requires		msg.sender != address(0)
+Requires		recipient != address(0)
+Requires		VeriSol.Old(_balances[msg.sender]) >= amount
+Ensures		VeriSol.Old(_balances[recipient]) <= _balances[recipient]
+Ensures		_balances[msg.sender] <= VeriSol.Old(_balances[msg.sender])
+Ensures		VeriSol.Old(VeriSol.SumMapping(_balances)) == VeriSol.SumMapping(_balances)
+Ensures		_totalSupply == VeriSol.Old(_totalSupply)
+Ensures		_balances[recipient] >= amount
+approve(spender,value):
+Requires		msg.sender != address(0)
+Requires		spender != address(0)
+Ensures		value == _allowances[msg.sender][spender]
+Ensures		_totalSupply == VeriSol.Old(_totalSupply)
+transferFrom(sender,recipient,amount):
+Requires		sender != address(0)
+Requires		msg.sender != address(0)
+Requires		recipient != address(0)
+Requires		VeriSol.Old(_balances[recipient]) != VeriSol.Old(_allowances[sender][msg.sender])
+Requires		VeriSol.Old(_balances[sender]) != VeriSol.Old(_allowances[sender][msg.sender])
+Requires		VeriSol.Old(_balances[sender]) >= amount
+Requires		VeriSol.Old(_allowances[sender][msg.sender]) >= amount
+Ensures		_balances[sender] <= VeriSol.Old(_balances[sender])
+Ensures		VeriSol.Old(VeriSol.SumMapping(_balances)) >= VeriSol.SumMapping(_balances)
+Ensures		_totalSupply == VeriSol.Old(_totalSupply)
+Ensures		_balances[recipient] >= amount
+Ensures		VeriSol.Old(_allowances[sender][msg.sender]) >= _allowances[sender][msg.sender]
+Ensures		amount + _allowances[sender][msg.sender] == VeriSol.Old(_allowances[sender][msg.sender])
+PreciousMetalCapital:
+Ensures		_totalSupply >= VeriSol.SumMapping(_balances)

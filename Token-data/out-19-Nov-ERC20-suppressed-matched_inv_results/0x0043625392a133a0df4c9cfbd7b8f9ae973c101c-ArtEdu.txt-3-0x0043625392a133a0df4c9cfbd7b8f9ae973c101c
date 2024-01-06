@@ -1,0 +1,34 @@
+[
+    [
+        "msg.sender != address(0)",
+        "msg.sender != address(0)"
+    ],
+    [
+        "recipient != address(0)",
+        "recipient != address(0)"
+    ],
+    [
+        "_totalSupply == VeriSol.Old(_totalSupply)",
+        "_totalSupply == VeriSol.Old(_totalSupply)"
+    ],
+    [
+        "msg.sender != recipient => _balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender])",
+        "recipient != msg.sender => _balances[msg.sender] == VeriSol.Old(_balances[msg.sender]) - amount"
+    ],
+    [
+        "msg.sender == recipient => VeriSol.Old(_balances[recipient]) == _balances[msg.sender]",
+        "recipient == msg.sender => _balances[msg.sender] == VeriSol.Old(_balances[recipient])"
+    ],
+    [
+        "msg.sender == recipient => _balances[recipient] == VeriSol.Old(_balances[msg.sender])",
+        "recipient == msg.sender => _balances[recipient] == VeriSol.Old(_balances[msg.sender])"
+    ],
+    [
+        "msg.sender == recipient => VeriSol.Old(_balances[recipient]) == _balances[recipient]",
+        "recipient == msg.sender => _balances[recipient] == VeriSol.Old(_balances[recipient])"
+    ],
+    [
+        "msg.sender == recipient => VeriSol.Old(_balances[msg.sender]) == _balances[msg.sender]",
+        "recipient == msg.sender => _balances[msg.sender] == VeriSol.Old(_balances[msg.sender])"
+    ]
+]

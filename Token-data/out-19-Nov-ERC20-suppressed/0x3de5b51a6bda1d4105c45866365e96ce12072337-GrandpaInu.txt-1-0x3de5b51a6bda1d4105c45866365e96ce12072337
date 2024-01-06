@@ -1,0 +1,48 @@
+original result: 163 invariants, smt-simplified result: 44 invariants
+approve(spender,tokens):
+Requires		msg.sender != address(0)
+Ensures		_totalSupply == VeriSol.Old(_totalSupply)
+Ensures		tokens == allowed[msg.sender][spender]
+Ensures		decimals == VeriSol.Old(uint256(decimals))
+Ensures		VeriSol.Old(allowed[msg.sender][spender]) == 0 => allowed[msg.sender][spender] >= VeriSol.Old(allowed[msg.sender][spender])
+Ensures		tokens == VeriSol.Old(allowed[msg.sender][spender]) => allowed[msg.sender][spender] == VeriSol.Old(allowed[msg.sender][spender])
+transfer(to,tokens):
+Requires		msg.sender != address(0)
+Requires		tokens <= VeriSol.Old(balances[msg.sender])
+Ensures		_totalSupply == VeriSol.Old(_totalSupply)
+Ensures		tokens <= balances[to]
+Ensures		decimals == VeriSol.Old(uint256(decimals))
+Ensures		balances[to] >= VeriSol.Old(balances[to])
+Ensures		VeriSol.Old(balances[msg.sender]) >= balances[msg.sender]
+Ensures		VeriSol.Old(VeriSol.SumMapping(balances)) == VeriSol.SumMapping(balances)
+Ensures		VeriSol.Old(balances[to]) == 0 => tokens == balances[to]
+Ensures		VeriSol.Old(balances[to]) == 0 => balances[to] <= VeriSol.Old(balances[msg.sender])
+Ensures		VeriSol.Old(balances[to]) == 0 => balances[msg.sender] >= VeriSol.Old(balances[to])
+Ensures		tokens != VeriSol.Old(balances[msg.sender]) => balances[msg.sender] > 0
+Ensures		tokens == VeriSol.Old(VeriSol.SumMapping(balances)) => tokens == VeriSol.SumMapping(balances)
+Ensures		tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.SumMapping(balances) > 0
+Ensures		tokens != VeriSol.Old(balances[to]) => balances[to] > 0
+Ensures		tokens > VeriSol.Old(balances[to]) => balances[to] > VeriSol.Old(balances[to])
+Ensures		tokens > VeriSol.Old(balances[to]) => VeriSol.Old(balances[msg.sender]) > balances[msg.sender]
+Ensures		VeriSol.Old(balances[msg.sender]) != VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(balances[msg.sender]) != VeriSol.SumMapping(balances)
+Ensures		VeriSol.Old(balances[msg.sender]) <= VeriSol.Old(VeriSol.SumMapping(balances)) => balances[msg.sender] <= VeriSol.Old(VeriSol.SumMapping(balances))
+Ensures		VeriSol.Old(balances[msg.sender]) <= VeriSol.Old(VeriSol.SumMapping(balances)) => balances[msg.sender] <= VeriSol.SumMapping(balances)
+Ensures		VeriSol.Old(VeriSol.SumMapping(balances)) == VeriSol.Old(balances[to]) => VeriSol.SumMapping(balances) == VeriSol.Old(balances[to])
+Ensures		VeriSol.Old(balances[to]) != 0 => balances[to] > 0
+Ensures		tokens == VeriSol.Old(balances[msg.sender]) => tokens >= balances[msg.sender]
+Ensures		msg.sender == to => tokens <= balances[msg.sender]
+Ensures		msg.sender == to => balances[to] == VeriSol.Old(balances[msg.sender])
+Ensures		msg.sender == to => balances[to] == balances[msg.sender]
+Ensures		tokens == VeriSol.Old(balances[msg.sender]) => balances[to] >= balances[msg.sender]
+Ensures		VeriSol.Old(balances[msg.sender]) == VeriSol.Old(balances[to]) => balances[to] >= balances[msg.sender]
+Ensures		tokens == VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(balances[msg.sender]) >= VeriSol.SumMapping(balances)
+Ensures		msg.sender == to => balances[msg.sender] == VeriSol.Old(balances[to])
+Ensures		msg.sender == to => balances[to] == VeriSol.Old(balances[to])
+Ensures		msg.sender == to => VeriSol.Old(balances[msg.sender]) == balances[msg.sender]
+GrandpaInu:
+Ensures		_totalSupply == 100000000000000000000
+Ensures		VeriSol.SumMapping(balances) == 100000000000000000000
+Ensures		decimals == 9
+Ensures		_totalSupply == VeriSol.SumMapping(balances)
+Ensures		_totalSupply > decimals
+Ensures		VeriSol.SumMapping(balances) > decimals

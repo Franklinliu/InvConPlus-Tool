@@ -1,0 +1,34 @@
+original result: 54 invariants, smt-simplified result: 29 invariants
+approve(spender,tokens):
+Requires		msg.sender != address(0)
+Ensures		allowed[msg.sender][spender] == tokens
+Ensures		_totalSupply == VeriSol.Old(_totalSupply)
+Ensures		VeriSol.Old(uint256(decimals)) == decimals
+transfer(to,tokens):
+Requires		msg.sender != address(0)
+Requires		tokens <= VeriSol.Old(balances[msg.sender])
+Ensures		tokens <= balances[to]
+Ensures		VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances))
+Ensures		balances[msg.sender] <= VeriSol.Old(balances[msg.sender])
+Ensures		_totalSupply == VeriSol.Old(_totalSupply)
+Ensures		VeriSol.Old(uint256(decimals)) == decimals
+Ensures		VeriSol.Old(balances[to]) <= balances[to]
+transferFrom(from,to,tokens):
+Requires		msg.sender != address(0)
+Requires		tokens <= VeriSol.Old(balances[from])
+Requires		tokens <= VeriSol.Old(allowed[from][msg.sender])
+Requires		VeriSol.Old(balances[to]) != VeriSol.Old(allowed[from][msg.sender])
+Ensures		tokens <= balances[to]
+Ensures		VeriSol.SumMapping(balances) <= VeriSol.Old(VeriSol.SumMapping(balances))
+Ensures		_totalSupply == VeriSol.Old(_totalSupply)
+Ensures		balances[from] <= VeriSol.Old(balances[from])
+Ensures		allowed[from][msg.sender] <= VeriSol.Old(allowed[from][msg.sender])
+Ensures		VeriSol.Old(uint256(decimals)) == decimals
+Ensures		VeriSol.Old(balances[to]) <= balances[to]
+BigBabyInu:
+Ensures		VeriSol.SumMapping(balances) == 100000000000000000000
+Ensures		decimals == 9
+Ensures		_totalSupply == 100000000000000000000
+Ensures		VeriSol.SumMapping(balances) > decimals
+Ensures		VeriSol.SumMapping(balances) == _totalSupply
+Ensures		decimals < _totalSupply

@@ -1,0 +1,351 @@
+Daikon version 5.8.6, released December 2, 2020; http://plse.cs.washington.edu/daikon.
+Reading declaration files Processing trace data; reading 1 dtrace file:
+Warning: Daikon is using a dataflow hierarchy analysis on a data trace that does not appear to be over a program execution, consider running Daikon with the --nohierarchy flag.
+
+===========================================================================
+MaronInu.approve(address,uint256):::EXIT1
+this == orig(this)
+this.decimals == this.oneHundredPercent
+this.decimals == msg.value
+this.decimals == orig(this.decimals)
+this.decimals == orig(this.oneHundredPercent)
+this.decimals == orig(msg.value)
+this.decimals == orig(this.allowed[post(pair(spender,msg.sender))].getSubValue())
+this._totalSupply == orig(this._totalSupply)
+this._totalSupply == sum(this.balances[].getValue())
+this._totalSupply == sum(orig(this.balances[].getValue()))
+this.oneHundredPercent == msg.value
+this.oneHundredPercent == orig(this.decimals)
+this.oneHundredPercent == orig(this.oneHundredPercent)
+this.oneHundredPercent == orig(msg.value)
+this.oneHundredPercent == orig(this.allowed[post(pair(spender,msg.sender))].getSubValue())
+this.balances == orig(this.balances)
+this.allowed == orig(this.allowed)
+spender == orig(spender)
+amount == orig(amount)
+amount == this.allowed[pair(msg.sender,spender)].getSubValue()
+msg.sender == orig(msg.sender)
+msg.value == orig(this.decimals)
+msg.value == orig(this.oneHundredPercent)
+msg.value == orig(msg.value)
+msg.value == orig(this.allowed[post(pair(spender,msg.sender))].getSubValue())
+block.timestamp == orig(block.timestamp)
+orig(this.decimals) == orig(this.oneHundredPercent)
+orig(this.decimals) == orig(msg.value)
+orig(this.decimals) == orig(this.allowed[post(pair(spender,msg.sender))].getSubValue())
+orig(this._totalSupply) == sum(this.balances[].getValue())
+orig(this._totalSupply) == sum(orig(this.balances[].getValue()))
+orig(this.oneHundredPercent) == orig(msg.value)
+orig(this.oneHundredPercent) == orig(this.allowed[post(pair(spender,msg.sender))].getSubValue())
+orig(amount) == this.allowed[pair(msg.sender,spender)].getSubValue()
+orig(msg.value) == orig(this.allowed[post(pair(spender,msg.sender))].getSubValue())
+sum(this.balances[].getValue()) == sum(orig(this.balances[].getValue()))
+this.decimals == 0
+this.oneHundredPercent == 0
+this.balances has only one value
+this.balances[].getValue() elements >= 0
+this.allowed has only one value
+this.allowed[].getSubLength() elements == 1
+amount == 115792089237316195423570985008687907853269984665640564039457584007913129639935
+msg.value == 0
+orig(this) has only one value
+orig(this) != null
+orig(this.decimals) == 0
+orig(this.oneHundredPercent) == 0
+orig(this.allowed[].getSubLength()) elements == 1
+orig(amount) == 115792089237316195423570985008687907853269984665640564039457584007913129639935
+orig(msg.value) == 0
+this.allowed[pair(msg.sender,spender)].getSubValue() == 115792089237316195423570985008687907853269984665640564039457584007913129639935
+orig(this.allowed[post(pair(spender,msg.sender))].getSubValue()) == 0
+this.decimals <= this._totalSupply
+this.decimals < amount
+this.decimals < block.timestamp
+this.decimals <= orig(this._totalSupply)
+this.decimals < orig(amount)
+this.decimals < orig(block.timestamp)
+this.decimals <= sum(this.balances[].getValue())
+this.decimals < sum(this.allowed[].getSubValue())
+this.decimals <= sum(orig(this.balances[].getValue()))
+this.decimals <= sum(orig(this.allowed[].getSubValue()))
+this.decimals < this.balances[orig(msg.sender)].getValue()
+this.decimals < this.allowed[pair(msg.sender,spender)].getSubValue()
+this._totalSupply < amount
+this._totalSupply < orig(amount)
+this._totalSupply < sum(this.allowed[].getSubValue())
+this._totalSupply <= sum(orig(this.allowed[].getSubValue()))
+this._totalSupply < this.allowed[pair(msg.sender,spender)].getSubValue()
+this.oneHundredPercent < amount
+this.oneHundredPercent < block.timestamp
+this.oneHundredPercent <= orig(this._totalSupply)
+this.oneHundredPercent < orig(amount)
+this.oneHundredPercent < orig(block.timestamp)
+this.oneHundredPercent <= sum(this.balances[].getValue())
+this.oneHundredPercent < sum(this.allowed[].getSubValue())
+this.oneHundredPercent <= sum(orig(this.balances[].getValue()))
+this.oneHundredPercent <= sum(orig(this.allowed[].getSubValue()))
+this.oneHundredPercent < this.balances[orig(msg.sender)].getValue()
+this.oneHundredPercent < this.allowed[pair(msg.sender,spender)].getSubValue()
+this.allowed[].getSubLength() > orig(this.allowed[].getSubLength()) (lexically)
+this.allowed[].getSubLength() >= orig(this.allowed[].getSubLength()) (lexically)
+amount <= sum(this.allowed[].getSubValue())
+msg.value < block.timestamp
+msg.value <= orig(this._totalSupply)
+msg.value < orig(amount)
+msg.value < orig(block.timestamp)
+msg.value <= sum(this.balances[].getValue())
+msg.value < sum(this.allowed[].getSubValue())
+msg.value <= sum(orig(this.balances[].getValue()))
+msg.value <= sum(orig(this.allowed[].getSubValue()))
+msg.value < this.balances[orig(msg.sender)].getValue()
+msg.value < this.allowed[pair(msg.sender,spender)].getSubValue()
+block.timestamp < orig(amount)
+block.timestamp < sum(this.allowed[].getSubValue())
+block.timestamp < this.balances[orig(msg.sender)].getValue()
+block.timestamp < this.allowed[pair(msg.sender,spender)].getSubValue()
+orig(this.decimals) <= orig(this._totalSupply)
+orig(this.decimals) < orig(amount)
+orig(this.decimals) < orig(block.timestamp)
+orig(this.decimals) <= sum(this.balances[].getValue())
+orig(this.decimals) < sum(this.allowed[].getSubValue())
+orig(this.decimals) <= sum(orig(this.balances[].getValue()))
+orig(this.decimals) <= sum(orig(this.allowed[].getSubValue()))
+orig(this.decimals) < this.balances[orig(msg.sender)].getValue()
+orig(this.decimals) < this.allowed[pair(msg.sender,spender)].getSubValue()
+orig(this._totalSupply) >= orig(this.oneHundredPercent)
+orig(this._totalSupply) < orig(amount)
+orig(this._totalSupply) >= orig(msg.value)
+orig(this._totalSupply) < sum(this.allowed[].getSubValue())
+orig(this._totalSupply) <= sum(orig(this.allowed[].getSubValue()))
+orig(this._totalSupply) < this.allowed[pair(msg.sender,spender)].getSubValue()
+orig(this.oneHundredPercent) < orig(amount)
+orig(this.oneHundredPercent) < orig(block.timestamp)
+orig(this.oneHundredPercent) <= sum(this.balances[].getValue())
+orig(this.oneHundredPercent) < sum(this.allowed[].getSubValue())
+orig(this.oneHundredPercent) <= sum(orig(this.balances[].getValue()))
+orig(this.oneHundredPercent) <= sum(orig(this.allowed[].getSubValue()))
+orig(this.oneHundredPercent) < this.balances[orig(msg.sender)].getValue()
+orig(this.oneHundredPercent) < this.allowed[pair(msg.sender,spender)].getSubValue()
+orig(spender) != orig(msg.sender)
+orig(amount) <= sum(this.allowed[].getSubValue())
+orig(msg.value) < orig(block.timestamp)
+orig(msg.value) <= sum(this.balances[].getValue())
+orig(msg.value) < sum(this.allowed[].getSubValue())
+orig(msg.value) <= sum(orig(this.balances[].getValue()))
+orig(msg.value) <= sum(orig(this.allowed[].getSubValue()))
+orig(msg.value) < this.balances[orig(msg.sender)].getValue()
+orig(msg.value) < this.allowed[pair(msg.sender,spender)].getSubValue()
+orig(block.timestamp) < sum(this.allowed[].getSubValue())
+orig(block.timestamp) < this.balances[orig(msg.sender)].getValue()
+orig(block.timestamp) < this.allowed[pair(msg.sender,spender)].getSubValue()
+sum(this.balances[].getValue()) < sum(this.allowed[].getSubValue())
+sum(this.balances[].getValue()) <= sum(orig(this.allowed[].getSubValue()))
+sum(this.balances[].getValue()) < this.allowed[pair(msg.sender,spender)].getSubValue()
+sum(this.allowed[].getSubLength()) - sum(orig(this.allowed[].getSubLength())) - 1 == 0
+sum(orig(this.balances[].getValue())) <= sum(orig(this.allowed[].getSubValue()))
+sum(orig(this.balances[].getValue())) < this.allowed[pair(msg.sender,spender)].getSubValue()
+this.balances[orig(msg.sender)].getValue() < this.allowed[pair(msg.sender,spender)].getSubValue()
+this.allowed[pair(msg.sender,spender)].getSubValue() > orig(this.allowed[post(pair(spender,msg.sender))].getSubValue())
+===========================================================================
+MaronInu.transfer(address,uint256):::EXIT1
+this == orig(this)
+this.decimals == this.oneHundredPercent
+this.decimals == msg.value
+this.decimals == orig(this.decimals)
+this.decimals == orig(this.oneHundredPercent)
+this.decimals == orig(msg.value)
+this.decimals == orig(this.allowed[post(pair(to,msg.sender))].getSubValue())
+this._totalSupply == sum(this.balances[].getValue())
+this.oneHundredPercent == msg.value
+this.oneHundredPercent == orig(this.decimals)
+this.oneHundredPercent == orig(this.oneHundredPercent)
+this.oneHundredPercent == orig(msg.value)
+this.oneHundredPercent == orig(this.allowed[post(pair(to,msg.sender))].getSubValue())
+this.balances == orig(this.balances)
+this.allowed == orig(this.allowed)
+this.allowed[].getSubLength() == orig(this.allowed[].getSubLength())
+to == orig(to)
+amount == orig(amount)
+msg.sender == orig(msg.sender)
+msg.value == orig(this.decimals)
+msg.value == orig(this.oneHundredPercent)
+msg.value == orig(msg.value)
+msg.value == orig(this.allowed[post(pair(to,msg.sender))].getSubValue())
+block.timestamp == orig(block.timestamp)
+orig(this.decimals) == orig(this.oneHundredPercent)
+orig(this.decimals) == orig(msg.value)
+orig(this.decimals) == orig(this.allowed[post(pair(to,msg.sender))].getSubValue())
+orig(this._totalSupply) == sum(orig(this.balances[].getValue()))
+orig(this.oneHundredPercent) == orig(msg.value)
+orig(this.oneHundredPercent) == orig(this.allowed[post(pair(to,msg.sender))].getSubValue())
+orig(msg.value) == orig(this.allowed[post(pair(to,msg.sender))].getSubValue())
+sum(this.allowed[].getSubLength()) == sum(orig(this.allowed[].getSubLength()))
+sum(this.allowed[].getSubValue()) == sum(orig(this.allowed[].getSubValue()))
+this.decimals == 0
+this.oneHundredPercent == 0
+this.balances has only one value
+this.balances[].getValue() elements >= 0
+this.allowed has only one value
+this.allowed[].getSubLength() elements == 1
+msg.value == 0
+orig(this) has only one value
+orig(this) != null
+orig(this.decimals) == 0
+orig(this.oneHundredPercent) == 0
+orig(this.balances[].getValue()) elements >= 0
+orig(msg.value) == 0
+sum(this.allowed[].getSubLength()) >= 2
+orig(this.balances[post(to)].getValue()) one of { 22747381879542493600296449, 80000000000000000000000000 }
+orig(this.allowed[post(pair(to,msg.sender))].getSubValue()) == 0
+this.decimals < this._totalSupply
+this.decimals < amount
+this.decimals < block.timestamp
+this.decimals < orig(this._totalSupply)
+this.decimals < orig(amount)
+this.decimals < orig(block.timestamp)
+this.decimals < sum(this.balances[].getValue())
+this.decimals < sum(this.allowed[].getSubValue())
+this.decimals < sum(orig(this.balances[].getValue()))
+this.decimals < sum(orig(this.allowed[].getSubValue()))
+this.decimals < this.balances[orig(to)].getValue()
+this.decimals <= this.balances[orig(msg.sender)].getValue()
+this.decimals < orig(this.balances[post(msg.sender)].getValue())
+this._totalSupply < orig(this._totalSupply)
+this._totalSupply < sum(this.allowed[].getSubValue())
+this._totalSupply < sum(orig(this.balances[].getValue()))
+this._totalSupply < sum(orig(this.allowed[].getSubValue()))
+this.oneHundredPercent < amount
+this.oneHundredPercent < block.timestamp
+this.oneHundredPercent < orig(this._totalSupply)
+this.oneHundredPercent < orig(amount)
+this.oneHundredPercent < orig(block.timestamp)
+this.oneHundredPercent < sum(this.balances[].getValue())
+this.oneHundredPercent < sum(this.allowed[].getSubValue())
+this.oneHundredPercent < sum(orig(this.balances[].getValue()))
+this.oneHundredPercent < sum(orig(this.allowed[].getSubValue()))
+this.oneHundredPercent < this.balances[orig(to)].getValue()
+this.oneHundredPercent <= this.balances[orig(msg.sender)].getValue()
+this.oneHundredPercent < orig(this.balances[post(msg.sender)].getValue())
+amount < orig(this._totalSupply)
+amount < sum(this.balances[].getValue())
+amount < sum(this.allowed[].getSubValue())
+amount < sum(orig(this.balances[].getValue()))
+amount < sum(orig(this.allowed[].getSubValue()))
+amount <= orig(this.balances[post(msg.sender)].getValue())
+msg.value < block.timestamp
+msg.value < orig(this._totalSupply)
+msg.value < orig(amount)
+msg.value < orig(block.timestamp)
+msg.value < sum(this.balances[].getValue())
+msg.value < sum(this.allowed[].getSubValue())
+msg.value < sum(orig(this.balances[].getValue()))
+msg.value < sum(orig(this.allowed[].getSubValue()))
+msg.value < this.balances[orig(to)].getValue()
+msg.value <= this.balances[orig(msg.sender)].getValue()
+msg.value < orig(this.balances[post(msg.sender)].getValue())
+block.timestamp < orig(this._totalSupply)
+block.timestamp < orig(amount)
+block.timestamp < sum(this.balances[].getValue())
+block.timestamp < sum(this.allowed[].getSubValue())
+block.timestamp < sum(orig(this.balances[].getValue()))
+block.timestamp < sum(orig(this.allowed[].getSubValue()))
+block.timestamp < this.balances[orig(to)].getValue()
+block.timestamp < orig(this.balances[post(msg.sender)].getValue())
+orig(this.decimals) < orig(this._totalSupply)
+orig(this.decimals) < orig(amount)
+orig(this.decimals) < orig(block.timestamp)
+orig(this.decimals) < sum(this.balances[].getValue())
+orig(this.decimals) < sum(this.allowed[].getSubValue())
+orig(this.decimals) < sum(orig(this.balances[].getValue()))
+orig(this.decimals) < sum(orig(this.allowed[].getSubValue()))
+orig(this.decimals) < this.balances[orig(to)].getValue()
+orig(this.decimals) <= this.balances[orig(msg.sender)].getValue()
+orig(this.decimals) < orig(this.balances[post(msg.sender)].getValue())
+orig(this._totalSupply) < sum(this.allowed[].getSubValue())
+orig(this._totalSupply) < sum(orig(this.allowed[].getSubValue()))
+orig(this.oneHundredPercent) < orig(amount)
+orig(this.oneHundredPercent) < orig(block.timestamp)
+orig(this.oneHundredPercent) < sum(this.balances[].getValue())
+orig(this.oneHundredPercent) < sum(this.allowed[].getSubValue())
+orig(this.oneHundredPercent) < sum(orig(this.balances[].getValue()))
+orig(this.oneHundredPercent) < sum(orig(this.allowed[].getSubValue()))
+orig(this.oneHundredPercent) < this.balances[orig(to)].getValue()
+orig(this.oneHundredPercent) <= this.balances[orig(msg.sender)].getValue()
+orig(this.oneHundredPercent) < orig(this.balances[post(msg.sender)].getValue())
+orig(to) != orig(msg.sender)
+orig(amount) < sum(this.balances[].getValue())
+orig(amount) < sum(this.allowed[].getSubValue())
+orig(amount) < sum(orig(this.balances[].getValue()))
+orig(amount) < sum(orig(this.allowed[].getSubValue()))
+orig(amount) <= orig(this.balances[post(msg.sender)].getValue())
+orig(msg.value) < orig(block.timestamp)
+orig(msg.value) < sum(this.balances[].getValue())
+orig(msg.value) < sum(this.allowed[].getSubValue())
+orig(msg.value) < sum(orig(this.balances[].getValue()))
+orig(msg.value) < sum(orig(this.allowed[].getSubValue()))
+orig(msg.value) < this.balances[orig(to)].getValue()
+orig(msg.value) <= this.balances[orig(msg.sender)].getValue()
+orig(msg.value) < orig(this.balances[post(msg.sender)].getValue())
+orig(block.timestamp) < sum(this.balances[].getValue())
+orig(block.timestamp) < sum(this.allowed[].getSubValue())
+orig(block.timestamp) < sum(orig(this.balances[].getValue()))
+orig(block.timestamp) < sum(orig(this.allowed[].getSubValue()))
+orig(block.timestamp) < this.balances[orig(to)].getValue()
+orig(block.timestamp) < orig(this.balances[post(msg.sender)].getValue())
+sum(this.balances[].getValue()) < sum(this.allowed[].getSubValue())
+sum(this.balances[].getValue()) < sum(orig(this.balances[].getValue()))
+sum(this.balances[].getValue()) < sum(orig(this.allowed[].getSubValue()))
+sum(orig(this.balances[].getValue())) < sum(orig(this.allowed[].getSubValue()))
+this.balances[orig(msg.sender)].getValue() < orig(this.balances[post(msg.sender)].getValue())
+amount + this.balances[orig(msg.sender)].getValue() - orig(this.balances[post(msg.sender)].getValue()) == 0
+orig(amount) + this.balances[orig(msg.sender)].getValue() - orig(this.balances[post(msg.sender)].getValue()) == 0
+===========================================================================
+MaronInu.transferFrom(address,address,uint256):::EXIT1
+this == orig(this)
+this.decimals == this.oneHundredPercent
+this.decimals == msg.value
+this.decimals == orig(msg.value)
+this.decimals == orig(this.allowed[post(pair(from,to))].getSubValue())
+this._totalSupply == sum(this.balances[].getValue())
+this.oneHundredPercent == msg.value
+this.oneHundredPercent == orig(msg.value)
+this.oneHundredPercent == orig(this.allowed[post(pair(from,to))].getSubValue())
+this.balances == orig(this.balances)
+this.allowed == orig(this.allowed)
+this.allowed[].getSubLength() == orig(this.allowed[].getSubLength())
+from == orig(from)
+to == orig(to)
+amount == orig(amount)
+msg.sender == orig(msg.sender)
+msg.value == orig(msg.value)
+msg.value == orig(this.allowed[post(pair(from,to))].getSubValue())
+block.timestamp == orig(block.timestamp)
+orig(this._totalSupply) == sum(orig(this.balances[].getValue()))
+orig(msg.value) == orig(this.allowed[post(pair(from,to))].getSubValue())
+sum(this.allowed[].getSubLength()) == sum(orig(this.allowed[].getSubLength()))
+this.decimals == 0
+this._totalSupply one of { 853878776975752074062630160, 857632363234417108894743050, 908000000000000000000000000 }
+this.oneHundredPercent == 0
+this.balances has only one value
+this.allowed has only one value
+this.allowed[].getSubLength() elements == 1
+amount one of { 12030084000000000000000000, 18000000000000000000000000, 920000000000000000000000000 }
+msg.value == 0
+block.timestamp one of { 1635458161, 1635458542 }
+orig(this) has only one value
+orig(this._totalSupply) one of { 0, 855678776975752074062630160, 858835371634417108894743050 }
+orig(amount) one of { 12030084000000000000000000, 18000000000000000000000000, 920000000000000000000000000 }
+orig(msg.value) == 0
+orig(block.timestamp) one of { 1635458161, 1635458542 }
+sum(this.balances[].getValue()) one of { 853878776975752074062630160, 857632363234417108894743050, 908000000000000000000000000 }
+sum(this.allowed[].getSubLength()) one of { 1, 11 }
+sum(this.allowed[].getSubValue()) one of { 115792089237316195423570985008687907853269984665639644039457584007913129639935, 1157920892373161954235709850086879078532699846656404756648590355854091419679238, 1157920892373161954235709850086879078532699846656404774648590355854091419679238 }
+sum(orig(this.balances[].getValue())) one of { 0, 855678776975752074062630160, 858835371634417108894743050 }
+sum(orig(this.allowed[].getSubValue())) one of { 115792089237316195423570985008687907853269984665640564039457584007913129639935, 1157920892373161954235709850086879078532699846656404774648590355854091419679238, 1157920892373161954235709850086879078532699846656404786678674355854091419679238 }
+this.balances[orig(from)].getValue() one of { 0, 888315642865157638, 80000000000000000000000000 }
+this.balances[orig(to)].getValue() one of { 379932938549442663360088104, 383268801136093011681216927, 828000000000000000000000000 }
+orig(this.balances[post(from)].getValue()) one of { 12030084888315642865157638, 18000000000000000000000000 }
+orig(this.balances[post(to)].getValue()) one of { 363732938549442663360088104, 372441725536093011681216927 }
+this.allowed[pair(from,msg.sender)].getSubValue() one of { 115792089237316195423570985008687907853269984665639644039457584007913129639935, 115792089237316195423570985008687907853269984665640546039457584007913129639935, 115792089237316195423570985008687907853269984665640552009373584007913129639935 }
+orig(this.allowed[post(pair(from,to))].getSubValue()) == 0
+orig(this.allowed[post(pair(from,msg.sender))].getSubValue()) == 115792089237316195423570985008687907853269984665640564039457584007913129639935
+Exiting Daikon.

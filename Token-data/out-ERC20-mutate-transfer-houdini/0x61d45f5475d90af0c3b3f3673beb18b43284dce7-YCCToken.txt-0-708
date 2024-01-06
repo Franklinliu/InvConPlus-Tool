@@ -1,0 +1,22 @@
+Invariants with True value:8
+Invariants with False value:6
+
+True Invariants:
+transfer(to,tokens): Requires msg.sender != address(0)
+transfer(to,tokens): Requires VeriSol.Old(balances[msg.sender]) >= tokens
+transfer(to,tokens): Ensures _totalSupply == VeriSol.Old(_totalSupply)
+transfer(to,tokens): Ensures VeriSol.Old(balances[msg.sender]) >= balances[msg.sender]
+transfer(to,tokens): Ensures decimals == VeriSol.Old(uint256(decimals))
+YCCToken: Ensures VeriSol.ContractInvariant(decimals == 8)
+YCCToken: Ensures VeriSol.ContractInvariant(_totalSupply == 1000000000000000000)
+YCCToken: Ensures VeriSol.ContractInvariant(decimals < _totalSupply)
+
+False Invariants:
+transfer(to,tokens): Ensures VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances))
+transfer(to,tokens): Ensures balances[to] >= VeriSol.Old(balances[to])
+transfer(to,tokens): Ensures balances[to] >= tokens
+YCCToken: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == 1000000000000000000)
+YCCToken: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) > decimals)
+YCCToken: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == _totalSupply)
+
+ // ./gambit_out_transfer/mutants/708/verisol_test

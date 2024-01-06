@@ -1,0 +1,18 @@
+Invariants with True value:10
+Invariants with False value:0
+
+True Invariants:
+approve(spender,tokens): Requires msg.sender != address(0)
+approve(spender,tokens): Ensures allowed[msg.sender][spender] == tokens
+approve(spender,tokens): Ensures _totalSupply == VeriSol.Old(_totalSupply)
+approve(spender,tokens): Ensures decimals == VeriSol.Old(uint256(decimals))
+AlphaWolf: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == 1000000000000000000000000000000)
+AlphaWolf: Ensures VeriSol.ContractInvariant(_totalSupply == 1000000000000000000000000000000)
+AlphaWolf: Ensures VeriSol.ContractInvariant(decimals == 18)
+AlphaWolf: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == _totalSupply)
+AlphaWolf: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) > decimals)
+AlphaWolf: Ensures VeriSol.ContractInvariant(_totalSupply > decimals)
+
+False Invariants:
+
+ // ./gambit_out_approve/mutants/141/verisol_test

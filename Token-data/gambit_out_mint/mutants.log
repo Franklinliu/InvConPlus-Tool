@@ -1,0 +1,10 @@
+1,BinaryOpMutation,verisol_test/0xb934c43268adaedee892c4e8d3d56b010498e80c.etherscan.io-clashPay.sol,144:40,**,*
+2,BinaryOpMutation,verisol_test/0xb934c43268adaedee892c4e8d3d56b010498e80c.etherscan.io-clashPay.sol,145:38,**,+
+3,DeleteExpressionMutation,verisol_test/0xb934c43268adaedee892c4e8d3d56b010498e80c.etherscan.io-clashPay.sol,171:9,owner= msg.sender,assert(true)
+4,DeleteExpressionMutation,verisol_test/0xb934c43268adaedee892c4e8d3d56b010498e80c.etherscan.io-clashPay.sol,201:9,"require(msg.sender==Tokenfarm,""only Tokenfarm contract can mint tokens"")",assert(true)
+5,RequireMutation,verisol_test/0xb934c43268adaedee892c4e8d3d56b010498e80c.etherscan.io-clashPay.sol,201:17,msg.sender==Tokenfarm,true
+6,BinaryOpMutation,verisol_test/0xb934c43268adaedee892c4e8d3d56b010498e80c.etherscan.io-clashPay.sol,14:22, + ,*
+7,SwapArgumentsOperatorMutation,verisol_test/0xb934c43268adaedee892c4e8d3d56b010498e80c.etherscan.io-clashPay.sol,15:17,c >= a,a >= c
+8,RequireMutation,verisol_test/0xb934c43268adaedee892c4e8d3d56b010498e80c.etherscan.io-clashPay.sol,43:17,b <= a,false
+9,BinaryOpMutation,verisol_test/0xb934c43268adaedee892c4e8d3d56b010498e80c.etherscan.io-clashPay.sol,44:22, - ,+
+10,BinaryOpMutation,verisol_test/0xb934c43268adaedee892c4e8d3d56b010498e80c.etherscan.io-clashPay.sol,44:22, - ,/

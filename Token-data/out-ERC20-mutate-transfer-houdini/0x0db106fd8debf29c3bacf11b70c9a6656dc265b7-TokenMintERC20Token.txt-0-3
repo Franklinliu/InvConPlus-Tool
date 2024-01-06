@@ -1,0 +1,21 @@
+Invariants with True value:12
+Invariants with False value:1
+
+True Invariants:
+transfer(recipient,amount): Requires msg.sender != address(0)
+transfer(recipient,amount): Requires VeriSol.Old(_balances[msg.sender]) >= amount
+transfer(recipient,amount): Ensures _totalSupply == VeriSol.Old(_totalSupply)
+transfer(recipient,amount): Ensures _balances[msg.sender] <= VeriSol.Old(_balances[msg.sender])
+transfer(recipient,amount): Ensures amount <= _balances[recipient]
+transfer(recipient,amount): Ensures _balances[recipient] >= VeriSol.Old(_balances[recipient])
+transfer(recipient,amount): Ensures VeriSol.Old(VeriSol.SumMapping(_balances)) == VeriSol.SumMapping(_balances)
+approve(spender,value): Requires msg.sender != address(0)
+approve(spender,value): Requires spender != address(0)
+approve(spender,value): Ensures _totalSupply == VeriSol.Old(_totalSupply)
+approve(spender,value): Ensures value == _allowances[msg.sender][spender]
+TokenMintERC20Token: Ensures VeriSol.ContractInvariant(_totalSupply == VeriSol.SumMapping(_balances))
+
+False Invariants:
+transfer(recipient,amount): Requires recipient != address(0)
+
+ // ./gambit_out_transfer/mutants/3/verisol_test

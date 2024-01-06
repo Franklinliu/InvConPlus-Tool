@@ -1,0 +1,13 @@
+original result: 11 invariants, smt-simplified result: 11 invariants
+approve(spender,value):
+Requires		_totalSupply == _allowances[spender][msg.sender]
+Requires		_totalSupply == 0
+Requires		_totalSupply < value
+Requires		_totalSupply < block.timestamp
+Requires		_totalSupply <= VeriSol.Old(VeriSol.SumMapping(_balances))
+Ensures		_totalSupply == VeriSol.Old(_totalSupply)
+Ensures		_totalSupply == VeriSol.Old(_allowances[spender][msg.sender])
+Ensures		spender == VeriSol.Old(spender)
+Ensures		value == VeriSol.Old(value)
+Ensures		value == _allowances[msg.sender][spender]
+Ensures		msg.sender == VeriSol.Old(msg.sender)

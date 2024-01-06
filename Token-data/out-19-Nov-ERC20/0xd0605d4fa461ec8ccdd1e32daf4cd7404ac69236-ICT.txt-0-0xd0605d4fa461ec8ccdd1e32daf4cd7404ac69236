@@ -1,0 +1,46 @@
+Invariants with True value:0
+Invariants with False value:40
+
+True Invariants:
+
+False Invariants:
+transfer(to,value): Requires VeriSol.Old(_totalSupply) > 0
+transfer(to,value): Requires VeriSol.Old(_totalSupply) == 1000000000000000000000000000
+transfer(to,value): Requires VeriSol.Old(owner) != address(0)
+transfer(to,value): Requires VeriSol.Old(_paused) == false
+transfer(to,value): Requires msg.sender != address(0)
+transfer(to,value): Requires to != address(0)
+transfer(to,value): Requires value > 0
+transfer(to,value): Requires VeriSol.Old(VeriSol.SumMapping(_balances)) > 0
+transfer(to,value): Requires VeriSol.Old(_totalSupply) >= value
+transfer(to,value): Requires VeriSol.Old(_totalSupply) > value
+transfer(to,value): Requires VeriSol.Old(_totalSupply) != value
+transfer(to,value): Requires VeriSol.Old(_totalSupply) >= VeriSol.Old(VeriSol.SumMapping(_balances))
+transfer(to,value): Requires msg.sender != to
+transfer(to,value): Requires value <= VeriSol.Old(VeriSol.SumMapping(_balances))
+transfer(to,value): Requires value < VeriSol.Old(VeriSol.SumMapping(_balances))
+transfer(to,value): Requires value != VeriSol.Old(VeriSol.SumMapping(_balances))
+transfer(to,value): Ensures _totalSupply > 0
+transfer(to,value): Ensures _totalSupply == 1000000000000000000000000000
+transfer(to,value): Ensures VeriSol.SumMapping(_balances) > 0
+transfer(to,value): Ensures _paused == false
+transfer(to,value): Ensures owner != address(0)
+transfer(to,value): Ensures _totalSupply >= VeriSol.SumMapping(_balances)
+transfer(to,value): Ensures _totalSupply == VeriSol.Old(_totalSupply)
+transfer(to,value): Ensures _totalSupply >= VeriSol.Old(_totalSupply)
+transfer(to,value): Ensures _totalSupply <= VeriSol.Old(_totalSupply)
+transfer(to,value): Ensures _totalSupply >= value
+transfer(to,value): Ensures _totalSupply > value
+transfer(to,value): Ensures _totalSupply != value
+transfer(to,value): Ensures _totalSupply >= VeriSol.Old(VeriSol.SumMapping(_balances))
+transfer(to,value): Ensures VeriSol.SumMapping(_balances) <= VeriSol.Old(_totalSupply)
+transfer(to,value): Ensures VeriSol.SumMapping(_balances) >= value
+transfer(to,value): Ensures VeriSol.SumMapping(_balances) > value
+transfer(to,value): Ensures VeriSol.SumMapping(_balances) != value
+transfer(to,value): Ensures VeriSol.Old(owner) == owner
+ICT: Ensures VeriSol.ContractInvariant(_totalSupply > 0)
+ICT: Ensures VeriSol.ContractInvariant(_totalSupply == 1000000000000000000000000000)
+ICT: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(_balances) > 0)
+ICT: Ensures VeriSol.ContractInvariant(_paused == false)
+ICT: Ensures VeriSol.ContractInvariant(owner != address(0))
+ICT: Ensures VeriSol.ContractInvariant(_totalSupply >= VeriSol.SumMapping(_balances))

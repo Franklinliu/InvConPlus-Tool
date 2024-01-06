@@ -1,0 +1,15 @@
+original result: 24 invariants, smt-simplified result: 12 invariants
+transfer(recipient,amount):
+Requires		msg.sender != address(0)
+Requires		recipient != address(0)
+Requires		VeriSol.Old(stopped) == false
+Ensures		stopped == false
+Ensures		VeriSol.Old(VeriSol.SumMapping(_lockTimes)) == VeriSol.SumMapping(_lockTimes)
+Ensures		_owner == VeriSol.Old(_owner)
+Ensures		VeriSol.SumMapping(_balances) == VeriSol.Old(VeriSol.SumMapping(_balances))
+Ensures		_totalSupply == VeriSol.Old(_totalSupply)
+Ensures		_decimals == VeriSol.Old(uint256(_decimals))
+Ensures		VeriSol.Old(VeriSol.SumMapping(_lockAmounts)) == VeriSol.SumMapping(_lockAmounts)
+HERO:
+Ensures		_owner != address(0)
+Ensures		VeriSol.SumMapping(_balances) == _totalSupply

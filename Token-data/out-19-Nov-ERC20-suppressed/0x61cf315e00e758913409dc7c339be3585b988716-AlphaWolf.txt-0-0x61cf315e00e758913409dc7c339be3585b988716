@@ -1,0 +1,13 @@
+original result: 25 invariants, smt-simplified result: 10 invariants
+approve(spender,tokens):
+Requires		msg.sender != address(0)
+Ensures		allowed[msg.sender][spender] == tokens
+Ensures		_totalSupply == VeriSol.Old(_totalSupply)
+Ensures		decimals == VeriSol.Old(uint256(decimals))
+AlphaWolf:
+Ensures		VeriSol.SumMapping(balances) == 1000000000000000000000000000000
+Ensures		_totalSupply == 1000000000000000000000000000000
+Ensures		decimals == 18
+Ensures		VeriSol.SumMapping(balances) == _totalSupply
+Ensures		VeriSol.SumMapping(balances) > decimals
+Ensures		_totalSupply > decimals

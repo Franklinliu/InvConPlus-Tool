@@ -1,0 +1,33 @@
+original result: 63 invariants, smt-simplified result: 29 invariants
+transfer(to,amount):
+Requires		decimals == 18
+Requires		msg.sender != address(0)
+Requires		to != address(0)
+Requires		oneHundredPercent == 100
+Requires		VeriSol.Old(VeriSol.SumMapping(balances)) == VeriSol.Old(_totalSupply)
+Requires		VeriSol.Old(uint256(decimals)) < VeriSol.Old(oneHundredPercent)
+Requires		amount <= VeriSol.Old(balances[msg.sender])
+Ensures		decimals == 18
+Ensures		oneHundredPercent == 100
+Ensures		VeriSol.Old(VeriSol.SumMapping(balances)) >= _totalSupply
+Ensures		VeriSol.Old(VeriSol.SumMapping(balances)) >= VeriSol.SumMapping(balances)
+Ensures		_totalSupply <= VeriSol.Old(_totalSupply)
+Ensures		_totalSupply == VeriSol.SumMapping(balances)
+Ensures		VeriSol.Old(uint256(decimals)) == decimals
+Ensures		VeriSol.Old(uint256(decimals)) < oneHundredPercent
+Ensures		VeriSol.Old(_totalSupply) >= VeriSol.SumMapping(balances)
+Ensures		decimals < VeriSol.Old(oneHundredPercent)
+Ensures		decimals < oneHundredPercent
+Ensures		balances[msg.sender] <= VeriSol.Old(balances[msg.sender])
+Ensures		VeriSol.Old(oneHundredPercent) == oneHundredPercent
+approve(spender,amount):
+Requires		msg.sender != address(0)
+Ensures		VeriSol.Old(uint256(decimals)) == decimals
+Ensures		_totalSupply == VeriSol.Old(_totalSupply)
+Ensures		allowed[msg.sender][spender] == amount
+Ensures		VeriSol.Old(oneHundredPercent) == oneHundredPercent
+MaronInu:
+Ensures		decimals == 18
+Ensures		oneHundredPercent == 100
+Ensures		_totalSupply == VeriSol.SumMapping(balances)
+Ensures		decimals < oneHundredPercent

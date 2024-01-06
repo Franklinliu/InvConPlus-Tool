@@ -1,0 +1,32 @@
+[
+    {
+        "func": "transfer(_to,_value)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "VeriSol.Requires(msg.sender != address(0))",
+            "VeriSol.Requires(VeriSol.Old(balanceOf[msg.sender]) >= _value)"
+        ],
+        "postconditions": [
+            "VeriSol.Ensures(VeriSol.SumMapping(balanceOf) == VeriSol.Old(VeriSol.SumMapping(balanceOf)))",
+            "VeriSol.Ensures(VeriSol.Old(balanceOf[msg.sender]) >= balanceOf[msg.sender])",
+            "VeriSol.Ensures(VeriSol.Old(uint256(decimals)) == decimals)",
+            "VeriSol.Ensures(totalSupply == VeriSol.Old(totalSupply))",
+            "VeriSol.Ensures(balanceOf[_to] >= VeriSol.Old(balanceOf[_to]))"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": null,
+        "type": "PptType.CONTRACT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [
+            "VeriSol.Ensures(decimals == 6)",
+            "VeriSol.Ensures(totalSupply == VeriSol.SumMapping(balanceOf))"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    }
+]

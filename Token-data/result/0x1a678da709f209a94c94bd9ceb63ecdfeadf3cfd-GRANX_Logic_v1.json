@@ -1,0 +1,227 @@
+{
+    "variables": [
+        {
+            "contractName": "GRANX_Logic_v1",
+            "varName": "_balances",
+            "varType": "mapping(address => uint256)",
+            "varBytes": 32,
+            "varValue": null,
+            "varSlot": 0,
+            "varOffset": 0,
+            "key_var_type": {
+                "contractName": null,
+                "varName": null,
+                "varType": "address",
+                "varBytes": 20,
+                "varValue": null,
+                "varSlot": null,
+                "varOffset": null
+            },
+            "val_var_type": {
+                "contractName": null,
+                "varName": null,
+                "varType": "uint256",
+                "varBytes": 32,
+                "varValue": null,
+                "varSlot": null,
+                "varOffset": null
+            }
+        },
+        {
+            "contractName": "GRANX_Logic_v1",
+            "varName": "_allowances",
+            "varType": "mapping(address => mapping(address => uint256))",
+            "varBytes": 32,
+            "varValue": null,
+            "varSlot": 1,
+            "varOffset": 0,
+            "key_var_type": {
+                "contractName": null,
+                "varName": null,
+                "varType": "address",
+                "varBytes": 20,
+                "varValue": null,
+                "varSlot": null,
+                "varOffset": null
+            },
+            "val_var_type": {
+                "contractName": null,
+                "varName": null,
+                "varType": "mapping(address => uint256)",
+                "varBytes": 32,
+                "varValue": null,
+                "varSlot": null,
+                "varOffset": null,
+                "key_var_type": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "address",
+                    "varBytes": 20,
+                    "varValue": null,
+                    "varSlot": null,
+                    "varOffset": null
+                },
+                "val_var_type": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "uint256",
+                    "varBytes": 32,
+                    "varValue": null,
+                    "varSlot": null,
+                    "varOffset": null
+                }
+            }
+        },
+        {
+            "contractName": "GRANX_Logic_v1",
+            "varName": "isInit",
+            "varType": "uint8",
+            "varBytes": 1,
+            "varValue": null,
+            "varSlot": 2,
+            "varOffset": 0
+        },
+        {
+            "contractName": "GRANX_Logic_v1",
+            "varName": "admin",
+            "varType": "address",
+            "varBytes": 20,
+            "varValue": null,
+            "varSlot": 2,
+            "varOffset": 1
+        },
+        {
+            "contractName": "GRANX_Logic_v1",
+            "varName": "_name",
+            "varType": "string",
+            "varBytes": 32,
+            "varValue": null,
+            "varSlot": 3,
+            "varOffset": 0,
+            "byteSize": 0,
+            "toReadSlot": 3
+        },
+        {
+            "contractName": "GRANX_Logic_v1",
+            "varName": "_symbol",
+            "varType": "string",
+            "varBytes": 32,
+            "varValue": null,
+            "varSlot": 4,
+            "varOffset": 0,
+            "byteSize": 0,
+            "toReadSlot": 4
+        },
+        {
+            "contractName": "GRANX_Logic_v1",
+            "varName": "_decimals",
+            "varType": "uint8",
+            "varBytes": 1,
+            "varValue": null,
+            "varSlot": 5,
+            "varOffset": 0
+        },
+        {
+            "contractName": "GRANX_Logic_v1",
+            "varName": "_totalSupply",
+            "varType": "uint256",
+            "varBytes": 32,
+            "varValue": null,
+            "varSlot": 6,
+            "varOffset": 0
+        },
+        {
+            "contractName": "GRANX_Logic_v1",
+            "varName": "Locked_list",
+            "varType": "mapping(address => GRANX_Logic_v1.LockDetails)",
+            "varBytes": 32,
+            "varValue": null,
+            "varSlot": 7,
+            "varOffset": 0,
+            "key_var_type": {
+                "contractName": null,
+                "varName": null,
+                "varType": "address",
+                "varBytes": 20,
+                "varValue": null,
+                "varSlot": null,
+                "varOffset": null
+            },
+            "val_var_type": {
+                "contractName": null,
+                "varName": null,
+                "varType": "GRANX_Logic_v1.LockDetails",
+                "varBytes": 64,
+                "varValue": [
+                    {
+                        "contractName": "GRANX_Logic_v1",
+                        "varName": "lockedTokencnt",
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": 0,
+                        "varOffset": 0
+                    },
+                    {
+                        "contractName": "GRANX_Logic_v1",
+                        "varName": "releaseTime",
+                        "varType": "uint256",
+                        "varBytes": 32,
+                        "varValue": null,
+                        "varSlot": 1,
+                        "varOffset": 0
+                    }
+                ],
+                "varSlot": null,
+                "varOffset": null
+            }
+        },
+        {
+            "contractName": "GRANX_Logic_v1",
+            "varName": "user_dataList",
+            "varType": "mapping(address => mapping(bytes32 => string))",
+            "varBytes": 32,
+            "varValue": null,
+            "varSlot": 8,
+            "varOffset": 0,
+            "key_var_type": {
+                "contractName": null,
+                "varName": null,
+                "varType": "address",
+                "varBytes": 20,
+                "varValue": null,
+                "varSlot": null,
+                "varOffset": null
+            },
+            "val_var_type": {
+                "contractName": null,
+                "varName": null,
+                "varType": "mapping(bytes32 => string)",
+                "varBytes": 32,
+                "varValue": null,
+                "varSlot": null,
+                "varOffset": null,
+                "key_var_type": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "bytes32",
+                    "varBytes": 32,
+                    "varValue": null,
+                    "varSlot": null,
+                    "varOffset": null
+                },
+                "val_var_type": {
+                    "contractName": null,
+                    "varName": null,
+                    "varType": "string",
+                    "varBytes": 32,
+                    "varValue": null,
+                    "varSlot": null,
+                    "varOffset": null,
+                    "byteSize": 0,
+                    "toReadSlot": null
+                }
+            }
+        }
+    ]
+}

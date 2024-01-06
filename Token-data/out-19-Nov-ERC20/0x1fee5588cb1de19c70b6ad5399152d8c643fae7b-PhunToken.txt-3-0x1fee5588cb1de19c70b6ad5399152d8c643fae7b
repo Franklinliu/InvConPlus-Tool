@@ -1,0 +1,45 @@
+Invariants with True value:33
+Invariants with False value:6
+
+True Invariants:
+transfer(to,value): Requires msg.sender != address(0)
+transfer(to,value): Requires to != address(0)
+transfer(to,value): Requires VeriSol.Old(_paused) == false
+transfer(to,value): Ensures _paused == false
+transfer(to,value): Ensures VeriSol.Old(_totalSupply) == _totalSupply
+transfer(to,value): Ensures VeriSol.Old(_totalSupply) >= _totalSupply
+transfer(to,value): Ensures VeriSol.Old(_totalSupply) <= _totalSupply
+transfer(to,value): Ensures VeriSol.SumMapping(_balances) == VeriSol.Old(VeriSol.SumMapping(_balances))
+transfer(to,value): Ensures VeriSol.SumMapping(_balances) >= VeriSol.Old(VeriSol.SumMapping(_balances))
+transfer(to,value): Ensures VeriSol.SumMapping(_balances) <= VeriSol.Old(VeriSol.SumMapping(_balances))
+transfer(to,value): Ensures value <= VeriSol.Old(VeriSol.SumMapping(_balances)) => value <= VeriSol.SumMapping(_balances)
+transfer(to,value): Ensures value < VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.SumMapping(_balances) > 0
+transfer(to,value): Ensures value < VeriSol.Old(VeriSol.SumMapping(_balances)) => value <= VeriSol.SumMapping(_balances)
+transfer(to,value): Ensures value < VeriSol.Old(VeriSol.SumMapping(_balances)) => value < VeriSol.SumMapping(_balances)
+transfer(to,value): Ensures value < VeriSol.Old(VeriSol.SumMapping(_balances)) => value != VeriSol.SumMapping(_balances)
+transfer(to,value): Ensures value != VeriSol.Old(VeriSol.SumMapping(_balances)) => value != VeriSol.SumMapping(_balances)
+transfer(to,value): Ensures value < VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.SumMapping(_balances) > 0
+transfer(to,value): Ensures value <= VeriSol.Old(VeriSol.SumMapping(_balances)) => value <= VeriSol.SumMapping(_balances)
+transfer(to,value): Ensures value < VeriSol.Old(VeriSol.SumMapping(_balances)) => value <= VeriSol.SumMapping(_balances)
+transfer(to,value): Ensures value == VeriSol.Old(VeriSol.SumMapping(_balances)) => value <= VeriSol.SumMapping(_balances)
+transfer(to,value): Ensures value < VeriSol.Old(VeriSol.SumMapping(_balances)) => value < VeriSol.SumMapping(_balances)
+transfer(to,value): Ensures value < VeriSol.Old(VeriSol.SumMapping(_balances)) => value != VeriSol.SumMapping(_balances)
+transfer(to,value): Ensures value != VeriSol.Old(VeriSol.SumMapping(_balances)) => value != VeriSol.SumMapping(_balances)
+transfer(to,value): Ensures value == VeriSol.Old(VeriSol.SumMapping(_balances)) => value <= VeriSol.SumMapping(_balances)
+transfer(to,value): Ensures value == VeriSol.Old(VeriSol.SumMapping(_balances)) => value == VeriSol.SumMapping(_balances)
+transfer(to,value): Ensures value == VeriSol.Old(VeriSol.SumMapping(_balances)) => value == VeriSol.SumMapping(_balances)
+transfer(to,value): Ensures value < VeriSol.Old(VeriSol.SumMapping(_balances)) && value == VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.SumMapping(_balances) == 10000000000000000000000000000
+transfer(to,value): Ensures value < VeriSol.Old(VeriSol.SumMapping(_balances)) && value == VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.SumMapping(_balances) != 10000000000000000000000000000
+PhunToken: Ensures VeriSol.ContractInvariant(_decimals > 0)
+PhunToken: Ensures VeriSol.ContractInvariant(_decimals == 18)
+PhunToken: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(_balances) == _totalSupply)
+PhunToken: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(_balances) >= _totalSupply)
+PhunToken: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(_balances) <= _totalSupply)
+
+False Invariants:
+transfer(to,value): Ensures value > 0 => VeriSol.SumMapping(_balances) > 0 || VeriSol.SumMapping(_balances) == 10000000000000000000000000000 || VeriSol.SumMapping(_balances) == 10000000000000000000000000000 || value <= VeriSol.SumMapping(_balances)
+transfer(to,value): Ensures VeriSol.SumMapping(_balances) > 0 || VeriSol.SumMapping(_balances) == 10000000000000000000000000000 || VeriSol.SumMapping(_balances) == 10000000000000000000000000000 || value <= VeriSol.SumMapping(_balances)
+transfer(to,value): Ensures value > 0 => VeriSol.SumMapping(_balances) == 10000000000000000000000000000 || value <= VeriSol.SumMapping(_balances) || value <= VeriSol.SumMapping(_balances) || value < VeriSol.SumMapping(_balances)
+transfer(to,value): Ensures VeriSol.SumMapping(_balances) == 10000000000000000000000000000 || value <= VeriSol.SumMapping(_balances) || value <= VeriSol.SumMapping(_balances) || value < VeriSol.SumMapping(_balances)
+transfer(to,value): Ensures value > 0 => value < VeriSol.SumMapping(_balances) || value != VeriSol.SumMapping(_balances) || value != VeriSol.SumMapping(_balances) || VeriSol.SumMapping(_balances) != 10000000000000000000000000000
+transfer(to,value): Ensures value < VeriSol.SumMapping(_balances) || value != VeriSol.SumMapping(_balances) || value != VeriSol.SumMapping(_balances) || VeriSol.SumMapping(_balances) != 10000000000000000000000000000

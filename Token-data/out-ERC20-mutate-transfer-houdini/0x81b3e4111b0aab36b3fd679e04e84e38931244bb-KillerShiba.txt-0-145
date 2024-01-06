@@ -1,0 +1,26 @@
+Invariants with True value:14
+Invariants with False value:4
+
+True Invariants:
+approve(spender,tokens): Requires msg.sender != address(0)
+approve(spender,tokens): Ensures tokens == allowed[msg.sender][spender]
+approve(spender,tokens): Ensures VeriSol.Old(_totalSupply) == _totalSupply
+approve(spender,tokens): Ensures VeriSol.Old(uint256(decimals)) == decimals
+transfer(to,tokens): Requires msg.sender != address(0)
+transfer(to,tokens): Requires tokens <= VeriSol.Old(balances[msg.sender])
+transfer(to,tokens): Ensures tokens <= balances[to]
+transfer(to,tokens): Ensures VeriSol.Old(balances[to]) <= balances[to]
+transfer(to,tokens): Ensures VeriSol.Old(_totalSupply) == _totalSupply
+transfer(to,tokens): Ensures balances[msg.sender] <= VeriSol.Old(balances[msg.sender])
+transfer(to,tokens): Ensures VeriSol.Old(uint256(decimals)) == decimals
+transfer(to,tokens): Ensures VeriSol.Old(VeriSol.SumMapping(balances)) == VeriSol.SumMapping(balances)
+KillerShiba: Ensures VeriSol.ContractInvariant(decimals == 18)
+KillerShiba: Ensures VeriSol.ContractInvariant(_totalSupply == VeriSol.SumMapping(balances))
+
+False Invariants:
+KillerShiba: Ensures VeriSol.ContractInvariant(_totalSupply == 1000000000000000000000000000000000)
+KillerShiba: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == 1000000000000000000000000000000000)
+KillerShiba: Ensures VeriSol.ContractInvariant(decimals < _totalSupply)
+KillerShiba: Ensures VeriSol.ContractInvariant(decimals < VeriSol.SumMapping(balances))
+
+ // ./gambit_out_transfer/mutants/145/verisol_test

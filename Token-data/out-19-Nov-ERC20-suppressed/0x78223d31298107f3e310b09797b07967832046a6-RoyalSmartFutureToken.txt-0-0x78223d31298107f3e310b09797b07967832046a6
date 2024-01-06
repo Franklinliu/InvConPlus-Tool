@@ -1,0 +1,22 @@
+original result: 34 invariants, smt-simplified result: 18 invariants
+approve(spender,tokens):
+Requires		msg.sender != address(0)
+Ensures		tokens == allowed[msg.sender][spender]
+Ensures		_totalSupply == VeriSol.Old(_totalSupply)
+Ensures		VeriSol.Old(uint256(decimals)) == decimals
+transfer(to,tokens):
+Requires		msg.sender != address(0)
+Requires		tokens <= VeriSol.Old(balances[msg.sender])
+Ensures		tokens <= balances[to]
+Ensures		_totalSupply == VeriSol.Old(_totalSupply)
+Ensures		balances[to] >= VeriSol.Old(balances[to])
+Ensures		balances[msg.sender] <= VeriSol.Old(balances[msg.sender])
+Ensures		VeriSol.Old(VeriSol.SumMapping(balances)) >= VeriSol.SumMapping(balances)
+Ensures		VeriSol.Old(uint256(decimals)) == decimals
+RoyalSmartFutureToken:
+Ensures		_totalSupply == 20000000000000000000000000
+Ensures		decimals == 18
+Ensures		VeriSol.SumMapping(balances) > 0
+Ensures		_totalSupply > decimals
+Ensures		_totalSupply >= VeriSol.SumMapping(balances)
+Ensures		decimals < VeriSol.SumMapping(balances)

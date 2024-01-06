@@ -1,0 +1,33 @@
+[
+    {
+        "func": "approve(spender,tokens)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "VeriSol.Requires(msg.sender != address(0))"
+        ],
+        "postconditions": [
+            "VeriSol.Ensures(decimals == VeriSol.Old(uint256(decimals)))",
+            "VeriSol.Ensures(tokens == allowed[msg.sender][spender])",
+            "VeriSol.Ensures(VeriSol.Old(_totalSupply) == _totalSupply)"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": null,
+        "type": "PptType.CONTRACT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [
+            "VeriSol.Ensures(decimals == 18)",
+            "VeriSol.Ensures(_totalSupply == 1000000000000000000000000000000)",
+            "VeriSol.Ensures(VeriSol.SumMapping(balances) == 1000000000000000000000000000000)",
+            "VeriSol.Ensures(decimals < _totalSupply)",
+            "VeriSol.Ensures(decimals < VeriSol.SumMapping(balances))",
+            "VeriSol.Ensures(_totalSupply == VeriSol.SumMapping(balances))"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    }
+]

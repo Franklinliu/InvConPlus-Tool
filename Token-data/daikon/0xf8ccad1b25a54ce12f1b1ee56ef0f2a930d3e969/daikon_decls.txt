@@ -1,0 +1,4244 @@
+// Declarations for Smart Contract Runtime Invariant Identification
+// Declarations automatically written by Liu Ye 
+
+decl-version 2.0
+var-comparability implicit
+ppt Finder:::Object
+ppt-type object
+variable this
+  var-kind variable
+  dec-type Finder
+  rep-type hashcode
+  flags non_null
+  comparability 0
+variable this.owner
+    var-kind field owner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+variable this.newOwner
+    var-kind field newOwner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+variable this.initialSupply
+    var-kind field initialSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+variable this.totalSupply_
+    var-kind field totalSupply_
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+variable this.frozen
+    var-kind field frozen
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozen[..]
+    var-kind array
+    enclosing-var this.frozen
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+variable this.frozen[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozen[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+
+
+ppt Finder.approve(address,uint256):::ENTER
+ppt-type enter
+parent parent Finder:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type Finder
+  rep-type hashcode
+  flags is_param nomod
+  parent Finder:::Object 1
+variable this.owner
+    var-kind field owner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.newOwner
+    var-kind field newOwner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.initialSupply
+    var-kind field initialSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.totalSupply_
+    var-kind field totalSupply_
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.frozen
+    var-kind field frozen
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozen[..]
+    var-kind array
+    enclosing-var this.frozen
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.frozen[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozen[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent Finder:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable _spender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable _value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt Finder.approve(address,uint256):::EXIT1
+ppt-type subexit
+parent parent Finder:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type Finder
+  rep-type hashcode
+  flags is_param nomod
+  parent Finder:::Object 1
+variable this.owner
+    var-kind field owner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.newOwner
+    var-kind field newOwner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.initialSupply
+    var-kind field initialSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.totalSupply_
+    var-kind field totalSupply_
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.frozen
+    var-kind field frozen
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozen[..]
+    var-kind array
+    enclosing-var this.frozen
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.frozen[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozen[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent Finder:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable _spender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable _value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt Finder.approve(address,uint256):::EXIT2
+ppt-type subexit
+parent parent Finder:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type Finder
+  rep-type hashcode
+  flags is_param nomod
+  parent Finder:::Object 1
+variable this.owner
+    var-kind field owner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.newOwner
+    var-kind field newOwner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.initialSupply
+    var-kind field initialSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.totalSupply_
+    var-kind field totalSupply_
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.frozen
+    var-kind field frozen
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozen[..]
+    var-kind array
+    enclosing-var this.frozen
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.frozen[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozen[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent Finder:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable _spender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable _value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt Finder.transferFrom(address,address,uint256):::ENTER
+ppt-type enter
+parent parent Finder:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type Finder
+  rep-type hashcode
+  flags is_param nomod
+  parent Finder:::Object 1
+variable this.owner
+    var-kind field owner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.newOwner
+    var-kind field newOwner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.initialSupply
+    var-kind field initialSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.totalSupply_
+    var-kind field totalSupply_
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.frozen
+    var-kind field frozen
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozen[..]
+    var-kind array
+    enclosing-var this.frozen
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.frozen[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozen[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent Finder:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable _from
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable _to
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable _value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt Finder.transferFrom(address,address,uint256):::EXIT1
+ppt-type subexit
+parent parent Finder:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type Finder
+  rep-type hashcode
+  flags is_param nomod
+  parent Finder:::Object 1
+variable this.owner
+    var-kind field owner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.newOwner
+    var-kind field newOwner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.initialSupply
+    var-kind field initialSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.totalSupply_
+    var-kind field totalSupply_
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.frozen
+    var-kind field frozen
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozen[..]
+    var-kind array
+    enclosing-var this.frozen
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.frozen[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozen[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent Finder:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable _from
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable _to
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable _value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt Finder.transferFrom(address,address,uint256):::EXIT2
+ppt-type subexit
+parent parent Finder:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type Finder
+  rep-type hashcode
+  flags is_param nomod
+  parent Finder:::Object 1
+variable this.owner
+    var-kind field owner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.newOwner
+    var-kind field newOwner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.initialSupply
+    var-kind field initialSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.totalSupply_
+    var-kind field totalSupply_
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.frozen
+    var-kind field frozen
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozen[..]
+    var-kind array
+    enclosing-var this.frozen
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.frozen[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozen[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent Finder:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable _from
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable _to
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable _value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt Finder.burn(uint256):::ENTER
+ppt-type enter
+parent parent Finder:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type Finder
+  rep-type hashcode
+  flags is_param nomod
+  parent Finder:::Object 1
+variable this.owner
+    var-kind field owner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.newOwner
+    var-kind field newOwner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.initialSupply
+    var-kind field initialSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.totalSupply_
+    var-kind field totalSupply_
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.frozen
+    var-kind field frozen
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozen[..]
+    var-kind array
+    enclosing-var this.frozen
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.frozen[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozen[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent Finder:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable _value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt Finder.burn(uint256):::EXIT1
+ppt-type subexit
+parent parent Finder:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type Finder
+  rep-type hashcode
+  flags is_param nomod
+  parent Finder:::Object 1
+variable this.owner
+    var-kind field owner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.newOwner
+    var-kind field newOwner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.initialSupply
+    var-kind field initialSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.totalSupply_
+    var-kind field totalSupply_
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.frozen
+    var-kind field frozen
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozen[..]
+    var-kind array
+    enclosing-var this.frozen
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.frozen[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozen[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent Finder:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable _value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt Finder.burn(uint256):::EXIT2
+ppt-type subexit
+parent parent Finder:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type Finder
+  rep-type hashcode
+  flags is_param nomod
+  parent Finder:::Object 1
+variable this.owner
+    var-kind field owner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.newOwner
+    var-kind field newOwner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.initialSupply
+    var-kind field initialSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.totalSupply_
+    var-kind field totalSupply_
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.frozen
+    var-kind field frozen
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozen[..]
+    var-kind array
+    enclosing-var this.frozen
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.frozen[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozen[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent Finder:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable _value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt Finder.acceptOwnership():::ENTER
+ppt-type enter
+parent parent Finder:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type Finder
+  rep-type hashcode
+  flags is_param nomod
+  parent Finder:::Object 1
+variable this.owner
+    var-kind field owner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.newOwner
+    var-kind field newOwner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.initialSupply
+    var-kind field initialSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.totalSupply_
+    var-kind field totalSupply_
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.frozen
+    var-kind field frozen
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozen[..]
+    var-kind array
+    enclosing-var this.frozen
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.frozen[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozen[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent Finder:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt Finder.acceptOwnership():::EXIT1
+ppt-type subexit
+parent parent Finder:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type Finder
+  rep-type hashcode
+  flags is_param nomod
+  parent Finder:::Object 1
+variable this.owner
+    var-kind field owner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.newOwner
+    var-kind field newOwner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.initialSupply
+    var-kind field initialSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.totalSupply_
+    var-kind field totalSupply_
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.frozen
+    var-kind field frozen
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozen[..]
+    var-kind array
+    enclosing-var this.frozen
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.frozen[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozen[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent Finder:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt Finder.acceptOwnership():::EXIT2
+ppt-type subexit
+parent parent Finder:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type Finder
+  rep-type hashcode
+  flags is_param nomod
+  parent Finder:::Object 1
+variable this.owner
+    var-kind field owner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.newOwner
+    var-kind field newOwner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.initialSupply
+    var-kind field initialSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.totalSupply_
+    var-kind field totalSupply_
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.frozen
+    var-kind field frozen
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozen[..]
+    var-kind array
+    enclosing-var this.frozen
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.frozen[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozen[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent Finder:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt Finder.UnLock(address):::ENTER
+ppt-type enter
+parent parent Finder:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type Finder
+  rep-type hashcode
+  flags is_param nomod
+  parent Finder:::Object 1
+variable this.owner
+    var-kind field owner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.newOwner
+    var-kind field newOwner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.initialSupply
+    var-kind field initialSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.totalSupply_
+    var-kind field totalSupply_
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.frozen
+    var-kind field frozen
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozen[..]
+    var-kind array
+    enclosing-var this.frozen
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.frozen[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozen[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent Finder:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable _holder
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt Finder.UnLock(address):::EXIT1
+ppt-type subexit
+parent parent Finder:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type Finder
+  rep-type hashcode
+  flags is_param nomod
+  parent Finder:::Object 1
+variable this.owner
+    var-kind field owner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.newOwner
+    var-kind field newOwner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.initialSupply
+    var-kind field initialSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.totalSupply_
+    var-kind field totalSupply_
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.frozen
+    var-kind field frozen
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozen[..]
+    var-kind array
+    enclosing-var this.frozen
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.frozen[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozen[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent Finder:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable _holder
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt Finder.UnLock(address):::EXIT2
+ppt-type subexit
+parent parent Finder:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type Finder
+  rep-type hashcode
+  flags is_param nomod
+  parent Finder:::Object 1
+variable this.owner
+    var-kind field owner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.newOwner
+    var-kind field newOwner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.initialSupply
+    var-kind field initialSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.totalSupply_
+    var-kind field totalSupply_
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.frozen
+    var-kind field frozen
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozen[..]
+    var-kind array
+    enclosing-var this.frozen
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.frozen[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozen[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent Finder:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable _holder
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt Finder.transfer(address,uint256):::ENTER
+ppt-type enter
+parent parent Finder:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type Finder
+  rep-type hashcode
+  flags is_param nomod
+  parent Finder:::Object 1
+variable this.owner
+    var-kind field owner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.newOwner
+    var-kind field newOwner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.initialSupply
+    var-kind field initialSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.totalSupply_
+    var-kind field totalSupply_
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.frozen
+    var-kind field frozen
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozen[..]
+    var-kind array
+    enclosing-var this.frozen
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.frozen[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozen[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent Finder:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable _to
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable _value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt Finder.transfer(address,uint256):::EXIT1
+ppt-type subexit
+parent parent Finder:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type Finder
+  rep-type hashcode
+  flags is_param nomod
+  parent Finder:::Object 1
+variable this.owner
+    var-kind field owner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.newOwner
+    var-kind field newOwner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.initialSupply
+    var-kind field initialSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.totalSupply_
+    var-kind field totalSupply_
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.frozen
+    var-kind field frozen
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozen[..]
+    var-kind array
+    enclosing-var this.frozen
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.frozen[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozen[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent Finder:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable _to
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable _value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt Finder.transfer(address,uint256):::EXIT2
+ppt-type subexit
+parent parent Finder:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type Finder
+  rep-type hashcode
+  flags is_param nomod
+  parent Finder:::Object 1
+variable this.owner
+    var-kind field owner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.newOwner
+    var-kind field newOwner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.initialSupply
+    var-kind field initialSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.totalSupply_
+    var-kind field totalSupply_
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.frozen
+    var-kind field frozen
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozen[..]
+    var-kind array
+    enclosing-var this.frozen
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.frozen[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozen[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent Finder:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable _to
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable _value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt Finder.Lock(address):::ENTER
+ppt-type enter
+parent parent Finder:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type Finder
+  rep-type hashcode
+  flags is_param nomod
+  parent Finder:::Object 1
+variable this.owner
+    var-kind field owner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.newOwner
+    var-kind field newOwner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.initialSupply
+    var-kind field initialSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.totalSupply_
+    var-kind field totalSupply_
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.frozen
+    var-kind field frozen
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozen[..]
+    var-kind array
+    enclosing-var this.frozen
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.frozen[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozen[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent Finder:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable _holder
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt Finder.Lock(address):::EXIT1
+ppt-type subexit
+parent parent Finder:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type Finder
+  rep-type hashcode
+  flags is_param nomod
+  parent Finder:::Object 1
+variable this.owner
+    var-kind field owner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.newOwner
+    var-kind field newOwner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.initialSupply
+    var-kind field initialSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.totalSupply_
+    var-kind field totalSupply_
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.frozen
+    var-kind field frozen
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozen[..]
+    var-kind array
+    enclosing-var this.frozen
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.frozen[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozen[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent Finder:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable _holder
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt Finder.Lock(address):::EXIT2
+ppt-type subexit
+parent parent Finder:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type Finder
+  rep-type hashcode
+  flags is_param nomod
+  parent Finder:::Object 1
+variable this.owner
+    var-kind field owner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.newOwner
+    var-kind field newOwner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.initialSupply
+    var-kind field initialSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.totalSupply_
+    var-kind field totalSupply_
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.frozen
+    var-kind field frozen
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozen[..]
+    var-kind array
+    enclosing-var this.frozen
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.frozen[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozen[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent Finder:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable _holder
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt Finder.transferOwnership(address):::ENTER
+ppt-type enter
+parent parent Finder:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type Finder
+  rep-type hashcode
+  flags is_param nomod
+  parent Finder:::Object 1
+variable this.owner
+    var-kind field owner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.newOwner
+    var-kind field newOwner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.initialSupply
+    var-kind field initialSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.totalSupply_
+    var-kind field totalSupply_
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.frozen
+    var-kind field frozen
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozen[..]
+    var-kind array
+    enclosing-var this.frozen
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.frozen[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozen[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent Finder:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable _newOwner
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt Finder.transferOwnership(address):::EXIT1
+ppt-type subexit
+parent parent Finder:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type Finder
+  rep-type hashcode
+  flags is_param nomod
+  parent Finder:::Object 1
+variable this.owner
+    var-kind field owner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.newOwner
+    var-kind field newOwner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.initialSupply
+    var-kind field initialSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.totalSupply_
+    var-kind field totalSupply_
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.frozen
+    var-kind field frozen
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozen[..]
+    var-kind array
+    enclosing-var this.frozen
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.frozen[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozen[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent Finder:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable _newOwner
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt Finder.transferOwnership(address):::EXIT2
+ppt-type subexit
+parent parent Finder:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type Finder
+  rep-type hashcode
+  flags is_param nomod
+  parent Finder:::Object 1
+variable this.owner
+    var-kind field owner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.newOwner
+    var-kind field newOwner
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent Finder:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.initialSupply
+    var-kind field initialSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.totalSupply_
+    var-kind field totalSupply_
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent Finder:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.frozen
+    var-kind field frozen
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozen[..]
+    var-kind array
+    enclosing-var this.frozen
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.frozen[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozen[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent Finder:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent Finder:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent Finder:::Object 1
+variable _newOwner
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+

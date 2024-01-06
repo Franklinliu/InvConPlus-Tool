@@ -1,0 +1,31 @@
+[
+    {
+        "func": "approve(spender,value)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "VeriSol.Requires(spender != address(0))",
+            "VeriSol.Requires(msg.sender != address(0))"
+        ],
+        "postconditions": [
+            "VeriSol.Ensures(VeriSol.Old(_totalSupply) == _totalSupply)",
+            "VeriSol.Ensures(_allowances[msg.sender][spender] == value)",
+            "VeriSol.Ensures(!(VeriSol.Old(_allowances[msg.sender][spender]) == 0 ) || ( VeriSol.Old(_allowances[msg.sender][spender]) <= _allowances[msg.sender][spender]))",
+            "VeriSol.Ensures(!(VeriSol.Old(_allowances[msg.sender][spender]) == value ) || ( VeriSol.Old(_allowances[msg.sender][spender]) == _allowances[msg.sender][spender]))",
+            "VeriSol.Ensures(!(VeriSol.Old(_allowances[msg.sender][spender]) == 0 ) || ( VeriSol.Old(_allowances[msg.sender][spender]) != _allowances[msg.sender][spender] || _allowances[msg.sender][spender] != 115792089237316195423570985008687907853269984665640564039457584007913129639935))"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": null,
+        "type": "PptType.CONTRACT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [
+            "VeriSol.Ensures(_totalSupply == VeriSol.SumMapping(_balances))"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    }
+]

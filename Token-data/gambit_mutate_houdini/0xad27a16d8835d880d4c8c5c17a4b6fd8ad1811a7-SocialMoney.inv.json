@@ -1,0 +1,57 @@
+[
+    {
+        "func": "transfer(to,value)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "VeriSol.Requires(msg.sender != address(0))",
+            "VeriSol.Requires(VeriSol.Old(_totalSupply) > 0)",
+            "VeriSol.Requires(to != address(0))",
+            "VeriSol.Requires(VeriSol.Old(VeriSol.SumMapping(_balances)) > 0)",
+            "VeriSol.Requires(VeriSol.Old(uint256(decimals)) < VeriSol.Old(_totalSupply))",
+            "VeriSol.Requires(VeriSol.Old(uint256(decimals)) < VeriSol.Old(VeriSol.SumMapping(_balances)))",
+            "VeriSol.Requires(VeriSol.Old(_totalSupply) == VeriSol.Old(VeriSol.SumMapping(_balances)))",
+            "VeriSol.Requires(value <= VeriSol.Old(_balances[msg.sender]))"
+        ],
+        "postconditions": [
+            "VeriSol.Ensures(_totalSupply > 0)",
+            "VeriSol.Ensures(VeriSol.SumMapping(_balances) > 0)",
+            "VeriSol.Ensures(_balances[msg.sender] < VeriSol.SumMapping(_balances))",
+            "VeriSol.Ensures(_balances[msg.sender] <= VeriSol.Old(_balances[msg.sender]))",
+            "VeriSol.Ensures(VeriSol.Old(_balances[to]) <= _balances[to])",
+            "VeriSol.Ensures(VeriSol.Old(uint256(decimals)) < _totalSupply)",
+            "VeriSol.Ensures(VeriSol.Old(uint256(decimals)) == decimals)",
+            "VeriSol.Ensures(VeriSol.Old(uint256(decimals)) < VeriSol.SumMapping(_balances))",
+            "VeriSol.Ensures(_totalSupply == VeriSol.Old(_totalSupply))",
+            "VeriSol.Ensures(_totalSupply > decimals)",
+            "VeriSol.Ensures(_totalSupply == VeriSol.Old(VeriSol.SumMapping(_balances)))",
+            "VeriSol.Ensures(_totalSupply == VeriSol.SumMapping(_balances))",
+            "VeriSol.Ensures(_totalSupply != VeriSol.Old(_balances[msg.sender]))",
+            "VeriSol.Ensures(VeriSol.Old(_totalSupply) > decimals)",
+            "VeriSol.Ensures(VeriSol.Old(_totalSupply) == VeriSol.SumMapping(_balances))",
+            "VeriSol.Ensures(decimals < VeriSol.Old(VeriSol.SumMapping(_balances)))",
+            "VeriSol.Ensures(decimals < VeriSol.SumMapping(_balances))",
+            "VeriSol.Ensures(decimals < VeriSol.Old(_balances[msg.sender]))",
+            "VeriSol.Ensures(value <= _balances[to])",
+            "VeriSol.Ensures(value != VeriSol.SumMapping(_balances))",
+            "VeriSol.Ensures(VeriSol.Old(VeriSol.SumMapping(_balances)) == VeriSol.SumMapping(_balances))",
+            "VeriSol.Ensures(VeriSol.SumMapping(_balances) != VeriSol.Old(_balances[msg.sender]))"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": null,
+        "type": "PptType.CONTRACT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [
+            "VeriSol.Ensures(_totalSupply > 0)",
+            "VeriSol.Ensures(VeriSol.SumMapping(_balances) == _totalSupply)",
+            "VeriSol.Ensures(VeriSol.SumMapping(_balances) > decimals)",
+            "VeriSol.Ensures(_totalSupply > decimals)"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    }
+]

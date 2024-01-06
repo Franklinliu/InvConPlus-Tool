@@ -1,0 +1,26 @@
+Invariants with True value:15
+Invariants with False value:3
+
+True Invariants:
+approve(spender,tokens): Requires msg.sender != address(0)
+approve(spender,tokens): Ensures decimals == VeriSol.Old(uint256(decimals))
+approve(spender,tokens): Ensures allowed[msg.sender][spender] == tokens
+approve(spender,tokens): Ensures VeriSol.Old(_totalSupply) == _totalSupply
+transfer(to,tokens): Requires msg.sender != address(0)
+transfer(to,tokens): Requires VeriSol.Old(balances[msg.sender]) >= tokens
+transfer(to,tokens): Ensures decimals == VeriSol.Old(uint256(decimals))
+transfer(to,tokens): Ensures VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances))
+transfer(to,tokens): Ensures VeriSol.Old(balances[msg.sender]) >= balances[msg.sender]
+transfer(to,tokens): Ensures VeriSol.Old(_totalSupply) == _totalSupply
+transfer(to,tokens): Ensures tokens <= balances[to]
+transfer(to,tokens): Ensures balances[to] >= VeriSol.Old(balances[to])
+FlowerToken: Ensures VeriSol.ContractInvariant(_totalSupply == 1000000000000000000000000000000000)
+FlowerToken: Ensures VeriSol.ContractInvariant(decimals == 18)
+FlowerToken: Ensures VeriSol.ContractInvariant(_totalSupply > decimals)
+
+False Invariants:
+FlowerToken: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == 1000000000000000000000000000000000)
+FlowerToken: Ensures VeriSol.ContractInvariant(_totalSupply == VeriSol.SumMapping(balances))
+FlowerToken: Ensures VeriSol.ContractInvariant(decimals < VeriSol.SumMapping(balances))
+
+ // ./gambit_out_approve/mutants/1209/verisol_test

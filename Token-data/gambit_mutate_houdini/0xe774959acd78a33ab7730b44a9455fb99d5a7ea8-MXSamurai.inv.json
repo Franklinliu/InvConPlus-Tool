@@ -1,0 +1,52 @@
+[
+    {
+        "func": "approve(spender,tokens)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "VeriSol.Requires(msg.sender != address(0))"
+        ],
+        "postconditions": [
+            "VeriSol.Ensures(allowed[msg.sender][spender] == tokens)",
+            "VeriSol.Ensures(VeriSol.Old(_totalSupply) == _totalSupply)",
+            "VeriSol.Ensures(decimals == VeriSol.Old(uint256(decimals)))"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "transfer(to,tokens)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "VeriSol.Requires(msg.sender != address(0))",
+            "VeriSol.Requires(VeriSol.Old(balances[msg.sender]) >= tokens)"
+        ],
+        "postconditions": [
+            "VeriSol.Ensures(VeriSol.Old(_totalSupply) == _totalSupply)",
+            "VeriSol.Ensures(VeriSol.Old(balances[msg.sender]) >= balances[msg.sender])",
+            "VeriSol.Ensures(VeriSol.Old(VeriSol.SumMapping(balances)) == VeriSol.SumMapping(balances))",
+            "VeriSol.Ensures(balances[to] >= VeriSol.Old(balances[to]))",
+            "VeriSol.Ensures(balances[to] >= tokens)",
+            "VeriSol.Ensures(decimals == VeriSol.Old(uint256(decimals)))"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": null,
+        "type": "PptType.CONTRACT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [
+            "VeriSol.Ensures(VeriSol.SumMapping(balances) == 100000000000000000)",
+            "VeriSol.Ensures(_totalSupply == 100000000000000000)",
+            "VeriSol.Ensures(decimals == 4)",
+            "VeriSol.Ensures(VeriSol.SumMapping(balances) == _totalSupply)",
+            "VeriSol.Ensures(VeriSol.SumMapping(balances) > decimals)",
+            "VeriSol.Ensures(_totalSupply > decimals)"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    }
+]

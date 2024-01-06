@@ -1,0 +1,8 @@
+original result: 11 invariants, smt-simplified result: 5 invariants
+approve(spender,value):
+Requires		msg.sender != address(0)
+Requires		spender != address(0)
+Ensures		_allowances[msg.sender][spender] == value
+Ensures		_totalSupply == VeriSol.Old(_totalSupply)
+TokenMintERC20Token:
+Ensures		VeriSol.SumMapping(_balances) == _totalSupply

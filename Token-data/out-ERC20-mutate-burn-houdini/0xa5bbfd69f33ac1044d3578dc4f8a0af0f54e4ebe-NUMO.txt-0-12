@@ -1,0 +1,20 @@
+Invariants with True value:12
+Invariants with False value:0
+
+True Invariants:
+approve(spender,value): Requires msg.sender != address(0)
+approve(spender,value): Requires spender != address(0)
+approve(spender,value): Ensures VeriSol.Old(_totalSupply) == _totalSupply
+approve(spender,value): Ensures _allowances[msg.sender][spender] == value
+burn(value): Requires msg.sender != address(0)
+burn(value): Requires VeriSol.Old(_totalSupply) >= value
+burn(value): Requires VeriSol.Old(_balances[msg.sender]) >= value
+burn(value): Ensures VeriSol.Old(_totalSupply) >= _totalSupply
+burn(value): Ensures VeriSol.Old(VeriSol.SumMapping(_balances)) >= VeriSol.SumMapping(_balances)
+burn(value): Ensures _balances[msg.sender] <= VeriSol.Old(_balances[msg.sender])
+burn(value): Ensures _decimals == VeriSol.Old(uint256(_decimals))
+NUMO: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(_balances) == _totalSupply)
+
+False Invariants:
+
+ // ./gambit_out_burn/mutants/12/verisol_test

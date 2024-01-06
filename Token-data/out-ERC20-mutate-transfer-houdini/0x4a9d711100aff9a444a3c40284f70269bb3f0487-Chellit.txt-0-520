@@ -1,0 +1,23 @@
+Invariants with True value:15
+Invariants with False value:0
+
+True Invariants:
+transfer(_to,_value): Requires msg.sender != address(0)
+transfer(_to,_value): Requires _to != address(0)
+transfer(_to,_value): Requires VeriSol.Old(LockList[msg.sender]) == false
+transfer(_to,_value): Requires VeriSol.Old(LockList[_to]) == false
+transfer(_to,_value): Ensures LockList[_to] == false
+transfer(_to,_value): Ensures LockList[msg.sender] == false
+transfer(_to,_value): Ensures totalSupply == VeriSol.Old(totalSupply)
+transfer(_to,_value): Ensures VeriSol.SumMapping(LockedTokens) == VeriSol.Old(VeriSol.SumMapping(LockedTokens))
+transfer(_to,_value): Ensures balanceOf[_to] >= VeriSol.Old(balanceOf[_to])
+transfer(_to,_value): Ensures balanceOf[_to] >= _value
+transfer(_to,_value): Ensures VeriSol.Old(VeriSol.SumMapping(balanceOf)) == VeriSol.SumMapping(balanceOf)
+transfer(_to,_value): Ensures VeriSol.Old(uint256(decimals)) == decimals
+Chellit: Ensures VeriSol.ContractInvariant(owner != address(0))
+Chellit: Ensures VeriSol.ContractInvariant(decimals == 18)
+Chellit: Ensures VeriSol.ContractInvariant(totalSupply == VeriSol.SumMapping(balanceOf))
+
+False Invariants:
+
+ // ./gambit_out_transfer/mutants/520/verisol_test

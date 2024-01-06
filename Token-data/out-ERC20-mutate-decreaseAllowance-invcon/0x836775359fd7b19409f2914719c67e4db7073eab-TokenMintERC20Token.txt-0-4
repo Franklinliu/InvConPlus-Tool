@@ -1,0 +1,33 @@
+Invariants with True value:22
+Invariants with False value:3
+
+True Invariants:
+approve(spender,value): Requires msg.sender != address(0)
+approve(spender,value): Ensures value == _allowances[msg.sender][spender]
+approve(spender,value): Ensures VeriSol.Old(_totalSupply) == _totalSupply
+approve(spender,value): Ensures !(value == VeriSol.Old(_allowances[msg.sender][spender]) ) || ( _allowances[msg.sender][spender] == VeriSol.Old(_allowances[msg.sender][spender]))
+approve(spender,value): Ensures !(VeriSol.Old(_allowances[msg.sender][spender]) == 0 ) || ( _allowances[msg.sender][spender] >= VeriSol.Old(_allowances[msg.sender][spender]))
+increaseAllowance(spender,addedValue): Requires msg.sender != address(0)
+increaseAllowance(spender,addedValue): Ensures VeriSol.Old(VeriSol.SumMapping(_balances)) <= VeriSol.SumMapping(_balances)
+increaseAllowance(spender,addedValue): Ensures _allowances[msg.sender][spender] >= VeriSol.Old(_allowances[msg.sender][spender])
+increaseAllowance(spender,addedValue): Ensures _allowances[msg.sender][spender] >= addedValue
+increaseAllowance(spender,addedValue): Ensures VeriSol.Old(_totalSupply) == _totalSupply
+increaseAllowance(spender,addedValue): Ensures addedValue + VeriSol.Old(_allowances[msg.sender][spender]) == _allowances[msg.sender][spender]
+increaseAllowance(spender,addedValue): Ensures !(VeriSol.Old(_allowances[msg.sender][spender]) != addedValue ) || ( _allowances[msg.sender][spender] > 0)
+decreaseAllowance(spender,subtractedValue): Requires msg.sender != address(0)
+decreaseAllowance(spender,subtractedValue): Requires subtractedValue <= VeriSol.Old(_allowances[msg.sender][spender])
+decreaseAllowance(spender,subtractedValue): Ensures VeriSol.Old(VeriSol.SumMapping(_balances)) >= VeriSol.SumMapping(_balances)
+decreaseAllowance(spender,subtractedValue): Ensures _allowances[msg.sender][spender] <= VeriSol.Old(_allowances[msg.sender][spender])
+decreaseAllowance(spender,subtractedValue): Ensures VeriSol.Old(_totalSupply) == _totalSupply
+decreaseAllowance(spender,subtractedValue): Ensures VeriSol.Old(_allowances[msg.sender][spender]) - subtractedValue == _allowances[msg.sender][spender]
+decreaseAllowance(spender,subtractedValue): Ensures !(subtractedValue != VeriSol.Old(_allowances[msg.sender][spender]) ) || ( _allowances[msg.sender][spender] > 0)
+decreaseAllowance(spender,subtractedValue): Ensures !(VeriSol.Old(_allowances[msg.sender][spender]) > 0 ) || ( _allowances[msg.sender][spender] != subtractedValue || _allowances[msg.sender][spender] < VeriSol.Old(_allowances[msg.sender][spender]))
+decreaseAllowance(spender,subtractedValue): Ensures !(VeriSol.Old(_allowances[msg.sender][spender]) > 0 ) || ( _allowances[msg.sender][spender] > subtractedValue || _allowances[msg.sender][spender] != subtractedValue || _allowances[msg.sender][spender] < VeriSol.Old(_allowances[msg.sender][spender]) || _allowances[msg.sender][spender] != VeriSol.Old(_allowances[msg.sender][spender]))
+TokenMintERC20Token: Ensures VeriSol.ContractInvariant(_totalSupply == VeriSol.SumMapping(_balances))
+
+False Invariants:
+approve(spender,value): Requires spender != address(0)
+increaseAllowance(spender,addedValue): Requires spender != address(0)
+decreaseAllowance(spender,subtractedValue): Requires spender != address(0)
+
+ // ./gambit_out_decreaseAllowance/mutants/4/verisol_test

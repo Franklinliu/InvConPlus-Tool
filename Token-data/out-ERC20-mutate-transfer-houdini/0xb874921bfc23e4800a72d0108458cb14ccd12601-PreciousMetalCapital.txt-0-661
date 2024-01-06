@@ -1,0 +1,34 @@
+Invariants with True value:24
+Invariants with False value:2
+
+True Invariants:
+transfer(recipient,amount): Requires msg.sender != address(0)
+transfer(recipient,amount): Requires VeriSol.Old(_balances[msg.sender]) >= amount
+transfer(recipient,amount): Ensures VeriSol.Old(_balances[recipient]) <= _balances[recipient]
+transfer(recipient,amount): Ensures _balances[msg.sender] <= VeriSol.Old(_balances[msg.sender])
+transfer(recipient,amount): Ensures VeriSol.Old(VeriSol.SumMapping(_balances)) == VeriSol.SumMapping(_balances)
+transfer(recipient,amount): Ensures _totalSupply == VeriSol.Old(_totalSupply)
+transfer(recipient,amount): Ensures _balances[recipient] >= amount
+approve(spender,value): Requires msg.sender != address(0)
+approve(spender,value): Requires spender != address(0)
+approve(spender,value): Ensures value == _allowances[msg.sender][spender]
+approve(spender,value): Ensures _totalSupply == VeriSol.Old(_totalSupply)
+transferFrom(sender,recipient,amount): Requires sender != address(0)
+transferFrom(sender,recipient,amount): Requires msg.sender != address(0)
+transferFrom(sender,recipient,amount): Requires VeriSol.Old(_balances[recipient]) != VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Requires VeriSol.Old(_balances[sender]) != VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Requires VeriSol.Old(_balances[sender]) >= amount
+transferFrom(sender,recipient,amount): Requires VeriSol.Old(_allowances[sender][msg.sender]) >= amount
+transferFrom(sender,recipient,amount): Ensures _balances[sender] <= VeriSol.Old(_balances[sender])
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(VeriSol.SumMapping(_balances)) >= VeriSol.SumMapping(_balances)
+transferFrom(sender,recipient,amount): Ensures _totalSupply == VeriSol.Old(_totalSupply)
+transferFrom(sender,recipient,amount): Ensures _balances[recipient] >= amount
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(_allowances[sender][msg.sender]) >= _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures amount + _allowances[sender][msg.sender] == VeriSol.Old(_allowances[sender][msg.sender])
+PreciousMetalCapital: Ensures VeriSol.ContractInvariant(_totalSupply >= VeriSol.SumMapping(_balances))
+
+False Invariants:
+transfer(recipient,amount): Requires recipient != address(0)
+transferFrom(sender,recipient,amount): Requires recipient != address(0)
+
+ // ./gambit_out_transfer/mutants/661/verisol_test

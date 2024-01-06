@@ -1,0 +1,10 @@
+1,DeleteExpressionMutation,verisol_test/0x836775359fd7b19409f2914719c67e4db7073eab.etherscan.io-TokenMintERC20Token.sol,409:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+2,RequireMutation,verisol_test/0x836775359fd7b19409f2914719c67e4db7073eab.etherscan.io-TokenMintERC20Token.sol,409:17,owner != address(0),false
+3,DeleteExpressionMutation,verisol_test/0x836775359fd7b19409f2914719c67e4db7073eab.etherscan.io-TokenMintERC20Token.sol,410:9,"require(spender != address(0), ""ERC20: approve to the zero address"")",assert(true)
+4,RequireMutation,verisol_test/0x836775359fd7b19409f2914719c67e4db7073eab.etherscan.io-TokenMintERC20Token.sol,410:17,spender != address(0),true
+5,DeleteExpressionMutation,verisol_test/0x836775359fd7b19409f2914719c67e4db7073eab.etherscan.io-TokenMintERC20Token.sol,412:9,_allowances[owner][spender] = value,assert(true)
+6,DeleteExpressionMutation,verisol_test/0x836775359fd7b19409f2914719c67e4db7073eab.etherscan.io-TokenMintERC20Token.sol,132:9,"require(b <= a, ""SafeMath: subtraction overflow"")",assert(true)
+7,BinaryOpMutation,verisol_test/0x836775359fd7b19409f2914719c67e4db7073eab.etherscan.io-TokenMintERC20Token.sol,133:22, - ,+
+8,BinaryOpMutation,verisol_test/0x836775359fd7b19409f2914719c67e4db7073eab.etherscan.io-TokenMintERC20Token.sol,133:22, - ,*
+9,BinaryOpMutation,verisol_test/0x836775359fd7b19409f2914719c67e4db7073eab.etherscan.io-TokenMintERC20Token.sol,133:22, - ,%
+10,BinaryOpMutation,verisol_test/0x836775359fd7b19409f2914719c67e4db7073eab.etherscan.io-TokenMintERC20Token.sol,133:22, - ,**

@@ -1,0 +1,18 @@
+[
+    [
+        "msg.sender != address(0)",
+        "msg.sender != address(0)"
+    ],
+    [
+        "VeriSol.Old(_totalSupply) == _totalSupply",
+        "_totalSupply == VeriSol.Old(_totalSupply)"
+    ],
+    [
+        "allowed[msg.sender][spender] == tokens",
+        "allowed[msg.sender][spender] == tokens"
+    ],
+    [
+        "VeriSol.SumMapping(balances) == _totalSupply",
+        "_totalSupply == VeriSol.SumMapping(balances)"
+    ]
+]

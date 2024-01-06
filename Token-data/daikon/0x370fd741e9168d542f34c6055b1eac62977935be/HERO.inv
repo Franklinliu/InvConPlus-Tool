@@ -1,0 +1,153 @@
+Daikon version 5.8.6, released December 2, 2020; http://plse.cs.washington.edu/daikon.
+Reading declaration files Processing trace data; reading 1 dtrace file:
+Warning: Daikon is using a dataflow hierarchy analysis on a data trace that does not appear to be over a program execution, consider running Daikon with the --nohierarchy flag.
+
+===========================================================================
+HERO.transfer(address,uint256):::EXIT1
+this == orig(this)
+this._decimals == this._totalSupply
+this._decimals == msg.value
+this._decimals == orig(this._decimals)
+this._decimals == orig(this._totalSupply)
+this._decimals == orig(msg.value)
+this._decimals == sum(this._allowed[].getSubValue())
+this._decimals == orig(this._allowed[post(pair(recipient,msg.sender))].getSubValue())
+this._balances == orig(this._balances)
+this._allowed == orig(this._allowed)
+this._allowed[].getSubLength() == orig(this._allowed[].getSubLength())
+this._totalSupply == msg.value
+this._totalSupply == orig(this._decimals)
+this._totalSupply == orig(this._totalSupply)
+this._totalSupply == orig(msg.value)
+this._totalSupply == sum(this._allowed[].getSubValue())
+this._totalSupply == orig(this._allowed[post(pair(recipient,msg.sender))].getSubValue())
+this._owner == orig(this._owner)
+this.stopped == orig(this.stopped)
+this._lockTimes == orig(this._lockTimes)
+this._lockAmounts == orig(this._lockAmounts)
+recipient == orig(recipient)
+amount == orig(amount)
+msg.sender == orig(msg.sender)
+msg.value == orig(this._decimals)
+msg.value == orig(this._totalSupply)
+msg.value == orig(msg.value)
+msg.value == sum(this._allowed[].getSubValue())
+msg.value == orig(this._allowed[post(pair(recipient,msg.sender))].getSubValue())
+block.timestamp == orig(block.timestamp)
+orig(this._decimals) == orig(this._totalSupply)
+orig(this._decimals) == orig(msg.value)
+orig(this._decimals) == sum(this._allowed[].getSubValue())
+orig(this._decimals) == orig(this._allowed[post(pair(recipient,msg.sender))].getSubValue())
+orig(this._totalSupply) == orig(msg.value)
+orig(this._totalSupply) == sum(this._allowed[].getSubValue())
+orig(this._totalSupply) == orig(this._allowed[post(pair(recipient,msg.sender))].getSubValue())
+orig(msg.value) == sum(this._allowed[].getSubValue())
+orig(msg.value) == orig(this._allowed[post(pair(recipient,msg.sender))].getSubValue())
+sum(this._allowed[].getSubLength()) == sum(orig(this._allowed[].getSubLength()))
+sum(this._allowed[].getSubValue()) == orig(this._allowed[post(pair(recipient,msg.sender))].getSubValue())
+this._decimals == 0
+this._balances has only one value
+this._allowed has only one value
+this._totalSupply == 0
+this.stopped == false
+this._lockTimes has only one value
+this._lockAmounts has only one value
+msg.value == 0
+orig(this) has only one value
+orig(this) != null
+orig(this._decimals) == 0
+orig(this._totalSupply) == 0
+orig(msg.value) == 0
+sum(this._balances[].getValue()) == 2000000000000000000000000000
+sum(this._allowed[].getSubLength()) == 0
+sum(this._allowed[].getSubValue()) == 0
+sum(orig(this._balances[].getValue())) one of { 0, 2000000000000000000000000000 }
+orig(this._allowed[post(pair(recipient,msg.sender))].getSubValue()) == 0
+this._decimals < amount
+this._decimals < block.timestamp
+this._decimals < orig(amount)
+this._decimals < orig(block.timestamp)
+this._decimals < sum(this._balances[].getValue())
+this._decimals <= sum(orig(this._balances[].getValue()))
+this._decimals < this._balances[orig(recipient)].getValue()
+this._decimals < this._balances[orig(msg.sender)].getValue()
+this._decimals < orig(this._balances[post(recipient)].getValue())
+this._decimals < orig(this._balances[post(msg.sender)].getValue())
+this._totalSupply < amount
+this._totalSupply < block.timestamp
+this._totalSupply < orig(amount)
+this._totalSupply < orig(block.timestamp)
+this._totalSupply < sum(this._balances[].getValue())
+this._totalSupply <= sum(orig(this._balances[].getValue()))
+this._totalSupply < this._balances[orig(recipient)].getValue()
+this._totalSupply < this._balances[orig(msg.sender)].getValue()
+this._totalSupply < orig(this._balances[post(recipient)].getValue())
+this._totalSupply < orig(this._balances[post(msg.sender)].getValue())
+this._owner != orig(recipient)
+this._owner != orig(msg.sender)
+amount < sum(this._balances[].getValue())
+amount <= this._balances[orig(recipient)].getValue()
+amount < this._balances[orig(msg.sender)].getValue()
+amount < orig(this._balances[post(msg.sender)].getValue())
+msg.value < block.timestamp
+msg.value < orig(amount)
+msg.value < orig(block.timestamp)
+msg.value < sum(this._balances[].getValue())
+msg.value <= sum(orig(this._balances[].getValue()))
+msg.value < this._balances[orig(recipient)].getValue()
+msg.value < this._balances[orig(msg.sender)].getValue()
+msg.value < orig(this._balances[post(recipient)].getValue())
+msg.value < orig(this._balances[post(msg.sender)].getValue())
+block.timestamp < orig(amount)
+block.timestamp < sum(this._balances[].getValue())
+block.timestamp < this._balances[orig(recipient)].getValue()
+block.timestamp < this._balances[orig(msg.sender)].getValue()
+block.timestamp < orig(this._balances[post(recipient)].getValue())
+block.timestamp < orig(this._balances[post(msg.sender)].getValue())
+orig(this._decimals) < orig(amount)
+orig(this._decimals) < orig(block.timestamp)
+orig(this._decimals) < sum(this._balances[].getValue())
+orig(this._decimals) <= sum(orig(this._balances[].getValue()))
+orig(this._decimals) < this._balances[orig(recipient)].getValue()
+orig(this._decimals) < this._balances[orig(msg.sender)].getValue()
+orig(this._decimals) < orig(this._balances[post(recipient)].getValue())
+orig(this._decimals) < orig(this._balances[post(msg.sender)].getValue())
+orig(this._totalSupply) < orig(amount)
+orig(this._totalSupply) < orig(block.timestamp)
+orig(this._totalSupply) < sum(this._balances[].getValue())
+orig(this._totalSupply) <= sum(orig(this._balances[].getValue()))
+orig(this._totalSupply) < this._balances[orig(recipient)].getValue()
+orig(this._totalSupply) < this._balances[orig(msg.sender)].getValue()
+orig(this._totalSupply) < orig(this._balances[post(recipient)].getValue())
+orig(this._totalSupply) < orig(this._balances[post(msg.sender)].getValue())
+orig(recipient) != orig(msg.sender)
+orig(amount) < sum(this._balances[].getValue())
+orig(amount) <= this._balances[orig(recipient)].getValue()
+orig(amount) < this._balances[orig(msg.sender)].getValue()
+orig(amount) < orig(this._balances[post(msg.sender)].getValue())
+orig(msg.value) < orig(block.timestamp)
+orig(msg.value) < sum(this._balances[].getValue())
+orig(msg.value) <= sum(orig(this._balances[].getValue()))
+orig(msg.value) < this._balances[orig(recipient)].getValue()
+orig(msg.value) < this._balances[orig(msg.sender)].getValue()
+orig(msg.value) < orig(this._balances[post(recipient)].getValue())
+orig(msg.value) < orig(this._balances[post(msg.sender)].getValue())
+orig(block.timestamp) < sum(this._balances[].getValue())
+orig(block.timestamp) < this._balances[orig(recipient)].getValue()
+orig(block.timestamp) < this._balances[orig(msg.sender)].getValue()
+orig(block.timestamp) < orig(this._balances[post(recipient)].getValue())
+orig(block.timestamp) < orig(this._balances[post(msg.sender)].getValue())
+sum(this._allowed[].getSubValue()) <= sum(orig(this._balances[].getValue()))
+sum(this._allowed[].getSubValue()) < this._balances[orig(recipient)].getValue()
+sum(this._allowed[].getSubValue()) < this._balances[orig(msg.sender)].getValue()
+sum(this._allowed[].getSubValue()) < orig(this._balances[post(recipient)].getValue())
+sum(this._allowed[].getSubValue()) < orig(this._balances[post(msg.sender)].getValue())
+this._balances[orig(recipient)].getValue() < this._balances[orig(msg.sender)].getValue()
+this._balances[orig(recipient)].getValue() < orig(this._balances[post(msg.sender)].getValue())
+this._balances[orig(msg.sender)].getValue() < orig(this._balances[post(msg.sender)].getValue())
+orig(this._balances[post(recipient)].getValue()) < orig(this._balances[post(msg.sender)].getValue())
+amount - this._balances[orig(recipient)].getValue() + orig(this._balances[post(recipient)].getValue()) == 0
+amount + this._balances[orig(msg.sender)].getValue() - orig(this._balances[post(msg.sender)].getValue()) == 0
+orig(amount) - this._balances[orig(recipient)].getValue() + orig(this._balances[post(recipient)].getValue()) == 0
+orig(amount) + this._balances[orig(msg.sender)].getValue() - orig(this._balances[post(msg.sender)].getValue()) == 0
+Exiting Daikon.

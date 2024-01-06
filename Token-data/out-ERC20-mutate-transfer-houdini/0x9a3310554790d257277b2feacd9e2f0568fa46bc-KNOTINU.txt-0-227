@@ -1,0 +1,26 @@
+Invariants with True value:13
+Invariants with False value:5
+
+True Invariants:
+approve(spender,tokens): Requires msg.sender != address(0)
+approve(spender,tokens): Ensures allowed[msg.sender][spender] == tokens
+approve(spender,tokens): Ensures decimals == VeriSol.Old(uint256(decimals))
+approve(spender,tokens): Ensures _totalSupply == VeriSol.Old(_totalSupply)
+transfer(to,tokens): Requires msg.sender != address(0)
+transfer(to,tokens): Ensures VeriSol.Old(balances[to]) <= balances[to]
+transfer(to,tokens): Ensures decimals == VeriSol.Old(uint256(decimals))
+transfer(to,tokens): Ensures balances[to] >= tokens
+transfer(to,tokens): Ensures _totalSupply == VeriSol.Old(_totalSupply)
+KNOTINU: Ensures VeriSol.ContractInvariant(_totalSupply == 1000000000000000000000000000000)
+KNOTINU: Ensures VeriSol.ContractInvariant(decimals == 18)
+KNOTINU: Ensures VeriSol.ContractInvariant(_totalSupply > decimals)
+KNOTINU: Ensures VeriSol.ContractInvariant(decimals < VeriSol.SumMapping(balances))
+
+False Invariants:
+transfer(to,tokens): Requires VeriSol.Old(balances[msg.sender]) >= tokens
+transfer(to,tokens): Ensures VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances))
+transfer(to,tokens): Ensures balances[msg.sender] <= VeriSol.Old(balances[msg.sender])
+KNOTINU: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == 1000000000000000000000000000000)
+KNOTINU: Ensures VeriSol.ContractInvariant(_totalSupply == VeriSol.SumMapping(balances))
+
+ // ./gambit_out_transfer/mutants/227/verisol_test

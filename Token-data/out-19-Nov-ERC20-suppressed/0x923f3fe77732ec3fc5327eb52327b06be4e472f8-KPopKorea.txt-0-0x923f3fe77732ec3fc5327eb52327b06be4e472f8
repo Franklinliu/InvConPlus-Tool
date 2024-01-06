@@ -1,0 +1,17 @@
+original result: 21 invariants, smt-simplified result: 14 invariants
+transfer(recipient,amount):
+Requires		msg.sender != address(0)
+Requires		VeriSol.Old(paused) == false
+Requires		recipient != address(0)
+Requires		VeriSol.Old(_balances[msg.sender]) >= amount
+Ensures		paused == false
+Ensures		_owner == VeriSol.Old(_owner)
+Ensures		_balances[msg.sender] <= VeriSol.Old(_balances[msg.sender])
+Ensures		VeriSol.Old(_balances[recipient]) <= _balances[recipient]
+Ensures		VeriSol.SumMapping(_balances) == VeriSol.Old(VeriSol.SumMapping(_balances))
+Ensures		VeriSol.Old(uint256(_decimals)) == _decimals
+Ensures		_balances[recipient] >= amount
+Ensures		_pendingowner == VeriSol.Old(_pendingowner)
+Ensures		VeriSol.Old(_totalSupply) == _totalSupply
+KPopKorea:
+Ensures		_decimals == 18

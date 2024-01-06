@@ -1,0 +1,26 @@
+Invariants with True value:18
+Invariants with False value:0
+
+True Invariants:
+transfer(recipient,amount): Requires msg.sender != address(0)
+transfer(recipient,amount): Requires recipient != address(0)
+transfer(recipient,amount): Requires amount <= VeriSol.Old(_balances[msg.sender])
+transfer(recipient,amount): Ensures VeriSol.Old(_totalSupply) == _totalSupply
+transfer(recipient,amount): Ensures _tokenOwnerAddress == VeriSol.Old(_tokenOwnerAddress)
+transfer(recipient,amount): Ensures VeriSol.Old(_balances[recipient]) <= _balances[recipient]
+transfer(recipient,amount): Ensures _balances[recipient] >= amount
+transfer(recipient,amount): Ensures VeriSol.SumMapping(_balances) == VeriSol.Old(VeriSol.SumMapping(_balances))
+transfer(recipient,amount): Ensures VeriSol.Old(uint256(_decimals)) == _decimals
+transfer(recipient,amount): Ensures _balances[msg.sender] <= VeriSol.Old(_balances[msg.sender])
+approve(spender,value): Requires msg.sender != address(0)
+approve(spender,value): Requires spender != address(0)
+approve(spender,value): Ensures VeriSol.Old(_totalSupply) == _totalSupply
+approve(spender,value): Ensures _allowances[msg.sender][spender] == value
+approve(spender,value): Ensures _tokenOwnerAddress == VeriSol.Old(_tokenOwnerAddress)
+approve(spender,value): Ensures VeriSol.Old(uint256(_decimals)) == _decimals
+StandardERC20Token: Ensures VeriSol.ContractInvariant(_tokenOwnerAddress != address(0))
+StandardERC20Token: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(_balances) >= _totalSupply)
+
+False Invariants:
+
+ // ./gambit_out_approve/mutants/1621/verisol_test

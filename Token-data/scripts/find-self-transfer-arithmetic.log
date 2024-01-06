@@ -1,0 +1,3432 @@
+294 results - 220 files
+
+
+
+Token-data/result/0x000ae26329aa0c57b9badbdee2996624272905e9-TokenMintERC20Token.inv.json:
+
+  491              "VeriSol.Ensures(_totalSupply != _balances[msg.sender])",
+
+  492:             "VeriSol.Ensures(_balances[msg.sender] + value == VeriSol.Old(_balances[msg.sender]))"
+
+  493          ]
+
+
+
+Token-data/result/0x0d8c6c3fc05be8483172fa6cd0131ee7dc8e8e05-TokenMintERC20Token.inv.json:
+
+  391              "VeriSol.Ensures(_balances[msg.sender] >= msg.value)",
+
+  392:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  393          ]
+
+
+
+Token-data/result/0x1d2dac9a2582e35463c12cd5fdf175afc7bb4f3a-SocialMoney.inv.json:
+
+  692              "VeriSol.Ensures(VeriSol.SumMapping(_balances) != VeriSol.Old(uint256(decimals)))",
+
+  693:             "VeriSol.Ensures(value + VeriSol.Old(_balances[to]) == _balances[to])"
+
+  694          ]
+
+
+
+Token-data/result/0x1f25ada422b1c54643996b3751dfa0f008f543b8-TokenMintERC20Token.inv.json:
+
+  859              "VeriSol.Ensures(VeriSol.SumMapping(_balances) >= _totalSupply)",
+
+  860:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  861          ]
+
+
+
+Token-data/result/0x1ff2e3bac33af1696b60903ce55b8063d52f22e0-RaichuToken.inv.json:
+
+  419              "VeriSol.Ensures(_balances[recipient] != VeriSol.Old(_balances[msg.sender]))",
+
+  420:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - _balances[msg.sender] == amount)"
+
+  421          ]
+
+
+
+Token-data/result/0x2db07f061f12f1ef51c49b02ad5a3eb71f60b69e-SocialMoney.inv.json:
+
+  556              "VeriSol.Ensures(decimals != msg.value)",
+
+  557:             "VeriSol.Ensures(VeriSol.Old(_balances[from]) - _balances[from] == value)",
+
+  558:             "VeriSol.Ensures(VeriSol.Old(_balances[to]) + value == _balances[to])"
+
+  559          ]
+
+
+
+  775              "VeriSol.Ensures(decimals != VeriSol.Old(_balances[msg.sender]))",
+
+  776:             "VeriSol.Ensures(VeriSol.Old(_balances[to]) + value == _balances[to])"
+
+  777          ]
+
+
+
+Token-data/result/0x3fa18875876794040105ff06dd50662d8e4b3054-TokenMintERC20Token.inv.json:
+
+  575              "VeriSol.Ensures(VeriSol.Old(_balances[recipient]) != _balances[recipient])",
+
+  576:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - _balances[msg.sender] == amount)",
+
+  577:             "VeriSol.Ensures(_balances[recipient] - VeriSol.Old(_balances[recipient]) == amount)"
+
+  578          ]
+
+
+
+Token-data/result/0x4c6719bf85903d18c295da44216f862b01b36f43-AlloHash.inv.json:
+
+  637              "VeriSol.Ensures(VeriSol.SumMapping(balances) != balances[msg.sender])",
+
+  638:             "VeriSol.Ensures(tokens + VeriSol.Old(balances[to]) == balances[to])",
+
+  639:             "VeriSol.Ensures(balances[msg.sender] + tokens == VeriSol.Old(balances[msg.sender]))"
+
+  640          ]
+
+
+
+Token-data/result/0x4d935d75889c0ce66aa50aac50508af502d6eb86-BezosBucks.inv.json:
+
+  1333              "VeriSol.Ensures(_balances[VeriSol.Old(donateWallet)] != value)",
+
+  1334:             "VeriSol.Ensures(value + _balances[msg.sender] == VeriSol.Old(_balances[msg.sender]))"
+
+  1335          ]
+
+
+
+Token-data/result/0x4de9622458d05abcaf3970b9369eb50b6d2b4018-SENDit.inv.json:
+
+  524              "VeriSol.Ensures(balances[to] != msg.value)",
+
+  525:             "VeriSol.Ensures(tokens + balances[msg.sender] == VeriSol.Old(balances[msg.sender]))"
+
+  526          ]
+
+
+
+Token-data/result/0x4ee1bb7c19bc332d1b172a64a027dd8a5560ec5a-TokenMintERC20Token.inv.json:
+
+  448              "VeriSol.Ensures(VeriSol.Old(uint256(_decimals)) != _totalSupply)",
+
+  449:             "VeriSol.Ensures(VeriSol.Old(_balances[recipient]) + amount == _balances[recipient])"
+
+  450          ]
+
+
+
+Token-data/result/0x04f33d09aae7923fcd82590b1d8fef0ce41936e1-BasedPepe.inv.json:
+
+  360              "VeriSol.Ensures(VeriSol.Old(VeriSol.SumMapping(balances)) != balances[msg.sender])",
+
+  361:             "VeriSol.Ensures(balances[msg.sender] + tokens == VeriSol.Old(balances[msg.sender]))"
+
+  362          ]
+
+
+
+Token-data/result/0x5e5948c6a1c48b5b6a19852928af3b72e974ef8d-BigBabyInu.inv.json:
+
+  845              "VeriSol.Ensures(balances[msg.sender] != balances[to])",
+
+  846:             "VeriSol.Ensures(balances[msg.sender] + tokens == VeriSol.Old(balances[msg.sender]))"
+
+  847          ]
+
+
+
+Token-data/result/0x6a137df19d3e987e3207e8c94387bece89d385f8-SACHS.inv.json:
+
+  671              "VeriSol.Ensures(VeriSol.Old(VeriSol.SumMapping(balances)) <= VeriSol.SumMapping(balances))",
+
+  672:             "VeriSol.Ensures(balances[msg.sender] + tokens == VeriSol.Old(balances[msg.sender]))"
+
+  673          ]
+
+
+
+Token-data/result/0x6f95df342e9d336275b05b1d7a43459c26be1963-TokenMintERC20Token.inv.json:
+
+  397              "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) != _decimals)",
+
+  398:             "VeriSol.Ensures(VeriSol.Old(_balances[recipient]) + amount == _balances[recipient])",
+
+  399:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - _balances[msg.sender] == amount)"
+
+  400          ]
+
+
+
+Token-data/result/0x7b52118bcd20d43861cdb112150a9b0342677d3b-TokenMintERC20Token.inv.json:
+
+  566              "VeriSol.Ensures(_balances[sender] != amount)",
+
+  567:             "VeriSol.Ensures(amount + _balances[sender] == VeriSol.Old(_balances[sender]))"
+
+  568          ]
+
+
+
+Token-data/result/0x07bc8d1a87c2b7caa596abce2d5bb41efc475c5c-InfernoHound.inv.json:
+
+  857              "VeriSol.Ensures(VeriSol.Old(_balances[recipient]) != _totalSupply)",
+
+  858:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - amount == _balances[msg.sender])"
+
+  859          ]
+
+
+
+Token-data/result/0x7c5ff719a6c76fe643e9ecd0f11f146a2de05f14-GaneshaToken.inv.json:
+
+  389              "VeriSol.Ensures(decimals != VeriSol.Old(balances[msg.sender]))",
+
+  390:             "VeriSol.Ensures(VeriSol.Old(balances[msg.sender]) - tokens == balances[msg.sender])"
+
+  391          ]
+
+
+
+Token-data/result/0x7d755944d44fc8b5183b82f55889b3fbe9bebb8d-PBull.inv.json:
+
+  19136              "VeriSol.Ensures(VeriSol.Old(UniLP) != _pairUSD)",
+
+  19137:             "VeriSol.Ensures(_updatedBalance[msg.sender] + value == VeriSol.Old(_updatedBalance[msg.sender]))"
+
+  19138          ]
+
+
+
+Token-data/result/0x8c867db31072f160cbfe1311d8a6cd85806dd6b4-Zeus.inv.json:
+
+  1481              "VeriSol.Ensures(_decimals != VeriSol.Old(_balances[msg.sender]))",
+
+  1482:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - _balances[msg.sender] == value)"
+
+  1483          ]
+
+
+
+Token-data/result/0x8de4644406933728ac9df5bc648d1482fb628406-TokenMintERC20Token.inv.json:
+
+  696              "VeriSol.Ensures(VeriSol.Old(_balances[recipient]) != _balances[msg.sender])",
+
+  697:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  698          ]
+
+
+
+Token-data/result/0x8ec39e54303269cfea50bb0555cf7a73fd933f73-TokenMintERC20Token.inv.json:
+
+  1050              "VeriSol.Ensures(_totalSupply <= VeriSol.Old(_totalSupply))",
+
+  1051:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - amount == _balances[msg.sender])"
+
+  1052          ]
+
+
+
+Token-data/result/0x8f12dfc7981de79a8a34070a732471f2d335eece-CryptoExcellence.inv.json:
+
+  659              "VeriSol.Ensures(decimals != balances[to])",
+
+  660:             "VeriSol.Ensures(VeriSol.Old(balances[msg.sender]) - tokens == balances[msg.sender])"
+
+  661          ]
+
+
+
+Token-data/result/0x9ab8432a7794566c27f051c087adedbf64337eea-GrandTheftArlen.inv.json:
+
+  918              "VeriSol.Ensures(_totalSupply != VeriSol.SumMapping(_balances))",
+
+  919:             "VeriSol.Ensures(_balances[msg.sender] + value == VeriSol.Old(_balances[msg.sender]))"
+
+  920          ]
+
+
+
+Token-data/result/0x09e333e720e1bd0fe82d188d6aed36d22f96d399-StandardERC20Token.inv.json:
+
+  589              "VeriSol.Ensures(_totalSupply != VeriSol.Old(_balances[recipient]))",
+
+  590:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  591          ]
+
+
+
+Token-data/result/0x9e0796c4146cd6ce77a9e1f77f2c3f21190a9055-TokenMintERC20Token.inv.json:
+
+  371              "VeriSol.Ensures(VeriSol.Old(_totalSupply) != _decimals)",
+
+  372:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - amount == _balances[msg.sender])"
+
+  373          ]
+
+
+
+Token-data/result/0x24da31e7bb182cb2cabfef1d88db19c2ae1f5572-TokenMintERC20Token.inv.json:
+
+  340              "VeriSol.Ensures(VeriSol.Old(uint256(_decimals)) != VeriSol.SumMapping(_balances))",
+
+  341:             "VeriSol.Ensures(_balances[recipient] - amount == VeriSol.Old(_balances[recipient]))"
+
+  342          ]
+
+
+
+Token-data/result/0x28c5d11436cf68fb0e7b21bb0c570f9ec62199a1-TokenMintERC20Token.inv.json:
+
+  716              "VeriSol.Ensures(VeriSol.SumMapping(_balances) != amount)",
+
+  717:             "VeriSol.Ensures(amount + _balances[msg.sender] == VeriSol.Old(_balances[msg.sender]))"
+
+  718          ]
+
+
+
+Token-data/result/0x32f9308c831bc74a8bcc675148e78340d812a976-BullRider.inv.json:
+
+  586              "VeriSol.Ensures(_balances[msg.sender] != VeriSol.Old(uint256(_decimals)))",
+
+  587:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - _balances[msg.sender] == amount)"
+
+  588          ]
+
+
+
+Token-data/result/0x38c97cbd6e986798207b4b29ecf01ea8977b7256-Hypano.inv.json:
+
+  381              "VeriSol.Ensures(decimals != VeriSol.Old(_totalSupply))",
+
+  382:             "VeriSol.Ensures(balances[msg.sender] + tokens == VeriSol.Old(balances[msg.sender]))"
+
+  383          ]
+
+
+
+Token-data/result/0x43b0bc65935a59ec7d6ce15e6d3112691a8e1dd9-TokenMintERC20Token.inv.json:
+
+  1036              "VeriSol.Ensures(VeriSol.Old(_balances[recipient]) != _decimals)",
+
+  1037:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  1038          ]
+
+
+
+Token-data/result/0x47d920a911cb9a0ad4618698ba3fef800abc868d-TokenMintERC20Token.inv.json:
+
+  409              "VeriSol.Ensures(VeriSol.Old(_allowances[sender][msg.sender]) != _decimals)",
+
+  410:             "VeriSol.Ensures(VeriSol.Old(_balances[recipient]) + amount == _balances[recipient])"
+
+  411          ]
+
+
+
+Token-data/result/0x48cd2a4947aa70251654312a2cbfa99663560cbd-CodeWithJoe.inv.json:
+
+  687              "VeriSol.Ensures(balances[msg.sender] != msg.value)",
+
+  688:             "VeriSol.Ensures(VeriSol.Old(balances[to]) + tokens == balances[to])"
+
+  689          ]
+
+
+
+Token-data/result/0x51fa8077fdd878ccce56912c3cb7fb9a87d0eeaa-CodeWithJoe.inv.json:
+
+  375              "VeriSol.Ensures(VeriSol.Old(VeriSol.SumMapping(balances)) != balances[to])",
+
+  376:             "VeriSol.Ensures(balances[to] - tokens == VeriSol.Old(balances[to]))",
+
+  377:             "VeriSol.Ensures(tokens + balances[msg.sender] == VeriSol.Old(balances[msg.sender]))"
+
+  378          ]
+
+
+
+Token-data/result/0x56df7dd5e6476af94666e856c38aefc4d4555861-DinosaurERC20Token.inv.json:
+
+  425              "VeriSol.Ensures(_totalSupply <= VeriSol.SumMapping(_balances))",
+
+  426:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - amount == _balances[recipient])",
+
+  427:             "VeriSol.Ensures(VeriSol.Old(_balances[recipient]) + amount == _balances[recipient])",
+
+  428:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - amount == _balances[msg.sender])"
+
+  429          ]
+
+
+
+Token-data/result/0x61d45f5475d90af0c3b3f3673beb18b43284dce7-YCCToken.inv.json:
+
+  215              "VeriSol.Ensures(_totalSupply <= VeriSol.SumMapping(balances))",
+
+  216:             "VeriSol.Ensures(tokens + balances[msg.sender] == VeriSol.Old(balances[msg.sender]))"
+
+  217          ]
+
+
+
+Token-data/result/0x62c23c5f75940c2275dd3cb9300289dd30992e59-TokenMintERC20Token.inv.json:
+
+  262              "VeriSol.Ensures(_decimals != VeriSol.Old(VeriSol.SumMapping(_balances)))",
+
+  263:             "VeriSol.Ensures(amount + _balances[msg.sender] == VeriSol.Old(_balances[msg.sender]))"
+
+  264          ]
+
+
+
+Token-data/result/0x62c8179b08b72acd4e745b33415aa512f2aa4097-TheHound.inv.json:
+
+  672              "VeriSol.Ensures(VeriSol.SumMapping(balances) != VeriSol.Old(uint256(decimals)))",
+
+  673:             "VeriSol.Ensures(VeriSol.Old(balances[to]) + tokens == balances[to])",
+
+  674:             "VeriSol.Ensures(VeriSol.Old(balances[msg.sender]) - balances[msg.sender] == tokens)"
+
+  675          ]
+
+
+
+Token-data/result/0x72f0c5d7fb01506543c2880e1a7f808e0a81febf-DogeFather.inv.json:
+
+  395              "VeriSol.Ensures(VeriSol.SumMapping(balances) <= VeriSol.Old(_totalSupply))",
+
+  396:             "VeriSol.Ensures(tokens + balances[msg.sender] == VeriSol.Old(balances[msg.sender]))"
+
+  397          ]
+
+
+
+Token-data/result/0x75de9fa3e18071eab22823d6c2bcecde759250ca-BURN.inv.json:
+
+  906              "VeriSol.Ensures(_totalSupply != msg.value)",
+
+  907:             "VeriSol.Ensures(_balances[msg.sender] + value == VeriSol.Old(_balances[msg.sender]))"
+
+  908          ]
+
+
+
+Token-data/result/0x80e9dd5d9c01082f4ff1620f0d19c8b95307403e-InuClassic.inv.json:
+
+  709              "VeriSol.Ensures(VeriSol.Old(VeriSol.SumMapping(_balances)) != _balances[msg.sender])",
+
+  710:             "VeriSol.Ensures(VeriSol.Old(_balances[recipient]) + amount == _balances[recipient])",
+
+  711:             "VeriSol.Ensures(VeriSol.Old(VeriSol.SumMapping(_balances)) - amount == _balances[recipient])",
+
+  712:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  713          ]
+
+
+
+Token-data/result/0x81b3e4111b0aab36b3fd679e04e84e38931244bb-KillerShiba.inv.json:
+
+  360              "VeriSol.Ensures(VeriSol.Old(balances[to]) != VeriSol.SumMapping(balances))",
+
+  361:             "VeriSol.Ensures(VeriSol.Old(balances[msg.sender]) - balances[msg.sender] == tokens)"
+
+  362          ]
+
+
+
+Token-data/result/0x85a65e23105d1b3538ceb463edfdfc3d9af179a8-SocialMoney.inv.json:
+
+  253              "VeriSol.Ensures(VeriSol.SumMapping(_balances) != _balances[to])",
+
+  254:             "VeriSol.Ensures(_balances[to] - VeriSol.Old(_balances[to]) == value)"
+
+  255          ]
+
+
+
+Token-data/result/0x97b3c9aa2ddf4d215a71090c1ee5990e2ad60fd1-SteveJobs.inv.json:
+
+  590              "VeriSol.Ensures(msg.value != allowed[from][msg.sender])",
+
+  591:             "VeriSol.Ensures(tokens + balances[from] == VeriSol.Old(balances[from]))",
+
+  592:             "VeriSol.Ensures(VeriSol.Old(allowed[from][msg.sender]) - tokens == balances[from])",
+
+  593:             "VeriSol.Ensures(allowed[from][msg.sender] + tokens == VeriSol.Old(balances[from]))",
+
+  594:             "VeriSol.Ensures(allowed[from][msg.sender] + tokens == VeriSol.Old(allowed[from][msg.sender]))"
+
+  595          ]
+
+
+
+Token-data/result/0x161cddfb1fb7921a01d45c147f44670bb060ace5-TokenMintERC20Token.inv.json:
+
+  442              "VeriSol.Ensures(VeriSol.Old(uint256(_decimals)) != _balances[recipient])",
+
+  443:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - amount == _balances[msg.sender])"
+
+  444          ]
+
+
+
+Token-data/result/0x509ed91b94972adc72bf7a7b326cfa6ba6378e7e-LilShiba.inv.json:
+
+  842              "VeriSol.Ensures(_totalSupply != amount)",
+
+  843:             "VeriSol.Ensures(amount + _balances[msg.sender] == VeriSol.Old(_balances[msg.sender]))",
+
+  844:             "VeriSol.Ensures(amount - VeriSol.Old(_balances[recipient]) == _balances[msg.sender])",
+
+  845:             "VeriSol.Ensures(amount + VeriSol.Old(_balances[recipient]) == _balances[recipient])"
+
+  846          ]
+
+
+
+Token-data/result/0x514d27336b4f80419e20d2a772d14efede22f245-TokenMintERC20Token.inv.json:
+
+  544              "VeriSol.Ensures(amount != _balances[msg.sender])",
+
+  545:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  546          ]
+
+
+
+Token-data/result/0x547dd0dc34f446d91fb5e270cbdf4198cca30bc6-SocialMoney.inv.json:
+
+  406              "VeriSol.Ensures(VeriSol.Old(VeriSol.SumMapping(_balances)) <= VeriSol.SumMapping(_balances))",
+
+  407:             "VeriSol.Ensures(_balances[to] - VeriSol.Old(_balances[to]) == value)"
+
+  408          ]
+
+
+
+Token-data/result/0x617b0e7d37b5cd55ad584c7e806a71c64ecc2a28-TokenMintERC20Token.inv.json:
+
+  424              "VeriSol.Ensures(_totalSupply != VeriSol.Old(_balances[recipient]))",
+
+  425:             "VeriSol.Ensures(amount + _balances[msg.sender] == VeriSol.Old(_balances[msg.sender]))",
+
+  426:             "VeriSol.Ensures(VeriSol.Old(_balances[recipient]) + amount == _balances[recipient])"
+
+  427          ]
+
+
+
+Token-data/result/0x642fab3778de79df3e0f9e21694c7d90e07f6ea3-AKAMARU.inv.json:
+
+  961              "VeriSol.Ensures(basePercent != VeriSol.Old(_balances[to]))",
+
+  962:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - value == _balances[msg.sender])"
+
+  963          ]
+
+
+
+Token-data/result/0x669b2360e3e33d0b4d60cbe05a5cdc0c0f2e8346-SAFEPEPPA.inv.json:
+
+  1949              "VeriSol.Ensures(_balances[to] != VeriSol.Old(_burnStopAmount))",
+
+  1950:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - _balances[msg.sender] == value)"
+
+  1951          ]
+
+
+
+Token-data/result/0x766d4c9c1c7316e97968a36b7b01bf7fcda7feb6-KogiInuToken.inv.json:
+
+  487              "VeriSol.Ensures(VeriSol.SumMapping(balances) <= VeriSol.Old(_totalSupply))",
+
+  488:             "VeriSol.Ensures(tokens + balances[msg.sender] == VeriSol.Old(balances[msg.sender]))"
+
+  489          ]
+
+
+
+Token-data/result/0x911f5e6b29ae4f9c8f1c3d179b9b249bba6d8262-TokenMintERC20Token.inv.json:
+
+  549              "VeriSol.Ensures(_totalSupply != amount)",
+
+  550:             "VeriSol.Ensures(amount + VeriSol.Old(_balances[recipient]) == _balances[recipient])"
+
+  551          ]
+
+
+
+Token-data/result/0x968afac04e82e186f2135ce689cd775084016c35-TokenMintERC20Token.inv.json:
+
+  387              "VeriSol.Ensures(VeriSol.SumMapping(_balances) != VeriSol.Old(_balances[recipient]))",
+
+  388:             "VeriSol.Ensures(VeriSol.Old(_balances[recipient]) + amount == _balances[recipient])",
+
+  389:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  390          ]
+
+
+
+Token-data/result/0x3130dd4efcfd51166934039cb5747707a55f3a5e-GuideAmbassador.inv.json:
+
+  365              "VeriSol.Ensures(_totalSupply != VeriSol.Old(balances[msg.sender]))",
+
+  366:             "VeriSol.Ensures(tokens + VeriSol.Old(balances[to]) == balances[to])",
+
+  367:             "VeriSol.Ensures(VeriSol.Old(balances[msg.sender]) - tokens == balances[msg.sender])"
+
+  368          ]
+
+
+
+Token-data/result/0x3301ee63fb29f863f2333bd4466acb46cd8323e6-AKITAERC20Token.inv.json:
+
+  412              "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) <= VeriSol.SumMapping(_balances))",
+
+  413:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - amount == _balances[msg.sender])"
+
+  414          ]
+
+
+
+Token-data/result/0x3622d034fbf3baec7060c7cb484a121389684986-RyukyuInuERC20Token.inv.json:
+
+  550              "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) != _totalSupply)",
+
+  551:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - _balances[msg.sender] == amount)"
+
+  552          ]
+
+
+
+Token-data/result/0x4804fb55e75bd1c32ab06cd053c5510c1b80fd26-SocialMoney.inv.json:
+
+  425              "VeriSol.Ensures(VeriSol.SumMapping(_balances) != _totalSupply)",
+
+  426:             "VeriSol.Ensures(VeriSol.Old(_allowed[from][msg.sender]) - value == _allowed[from][msg.sender])",
+
+  427:             "VeriSol.Ensures(VeriSol.Old(_balances[from]) - value == _balances[from])"
+
+  428          ]
+
+
+
+Token-data/result/0x5672f74741549428e38a440fd73d90fc8364e863-TokenMintERC20Token.inv.json:
+
+  606              "VeriSol.Ensures(Account == VeriSol.Old(Account))",
+
+  607:             "VeriSol.Ensures(amount + _balances[msg.sender] == VeriSol.Old(_balances[msg.sender]))"
+
+  608          ]
+
+
+
+Token-data/result/0x8037fbdb3a8b4befdd40fcd75e899b2aba5bf5a3-TokenMintERC20Token.inv.json:
+
+  399              "VeriSol.Ensures(_decimals <= VeriSol.Old(_totalSupply))",
+
+  400:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))",
+
+  401:             "VeriSol.Ensures(VeriSol.Old(_balances[recipient]) + amount == _balances[recipient])"
+
+  402          ]
+
+
+
+Token-data/result/0x9682e720ddf3b8c667966a72bb62649c58a53d5e-DOGHOUSE.inv.json:
+
+  1533              "VeriSol.Ensures(basePercent != msg.value)",
+
+  1534:             "VeriSol.Ensures(_balances[msg.sender] + value == VeriSol.Old(_balances[msg.sender]))"
+
+  1535          ]
+
+
+
+Token-data/result/0x56366ce135cc5f636365f11e4e3450ef03241c44-Bone.inv.json:
+
+  502              "VeriSol.Ensures(balances[msg.sender] != VeriSol.Old(balances[msg.sender]))",
+
+  503:             "VeriSol.Ensures(VeriSol.Old(balances[msg.sender]) - balances[msg.sender] == tokens)"
+
+  504          ]
+
+
+
+Token-data/result/0x70665f330191abababc772f5e51ba1ecf61672ef-TokenMintERC20Token.inv.json:
+
+  690              "VeriSol.Ensures(_balances[msg.sender] != VeriSol.Old(_totalSupply))",
+
+  691:             "VeriSol.Ensures(_balances[recipient] - amount == VeriSol.Old(_balances[recipient]))"
+
+  692          ]
+
+
+
+Token-data/result/0x78689fd6ecd9c168b2ba69ff022ff70302f0bba7-BLOCKYDOGE.inv.json:
+
+  394              "VeriSol.Ensures(msg.value != balances[msg.sender])",
+
+  395:             "VeriSol.Ensures(tokens + VeriSol.Old(balances[to]) == balances[to])",
+
+  396:             "VeriSol.Ensures(balances[msg.sender] + tokens == VeriSol.Old(balances[msg.sender]))"
+
+  397          ]
+
+
+
+Token-data/result/0x299209fa44d48863c84125bbae12676ed6ce8e97-TokenMintERC20Token.inv.json:
+
+  404              "VeriSol.Ensures(_decimals != _balances[recipient])",
+
+  405:             "VeriSol.Ensures(_balances[recipient] - VeriSol.Old(_balances[recipient]) == amount)"
+
+  406          ]
+
+
+
+Token-data/result/0x378385c2f2ab9052e38d9cb4025ebf696c17b291-ECTONETWORK.inv.json:
+
+  359              "VeriSol.Ensures(_totalSupply != msg.value)",
+
+  360:             "VeriSol.Ensures(balances[to] - VeriSol.Old(balances[to]) == tokens)"
+
+  361          ]
+
+
+
+Token-data/result/0x380724fa326ef4a616798e67ac042b2b647decd3-SpartanGlobalCoin.inv.json:
+
+  351              "VeriSol.Ensures(decimals != tokens)",
+
+  352:             "VeriSol.Ensures(tokens + VeriSol.Old(balances[to]) == balances[to])"
+
+  353          ]
+
+
+
+Token-data/result/0x3781731acd887b14d7f7f261f3aada7f6405868a-Arcanite.inv.json:
+
+  340              "VeriSol.Ensures(_totalSupply != balances[msg.sender])",
+
+  341:             "VeriSol.Ensures(balances[msg.sender] + tokens == VeriSol.Old(balances[msg.sender]))"
+
+  342          ]
+
+
+
+Token-data/result/0x6466165ef085c4b5bc9c978397b128a85d12c184-TokenMintERC20Token.inv.json:
+
+  336              "VeriSol.Ensures(_balances[msg.sender] != _decimals)",
+
+  337:             "VeriSol.Ensures(_balances[msg.sender] + value == VeriSol.Old(VeriSol.SumMapping(_balances)))",
+
+  338:             "VeriSol.Ensures(_balances[msg.sender] + value == VeriSol.Old(_balances[msg.sender]))",
+
+  339:             "VeriSol.Ensures(_balances[msg.sender] + value == VeriSol.Old(_totalSupply))"
+
+  340          ]
+
+
+
+  561              "VeriSol.Ensures(_balances[msg.sender] != _decimals)",
+
+  562:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  563          ]
+
+
+
+Token-data/result/0x6767615a97a8204298bbac44c57ef1a615eed244-CribnbERC20.inv.json:
+
+  372              "VeriSol.Ensures(_totalSupply <= VeriSol.SumMapping(balances))",
+
+  373:             "VeriSol.Ensures(VeriSol.Old(balances[from]) - tokens == balances[from])",
+
+  374:             "VeriSol.Ensures(tokens + allowed[from][msg.sender] == VeriSol.Old(allowed[from][msg.sender]))"
+
+  375          ]
+
+
+
+Token-data/result/0x7302429c53c54d15328e3e393d52d005e9759355-XINU.inv.json:
+
+  400              "VeriSol.Ensures(_balances[msg.sender] >= msg.value)",
+
+  401:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  402          ]
+
+
+
+Token-data/result/0x7631127e358517e3b15903bbcb0f50a45a4379db-SING.inv.json:
+
+  358              "VeriSol.Ensures(VeriSol.Old(balances[msg.sender]) != VeriSol.SumMapping(balances))",
+
+  359:             "VeriSol.Ensures(VeriSol.Old(balances[msg.sender]) - balances[msg.sender] == tokens)"
+
+  360          ]
+
+
+
+Token-data/result/0x62406995cafd18f57e7375e8e0060725acebce58-FirulaisWalletToken.inv.json:
+
+  614              "VeriSol.Ensures(VeriSol.SumMapping(_balances) != msg.value)",
+
+  615:             "VeriSol.Ensures(amount + _balances[msg.sender] == VeriSol.Old(_balances[msg.sender]))",
+
+  616:             "VeriSol.Ensures(amount + VeriSol.Old(_balances[recipient]) == _balances[recipient])"
+
+  617          ]
+
+
+
+Token-data/result/0x78132543d8e20d2417d8a07d9ae199d458a0d581-TokenMintERC20Token.inv.json:
+
+  730              "VeriSol.Ensures(_totalSupply <= VeriSol.Old(VeriSol.SumMapping(_balances)))",
+
+  731:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  732          ]
+
+
+
+Token-data/result/0x836775359fd7b19409f2914719c67e4db7073eab-TokenMintERC20Token.inv.json:
+
+  452              "VeriSol.Ensures(_decimals != VeriSol.Old(VeriSol.SumMapping(_balances)))",
+
+  453:             "VeriSol.Ensures(VeriSol.Old(_allowances[msg.sender][spender]) + addedValue == _allowances[msg.sender][spender])"
+
+  454          ]
+
+
+
+  633              "VeriSol.Ensures(_decimals != VeriSol.Old(VeriSol.SumMapping(_balances)))",
+
+  634:             "VeriSol.Ensures(VeriSol.Old(_allowances[msg.sender][spender]) - _allowances[msg.sender][spender] == subtractedValue)"
+
+  635          ]
+
+
+
+Token-data/result/0x846132977b441bcbaeeefb79e056f7c5be8fcdf3-TokenMintERC20Token.inv.json:
+
+  392              "VeriSol.Ensures(_decimals != amount)",
+
+  393:             "VeriSol.Ensures(amount + _balances[msg.sender] == VeriSol.Old(_balances[msg.sender]))"
+
+  394          ]
+
+
+
+Token-data/result/0x4333993025af6475b86e18e3ef8b371bb5966ec8-TokenMintERC20Token.inv.json:
+
+  358              "VeriSol.Ensures(VeriSol.Old(uint256(_decimals)) != _balances[msg.sender])",
+
+  359:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))",
+
+  360:             "VeriSol.Ensures(amount + VeriSol.Old(_balances[recipient]) == _balances[recipient])"
+
+  361          ]
+
+
+
+Token-data/result/0x56779592815d1d9298d5c88fc64413b1eaaf00dc-CodeWithJoe.inv.json:
+
+  344              "VeriSol.Ensures(VeriSol.SumMapping(balances) <= VeriSol.Old(_totalSupply))",
+
+  345:             "VeriSol.Ensures(VeriSol.Old(balances[to]) + tokens == balances[to])"
+
+  346          ]
+
+
+
+Token-data/result/0xa1a7a1c19e6cc4c79ea5f4b344181cf1be07e6d6-TokenMintERC20Token.inv.json:
+
+  570              "VeriSol.Ensures(_balances[recipient] <= amount)",
+
+  571:             "VeriSol.Ensures(amount + _balances[msg.sender] == VeriSol.Old(_balances[msg.sender]))"
+
+  572          ]
+
+
+
+Token-data/result/0xa25c780132be018a4064f0aa62ff54a32687ae14-Bone.inv.json:
+
+  356              "VeriSol.Ensures(VeriSol.Old(balances[msg.sender]) <= VeriSol.SumMapping(balances))",
+
+  357:             "VeriSol.Ensures(VeriSol.Old(balances[msg.sender]) - balances[msg.sender] == tokens)"
+
+  358          ]
+
+
+
+Token-data/result/0xad27a16d8835d880d4c8c5c17a4b6fd8ad1811a7-SocialMoney.inv.json:
+
+  252              "VeriSol.Ensures(_balances[msg.sender] != value)",
+
+  253:             "VeriSol.Ensures(value + VeriSol.Old(_balances[to]) == _balances[to])"
+
+  254          ]
+
+
+
+Token-data/result/0xb6a3fb9a636f6f3b22c06c8ba62b63d7d499fa15-TokenMintERC20Token.inv.json:
+
+  416              "VeriSol.Ensures(_balances[recipient] != msg.value)",
+
+  417:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  418          ]
+
+
+
+Token-data/result/0xb77ffbb00f4c529747bab93bdeb3dce49b021e76-SafeDawg.inv.json:
+
+  514              "VeriSol.Ensures(balances[msg.sender] != _totalSupply)",
+
+  515:             "VeriSol.Ensures(VeriSol.Old(balances[to]) + tokens == balances[to])"
+
+  516          ]
+
+
+
+Token-data/result/0xb934c43268adaedee892c4e8d3d56b010498e80c-clashPay.inv.json:
+
+  1181              "VeriSol.Ensures(_to != Tokenfarm)",
+
+  1182:             "VeriSol.Ensures(_value + balanceOf[msg.sender] == VeriSol.Old(balanceOf[msg.sender]))"
+
+  1183          ]
+
+
+
+Token-data/result/0xb874921bfc23e4800a72d0108458cb14ccd12601-PreciousMetalCapital.inv.json:
+
+  590              "VeriSol.Ensures(VeriSol.Old(_balances[sender]) != _allowances[sender][msg.sender])",
+
+  591:             "VeriSol.Ensures(_allowances[sender][msg.sender] + amount == VeriSol.Old(_allowances[sender][msg.sender]))"
+
+  592          ]
+
+
+
+Token-data/result/0xb2923909b5d8bbe01505121f15a4503b6617dae7-WrappedHeC.inv.json:
+
+  221              "VeriSol.Ensures(_totalSupply != balances[to])",
+
+  222:             "VeriSol.Ensures(balances[to] - VeriSol.Old(balances[to]) == tokens)"
+
+  223          ]
+
+
+
+Token-data/result/0xb7131835d3fc64bcb1976733e28af8364d328f5c-DOGKINGERC20Token.inv.json:
+
+  410              "VeriSol.Ensures(_balances[msg.sender] != VeriSol.Old(VeriSol.SumMapping(_balances)))",
+
+  411:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  412          ]
+
+
+
+Token-data/result/0xc5ba8e0afbbc9eedcd9f8c780e36369b0769ee52-DRAKON.inv.json:
+
+  418              "VeriSol.Ensures(msg.value != _decimals)",
+
+  419:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  420          ]
+
+
+
+Token-data/result/0xc8b98f0030ef771b18f2bcb77964111f2889ebd3-FuckSellers.inv.json:
+
+  9689              "VeriSol.Ensures(_updatedBalance[LastBuyer] != VeriSol.Old(_updatedBalance[NextVault]))",
+
+  9690:             "VeriSol.Ensures(_updatedBalance[VeriSol.Old(LastBuyer)] - value == VeriSol.Old(_updatedBalance[LastBuyer]))",
+
+  9691:             "VeriSol.Ensures(_updatedBalance[LastBuyer] - value == VeriSol.Old(_updatedBalance[LastBuyer]))",
+
+  9692:             "VeriSol.Ensures(value + VeriSol.Old(_updatedBalance[to]) == _updatedBalance[to])",
+
+  9693:             "VeriSol.Ensures(_updatedBalance[VeriSol.Old(LastBuyer)] - value == VeriSol.Old(RestValue))",
+
+  9694:             "VeriSol.Ensures(_updatedBalance[LastBuyer] - value == VeriSol.Old(RestValue))",
+
+  9695:             "VeriSol.Ensures(_updatedBalance[msg.sender] + value == VeriSol.Old(_updatedBalance[msg.sender]))",
+
+  9696:             "VeriSol.Ensures(_updatedBalance[VeriSol.Old(LastBuyer)] - value == VeriSol.Old(_updatedBalance[VeriSol.Old(LastBuyer)]))",
+
+  9697:             "VeriSol.Ensures(_updatedBalance[LastBuyer] - value == VeriSol.Old(_updatedBalance[VeriSol.Old(LastBuyer)]))"
+
+  9698          ]
+
+
+
+Token-data/result/0xc45efe8b705c97e9d49612443ccb10aec52a2543-ProofOfRyoshi.inv.json:
+
+  430              "VeriSol.Ensures(VeriSol.Old(VeriSol.SumMapping(_balances)) != _balances[recipient])",
+
+  431:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - _balances[msg.sender] == amount)"
+
+  432          ]
+
+
+
+Token-data/result/0xc8705424948e97e6db98022ba81bca5164660c82-KogiInuToken.inv.json:
+
+  391              "VeriSol.Ensures(decimals != VeriSol.Old(balances[msg.sender]))",
+
+  392:             "VeriSol.Ensures(VeriSol.Old(balances[msg.sender]) - tokens == balances[msg.sender])"
+
+  393          ]
+
+
+
+Token-data/result/0xcaec28836b84f8b5c533983799fd78412fb4395a-TokenMintERC20Token.inv.json:
+
+  429              "VeriSol.Ensures(_totalSupply != _balances[msg.sender])",
+
+  430:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  431          ]
+
+
+
+Token-data/result/0xce5860c82d49037efdfe300c7488263298a93501-RickRoll.inv.json:
+
+  370              "VeriSol.Ensures(decimals != balances[to])",
+
+  371:             "VeriSol.Ensures(balances[to] - tokens == VeriSol.Old(balances[to]))",
+
+  372:             "VeriSol.Ensures(tokens + balances[msg.sender] == VeriSol.Old(balances[msg.sender]))"
+
+  373          ]
+
+
+
+Token-data/result/0xcfa6ab49f69800b877070f231f22496249990cee-Brahma.inv.json:
+
+  813              "VeriSol.Ensures(VeriSol.SumMapping(balances) != tokens)",
+
+  814:             "VeriSol.Ensures(tokens + VeriSol.Old(balances[to]) == balances[to])"
+
+  815          ]
+
+
+
+Token-data/result/0xcfa1279b6a3860493f64cce1344f4e9c825113e4-GOCP.inv.json:
+
+  191              "VeriSol.Ensures(VeriSol.SumMapping(balances) != VeriSol.Old(balances[msg.sender]))",
+
+  192:             "VeriSol.Ensures(VeriSol.Old(balances[msg.sender]) + _value == balances[msg.sender])"
+
+  193          ]
+
+
+
+Token-data/result/0xd50e079db8d18d594144108077f945218999acb0-TokenMintERC20Token.inv.json:
+
+  448              "VeriSol.Ensures(VeriSol.Old(_balances[recipient]) <= _balances[msg.sender])",
+
+  449:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  450          ]
+
+
+
+Token-data/result/0xd83ea66d2ec74617734e82a39e7fe90496599204-SocialMoney.inv.json:
+
+  371              "VeriSol.Ensures(VeriSol.SumMapping(_balances) != VeriSol.Old(_balances[msg.sender]))",
+
+  372:             "VeriSol.Ensures(_balances[to] - value == VeriSol.Old(_balances[to]))"
+
+  373          ]
+
+
+
+Token-data/result/0xda6f3e151596cdc0c504e14932496ab8b2050895-FlowerToken.inv.json:
+
+  359              "VeriSol.Ensures(tokens != balances[msg.sender])",
+
+  360:             "VeriSol.Ensures(balances[msg.sender] + tokens == VeriSol.Old(balances[msg.sender]))"
+
+  361          ]
+
+
+
+Token-data/result/0xdeb14c17e9c8ed4c64a2194e7758a072af69ef89-TokenMintERC20Token.inv.json:
+
+  614              "VeriSol.Ensures(_balances[msg.sender] != VeriSol.Old(VeriSol.SumMapping(_balances)))",
+
+  615:             "VeriSol.Ensures(amount + _balances[msg.sender] == VeriSol.Old(_balances[msg.sender]))"
+
+  616          ]
+
+
+
+Token-data/result/0xe4f6d46c244bb7cf3e218cdfb5c35cf9a4d9c920-Donkey.inv.json:
+
+  376              "VeriSol.Ensures(_totalSupply != VeriSol.Old(VeriSol.SumMapping(balances)))",
+
+  377:             "VeriSol.Ensures(tokens + balances[msg.sender] == VeriSol.Old(balances[msg.sender]))"
+
+  378          ]
+
+
+
+Token-data/result/0xe09fb60e8d6e7e1cebbe821bd5c3fc67a40f86bf-PikachuToken.inv.json:
+
+  599              "VeriSol.Ensures(VeriSol.Old(_totalSupply) != _balances[recipient])",
+
+  600:             "VeriSol.Ensures(amount + _balances[msg.sender] == VeriSol.Old(_balances[msg.sender]))"
+
+  601          ]
+
+
+
+Token-data/result/0xe774959acd78a33ab7730b44a9455fb99d5a7ea8-MXSamurai.inv.json:
+
+  527              "VeriSol.Ensures(VeriSol.Old(uint256(decimals)) != _totalSupply)",
+
+  528:             "VeriSol.Ensures(tokens + balances[msg.sender] == VeriSol.Old(balances[msg.sender]))"
+
+  529          ]
+
+
+
+Token-data/result/0xea75671ab1d5c71b29399c0c4eccd5a9dbe41370-TokenMintERC20Token.inv.json:
+
+  348              "VeriSol.Ensures(_decimals != amount)",
+
+  349:             "VeriSol.Ensures(amount + VeriSol.Old(_balances[recipient]) == _balances[recipient])"
+
+  350          ]
+
+
+
+Token-data/result/0xeb2fce02460b095f7b084081c4799db0fb0b8a84-Cheese2.inv.json:
+
+  877              "VeriSol.Ensures(VeriSol.SumMapping(_balances) <= VeriSol.Old(VeriSol.SumMapping(_balances)))",
+
+  878:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  879          ]
+
+
+
+Token-data/result/0xec4a1c7a4e9fdc7cc621b548a931c92bc08a679a-Goji.inv.json:
+
+  350              "VeriSol.Ensures(balances[msg.sender] != VeriSol.Old(_totalSupply))",
+
+  351:             "VeriSol.Ensures(balances[to] - tokens == VeriSol.Old(balances[to]))"
+
+  352          ]
+
+
+
+Token-data/result/0xeef7eaa73cab2f07f8ecee246f479a76139e236d-MyloToken.inv.json:
+
+  367              "VeriSol.Ensures(_totalSupply != balances[to])",
+
+  368:             "VeriSol.Ensures(balances[msg.sender] + tokens == VeriSol.Old(balances[msg.sender]))"
+
+  369          ]
+
+
+
+Token-data/result/0xf4c3a87ce0e92dadd82b494bcefd0cdeca9b03dd-SAFEKONG.inv.json:
+
+  915              "VeriSol.Ensures(_decimals != VeriSol.Old(_balances[msg.sender]))",
+
+  916:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - _balances[msg.sender] == value)"
+
+  917          ]
+
+
+
+Token-data/result/0xf8ccad1b25a54ce12f1b1ee56ef0f2a930d3e969-Finder.inv.json:
+
+  475              "VeriSol.Ensures(decimals != VeriSol.Old(totalSupply_))",
+
+  476:             "VeriSol.Ensures(_value + balances[msg.sender] == VeriSol.Old(balances[msg.sender]))"
+
+  477          ]
+
+
+
+Token-data/result/0xf61ae54b74a37be4fc11e9f1a35021848d996afc-EmaxClassic.inv.json:
+
+  379              "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) >= _balances[recipient])",
+
+  380:             "VeriSol.Ensures(_balances[recipient] - amount == VeriSol.Old(_balances[recipient]))"
+
+  381          ]
+
+
+
+Token-data/result/0xff354e95d1120ae2d9e5db4c1cd18da7d976f1b7-TokenMintERC20Token.inv.json:
+
+  422              "VeriSol.Ensures(VeriSol.Old(VeriSol.SumMapping(_balances)) >= VeriSol.SumMapping(_balances))",
+
+  423:             "VeriSol.Ensures(_balances[recipient] - amount == VeriSol.Old(_balances[recipient]))"
+
+  424          ]
+
+
+
+verisol_test/0x000ae26329aa0c57b9badbdee2996624272905e9-TokenMintERC20Token.inv.json:
+
+  491              "VeriSol.Ensures(_totalSupply != _balances[msg.sender])",
+
+  492:             "VeriSol.Ensures(_balances[msg.sender] + value == VeriSol.Old(_balances[msg.sender]))"
+
+  493          ]
+
+
+
+verisol_test/0x0d8c6c3fc05be8483172fa6cd0131ee7dc8e8e05-TokenMintERC20Token.inv.json:
+
+  391              "VeriSol.Ensures(_balances[msg.sender] >= msg.value)",
+
+  392:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  393          ]
+
+
+
+verisol_test/0x1d2dac9a2582e35463c12cd5fdf175afc7bb4f3a-SocialMoney.inv.json:
+
+  692              "VeriSol.Ensures(VeriSol.SumMapping(_balances) != VeriSol.Old(uint256(decimals)))",
+
+  693:             "VeriSol.Ensures(value + VeriSol.Old(_balances[to]) == _balances[to])"
+
+  694          ]
+
+
+
+verisol_test/0x1f25ada422b1c54643996b3751dfa0f008f543b8-TokenMintERC20Token.inv.json:
+
+  859              "VeriSol.Ensures(VeriSol.SumMapping(_balances) >= _totalSupply)",
+
+  860:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  861          ]
+
+
+
+verisol_test/0x1ff2e3bac33af1696b60903ce55b8063d52f22e0-RaichuToken.inv.json:
+
+  419              "VeriSol.Ensures(_balances[recipient] != VeriSol.Old(_balances[msg.sender]))",
+
+  420:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - _balances[msg.sender] == amount)"
+
+  421          ]
+
+
+
+verisol_test/0x2db07f061f12f1ef51c49b02ad5a3eb71f60b69e-SocialMoney.inv.json:
+
+  556              "VeriSol.Ensures(decimals != msg.value)",
+
+  557:             "VeriSol.Ensures(VeriSol.Old(_balances[from]) - _balances[from] == value)",
+
+  558:             "VeriSol.Ensures(VeriSol.Old(_balances[to]) + value == _balances[to])"
+
+  559          ]
+
+
+
+  775              "VeriSol.Ensures(decimals != VeriSol.Old(_balances[msg.sender]))",
+
+  776:             "VeriSol.Ensures(VeriSol.Old(_balances[to]) + value == _balances[to])"
+
+  777          ]
+
+
+
+verisol_test/0x3fa18875876794040105ff06dd50662d8e4b3054-TokenMintERC20Token.inv.json:
+
+  575              "VeriSol.Ensures(VeriSol.Old(_balances[recipient]) != _balances[recipient])",
+
+  576:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - _balances[msg.sender] == amount)",
+
+  577:             "VeriSol.Ensures(_balances[recipient] - VeriSol.Old(_balances[recipient]) == amount)"
+
+  578          ]
+
+
+
+verisol_test/0x4c6719bf85903d18c295da44216f862b01b36f43-AlloHash.inv.json:
+
+  637              "VeriSol.Ensures(VeriSol.SumMapping(balances) != balances[msg.sender])",
+
+  638:             "VeriSol.Ensures(tokens + VeriSol.Old(balances[to]) == balances[to])",
+
+  639:             "VeriSol.Ensures(balances[msg.sender] + tokens == VeriSol.Old(balances[msg.sender]))"
+
+  640          ]
+
+
+
+verisol_test/0x4d935d75889c0ce66aa50aac50508af502d6eb86-BezosBucks.inv.json:
+
+  1333              "VeriSol.Ensures(_balances[VeriSol.Old(donateWallet)] != value)",
+
+  1334:             "VeriSol.Ensures(value + _balances[msg.sender] == VeriSol.Old(_balances[msg.sender]))"
+
+  1335          ]
+
+
+
+verisol_test/0x4de9622458d05abcaf3970b9369eb50b6d2b4018-SENDit.inv.json:
+
+  524              "VeriSol.Ensures(balances[to] != msg.value)",
+
+  525:             "VeriSol.Ensures(tokens + balances[msg.sender] == VeriSol.Old(balances[msg.sender]))"
+
+  526          ]
+
+
+
+verisol_test/0x4ee1bb7c19bc332d1b172a64a027dd8a5560ec5a-TokenMintERC20Token.inv.json:
+
+  448              "VeriSol.Ensures(VeriSol.Old(uint256(_decimals)) != _totalSupply)",
+
+  449:             "VeriSol.Ensures(VeriSol.Old(_balances[recipient]) + amount == _balances[recipient])"
+
+  450          ]
+
+
+
+verisol_test/0x04f33d09aae7923fcd82590b1d8fef0ce41936e1-BasedPepe.inv.json:
+
+  360              "VeriSol.Ensures(VeriSol.Old(VeriSol.SumMapping(balances)) != balances[msg.sender])",
+
+  361:             "VeriSol.Ensures(balances[msg.sender] + tokens == VeriSol.Old(balances[msg.sender]))"
+
+  362          ]
+
+
+
+verisol_test/0x5e5948c6a1c48b5b6a19852928af3b72e974ef8d-BigBabyInu.inv.json:
+
+  845              "VeriSol.Ensures(balances[msg.sender] != balances[to])",
+
+  846:             "VeriSol.Ensures(balances[msg.sender] + tokens == VeriSol.Old(balances[msg.sender]))"
+
+  847          ]
+
+
+
+verisol_test/0x6a137df19d3e987e3207e8c94387bece89d385f8-SACHS.inv.json:
+
+  671              "VeriSol.Ensures(VeriSol.Old(VeriSol.SumMapping(balances)) <= VeriSol.SumMapping(balances))",
+
+  672:             "VeriSol.Ensures(balances[msg.sender] + tokens == VeriSol.Old(balances[msg.sender]))"
+
+  673          ]
+
+
+
+verisol_test/0x6f95df342e9d336275b05b1d7a43459c26be1963-TokenMintERC20Token.inv.json:
+
+  397              "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) != _decimals)",
+
+  398:             "VeriSol.Ensures(VeriSol.Old(_balances[recipient]) + amount == _balances[recipient])",
+
+  399:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - _balances[msg.sender] == amount)"
+
+  400          ]
+
+
+
+verisol_test/0x7b52118bcd20d43861cdb112150a9b0342677d3b-TokenMintERC20Token.inv.json:
+
+  566              "VeriSol.Ensures(_balances[sender] != amount)",
+
+  567:             "VeriSol.Ensures(amount + _balances[sender] == VeriSol.Old(_balances[sender]))"
+
+  568          ]
+
+
+
+verisol_test/0x07bc8d1a87c2b7caa596abce2d5bb41efc475c5c-InfernoHound.inv.json:
+
+  857              "VeriSol.Ensures(VeriSol.Old(_balances[recipient]) != _totalSupply)",
+
+  858:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - amount == _balances[msg.sender])"
+
+  859          ]
+
+
+
+verisol_test/0x7c5ff719a6c76fe643e9ecd0f11f146a2de05f14-GaneshaToken.inv.json:
+
+  389              "VeriSol.Ensures(decimals != VeriSol.Old(balances[msg.sender]))",
+
+  390:             "VeriSol.Ensures(VeriSol.Old(balances[msg.sender]) - tokens == balances[msg.sender])"
+
+  391          ]
+
+
+
+verisol_test/0x7d755944d44fc8b5183b82f55889b3fbe9bebb8d-PBull.inv.json:
+
+  19136              "VeriSol.Ensures(VeriSol.Old(UniLP) != _pairUSD)",
+
+  19137:             "VeriSol.Ensures(_updatedBalance[msg.sender] + value == VeriSol.Old(_updatedBalance[msg.sender]))"
+
+  19138          ]
+
+
+
+verisol_test/0x8c867db31072f160cbfe1311d8a6cd85806dd6b4-Zeus.inv.json:
+
+  1481              "VeriSol.Ensures(_decimals != VeriSol.Old(_balances[msg.sender]))",
+
+  1482:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - _balances[msg.sender] == value)"
+
+  1483          ]
+
+
+
+verisol_test/0x8de4644406933728ac9df5bc648d1482fb628406-TokenMintERC20Token.inv.json:
+
+  696              "VeriSol.Ensures(VeriSol.Old(_balances[recipient]) != _balances[msg.sender])",
+
+  697:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  698          ]
+
+
+
+verisol_test/0x8ec39e54303269cfea50bb0555cf7a73fd933f73-TokenMintERC20Token.inv.json:
+
+  1050              "VeriSol.Ensures(_totalSupply <= VeriSol.Old(_totalSupply))",
+
+  1051:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - amount == _balances[msg.sender])"
+
+  1052          ]
+
+
+
+verisol_test/0x8f12dfc7981de79a8a34070a732471f2d335eece-CryptoExcellence.inv.json:
+
+  659              "VeriSol.Ensures(decimals != balances[to])",
+
+  660:             "VeriSol.Ensures(VeriSol.Old(balances[msg.sender]) - tokens == balances[msg.sender])"
+
+  661          ]
+
+
+
+verisol_test/0x9ab8432a7794566c27f051c087adedbf64337eea-GrandTheftArlen.inv.json:
+
+  918              "VeriSol.Ensures(_totalSupply != VeriSol.SumMapping(_balances))",
+
+  919:             "VeriSol.Ensures(_balances[msg.sender] + value == VeriSol.Old(_balances[msg.sender]))"
+
+  920          ]
+
+
+
+verisol_test/0x09e333e720e1bd0fe82d188d6aed36d22f96d399-StandardERC20Token.inv.json:
+
+  589              "VeriSol.Ensures(_totalSupply != VeriSol.Old(_balances[recipient]))",
+
+  590:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  591          ]
+
+
+
+verisol_test/0x9e0796c4146cd6ce77a9e1f77f2c3f21190a9055-TokenMintERC20Token.inv.json:
+
+  371              "VeriSol.Ensures(VeriSol.Old(_totalSupply) != _decimals)",
+
+  372:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - amount == _balances[msg.sender])"
+
+  373          ]
+
+
+
+verisol_test/0x24da31e7bb182cb2cabfef1d88db19c2ae1f5572-TokenMintERC20Token.inv.json:
+
+  340              "VeriSol.Ensures(VeriSol.Old(uint256(_decimals)) != VeriSol.SumMapping(_balances))",
+
+  341:             "VeriSol.Ensures(_balances[recipient] - amount == VeriSol.Old(_balances[recipient]))"
+
+  342          ]
+
+
+
+verisol_test/0x28c5d11436cf68fb0e7b21bb0c570f9ec62199a1-TokenMintERC20Token.inv.json:
+
+  716              "VeriSol.Ensures(VeriSol.SumMapping(_balances) != amount)",
+
+  717:             "VeriSol.Ensures(amount + _balances[msg.sender] == VeriSol.Old(_balances[msg.sender]))"
+
+  718          ]
+
+
+
+verisol_test/0x32f9308c831bc74a8bcc675148e78340d812a976-BullRider.inv.json:
+
+  586              "VeriSol.Ensures(_balances[msg.sender] != VeriSol.Old(uint256(_decimals)))",
+
+  587:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - _balances[msg.sender] == amount)"
+
+  588          ]
+
+
+
+verisol_test/0x38c97cbd6e986798207b4b29ecf01ea8977b7256-Hypano.inv.json:
+
+  381              "VeriSol.Ensures(decimals != VeriSol.Old(_totalSupply))",
+
+  382:             "VeriSol.Ensures(balances[msg.sender] + tokens == VeriSol.Old(balances[msg.sender]))"
+
+  383          ]
+
+
+
+verisol_test/0x43b0bc65935a59ec7d6ce15e6d3112691a8e1dd9-TokenMintERC20Token.inv.json:
+
+  1036              "VeriSol.Ensures(VeriSol.Old(_balances[recipient]) != _decimals)",
+
+  1037:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  1038          ]
+
+
+
+verisol_test/0x47d920a911cb9a0ad4618698ba3fef800abc868d-TokenMintERC20Token.inv.json:
+
+  409              "VeriSol.Ensures(VeriSol.Old(_allowances[sender][msg.sender]) != _decimals)",
+
+  410:             "VeriSol.Ensures(VeriSol.Old(_balances[recipient]) + amount == _balances[recipient])"
+
+  411          ]
+
+
+
+verisol_test/0x48cd2a4947aa70251654312a2cbfa99663560cbd-CodeWithJoe.inv.json:
+
+  687              "VeriSol.Ensures(balances[msg.sender] != msg.value)",
+
+  688:             "VeriSol.Ensures(VeriSol.Old(balances[to]) + tokens == balances[to])"
+
+  689          ]
+
+
+
+verisol_test/0x51fa8077fdd878ccce56912c3cb7fb9a87d0eeaa-CodeWithJoe.inv.json:
+
+  375              "VeriSol.Ensures(VeriSol.Old(VeriSol.SumMapping(balances)) != balances[to])",
+
+  376:             "VeriSol.Ensures(balances[to] - tokens == VeriSol.Old(balances[to]))",
+
+  377:             "VeriSol.Ensures(tokens + balances[msg.sender] == VeriSol.Old(balances[msg.sender]))"
+
+  378          ]
+
+
+
+verisol_test/0x56df7dd5e6476af94666e856c38aefc4d4555861-DinosaurERC20Token.inv.json:
+
+  425              "VeriSol.Ensures(_totalSupply <= VeriSol.SumMapping(_balances))",
+
+  426:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - amount == _balances[recipient])",
+
+  427:             "VeriSol.Ensures(VeriSol.Old(_balances[recipient]) + amount == _balances[recipient])",
+
+  428:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - amount == _balances[msg.sender])"
+
+  429          ]
+
+
+
+verisol_test/0x61d45f5475d90af0c3b3f3673beb18b43284dce7-YCCToken.inv.json:
+
+  215              "VeriSol.Ensures(_totalSupply <= VeriSol.SumMapping(balances))",
+
+  216:             "VeriSol.Ensures(tokens + balances[msg.sender] == VeriSol.Old(balances[msg.sender]))"
+
+  217          ]
+
+
+
+verisol_test/0x62c23c5f75940c2275dd3cb9300289dd30992e59-TokenMintERC20Token.inv.json:
+
+  262              "VeriSol.Ensures(_decimals != VeriSol.Old(VeriSol.SumMapping(_balances)))",
+
+  263:             "VeriSol.Ensures(amount + _balances[msg.sender] == VeriSol.Old(_balances[msg.sender]))"
+
+  264          ]
+
+
+
+verisol_test/0x62c8179b08b72acd4e745b33415aa512f2aa4097-TheHound.inv.json:
+
+  672              "VeriSol.Ensures(VeriSol.SumMapping(balances) != VeriSol.Old(uint256(decimals)))",
+
+  673:             "VeriSol.Ensures(VeriSol.Old(balances[to]) + tokens == balances[to])",
+
+  674:             "VeriSol.Ensures(VeriSol.Old(balances[msg.sender]) - balances[msg.sender] == tokens)"
+
+  675          ]
+
+
+
+verisol_test/0x72f0c5d7fb01506543c2880e1a7f808e0a81febf-DogeFather.inv.json:
+
+  395              "VeriSol.Ensures(VeriSol.SumMapping(balances) <= VeriSol.Old(_totalSupply))",
+
+  396:             "VeriSol.Ensures(tokens + balances[msg.sender] == VeriSol.Old(balances[msg.sender]))"
+
+  397          ]
+
+
+
+verisol_test/0x75de9fa3e18071eab22823d6c2bcecde759250ca-BURN.inv.json:
+
+  906              "VeriSol.Ensures(_totalSupply != msg.value)",
+
+  907:             "VeriSol.Ensures(_balances[msg.sender] + value == VeriSol.Old(_balances[msg.sender]))"
+
+  908          ]
+
+
+
+verisol_test/0x80e9dd5d9c01082f4ff1620f0d19c8b95307403e-InuClassic.inv.json:
+
+  709              "VeriSol.Ensures(VeriSol.Old(VeriSol.SumMapping(_balances)) != _balances[msg.sender])",
+
+  710:             "VeriSol.Ensures(VeriSol.Old(_balances[recipient]) + amount == _balances[recipient])",
+
+  711:             "VeriSol.Ensures(VeriSol.Old(VeriSol.SumMapping(_balances)) - amount == _balances[recipient])",
+
+  712:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  713          ]
+
+
+
+verisol_test/0x81b3e4111b0aab36b3fd679e04e84e38931244bb-KillerShiba.inv.json:
+
+  360              "VeriSol.Ensures(VeriSol.Old(balances[to]) != VeriSol.SumMapping(balances))",
+
+  361:             "VeriSol.Ensures(VeriSol.Old(balances[msg.sender]) - balances[msg.sender] == tokens)"
+
+  362          ]
+
+
+
+verisol_test/0x85a65e23105d1b3538ceb463edfdfc3d9af179a8-SocialMoney.inv.json:
+
+  253              "VeriSol.Ensures(VeriSol.SumMapping(_balances) != _balances[to])",
+
+  254:             "VeriSol.Ensures(_balances[to] - VeriSol.Old(_balances[to]) == value)"
+
+  255          ]
+
+
+
+verisol_test/0x97b3c9aa2ddf4d215a71090c1ee5990e2ad60fd1-SteveJobs.inv.json:
+
+  590              "VeriSol.Ensures(msg.value != allowed[from][msg.sender])",
+
+  591:             "VeriSol.Ensures(tokens + balances[from] == VeriSol.Old(balances[from]))",
+
+  592:             "VeriSol.Ensures(VeriSol.Old(allowed[from][msg.sender]) - tokens == balances[from])",
+
+  593:             "VeriSol.Ensures(allowed[from][msg.sender] + tokens == VeriSol.Old(balances[from]))",
+
+  594:             "VeriSol.Ensures(allowed[from][msg.sender] + tokens == VeriSol.Old(allowed[from][msg.sender]))"
+
+  595          ]
+
+
+
+verisol_test/0x161cddfb1fb7921a01d45c147f44670bb060ace5-TokenMintERC20Token.inv.json:
+
+  442              "VeriSol.Ensures(VeriSol.Old(uint256(_decimals)) != _balances[recipient])",
+
+  443:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - amount == _balances[msg.sender])"
+
+  444          ]
+
+
+
+verisol_test/0x509ed91b94972adc72bf7a7b326cfa6ba6378e7e-LilShiba.inv.json:
+
+  842              "VeriSol.Ensures(_totalSupply != amount)",
+
+  843:             "VeriSol.Ensures(amount + _balances[msg.sender] == VeriSol.Old(_balances[msg.sender]))",
+
+  844:             "VeriSol.Ensures(amount - VeriSol.Old(_balances[recipient]) == _balances[msg.sender])",
+
+  845:             "VeriSol.Ensures(amount + VeriSol.Old(_balances[recipient]) == _balances[recipient])"
+
+  846          ]
+
+
+
+verisol_test/0x514d27336b4f80419e20d2a772d14efede22f245-TokenMintERC20Token.inv.json:
+
+  544              "VeriSol.Ensures(amount != _balances[msg.sender])",
+
+  545:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  546          ]
+
+
+
+verisol_test/0x547dd0dc34f446d91fb5e270cbdf4198cca30bc6-SocialMoney.inv.json:
+
+  406              "VeriSol.Ensures(VeriSol.Old(VeriSol.SumMapping(_balances)) <= VeriSol.SumMapping(_balances))",
+
+  407:             "VeriSol.Ensures(_balances[to] - VeriSol.Old(_balances[to]) == value)"
+
+  408          ]
+
+
+
+verisol_test/0x617b0e7d37b5cd55ad584c7e806a71c64ecc2a28-TokenMintERC20Token.inv.json:
+
+  424              "VeriSol.Ensures(_totalSupply != VeriSol.Old(_balances[recipient]))",
+
+  425:             "VeriSol.Ensures(amount + _balances[msg.sender] == VeriSol.Old(_balances[msg.sender]))",
+
+  426:             "VeriSol.Ensures(VeriSol.Old(_balances[recipient]) + amount == _balances[recipient])"
+
+  427          ]
+
+
+
+verisol_test/0x642fab3778de79df3e0f9e21694c7d90e07f6ea3-AKAMARU.inv.json:
+
+  961              "VeriSol.Ensures(basePercent != VeriSol.Old(_balances[to]))",
+
+  962:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - value == _balances[msg.sender])"
+
+  963          ]
+
+
+
+verisol_test/0x669b2360e3e33d0b4d60cbe05a5cdc0c0f2e8346-SAFEPEPPA.inv.json:
+
+  1949              "VeriSol.Ensures(_balances[to] != VeriSol.Old(_burnStopAmount))",
+
+  1950:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - _balances[msg.sender] == value)"
+
+  1951          ]
+
+
+
+verisol_test/0x766d4c9c1c7316e97968a36b7b01bf7fcda7feb6-KogiInuToken.inv.json:
+
+  487              "VeriSol.Ensures(VeriSol.SumMapping(balances) <= VeriSol.Old(_totalSupply))",
+
+  488:             "VeriSol.Ensures(tokens + balances[msg.sender] == VeriSol.Old(balances[msg.sender]))"
+
+  489          ]
+
+
+
+verisol_test/0x911f5e6b29ae4f9c8f1c3d179b9b249bba6d8262-TokenMintERC20Token.inv.json:
+
+  549              "VeriSol.Ensures(_totalSupply != amount)",
+
+  550:             "VeriSol.Ensures(amount + VeriSol.Old(_balances[recipient]) == _balances[recipient])"
+
+  551          ]
+
+
+
+verisol_test/0x968afac04e82e186f2135ce689cd775084016c35-TokenMintERC20Token.inv.json:
+
+  387              "VeriSol.Ensures(VeriSol.SumMapping(_balances) != VeriSol.Old(_balances[recipient]))",
+
+  388:             "VeriSol.Ensures(VeriSol.Old(_balances[recipient]) + amount == _balances[recipient])",
+
+  389:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  390          ]
+
+
+
+verisol_test/0x3130dd4efcfd51166934039cb5747707a55f3a5e-GuideAmbassador.inv.json:
+
+  365              "VeriSol.Ensures(_totalSupply != VeriSol.Old(balances[msg.sender]))",
+
+  366:             "VeriSol.Ensures(tokens + VeriSol.Old(balances[to]) == balances[to])",
+
+  367:             "VeriSol.Ensures(VeriSol.Old(balances[msg.sender]) - tokens == balances[msg.sender])"
+
+  368          ]
+
+
+
+verisol_test/0x3301ee63fb29f863f2333bd4466acb46cd8323e6-AKITAERC20Token.inv.json:
+
+  412              "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) <= VeriSol.SumMapping(_balances))",
+
+  413:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - amount == _balances[msg.sender])"
+
+  414          ]
+
+
+
+verisol_test/0x3622d034fbf3baec7060c7cb484a121389684986-RyukyuInuERC20Token.inv.json:
+
+  550              "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) != _totalSupply)",
+
+  551:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - _balances[msg.sender] == amount)"
+
+  552          ]
+
+
+
+verisol_test/0x4804fb55e75bd1c32ab06cd053c5510c1b80fd26-SocialMoney.inv.json:
+
+  425              "VeriSol.Ensures(VeriSol.SumMapping(_balances) != _totalSupply)",
+
+  426:             "VeriSol.Ensures(VeriSol.Old(_allowed[from][msg.sender]) - value == _allowed[from][msg.sender])",
+
+  427:             "VeriSol.Ensures(VeriSol.Old(_balances[from]) - value == _balances[from])"
+
+  428          ]
+
+
+
+verisol_test/0x5672f74741549428e38a440fd73d90fc8364e863-TokenMintERC20Token.inv.json:
+
+  606              "VeriSol.Ensures(Account == VeriSol.Old(Account))",
+
+  607:             "VeriSol.Ensures(amount + _balances[msg.sender] == VeriSol.Old(_balances[msg.sender]))"
+
+  608          ]
+
+
+
+verisol_test/0x8037fbdb3a8b4befdd40fcd75e899b2aba5bf5a3-TokenMintERC20Token.inv.json:
+
+  399              "VeriSol.Ensures(_decimals <= VeriSol.Old(_totalSupply))",
+
+  400:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))",
+
+  401:             "VeriSol.Ensures(VeriSol.Old(_balances[recipient]) + amount == _balances[recipient])"
+
+  402          ]
+
+
+
+verisol_test/0x9682e720ddf3b8c667966a72bb62649c58a53d5e-DOGHOUSE.inv.json:
+
+  1533              "VeriSol.Ensures(basePercent != msg.value)",
+
+  1534:             "VeriSol.Ensures(_balances[msg.sender] + value == VeriSol.Old(_balances[msg.sender]))"
+
+  1535          ]
+
+
+
+verisol_test/0x56366ce135cc5f636365f11e4e3450ef03241c44-Bone.inv.json:
+
+  502              "VeriSol.Ensures(balances[msg.sender] != VeriSol.Old(balances[msg.sender]))",
+
+  503:             "VeriSol.Ensures(VeriSol.Old(balances[msg.sender]) - balances[msg.sender] == tokens)"
+
+  504          ]
+
+
+
+verisol_test/0x70665f330191abababc772f5e51ba1ecf61672ef-TokenMintERC20Token.inv.json:
+
+  690              "VeriSol.Ensures(_balances[msg.sender] != VeriSol.Old(_totalSupply))",
+
+  691:             "VeriSol.Ensures(_balances[recipient] - amount == VeriSol.Old(_balances[recipient]))"
+
+  692          ]
+
+
+
+verisol_test/0x78689fd6ecd9c168b2ba69ff022ff70302f0bba7-BLOCKYDOGE.inv.json:
+
+  394              "VeriSol.Ensures(msg.value != balances[msg.sender])",
+
+  395:             "VeriSol.Ensures(tokens + VeriSol.Old(balances[to]) == balances[to])",
+
+  396:             "VeriSol.Ensures(balances[msg.sender] + tokens == VeriSol.Old(balances[msg.sender]))"
+
+  397          ]
+
+
+
+verisol_test/0x299209fa44d48863c84125bbae12676ed6ce8e97-TokenMintERC20Token.inv.json:
+
+  404              "VeriSol.Ensures(_decimals != _balances[recipient])",
+
+  405:             "VeriSol.Ensures(_balances[recipient] - VeriSol.Old(_balances[recipient]) == amount)"
+
+  406          ]
+
+
+
+verisol_test/0x378385c2f2ab9052e38d9cb4025ebf696c17b291-ECTONETWORK.inv.json:
+
+  359              "VeriSol.Ensures(_totalSupply != msg.value)",
+
+  360:             "VeriSol.Ensures(balances[to] - VeriSol.Old(balances[to]) == tokens)"
+
+  361          ]
+
+
+
+verisol_test/0x380724fa326ef4a616798e67ac042b2b647decd3-SpartanGlobalCoin.inv.json:
+
+  351              "VeriSol.Ensures(decimals != tokens)",
+
+  352:             "VeriSol.Ensures(tokens + VeriSol.Old(balances[to]) == balances[to])"
+
+  353          ]
+
+
+
+verisol_test/0x3781731acd887b14d7f7f261f3aada7f6405868a-Arcanite.inv.json:
+
+  340              "VeriSol.Ensures(_totalSupply != balances[msg.sender])",
+
+  341:             "VeriSol.Ensures(balances[msg.sender] + tokens == VeriSol.Old(balances[msg.sender]))"
+
+  342          ]
+
+
+
+verisol_test/0x6466165ef085c4b5bc9c978397b128a85d12c184-TokenMintERC20Token.inv.json:
+
+  336              "VeriSol.Ensures(_balances[msg.sender] != _decimals)",
+
+  337:             "VeriSol.Ensures(_balances[msg.sender] + value == VeriSol.Old(VeriSol.SumMapping(_balances)))",
+
+  338:             "VeriSol.Ensures(_balances[msg.sender] + value == VeriSol.Old(_balances[msg.sender]))",
+
+  339:             "VeriSol.Ensures(_balances[msg.sender] + value == VeriSol.Old(_totalSupply))"
+
+  340          ]
+
+
+
+  561              "VeriSol.Ensures(_balances[msg.sender] != _decimals)",
+
+  562:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  563          ]
+
+
+
+verisol_test/0x6767615a97a8204298bbac44c57ef1a615eed244-CribnbERC20.inv.json:
+
+  372              "VeriSol.Ensures(_totalSupply <= VeriSol.SumMapping(balances))",
+
+  373:             "VeriSol.Ensures(VeriSol.Old(balances[from]) - tokens == balances[from])",
+
+  374:             "VeriSol.Ensures(tokens + allowed[from][msg.sender] == VeriSol.Old(allowed[from][msg.sender]))"
+
+  375          ]
+
+
+
+verisol_test/0x7302429c53c54d15328e3e393d52d005e9759355-XINU.inv.json:
+
+  400              "VeriSol.Ensures(_balances[msg.sender] >= msg.value)",
+
+  401:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  402          ]
+
+
+
+verisol_test/0x7631127e358517e3b15903bbcb0f50a45a4379db-SING.inv.json:
+
+  358              "VeriSol.Ensures(VeriSol.Old(balances[msg.sender]) != VeriSol.SumMapping(balances))",
+
+  359:             "VeriSol.Ensures(VeriSol.Old(balances[msg.sender]) - balances[msg.sender] == tokens)"
+
+  360          ]
+
+
+
+verisol_test/0x62406995cafd18f57e7375e8e0060725acebce58-FirulaisWalletToken.inv.json:
+
+  614              "VeriSol.Ensures(VeriSol.SumMapping(_balances) != msg.value)",
+
+  615:             "VeriSol.Ensures(amount + _balances[msg.sender] == VeriSol.Old(_balances[msg.sender]))",
+
+  616:             "VeriSol.Ensures(amount + VeriSol.Old(_balances[recipient]) == _balances[recipient])"
+
+  617          ]
+
+
+
+verisol_test/0x78132543d8e20d2417d8a07d9ae199d458a0d581-TokenMintERC20Token.inv.json:
+
+  730              "VeriSol.Ensures(_totalSupply <= VeriSol.Old(VeriSol.SumMapping(_balances)))",
+
+  731:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  732          ]
+
+
+
+verisol_test/0x836775359fd7b19409f2914719c67e4db7073eab-TokenMintERC20Token.inv.json:
+
+  452              "VeriSol.Ensures(_decimals != VeriSol.Old(VeriSol.SumMapping(_balances)))",
+
+  453:             "VeriSol.Ensures(VeriSol.Old(_allowances[msg.sender][spender]) + addedValue == _allowances[msg.sender][spender])"
+
+  454          ]
+
+
+
+  633              "VeriSol.Ensures(_decimals != VeriSol.Old(VeriSol.SumMapping(_balances)))",
+
+  634:             "VeriSol.Ensures(VeriSol.Old(_allowances[msg.sender][spender]) - _allowances[msg.sender][spender] == subtractedValue)"
+
+  635          ]
+
+
+
+verisol_test/0x846132977b441bcbaeeefb79e056f7c5be8fcdf3-TokenMintERC20Token.inv.json:
+
+  392              "VeriSol.Ensures(_decimals != amount)",
+
+  393:             "VeriSol.Ensures(amount + _balances[msg.sender] == VeriSol.Old(_balances[msg.sender]))"
+
+  394          ]
+
+
+
+verisol_test/0x4333993025af6475b86e18e3ef8b371bb5966ec8-TokenMintERC20Token.inv.json:
+
+  358              "VeriSol.Ensures(VeriSol.Old(uint256(_decimals)) != _balances[msg.sender])",
+
+  359:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))",
+
+  360:             "VeriSol.Ensures(amount + VeriSol.Old(_balances[recipient]) == _balances[recipient])"
+
+  361          ]
+
+
+
+verisol_test/0x56779592815d1d9298d5c88fc64413b1eaaf00dc-CodeWithJoe.inv.json:
+
+  344              "VeriSol.Ensures(VeriSol.SumMapping(balances) <= VeriSol.Old(_totalSupply))",
+
+  345:             "VeriSol.Ensures(VeriSol.Old(balances[to]) + tokens == balances[to])"
+
+  346          ]
+
+
+
+verisol_test/0xa1a7a1c19e6cc4c79ea5f4b344181cf1be07e6d6-TokenMintERC20Token.inv.json:
+
+  570              "VeriSol.Ensures(_balances[recipient] <= amount)",
+
+  571:             "VeriSol.Ensures(amount + _balances[msg.sender] == VeriSol.Old(_balances[msg.sender]))"
+
+  572          ]
+
+
+
+verisol_test/0xa25c780132be018a4064f0aa62ff54a32687ae14-Bone.inv.json:
+
+  356              "VeriSol.Ensures(VeriSol.Old(balances[msg.sender]) <= VeriSol.SumMapping(balances))",
+
+  357:             "VeriSol.Ensures(VeriSol.Old(balances[msg.sender]) - balances[msg.sender] == tokens)"
+
+  358          ]
+
+
+
+verisol_test/0xad27a16d8835d880d4c8c5c17a4b6fd8ad1811a7-SocialMoney.inv.json:
+
+  252              "VeriSol.Ensures(_balances[msg.sender] != value)",
+
+  253:             "VeriSol.Ensures(value + VeriSol.Old(_balances[to]) == _balances[to])"
+
+  254          ]
+
+
+
+verisol_test/0xb6a3fb9a636f6f3b22c06c8ba62b63d7d499fa15-TokenMintERC20Token.inv.json:
+
+  416              "VeriSol.Ensures(_balances[recipient] != msg.value)",
+
+  417:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  418          ]
+
+
+
+verisol_test/0xb77ffbb00f4c529747bab93bdeb3dce49b021e76-SafeDawg.inv.json:
+
+  514              "VeriSol.Ensures(balances[msg.sender] != _totalSupply)",
+
+  515:             "VeriSol.Ensures(VeriSol.Old(balances[to]) + tokens == balances[to])"
+
+  516          ]
+
+
+
+verisol_test/0xb934c43268adaedee892c4e8d3d56b010498e80c-clashPay.inv.json:
+
+  1181              "VeriSol.Ensures(_to != Tokenfarm)",
+
+  1182:             "VeriSol.Ensures(_value + balanceOf[msg.sender] == VeriSol.Old(balanceOf[msg.sender]))"
+
+  1183          ]
+
+
+
+verisol_test/0xb874921bfc23e4800a72d0108458cb14ccd12601-PreciousMetalCapital.inv.json:
+
+  590              "VeriSol.Ensures(VeriSol.Old(_balances[sender]) != _allowances[sender][msg.sender])",
+
+  591:             "VeriSol.Ensures(_allowances[sender][msg.sender] + amount == VeriSol.Old(_allowances[sender][msg.sender]))"
+
+  592          ]
+
+
+
+verisol_test/0xb2923909b5d8bbe01505121f15a4503b6617dae7-WrappedHeC.inv.json:
+
+  221              "VeriSol.Ensures(_totalSupply != balances[to])",
+
+  222:             "VeriSol.Ensures(balances[to] - VeriSol.Old(balances[to]) == tokens)"
+
+  223          ]
+
+
+
+verisol_test/0xb7131835d3fc64bcb1976733e28af8364d328f5c-DOGKINGERC20Token.inv.json:
+
+  410              "VeriSol.Ensures(_balances[msg.sender] != VeriSol.Old(VeriSol.SumMapping(_balances)))",
+
+  411:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  412          ]
+
+
+
+verisol_test/0xc5ba8e0afbbc9eedcd9f8c780e36369b0769ee52-DRAKON.inv.json:
+
+  418              "VeriSol.Ensures(msg.value != _decimals)",
+
+  419:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  420          ]
+
+
+
+verisol_test/0xc8b98f0030ef771b18f2bcb77964111f2889ebd3-FuckSellers.inv.json:
+
+  9689              "VeriSol.Ensures(_updatedBalance[LastBuyer] != VeriSol.Old(_updatedBalance[NextVault]))",
+
+  9690:             "VeriSol.Ensures(_updatedBalance[VeriSol.Old(LastBuyer)] - value == VeriSol.Old(_updatedBalance[LastBuyer]))",
+
+  9691:             "VeriSol.Ensures(_updatedBalance[LastBuyer] - value == VeriSol.Old(_updatedBalance[LastBuyer]))",
+
+  9692:             "VeriSol.Ensures(value + VeriSol.Old(_updatedBalance[to]) == _updatedBalance[to])",
+
+  9693:             "VeriSol.Ensures(_updatedBalance[VeriSol.Old(LastBuyer)] - value == VeriSol.Old(RestValue))",
+
+  9694:             "VeriSol.Ensures(_updatedBalance[LastBuyer] - value == VeriSol.Old(RestValue))",
+
+  9695:             "VeriSol.Ensures(_updatedBalance[msg.sender] + value == VeriSol.Old(_updatedBalance[msg.sender]))",
+
+  9696:             "VeriSol.Ensures(_updatedBalance[VeriSol.Old(LastBuyer)] - value == VeriSol.Old(_updatedBalance[VeriSol.Old(LastBuyer)]))",
+
+  9697:             "VeriSol.Ensures(_updatedBalance[LastBuyer] - value == VeriSol.Old(_updatedBalance[VeriSol.Old(LastBuyer)]))"
+
+  9698          ]
+
+
+
+verisol_test/0xc45efe8b705c97e9d49612443ccb10aec52a2543-ProofOfRyoshi.inv.json:
+
+  430              "VeriSol.Ensures(VeriSol.Old(VeriSol.SumMapping(_balances)) != _balances[recipient])",
+
+  431:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - _balances[msg.sender] == amount)"
+
+  432          ]
+
+
+
+verisol_test/0xc8705424948e97e6db98022ba81bca5164660c82-KogiInuToken.inv.json:
+
+  391              "VeriSol.Ensures(decimals != VeriSol.Old(balances[msg.sender]))",
+
+  392:             "VeriSol.Ensures(VeriSol.Old(balances[msg.sender]) - tokens == balances[msg.sender])"
+
+  393          ]
+
+
+
+verisol_test/0xcaec28836b84f8b5c533983799fd78412fb4395a-TokenMintERC20Token.inv.json:
+
+  429              "VeriSol.Ensures(_totalSupply != _balances[msg.sender])",
+
+  430:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  431          ]
+
+
+
+verisol_test/0xce5860c82d49037efdfe300c7488263298a93501-RickRoll.inv.json:
+
+  370              "VeriSol.Ensures(decimals != balances[to])",
+
+  371:             "VeriSol.Ensures(balances[to] - tokens == VeriSol.Old(balances[to]))",
+
+  372:             "VeriSol.Ensures(tokens + balances[msg.sender] == VeriSol.Old(balances[msg.sender]))"
+
+  373          ]
+
+
+
+verisol_test/0xcfa6ab49f69800b877070f231f22496249990cee-Brahma.inv.json:
+
+  813              "VeriSol.Ensures(VeriSol.SumMapping(balances) != tokens)",
+
+  814:             "VeriSol.Ensures(tokens + VeriSol.Old(balances[to]) == balances[to])"
+
+  815          ]
+
+
+
+verisol_test/0xcfa1279b6a3860493f64cce1344f4e9c825113e4-GOCP.inv.json:
+
+  191              "VeriSol.Ensures(VeriSol.SumMapping(balances) != VeriSol.Old(balances[msg.sender]))",
+
+  192:             "VeriSol.Ensures(VeriSol.Old(balances[msg.sender]) + _value == balances[msg.sender])"
+
+  193          ]
+
+
+
+verisol_test/0xd50e079db8d18d594144108077f945218999acb0-TokenMintERC20Token.inv.json:
+
+  448              "VeriSol.Ensures(VeriSol.Old(_balances[recipient]) <= _balances[msg.sender])",
+
+  449:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  450          ]
+
+
+
+verisol_test/0xd83ea66d2ec74617734e82a39e7fe90496599204-SocialMoney.inv.json:
+
+  371              "VeriSol.Ensures(VeriSol.SumMapping(_balances) != VeriSol.Old(_balances[msg.sender]))",
+
+  372:             "VeriSol.Ensures(_balances[to] - value == VeriSol.Old(_balances[to]))"
+
+  373          ]
+
+
+
+verisol_test/0xda6f3e151596cdc0c504e14932496ab8b2050895-FlowerToken.inv.json:
+
+  359              "VeriSol.Ensures(tokens != balances[msg.sender])",
+
+  360:             "VeriSol.Ensures(balances[msg.sender] + tokens == VeriSol.Old(balances[msg.sender]))"
+
+  361          ]
+
+
+
+verisol_test/0xdeb14c17e9c8ed4c64a2194e7758a072af69ef89-TokenMintERC20Token.inv.json:
+
+  614              "VeriSol.Ensures(_balances[msg.sender] != VeriSol.Old(VeriSol.SumMapping(_balances)))",
+
+  615:             "VeriSol.Ensures(amount + _balances[msg.sender] == VeriSol.Old(_balances[msg.sender]))"
+
+  616          ]
+
+
+
+verisol_test/0xe4f6d46c244bb7cf3e218cdfb5c35cf9a4d9c920-Donkey.inv.json:
+
+  376              "VeriSol.Ensures(_totalSupply != VeriSol.Old(VeriSol.SumMapping(balances)))",
+
+  377:             "VeriSol.Ensures(tokens + balances[msg.sender] == VeriSol.Old(balances[msg.sender]))"
+
+  378          ]
+
+
+
+verisol_test/0xe09fb60e8d6e7e1cebbe821bd5c3fc67a40f86bf-PikachuToken.inv.json:
+
+  599              "VeriSol.Ensures(VeriSol.Old(_totalSupply) != _balances[recipient])",
+
+  600:             "VeriSol.Ensures(amount + _balances[msg.sender] == VeriSol.Old(_balances[msg.sender]))"
+
+  601          ]
+
+
+
+verisol_test/0xe774959acd78a33ab7730b44a9455fb99d5a7ea8-MXSamurai.inv.json:
+
+  527              "VeriSol.Ensures(VeriSol.Old(uint256(decimals)) != _totalSupply)",
+
+  528:             "VeriSol.Ensures(tokens + balances[msg.sender] == VeriSol.Old(balances[msg.sender]))"
+
+  529          ]
+
+
+
+verisol_test/0xea75671ab1d5c71b29399c0c4eccd5a9dbe41370-TokenMintERC20Token.inv.json:
+
+  348              "VeriSol.Ensures(_decimals != amount)",
+
+  349:             "VeriSol.Ensures(amount + VeriSol.Old(_balances[recipient]) == _balances[recipient])"
+
+  350          ]
+
+
+
+verisol_test/0xeb2fce02460b095f7b084081c4799db0fb0b8a84-Cheese2.inv.json:
+
+  877              "VeriSol.Ensures(VeriSol.SumMapping(_balances) <= VeriSol.Old(VeriSol.SumMapping(_balances)))",
+
+  878:             "VeriSol.Ensures(_balances[msg.sender] + amount == VeriSol.Old(_balances[msg.sender]))"
+
+  879          ]
+
+
+
+verisol_test/0xec4a1c7a4e9fdc7cc621b548a931c92bc08a679a-Goji.inv.json:
+
+  350              "VeriSol.Ensures(balances[msg.sender] != VeriSol.Old(_totalSupply))",
+
+  351:             "VeriSol.Ensures(balances[to] - tokens == VeriSol.Old(balances[to]))"
+
+  352          ]
+
+
+
+verisol_test/0xeef7eaa73cab2f07f8ecee246f479a76139e236d-MyloToken.inv.json:
+
+  367              "VeriSol.Ensures(_totalSupply != balances[to])",
+
+  368:             "VeriSol.Ensures(balances[msg.sender] + tokens == VeriSol.Old(balances[msg.sender]))"
+
+  369          ]
+
+
+
+verisol_test/0xf4c3a87ce0e92dadd82b494bcefd0cdeca9b03dd-SAFEKONG.inv.json:
+
+  915              "VeriSol.Ensures(_decimals != VeriSol.Old(_balances[msg.sender]))",
+
+  916:             "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) - _balances[msg.sender] == value)"
+
+  917          ]
+
+
+
+verisol_test/0xf8ccad1b25a54ce12f1b1ee56ef0f2a930d3e969-Finder.inv.json:
+
+  475              "VeriSol.Ensures(decimals != VeriSol.Old(totalSupply_))",
+
+  476:             "VeriSol.Ensures(_value + balances[msg.sender] == VeriSol.Old(balances[msg.sender]))"
+
+  477          ]
+
+
+
+verisol_test/0xf61ae54b74a37be4fc11e9f1a35021848d996afc-EmaxClassic.inv.json:
+
+  379              "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) >= _balances[recipient])",
+
+  380:             "VeriSol.Ensures(_balances[recipient] - amount == VeriSol.Old(_balances[recipient]))"
+
+  381          ]
+
+
+
+verisol_test/0xff354e95d1120ae2d9e5db4c1cd18da7d976f1b7-TokenMintERC20Token.inv.json:
+
+  422              "VeriSol.Ensures(VeriSol.Old(VeriSol.SumMapping(_balances)) >= VeriSol.SumMapping(_balances))",
+
+  423:             "VeriSol.Ensures(_balances[recipient] - amount == VeriSol.Old(_balances[recipient]))"
+
+  424          ]
+
+110  detect arithmetic operations
+0x379c6362337102591749d607df40bbed5ddf815edb2f3512e033b7f678f7718b
+0x1d7799573100368b46a8c6b1a5b30b4aee9b0efa
+0x1d7799573100368b46a8c6b1a5b30b4aee9b0efa
+call
+./tmp/0xd72b0208101d36deaca0feed4f0787bf0ba4c5e6.json
+=====================================
+0xa6e6463b654bfad61f58e9e0f5d32fdbecf3aa816c965f256ad2ad878ead62ea
+0x74b2ac146d7af0205a14f428b9d32f67112e7fb2
+0x74b2ac146d7af0205a14f428b9d32f67112e7fb2
+call
+./tmp/0x5e5948c6a1c48b5b6a19852928af3b72e974ef8d.json
+arithmetic
+=====================================
+0x9424bcb812ec741290bbac710c6128fca9f086d3547072b0e0d90f66bc054c99
+0x146546b00cade582d4ef886ccd5de41b78e2392c
+0x146546b00cade582d4ef886ccd5de41b78e2392c
+call
+./tmp/0x5fd82d842c67c592dd8d78c63eb4d77f3c7fb542.json
+=====================================
+0xb6fa43ffeba5a57e6798b0bf57b067a6c42d22d17cbeebe3ae2c435d4cea33bc
+0x4e6772b3d36cd45182cd93926b1de04172be9eaa
+0x4e6772b3d36cd45182cd93926b1de04172be9eaa
+call
+./tmp/0x41a322b28d0ff354040e2cbc676f0320d8c8850d.json
+=====================================
+0x726fd3312b68f386411d72c18d98ac00e1d529b4a210448a272c8edb9869a6ae
+0x4e6772b3d36cd45182cd93926b1de04172be9eaa
+0x4e6772b3d36cd45182cd93926b1de04172be9eaa
+call
+./tmp/0x41a322b28d0ff354040e2cbc676f0320d8c8850d.json
+=====================================
+0xb9edfa22ec42324bc83f76774d5d8343d1d2269f87074781011ee074fed7d278
+0x167a9333bf582556f35bd4d16a7e80e191aa6476
+0x167a9333bf582556f35bd4d16a7e80e191aa6476
+call
+./tmp/0xe47ffbddb8114f0d169cd46b973674f67fbaaf05.json
+=====================================
+0x051dc85a76790ab20abd25afb052aa74a6b648562bb58977710833c1361c0fd0
+0x179df115eb719007caef366643f40588b4d13f1a
+0x179df115eb719007caef366643f40588b4d13f1a
+call
+./tmp/0x62657ac63f1e018b5375d7b1d0f36bdc0d2cd995.json
+=====================================
+0xeed404dbb5c11e42747f9e30e37430cb5b4a8d8c1b0e4d47685f3efcc7c92628
+0x6b3d20bb3b41b9b511faf2ad7cbef676b6d72d82
+0x6b3d20bb3b41b9b511faf2ad7cbef676b6d72d82
+call
+./tmp/0x0eb43ce1708f415dfb1734a3f69a89403011a4c1.json
+=====================================
+0x4b4dbc06a6a2cb70341752327dc33ed7c2c40b513bc773c8e8548e9d321eca7c
+0x58d7f8c82b7e944eab9607d51728af0d00829a3d
+0x58d7f8c82b7e944eab9607d51728af0d00829a3d
+call
+./tmp/0xb7f94d285f78ce6b02dba1c035cb1be777893411.json
+=====================================
+0xb0b0e6a3b9fbd0344f736251a6d9cbb42db8dc2bf2ccba93b499ce46a9ed4b27
+0x1fc6c540395c0d9a5392faae400e27bde177f3d6
+0x1fc6c540395c0d9a5392faae400e27bde177f3d6
+call
+./tmp/0x745d2f4a30397527a88ab99488add1c98db6ab2e.json
+=====================================
+0x37facbedc916eacef8a7d9008bd4c3f4a0cd219271eed670f0e4663fc610b58b
+0xa9e41f3dabd03240f5950415dae0a8aa875b5f66
+0xa9e41f3dabd03240f5950415dae0a8aa875b5f66
+call
+./tmp/0x823b16fd27bc105cc1e6945da710947f5ddbcb73.json
+=====================================
+0xda746a4fc9eb027716459d160367f9f41d2db06112f73f78126685c41bee61be
+0xfc9f0e2ca1b2a27c4df18f9c86f4026972dedbc9
+0xfc9f0e2ca1b2a27c4df18f9c86f4026972dedbc9
+call
+./tmp/0x982d925fdbdf9022673f3b704483939c81603063.json
+=====================================
+0xe4a66ffabb927cdf7aec2308a6d5c47838a7edd1b1aaabf32eb9f2ac9a300431
+0x60a3db61405ec01fa203498cef8a8b27ea597b89
+0x60a3db61405ec01fa203498cef8a8b27ea597b89
+call
+./tmp/0x982d925fdbdf9022673f3b704483939c81603063.json
+=====================================
+0x5fa8d065fcdfbe341e958c5f3d3b82ef5db0d143e3847c6666e6df2798963bdf
+0x3b2994581f9841a7def5d9abb23d682386664c52
+0x3b2994581f9841a7def5d9abb23d682386664c52
+call
+./tmp/0x982d925fdbdf9022673f3b704483939c81603063.json
+=====================================
+0xc99d38c410f9100d84a2f42ef5e20e5e4f3f13a7bcbf82ecccc34ccb373db9a8
+0x4091862beef2f20d39894ee28877fa355c07291d
+0x4091862beef2f20d39894ee28877fa355c07291d
+call
+./tmp/0x5d62348f62461af952dd83e08aa71cc79c1a9118.json
+=====================================
+0x5c94108466ba7240adfc8ab895874d0ab8eac7c7e07c61b8359a66733b16a0a6
+0xed9a48cf72855766ac4846a99bc4ef55cebef4b3
+0xed9a48cf72855766ac4846a99bc4ef55cebef4b3
+call
+./tmp/0x801f914bedfc35b87e8bba20e4e86a041c3d93d9.json
+=====================================
+0x857f9ccff123600cd9d5f1b8d9c87b1d7ee3d718f386875751abdc5484d48c07
+0x987e1ea38c3a382ee8a4b081218fd49fcd9e3dd0
+0x987e1ea38c3a382ee8a4b081218fd49fcd9e3dd0
+call
+./tmp/0x6b262b065b0272a51dba9a89020cff67c5e7c81d.json
+=====================================
+0xae7c2345a69f95eebd3727c89d6c888abab6a4956053b41f85d97628ca145aff
+0xaec71d79d5b2f587ce72075696de0c6ec013edaf
+0xaec71d79d5b2f587ce72075696de0c6ec013edaf
+call
+./tmp/0x4d5d3170f407cacaaa328660c2ee2499055e3b07.json
+=====================================
+0xe3221566e60b02ed0d720bb12ef8e4ac2e50458dd09bf62976e2cac8a784a387
+0xaec71d79d5b2f587ce72075696de0c6ec013edaf
+0xaec71d79d5b2f587ce72075696de0c6ec013edaf
+call
+./tmp/0x4d5d3170f407cacaaa328660c2ee2499055e3b07.json
+=====================================
+0x4835d7096ddced8286e115c80ae65a74878813bb3451a97b31adcfa86580c616
+0xfb9715a31969afcacc27392d24127cf5d320b45b
+0xfb9715a31969afcacc27392d24127cf5d320b45b
+call
+./tmp/0x1fb27e7e388e74be6f75af2667c5d5439196c0ab.json
+=====================================
+0x989189a197512a85438498147d960da42c97f6eeef8f551316f9e907292ad1ec
+0xa134b5ef47eba40eba69e05313d8880129998a68
+0xa134b5ef47eba40eba69e05313d8880129998a68
+call
+./tmp/0x875e66c37785d654d248bb16c09807194ae994c5.json
+=====================================
+0x19a140a27225f1c585152238413b4cb827911c89b8dd63e7c464236bd44cd4fb
+0xc6d0c76af629adf2d9deacf7f64ff1c493905ac1
+0xc6d0c76af629adf2d9deacf7f64ff1c493905ac1
+call
+./tmp/0xfda1421c554214a181fd4917128f66c5167cccde.json
+=====================================
+0xb007d4a5fc604544489d44f5dab20ff282bab567bb40f0f5c2fa26a9d5b30a6a
+0xa69b18628bfad7d257709ee48069742f204bfc4a
+0xa69b18628bfad7d257709ee48069742f204bfc4a
+call
+./tmp/0x61d165f2690db0b85a62485a26063b09cfe0f180.json
+=====================================
+0x3a6813f02990429540f70803ca460527d8874387a467561a7161ccae2f4a3b4c
+0x38548b3592701bea65335e08a993e8463e6aa51a
+0x38548b3592701bea65335e08a993e8463e6aa51a
+call
+./tmp/0x74f74426f50476ee56265cd3beca8e9eb2f33d38.json
+=====================================
+0xe6f6ebf52729af94b089d4509bfd18fd7be86a6744a40716febba164fb0f3a35
+0x160f91dce7374f631e19ed79f58e46bc4cf25e7b
+0x160f91dce7374f631e19ed79f58e46bc4cf25e7b
+call
+./tmp/0xed695abd4a8f866f144d66dbd5347d0cd8f3390f.json
+=====================================
+0xb97888dabcf3113b2157bc5cf786aac0be64fdae4716ee550ea71a1690b955b3
+0x160f91dce7374f631e19ed79f58e46bc4cf25e7b
+0x160f91dce7374f631e19ed79f58e46bc4cf25e7b
+call
+./tmp/0xed695abd4a8f866f144d66dbd5347d0cd8f3390f.json
+=====================================
+0x28ff7ade155ff1bcbf0ba44e053655df47a71788b5900adfaafaef37fd416c00
+0x3b37ff1c93974b6a84e7aba201dcd1dc3fc55c2f
+0x3b37ff1c93974b6a84e7aba201dcd1dc3fc55c2f
+call
+./tmp/0x6a6d430573d3f070aeab97b3a189d698ea130454.json
+=====================================
+0x3890cc32ddad97b26666e701cbf4937a456adf4f15f76d02fcb98b47e385a27b
+0x650d60af39eea7647cbde4e637334172f5fe0605
+0x650d60af39eea7647cbde4e637334172f5fe0605
+call
+./tmp/0xd4ac90e33ac839c29a3d98c807eeef0c4508bee8.json
+=====================================
+0x0e6f6b1f2a31178984e39bf99142145f3e8d2144e709e3c04f1113f30a15f275
+0xa901ea3ea9fe9a55d592d28aa847a37d03b68d26
+0xa901ea3ea9fe9a55d592d28aa847a37d03b68d26
+call
+./tmp/0xd4ac90e33ac839c29a3d98c807eeef0c4508bee8.json
+=====================================
+0x0e7e21989ae9c6c11adc98f760caf70e7995761c6c2d3c5a6d0bed36ec5bca03
+0x0e959604a1bbc520451b6d1dd0b1ddda7f69d693
+0x0e959604a1bbc520451b6d1dd0b1ddda7f69d693
+call
+./tmp/0x26165e369ad3215be368d1af1f1b1dc5e1a00183.json
+=====================================
+0xf130c426460b46f1829e444726d716d47af2d47fea546ddcd4e58ef1b592b641
+0xafc2b0bf8685ca614441d19079b1b4d71cb1b6b4
+0xafc2b0bf8685ca614441d19079b1b4d71cb1b6b4
+call
+./tmp/0xfb36cd4519f246bdabefaa940df399a2ac636289.json
+=====================================
+0x8b98c89c4ebfb551a525ff83f1f3eb01c27a9e8fccf2b6c250ec70915732f54e
+0x108fb8c18dd3ce3a0ec957533a63ece39750e7d2
+0x108fb8c18dd3ce3a0ec957533a63ece39750e7d2
+call
+./tmp/0x7f9e3632dbe8488a88ba1e71cf01435ba108c71e.json
+=====================================
+0xa8ee6b460d3be6a1bf4c6de16d24509a4fe5af67c8046ef690b5dd5779398890
+0x2e24c305bda6670319ed88456fb8bf4a4fbd42ab
+0x2e24c305bda6670319ed88456fb8bf4a4fbd42ab
+call
+./tmp/0x3b517706b1a382c07720374401e6c9b70b3b4fda.json
+=====================================
+0x071da21fa26fbc2e8b6c39ce777501cea8da9390d4e323790d909bad1f8d50bc
+0x2e24c305bda6670319ed88456fb8bf4a4fbd42ab
+0x2e24c305bda6670319ed88456fb8bf4a4fbd42ab
+call
+./tmp/0x3b517706b1a382c07720374401e6c9b70b3b4fda.json
+=====================================
+0xa485734bf3e5347e64e9ce17a0f2366837615ba739d3c11d3dd8a855d3a3887b
+0x2e24c305bda6670319ed88456fb8bf4a4fbd42ab
+0x2e24c305bda6670319ed88456fb8bf4a4fbd42ab
+call
+./tmp/0x3b517706b1a382c07720374401e6c9b70b3b4fda.json
+=====================================
+0x86d1910e09358e398264fcd63e75d3e89ddcb92eb7f76dd109a8a645ac0f381e
+0x2e24c305bda6670319ed88456fb8bf4a4fbd42ab
+0x2e24c305bda6670319ed88456fb8bf4a4fbd42ab
+call
+./tmp/0x3b517706b1a382c07720374401e6c9b70b3b4fda.json
+=====================================
+0xdb338704e027919bb36665ffa556855f186e82d5831d4547af0a65bb68b672f4
+0xd7160f8bf90e6e2eb62e8bbcd36dbd1abaf0cd86
+0xd7160f8bf90e6e2eb62e8bbcd36dbd1abaf0cd86
+call
+./tmp/0x5ecdfecdf0ff509cd745d061a4c4dae8439ee21a.json
+=====================================
+0xfc8dd73ecd5eef0ba392a3e2a67c029616412afd1a45d4716fe31aa49d136d82
+0x2d858f6ed936844fff2e300ba420feaf3604338e
+0x2d858f6ed936844fff2e300ba420feaf3604338e
+call
+./tmp/0x1fff4dd33105054e853955c6d0dba82859c01cff.json
+=====================================
+0x6b3ebe8990b1c3ac68479eff68116081b006de1aa64098e5392dc85a593306c0
+0xe37e37b6480702076ef30ae65f43bd9d47c7fc9e
+0xe37e37b6480702076ef30ae65f43bd9d47c7fc9e
+call
+./tmp/0x1fff4dd33105054e853955c6d0dba82859c01cff.json
+=====================================
+0xe98de6d2dc69a006cf81a9bf8e139a3f4a6caedc3d466c072d617cf878b5b5ab
+0x8d8c1c31ca322cba37d76e23d1ad86da157f3341
+0x8d8c1c31ca322cba37d76e23d1ad86da157f3341
+call
+./tmp/0x923f3fe77732ec3fc5327eb52327b06be4e472f8.json
+=====================================
+0xc8d35c9b5c017505c0d5894930745edeca42b6607c7c68db962d57f0d4502560
+0xe53aee3b3b044c7e1abdc02bde4dcb278a701fbf
+0xe53aee3b3b044c7e1abdc02bde4dcb278a701fbf
+call
+./tmp/0x3be26969aacc5fae1aa24018096d49827f1861ca.json
+=====================================
+0x8a575b07954065556116e85a6e15d6e577410f7596cf853df065af8dfc41c53b
+0x71b9f278e50466624d032bf22962d8d1e53adc92
+0x71b9f278e50466624d032bf22962d8d1e53adc92
+call
+./tmp/0x19c8ac33cb42c67ce69bcf4e52466a955d46f866.json
+=====================================
+0x6f1da08c0cc53c2ce192562493d68ae00e0e6f3f7e65ab1c41976db7075e0874
+0x973fea520b16e4a720790a7ecf6b7d2fe06c99ed
+0x973fea520b16e4a720790a7ecf6b7d2fe06c99ed
+call
+./tmp/0xc0c7f12567b53c9e042df84abacb05050007859f.json
+=====================================
+0x3b010ad14908c3bdbc48c6268ba02efa209b27d682ca0c113b7386f703eed904
+0x8d8c1c31ca322cba37d76e23d1ad86da157f3341
+0x8d8c1c31ca322cba37d76e23d1ad86da157f3341
+call
+./tmp/0xca09dd9874146250ca0fe8e03aa2266f66efcd61.json
+=====================================
+0x7d99e7891e964626b6f5ddc1621069d2ce606c6685a88297010b3550b8d7e3b0
+0xf7e0390aaa06fb575621e7f4d3372edd499b9296
+0xf7e0390aaa06fb575621e7f4d3372edd499b9296
+call
+./tmp/0x20cd753171f02b25a3c3dd6b519d2af21c2f1398.json
+=====================================
+0xc9d6f40e1c83f3b6ae6bb70f37cce46c5b2e97c4b8630a8194c7894236443cc7
+0xf7e0390aaa06fb575621e7f4d3372edd499b9296
+0xf7e0390aaa06fb575621e7f4d3372edd499b9296
+call
+./tmp/0x20cd753171f02b25a3c3dd6b519d2af21c2f1398.json
+=====================================
+0x55cdf21261518b45eae81c5acae5abec5bc40cb93d45c5015402125336d6fa6a
+0x3f5230267ac2fd9943eb529e739fdd3480db92b7
+0x3f5230267ac2fd9943eb529e739fdd3480db92b7
+call
+./tmp/0x4852beaf59549c304ef14ebdc256b222c61864e8.json
+=====================================
+0xc93cbf202af5808353bb9c4dbb1ccedd96ed1ee1a07c5939617f53e23aa7deea
+0x3431b8e0e5410f196ad7ea6c8e39ff4fcd9e5543
+0x3431b8e0e5410f196ad7ea6c8e39ff4fcd9e5543
+call
+./tmp/0x4852beaf59549c304ef14ebdc256b222c61864e8.json
+=====================================
+0x91d7d1d223d3a76a50efd6709bac977828c93103a7d9ad9c4ddbcc387f1363b9
+0x6a0909d130c5da0b95d6b47af07e85f776993358
+0x6a0909d130c5da0b95d6b47af07e85f776993358
+call
+./tmp/0xc456dbabd2ea9fe5111263a8b1ef985aa16f8a4c.json
+=====================================
+0xb64a924dda28d512932bc0a20953dbd2c424ad79f8f38d6f799398d1860c0db3
+0x5d152389202122b42a850591acffe34a7e150990
+0x5d152389202122b42a850591acffe34a7e150990
+call
+./tmp/0x15c896bcb71345659cc2d0605bfda8d220dca6d4.json
+=====================================
+0xde5c971390bc2e444ede5eb984b2ea50f8dc6ea2c7195b1d824e1cbb764be923
+0xeabde9845300932dbb1a303bf41fddc46e899896
+0xeabde9845300932dbb1a303bf41fddc46e899896
+call
+./tmp/0x515239079b6f2453d8c75b7d1afd9d392cc752ca.json
+=====================================
+0xf9fbfce9b707296def92696ef191bd962849afc807c74087efcf60431b83b189
+0x00d856a36eb53885e54f9e99cba75aad9701f576
+0x00d856a36eb53885e54f9e99cba75aad9701f576
+call
+./tmp/0xd26018164e49096e7a24b5275dcafa3ecf12ba4c.json
+=====================================
+0xd2fb77ed0da13d593a0ea75199a277219338fbf0b7cd63c3f5c3268f533e8450
+0x70b3f6235aee018b3c1aecf188f13e8f0242d21e
+0x70b3f6235aee018b3c1aecf188f13e8f0242d21e
+call
+./tmp/0xd26018164e49096e7a24b5275dcafa3ecf12ba4c.json
+=====================================
+0x85c82acf401b06b541d12894d732ba203a16c16315b93135689bcf4088d3f3ea
+0x70b3f6235aee018b3c1aecf188f13e8f0242d21e
+0x70b3f6235aee018b3c1aecf188f13e8f0242d21e
+call
+./tmp/0xd26018164e49096e7a24b5275dcafa3ecf12ba4c.json
+=====================================
+0x96d1adc318398d6ad25fa7d052048696de0dc680c3f9a106d52c24ac4647e58e
+0x5aa343b4a7c87d0f599638a551d54cdfe64a0ded
+0x5aa343b4a7c87d0f599638a551d54cdfe64a0ded
+call
+./tmp/0x9562ad1c03e14437feb34e8d4abf6f540267c9b7.json
+=====================================
+0x599223bd3efba65e98e93254db4ae58e6307dade70c0930f765ca4c2d82ae0e8
+0x2241f9791487834fa3af7981003f2063ed6e8bcf
+0x2241f9791487834fa3af7981003f2063ed6e8bcf
+call
+./tmp/0xec4a1c7a4e9fdc7cc621b548a931c92bc08a679a.json
+arithmetic
+=====================================
+0x591773e0966380e9cce121c5140883bc980c51cb090d4c552d9298293b414f26
+0xf7f305f4d61e39738e9e69c00bdb39b6b8ae9c0a
+0xf7f305f4d61e39738e9e69c00bdb39b6b8ae9c0a
+call
+./tmp/0xc4c7ea4fab34bd9fb9a5e1b1a98df76e26e6407c.json
+=====================================
+0x94a5a06ff28680fad45ffb82482eb94c94cd74353fa65c83bbf25351c91d5f9a
+0x0b56ed674366e76950c299620d84a16dd9456dd5
+0x0b56ed674366e76950c299620d84a16dd9456dd5
+call
+./tmp/0xa5b91fbfec2f9a708592f9cd3c9e20becdfcb816.json
+=====================================
+0x89b1078f9a4844cac970ad234fe130b9d4f235ada6066d6fe89f53435525cd91
+0x244b06d88062846969810a88538c931bfbe44829
+0x244b06d88062846969810a88538c931bfbe44829
+call
+./tmp/0xe218ce5cf69227c57fbe2f4fee8df924c08b0dfc.json
+=====================================
+0xa5e87a5f6331bebc32ac0532094072bf7e7c9493053555d727e056150a1997b2
+0x4e71d6bb4ddc017f6823e71d08f49a98e3bac36a
+0x4e71d6bb4ddc017f6823e71d08f49a98e3bac36a
+call
+./tmp/0xb77ffbb00f4c529747bab93bdeb3dce49b021e76.json
+arithmetic
+=====================================
+0x786b8db7e7a312f6e3d1bd27b3e8b375e7af255475a212d966c6af5ef92fca21
+0xacdd225bb92941c79bc67fabcf4613e4c2a415bc
+0xacdd225bb92941c79bc67fabcf4613e4c2a415bc
+call
+./tmp/0xe3adb73f0eca13e4db6eda5a2871941845a78c17.json
+=====================================
+0x3ddb4794a718ff7903da31293e04be951f196939512b293de0e2c3ad6ac8ac3c
+0x3a40a8a7c5214b3f3796f81cd6b02de3776b9126
+0x3a40a8a7c5214b3f3796f81cd6b02de3776b9126
+call
+./tmp/0x943b055e54b7e81fd6ddee08ed07b785c3b56468.json
+=====================================
+0x9936122767ad12d6ce26cfa5c3e08c6026edd67f281abf44a973bc7156e97269
+0x8901f5c5b5f922ba20630a2af34093fa355d8dc9
+0x8901f5c5b5f922ba20630a2af34093fa355d8dc9
+call
+./tmp/0xfa8ce56b9f8f586ad3a4410ab1b5fbc3871c80c2.json
+=====================================
+0x8a40ef642db86ba4917f25ba2501fbecd9082e780e4790a5d1b31665c633632d
+0xe42aed3973d87f23e95bb5bbc2542a639dcbc33f
+0xe42aed3973d87f23e95bb5bbc2542a639dcbc33f
+call
+./tmp/0xfb39c5d274d18a4d702df669e66e4be2672fd911.json
+=====================================
+0x15b99170761ae95e6bc8b334f48c7382146f939e124ee9c589ab994ee60a0881
+0x3e5a2ac932ca92738900ce6e350fab5a8ebd4538
+0x3e5a2ac932ca92738900ce6e350fab5a8ebd4538
+call
+./tmp/0xbbc23359b5b9a59404d41b71503bd9e92e7f30e3.json
+=====================================
+0x68a0146c9289d4bd16ade571febd11e66c914049d980310f086a476b9f6b8e40
+0x73e79d5be51f6666011b2cef5db48394c5a0df07
+0x73e79d5be51f6666011b2cef5db48394c5a0df07
+call
+./tmp/0x45aa6f7e8b20134f4f39c79af2436ff9b24bf6fe.json
+=====================================
+0xda670208f2aaf1d43bfcfcc632db2a5a983116d48de155ff2910bd413d2e8ed6
+0x33085c194afa69d597f743822dab4b917e341de9
+0x33085c194afa69d597f743822dab4b917e341de9
+call
+./tmp/0x8dab0d734e294ea20b5ecef05564607e71ba8f8d.json
+=====================================
+0xa138648867f96030aeadabdaf42dff98e7f930efcd9ec96f6c5a3513baf7bd28
+0xfab4fd436e7d2607928210593183ceac02baf7cc
+0xfab4fd436e7d2607928210593183ceac02baf7cc
+call
+./tmp/0x365d94f33332a7abb794dc9f0503e4513527c352.json
+=====================================
+0x5a68b437c98df0335d9fc31ff259ba9b849cade1a8c8007c58a2f8c36cf78106
+0x634beb3c6fdfd85609b760f12805ac47a7985339
+0x634beb3c6fdfd85609b760f12805ac47a7985339
+call
+./tmp/0x7691f21f471be902caf543c9f00517b00be6e269.json
+=====================================
+0x26904a42541217f376da7cdaf3fc36625c41c89e503ac18a608f2c603c60a49d
+0xc1d1d0adfdac707dde913c829008c92335099726
+0xc1d1d0adfdac707dde913c829008c92335099726
+call
+./tmp/0xf722b01910f93b84eda9ca128b9f05821a41eae1.json
+=====================================
+0x5975043b8478e9f67b2333614ed3695d5e63bfe7f37bd94df1fc13cdfa5c328d
+0xc1d1d0adfdac707dde913c829008c92335099726
+0xc1d1d0adfdac707dde913c829008c92335099726
+call
+./tmp/0xf722b01910f93b84eda9ca128b9f05821a41eae1.json
+=====================================
+0x1524715f0de115b351ee2f19a030314f161754a455d56ab5ccc9824aa6d7cf4d
+0x06ca0686d218473284434f6aabd8960e71802776
+0x06ca0686d218473284434f6aabd8960e71802776
+call
+./tmp/0x445cd0ec5a6bd6f678ad09a1e59524bdbc12777f.json
+=====================================
+0x21a3036cca9b249af0fab3a270fb23828762708094d3bd35e72099ed25e5044e
+0xbab7beadeb29c0485b040373d5626eb6c66cd423
+0xbab7beadeb29c0485b040373d5626eb6c66cd423
+call
+./tmp/0xe2e6dc1571b42929dd9ffdf7567edbef2c255948.json
+=====================================
+0x86c2b117865f7b26707ed5bb7fe8035e0b0ce42ea7df5b8c09d3e92f7d808207
+0x86c333c910a705b65388329461554cb0e2b32294
+0x86c333c910a705b65388329461554cb0e2b32294
+call
+./tmp/0x40225e0e18a94b5e1ad236ac8baf845e443236d5.json
+=====================================
+0xa5503d9250201dfb18cba4022c691ec69db0bbab776a188c262bfdbddb9bac58
+0x9674f709f20699a92aedce7c3ac3ce6a19568aec
+0x9674f709f20699a92aedce7c3ac3ce6a19568aec
+call
+./tmp/0x8ecf6ce839e873217c1735fdecf1e01fd935805e.json
+=====================================
+0x816a7c71fb1605673296fc89a861764b942afa7d9b47ddc3a6dd7b1e4f2a308a
+0x9674f709f20699a92aedce7c3ac3ce6a19568aec
+0x9674f709f20699a92aedce7c3ac3ce6a19568aec
+call
+./tmp/0x8ecf6ce839e873217c1735fdecf1e01fd935805e.json
+=====================================
+0x97c77826b33a7e59b4301cebb9fe9e2855652f26680a58c691e527a450f64f7b
+0xa1421b3f9ab11773a3050126134c4ffc0e8e7332
+0xa1421b3f9ab11773a3050126134c4ffc0e8e7332
+call
+./tmp/0x1c1f55beaa1c45817f98ff24220c9ae620dd8245.json
+=====================================
+0xb36fc5d5fb4c3f7361f7a8eec9a67accfc185e018b6710d81d5c5b3f18c60c41
+0xcb9fef80449d7364e18ba2d27974dd773515c7d8
+0xcb9fef80449d7364e18ba2d27974dd773515c7d8
+call
+./tmp/0xb8e2e9dddc504688cfe925b9ace8017d48d3e095.json
+=====================================
+0x5001f3c256062d215a8fe002e5c58630cbf196545d2dd529fe3427f52dc39993
+0xcb9fef80449d7364e18ba2d27974dd773515c7d8
+0xcb9fef80449d7364e18ba2d27974dd773515c7d8
+call
+./tmp/0xb8e2e9dddc504688cfe925b9ace8017d48d3e095.json
+=====================================
+0x205ecf89fff5b3b5acfce3e8dc15b8d2cb464c8bb622ab09d997fa5c5d54ae35
+0xcb9fef80449d7364e18ba2d27974dd773515c7d8
+0xcb9fef80449d7364e18ba2d27974dd773515c7d8
+call
+./tmp/0xb8e2e9dddc504688cfe925b9ace8017d48d3e095.json
+=====================================
+0x90fa5411869f773fd7dbca4b25bca4543efd793ba27f79ada89bcafff445960f
+0xcb9fef80449d7364e18ba2d27974dd773515c7d8
+0xcb9fef80449d7364e18ba2d27974dd773515c7d8
+call
+./tmp/0xb8e2e9dddc504688cfe925b9ace8017d48d3e095.json
+=====================================
+0x31d804b1391116fae214ce67a350b2fda5f7cef4a218d1d1c0875afc4ff303ad
+0xcb9fef80449d7364e18ba2d27974dd773515c7d8
+0xcb9fef80449d7364e18ba2d27974dd773515c7d8
+call
+./tmp/0xb8e2e9dddc504688cfe925b9ace8017d48d3e095.json
+=====================================
+0xca34c3546d098332bd5040fefd8d82596eafcd7e9dab91bdf9c83366b766266a
+0xcb9fef80449d7364e18ba2d27974dd773515c7d8
+0xcb9fef80449d7364e18ba2d27974dd773515c7d8
+call
+./tmp/0xb8e2e9dddc504688cfe925b9ace8017d48d3e095.json
+=====================================
+0x5350acc5b99f39690f3d382d174a76c1652e6fc1bd005e515924d6de22bbe0ba
+0xc6276295ad4325f69761840d4be30cf43c59fe46
+0xc6276295ad4325f69761840d4be30cf43c59fe46
+call
+./tmp/0xb4e82186bca71b6c9a3ed2eb34300b5fb0f876ab.json
+=====================================
+0x00759e653d1553aa2cbaee3c4b0fad613d408f68f3e6fac2707da2fb6b4e7820
+0xd49ab485ebfeeee04c1cbb4009a828705b48175f
+0xd49ab485ebfeeee04c1cbb4009a828705b48175f
+call
+./tmp/0xb4e82186bca71b6c9a3ed2eb34300b5fb0f876ab.json
+=====================================
+0x50765a15b23850f01f99ac873ee99da3997c70b9093395c9299f3e39de2e7c4f
+0x89e6102ebefcec5a247412446c7965577ab83fd8
+0x89e6102ebefcec5a247412446c7965577ab83fd8
+call
+./tmp/0x6a3aab575838119adcbe42063bf60bb4f8063f40.json
+=====================================
+0xa845c1b772bde8114422741861b4fceee9f0856e866947a0d21cb961809eb674
+0x8c634c4af89a9ff8f5c8d31ac037f847793c684d
+0x8c634c4af89a9ff8f5c8d31ac037f847793c684d
+call
+./tmp/0x6a038abbfab92e5a132ba728c4c7a9b5f58498f5.json
+=====================================
+0x2c9aadf578bb342c8dff9e600f37fe001a6f2f452c1f3a31feca1ecde97a4a17
+0xeeb85edfe129cd486931c3b880d582edd95aa7f7
+0xeeb85edfe129cd486931c3b880d582edd95aa7f7
+call
+./tmp/0x5933d83facd564711acc6c70375b490035326f09.json
+=====================================
+0x1ed131c920a2fad39493ee8060e453d092819b9cee667d0094609bcd42ca77e3
+0xb449ecff0dbe0e7ebc770e4d696ebf6fcd98d711
+0xb449ecff0dbe0e7ebc770e4d696ebf6fcd98d711
+call
+./tmp/0x4a6a4eb175138d336a77d093012504117db0e79f.json
+=====================================
+0x8328e7bdd8e9110f884f52b079a9dfe5765fd6748d2b7a1ad1972129bf768f32
+0xb449ecff0dbe0e7ebc770e4d696ebf6fcd98d711
+0xb449ecff0dbe0e7ebc770e4d696ebf6fcd98d711
+call
+./tmp/0x4a6a4eb175138d336a77d093012504117db0e79f.json
+=====================================
+0xe77449788fe6cf2398927333e1192e53f294bbbe80de342e1f30e17f6e4ebc3d
+0x19b0ad238e0f438d9600246d243a9e03066f1558
+0x19b0ad238e0f438d9600246d243a9e03066f1558
+call
+./tmp/0x21189ead9fc542986274cd8615e2e360d778f0c1.json
+=====================================
+0xa05e7cb8537011fe05bc99f8396c297c3fd405fbde84f9ee2da9d645e7f7a84d
+0x8e697ed5a98cda1e691de331ec79ab8e4148e985
+0x8e697ed5a98cda1e691de331ec79ab8e4148e985
+call
+./tmp/0x9030efac803ca814964bda79f709433eda590d94.json
+=====================================
+0x01d832ed24962b771613738d550efeeff68bc8e84314c2c77af7df9d0998d979
+0xd4c7378115b6c80c4cdf5b33303d444150a53444
+0xd4c7378115b6c80c4cdf5b33303d444150a53444
+call
+./tmp/0x2fca882ef15886ede1bd8067de70f1407d04f1f7.json
+=====================================
+0x631f36d85aa0b41284dc2becf17fd3c2c31aff2b78da94837d561ee93c4f4935
+0x267f6eafbb370ca4a505ec5e452d3ebced28df37
+0x267f6eafbb370ca4a505ec5e452d3ebced28df37
+call
+./tmp/0x4dd981f0f2e7934b6b50c9d1beda2b5456924df6.json
+=====================================
+0x5dcbd67fce12160308ef11a82e88f12113cdebd39936f172cc0e3c7c6a2c0aa4
+0x3c1c2f918c38bde38c1018f4ade2a1159ff1f2d8
+0x3c1c2f918c38bde38c1018f4ade2a1159ff1f2d8
+call
+./tmp/0x749cd1d4c5103768ddd8b6a88ef9af7cfc2d0051.json
+=====================================
+0xf8bafb66c9b6393ed150804e143256355e88b3f324151fa43a819cd4a1edf7b2
+0xa8e72bdd7cc39721e6239f406c7a56b477165b48
+0xa8e72bdd7cc39721e6239f406c7a56b477165b48
+call
+./tmp/0x6f2a550259532f7429530dcb93d86269629e3f2a.json
+=====================================
+0xb1110b0840a0abbb89b71ad2bf8f5299a1e548347ce44193d7ae01870630128d
+0xcf850930f9b6092804ea5fc75bd3bbde261e8069
+0xcf850930f9b6092804ea5fc75bd3bbde261e8069
+call
+./tmp/0x2823589ae095d99bd64deea80b4690313e2fb519.json
+=====================================
+0xa9296971a4d055d49a1705ebe2e4d3af8e9f6000f677d85e0d64b8bac61cc9bd
+0x1ec0a8c471cae1673f15d13a10962d6c7869e99c
+0x1ec0a8c471cae1673f15d13a10962d6c7869e99c
+call
+./tmp/0x6d220395e741d1c068e9349eee3ffac780fc88c8.json
+=====================================
+0xf36f421f7c6ddde408e9f1d31493b6c4a31b3693eb6cce7d2f1dd9945b48587f
+0x267f3602131b84812fbe3bc8a2766cb5fb72eb13
+0x267f3602131b84812fbe3bc8a2766cb5fb72eb13
+call
+./tmp/0x6d220395e741d1c068e9349eee3ffac780fc88c8.json
+=====================================
+0x5adc964e836109dfe620ca563322fdb530fc26fd9602a87cd861625f3886592b
+0xaa0ea0ff57bd5d91d645898301a645d256de022b
+0xaa0ea0ff57bd5d91d645898301a645d256de022b
+call
+./tmp/0x5450f8e9f5b6de436c0653ba9c9bf46a50cf3540.json
+=====================================
+0x12b790a6b3ba996b19ec0c638f03d75adfdc1fe4fd8b456090685a0b8f883db6
+0x3a2b0e04696e3af64d328079c76c8cfd5a2582f0
+0x3a2b0e04696e3af64d328079c76c8cfd5a2582f0
+call
+./tmp/0x6767615a97a8204298bbac44c57ef1a615eed244.json
+arithmetic
+=====================================
+0x811e3e2472071a343986f0251175cb189ee963b92868602c925b711757ebc781
+0x3a2b0e04696e3af64d328079c76c8cfd5a2582f0
+0x3a2b0e04696e3af64d328079c76c8cfd5a2582f0
+call
+./tmp/0x6767615a97a8204298bbac44c57ef1a615eed244.json
+arithmetic
+=====================================
+0x4e237fa517c413fbd4afdfdf4361a4c6158b382ec2553ffb67aaf26a18218b66
+0x1fe27b24454c5986581b9648634fb909be8c8047
+0x1fe27b24454c5986581b9648634fb909be8c8047
+call
+./tmp/0x0445174b6fa65df016ac975967148d257598ee9f.json
+=====================================
+0xa057b5e55c870c5346967bc112b651e0a1dcce4b4c4faeec153e68a71b8a5cb2
+0xd22a58698f8bcd1c1ace77b95cb65566ae35e24f
+0xd22a58698f8bcd1c1ace77b95cb65566ae35e24f
+call
+./tmp/0x507bde03a87a6aa134d16634545e3d79c11c137d.json
+=====================================
+0xf745e99038f988fb1daaf7362812da245cbbd21089acd2ad1ca1cefdd7174f3c
+0x17d3d79bc36d11cef7877cb859343cfc381a6728
+0x17d3d79bc36d11cef7877cb859343cfc381a6728
+call
+./tmp/0x3970c29dbcbb5b1452987727900f4d2257699edf.json
+=====================================
+0x2723ef1f6899478f2a5f8f931b52a1a482221acba34b7012beb05db5002600bd
+0x84bc7f79c867f8b33e1309734809de0f5c79edc0
+0x84bc7f79c867f8b33e1309734809de0f5c79edc0
+call
+./tmp/0x5ce90fcd8feffd13148d7b440dd951b2ca01a225.json
+=====================================
+0xa5cbff067764e4e1aa7903ee78c81567537c0d57549c26b5618d0f55c0fc8628
+0x6e8e9e0856c30d244427cd18163cb89c9672f3ba
+0x6e8e9e0856c30d244427cd18163cb89c9672f3ba
+call
+./tmp/0xdde5b33a56f3f1c22e5a6bd8429e6ad508bff24e.json
+=====================================
+0x700d74d5bbb246989d75a29bd655f30ed2117f79f2c4d58e6b9822a595fcc944
+0x0ceba8b287d0eb596801dc8e400ec94bb68aab84
+0x0ceba8b287d0eb596801dc8e400ec94bb68aab84
+call
+./tmp/0x7839624282f5f00b48adc70d0756228c433966d0.json
+=====================================
+0xe895e2c21c39fb2f731f4ed141a56718398449e9e7ab73e58b66504869790046
+0x0ceba8b287d0eb596801dc8e400ec94bb68aab84
+0x0ceba8b287d0eb596801dc8e400ec94bb68aab84
+call
+./tmp/0x7839624282f5f00b48adc70d0756228c433966d0.json
+=====================================
+0x2753084cf844fd2cbafa61620f725bfa09c71eaee425098939b804c4874e0a98
+0x0ceba8b287d0eb596801dc8e400ec94bb68aab84
+0x0ceba8b287d0eb596801dc8e400ec94bb68aab84
+call
+./tmp/0x7839624282f5f00b48adc70d0756228c433966d0.json
+=====================================
+0x1d5792923c9282b0e3998fa62599fe4ae580071c2287331e4e333494dd55b93d
+0x0ceba8b287d0eb596801dc8e400ec94bb68aab84
+0x0ceba8b287d0eb596801dc8e400ec94bb68aab84
+call
+./tmp/0x7839624282f5f00b48adc70d0756228c433966d0.json
+=====================================
+0x829c92c619a89304d2e639541196c5b7018a5f045890d9c82bf94a868f6cfda8
+0x97bc6b90ca0aad3ffabe310d5e176b1f3a8ed575
+0x97bc6b90ca0aad3ffabe310d5e176b1f3a8ed575
+call
+./tmp/0x4da22f39786281c2aa1a48f050c48dbeeeb95767.json
+=====================================
+0xac3d89b3e2e9c2ef6289352f3c652e373fd8e0e0d12ff4e3dbe8b8b3f27b5da2
+0x97bc6b90ca0aad3ffabe310d5e176b1f3a8ed575
+0x97bc6b90ca0aad3ffabe310d5e176b1f3a8ed575
+call
+./tmp/0x4da22f39786281c2aa1a48f050c48dbeeeb95767.json
+=====================================
+0x800ad6ca0912e6bc48d5003b3361e6ea55a9c7bc291029ab86fd292e24f3807d
+0x2e777e688fbabf385aea9e22f6e082a81252c44f
+0x2e777e688fbabf385aea9e22f6e082a81252c44f
+call
+./tmp/0x84fffdc0d69b7fd96942ecb6e3adc42ddd1d417b.json
+=====================================
+0xda14256ede964c7223c105e25d48c7c331d7e200862ec172df5ffeace6ee528e
+0x94dfc714521f82b995f3eeff1958280b9282d272
+0x94dfc714521f82b995f3eeff1958280b9282d272
+call
+./tmp/0x387a104f3130151b4aad0408b94ea9bf4ede5b47.json
+=====================================
+0x84bc48cd19b4e4d1a93dde0675695f0c66cc549e9e2b58dc320efafb33d283be
+0xcc7599960137798bda34fbb0b16251780759e17c
+0xcc7599960137798bda34fbb0b16251780759e17c
+call
+./tmp/0xa1129a80e73964bc983455e416bb5e9d36cbfdf1.json
+=====================================
+0x65d45df5532154399fd5859b024fba581bc4f7a3d478c5b6adf708793926552e
+0xfbcd3309e52c50bf879b94ec1c01a48b4abeb294
+0xfbcd3309e52c50bf879b94ec1c01a48b4abeb294
+call
+./tmp/0x952dd528ae5ec4024326496d4181403c2df5cdb7.json
+=====================================
+0x91a76262362d754f6a78dd3103941c5742905a4a75931d21598c82c9f0f0a379
+0xfbcd3309e52c50bf879b94ec1c01a48b4abeb294
+0xfbcd3309e52c50bf879b94ec1c01a48b4abeb294
+call
+./tmp/0x952dd528ae5ec4024326496d4181403c2df5cdb7.json
+=====================================
+0xc460b2e04d222d2e570f3be81b0e318d40398917e45d4d5430a99a12f3cc1322
+0xfbcd3309e52c50bf879b94ec1c01a48b4abeb294
+0xfbcd3309e52c50bf879b94ec1c01a48b4abeb294
+call
+./tmp/0x952dd528ae5ec4024326496d4181403c2df5cdb7.json
+=====================================
+0x9b70ca90782929dfae0f3a4879ef297d054cf65e16aa8f2a199c1d38e2584de5
+0xf36cd70e9c5bf32689174ee3e71a1d3c542f5f7b
+0xf36cd70e9c5bf32689174ee3e71a1d3c542f5f7b
+call
+./tmp/0x796e0ee14f9a303f9cb05722e6fa1840d86ba37b.json
+=====================================
+0xdfaa4a0cf31230b3da66d3938f46c98f7d65fd217e8df04377c0166f05e27cc5
+0x00caac340d2c070106140a2c3228250563db65b5
+0x00caac340d2c070106140a2c3228250563db65b5
+call
+./tmp/0x908951f38c41b4c5dedf29a371e66c88cefa0be2.json
+=====================================
+0x46b9fe5ac1629eec9d1684e6ad3ae090795ec59ce963378565f9f842f7b22912
+0xe572e2933ea8f4ce27d9ee1151c1e086f5e6f525
+0xe572e2933ea8f4ce27d9ee1151c1e086f5e6f525
+call
+./tmp/0xd68f761ae71467996b65522711357e5cfc1045b3.json
+=====================================
+0xf10f1b7fb5b4fb2bd2800a42d14c06eaa6673797dcf9a71d6aad942de87cf9bc
+0x83673a1d24e2e257902b2eeb839fd5bee58407f7
+0x83673a1d24e2e257902b2eeb839fd5bee58407f7
+call
+./tmp/0xd68f761ae71467996b65522711357e5cfc1045b3.json
+=====================================
+0xce89f1a51ace9149982727b9861d728005375bcc57515abe8822ad4eb9bc0b52
+0xab0856c1604aad137ffdab0871c38830a95bc6e2
+0xab0856c1604aad137ffdab0871c38830a95bc6e2
+call
+./tmp/0xd68f761ae71467996b65522711357e5cfc1045b3.json
+=====================================
+0xf0f6462e099b1a946c3f8fbaebe5a661fd231e57f4f6ac3fa57dde40ab5993a2
+0xe075beea1fb519d927139e1963923e181e6d94ff
+0xe075beea1fb519d927139e1963923e181e6d94ff
+call
+./tmp/0xd68f761ae71467996b65522711357e5cfc1045b3.json
+=====================================
+0x9ff0cb85e27181f70ca9eb83061cec5be5330c51c3c04299b79045ec136057ea
+0x9ea6e1b5093925281d9e864bf2975d0d2bfde7b1
+0x9ea6e1b5093925281d9e864bf2975d0d2bfde7b1
+call
+./tmp/0xd68f761ae71467996b65522711357e5cfc1045b3.json
+=====================================
+0x1d435c2daf8947c081621cda0b77f48256f8774cd5ae3a8980d787c2e2c35920
+0x742780365ab25b425ada9651661b9f01f4002f4f
+0x742780365ab25b425ada9651661b9f01f4002f4f
+call
+./tmp/0xd68f761ae71467996b65522711357e5cfc1045b3.json
+=====================================
+0xaaa37833e70e67f278f862ea12ddad167540ab9814047e021084a74d63137537
+0x490abf1a20171313b9fc53ec3dcee48e9db3335d
+0x490abf1a20171313b9fc53ec3dcee48e9db3335d
+call
+./tmp/0xd68f761ae71467996b65522711357e5cfc1045b3.json
+=====================================
+0xf7bf42d037f225a62ee4a39408459626cbedf5ecf3b608ef21d23fed1c896b93
+0x2c6c1e35bf28bced955b9216d3f063edfce518cd
+0x2c6c1e35bf28bced955b9216d3f063edfce518cd
+call
+./tmp/0xd68f761ae71467996b65522711357e5cfc1045b3.json
+=====================================
+0xc96232a523a8bf9dd08f2f7b376516e780c5aeab4925275e15eddfa97ba3c398
+0x6d900a80d15a9ab7b7b767e9fa4dc28cf198a690
+0x6d900a80d15a9ab7b7b767e9fa4dc28cf198a690
+call
+./tmp/0xd68f761ae71467996b65522711357e5cfc1045b3.json
+=====================================
+0xf8348ebaed558a2c85c0f7f8bf956967102842b04f1ad378a40cbea88c750295
+0x13e8349077173ff2256e989c7d25b5621c6a4448
+0x13e8349077173ff2256e989c7d25b5621c6a4448
+call
+./tmp/0xd68f761ae71467996b65522711357e5cfc1045b3.json
+=====================================
+0xfbe1acaa53166cfa8a8a835ed73324adf0daf66d1d82c4bf856f228f90247a23
+0x92471502ac5f68ec239ebc57b4ac0e384919f887
+0x92471502ac5f68ec239ebc57b4ac0e384919f887
+call
+./tmp/0x9abbba89700e1ce5a9a6e5d6748e5cc464c3771d.json
+=====================================
+0xa3aff7738577bd3f1129e8d92d44b87559743bba19d532511f702eed1e1971a3
+0xd1dab0e897af4e9aee4e3611e1ed483b6d8ccb8f
+0xd1dab0e897af4e9aee4e3611e1ed483b6d8ccb8f
+call
+./tmp/0xc0416e94f4810cd257b65ea43b82007a746fa2ea.json
+=====================================
+0x99c901be5d2494dc01e986aaa6115016e47ea0ebb3c05f6159dc022acf666c1c
+0x32f35a54acaee16f55b3fffcc61de0aee3bb7aa5
+0x32f35a54acaee16f55b3fffcc61de0aee3bb7aa5
+call
+./tmp/0xe565cc942bd33e004786fd0cff9de5ef8ef63493.json
+=====================================
+0xdb147a207b7f386396aefcfc1453597282e98a34a7f4b59912883868a9a0922a
+0x6b96893cbfc28d227d8a6bd9823b1c428e2f91d0
+0x6b96893cbfc28d227d8a6bd9823b1c428e2f91d0
+call
+./tmp/0xa3942b69d8f3d4688830e8e22579c1032038819e.json
+=====================================
+0x209456d096c4bba927d2c27a91cff0bb37ee317577b84360c61f2f43c6da7f59
+0xf4c2f603ebd4b8c7bdd739cacddc5bfc91fc9621
+0xf4c2f603ebd4b8c7bdd739cacddc5bfc91fc9621
+call
+./tmp/0xa3942b69d8f3d4688830e8e22579c1032038819e.json
+=====================================
+0xafb69517bc1f25687317d669aa927b7d277e8091e192dfd5771411ac2f54af0c
+0xf95f37dbbcbd27bc1ef844f9079e4549059b9b16
+0xf95f37dbbcbd27bc1ef844f9079e4549059b9b16
+call
+./tmp/0xa3b19abc996afb6fe91e8f0525432419af18d886.json
+=====================================
+0x1640b920cce0f73685a22ae833507636b6b494478042136097fd9523807129c0
+0x89265663e6eee1275339ea2ce8ee7dba96d5b547
+0x89265663e6eee1275339ea2ce8ee7dba96d5b547
+call
+./tmp/0xa3b19abc996afb6fe91e8f0525432419af18d886.json
+=====================================
+0x91fd3ca1ae3c6d46176f875a49d2196e3e3ae700c6b676c22fc0665c73d32e3d
+0xd9ac1fa89052676a6143dd4cef6d36b484220293
+0xd9ac1fa89052676a6143dd4cef6d36b484220293
+call
+./tmp/0x80b477d10cec5a46686fdaadfd6812a8b2901c53.json
+=====================================
+0xb8996606379f8cfb8c0c65e80dc030962138192a1c755aa4a31b475fd0218f17
+0xa2fe07918ada854c4943d1f5c3792838cbb9d66d
+0xa2fe07918ada854c4943d1f5c3792838cbb9d66d
+call
+./tmp/0x4d65db16010a742d2734253118123bedeef2c712.json
+=====================================
+0xa22a27570d1ab552474801830cdf7a2f167be314c192eec5171fc07be38b5d14
+0xa2fe07918ada854c4943d1f5c3792838cbb9d66d
+0xa2fe07918ada854c4943d1f5c3792838cbb9d66d
+call
+./tmp/0x4d65db16010a742d2734253118123bedeef2c712.json
+=====================================
+0x1f664f47b2573e16abe7e3c5b9ab9024ff0ebd0fac3493b3f3d46083201695e0
+0x52d82d595af354fbe692b04fa0a313ebb90fe4cf
+0x52d82d595af354fbe692b04fa0a313ebb90fe4cf
+call
+./tmp/0xd321ca7cd7a233483b8cd5a11a89e9337e70df84.json
+=====================================
+0xb0df1c892c0291a17895662f89ca68cfc9af2e045d86981b97a8b8c68be18d31
+0xbcac50256345775e4bbff526b247b3d68a0f10ca
+0xbcac50256345775e4bbff526b247b3d68a0f10ca
+call
+./tmp/0xadab18a88f5694ac58109101761a3a0e827a01b6.json
+=====================================
+0xc14b86d5b8166e4a15494518503a73caf145632f87c18b332d29da138d3d93c7
+0x9c1909a2ac8736efe071490613f323f0c40bc827
+0x9c1909a2ac8736efe071490613f323f0c40bc827
+call
+./tmp/0x22ecd603fdb52d59090ffb9e6fb3b67ad0a29d4f.json
+=====================================
+0xd2666828b9fb55085ebddc57bfcee88761843c52835b10752e36809962f410da
+0xaf3a96bbfeee789a5958bcb3eb238214e5f4468e
+0xaf3a96bbfeee789a5958bcb3eb238214e5f4468e
+call
+./tmp/0xce2ac722f8b9349a0bdcbe9ee9f9d877c8cfa7a0.json
+=====================================
+0x1807b5a3b898573cb999f7ef7bf1db45b4a358f1dea53449eb2d2d6a15cd974b
+0xaf3a96bbfeee789a5958bcb3eb238214e5f4468e
+0xaf3a96bbfeee789a5958bcb3eb238214e5f4468e
+call
+./tmp/0xce2ac722f8b9349a0bdcbe9ee9f9d877c8cfa7a0.json
+=====================================
+0x63103ae844751ab3a34db2ad32db8b90f5e25e71e7f05237c14aacd086a21684
+0x435aca4228e50f8d2f70004bc5aef9b44cc347c3
+0x435aca4228e50f8d2f70004bc5aef9b44cc347c3
+call
+./tmp/0x33f10f97fd657f0758c6ab85d490c0430bcf272a.json
+=====================================
+0x234049c6c0cdf4a09aeef9b4f1ad1876fd7fa4d05ef682f6ba476d15f630623d
+0x37190e277ef2ebb1f0ec0c689f98b9e9c09684f5
+0x37190e277ef2ebb1f0ec0c689f98b9e9c09684f5
+call
+./tmp/0xbaf8f642e51e4dd275f1a4bdc960dcf14d9094b4.json
+=====================================
+0xcc796ded4e4ed1ecd0a01536fb70fec015f9bad13bb46566489450146520be26
+0xee8863503e07028a37a3bf04db09fc0f4e775a89
+0xee8863503e07028a37a3bf04db09fc0f4e775a89
+call
+./tmp/0xcfa1279b6a3860493f64cce1344f4e9c825113e4.json
+arithmetic
+=====================================
+0xc949bda471aee71c8959686394592bf0940ac51c9750a5a659f33489b7b25c23
+0x6e8e9e0856c30d244427cd18163cb89c9672f3ba
+0x6e8e9e0856c30d244427cd18163cb89c9672f3ba
+call
+./tmp/0xbfce0c7d3ba3a7f7a039521fe371a87bf84baad4.json
+=====================================
+0x1929f37bec2f6833e5d05106c09abfbb070ab587b40d1e5574f466c4029da302
+0xe54cf3e3f4edb03c248b76f7bc1356df70824e7c
+0xe54cf3e3f4edb03c248b76f7bc1356df70824e7c
+call
+./tmp/0x8a94ebb84bc91f22b60f8035b457f2624bf26506.json
+=====================================
+0xd9399ec62c32f1f138934d299593d831c627b3c391aa1477bcc3070e08186712
+0x6cd8e8142dfe2f1149f31eec74d98e5d432e3e84
+0x6cd8e8142dfe2f1149f31eec74d98e5d432e3e84
+call
+./tmp/0xc020cd68ee47d3c85c5bd88aede1cbf0a99f0fa6.json
+=====================================
+0xfa2e62fd645c024ac14ca6cac6feb37e2891fcd297cbdcf20087519442701d99
+0x30a3b6b6e37e402bac6f1161d2ad4cf9e14506b0
+0x30a3b6b6e37e402bac6f1161d2ad4cf9e14506b0
+call
+./tmp/0xe1631864495a2251ae092d678111ace32ee28ad4.json
+=====================================
+0x7a56ac6b8e5a43c90e4c7dde9ab6249b129a5d69e99b46523dd9c3ebe871d97b
+0x9a84ddc3c06a0c7b13ebb2eb46f6fea74705b3bd
+0x9a84ddc3c06a0c7b13ebb2eb46f6fea74705b3bd
+call
+./tmp/0xce5860c82d49037efdfe300c7488263298a93501.json
+arithmetic
+=====================================
+0x8dcdf192e47082644c1d42b808702e9f32fd1b2a857fa83c213eddc18546ba48
+0xa7ec76fec27763593ae83d73a630c41ef752ae2a
+0xa7ec76fec27763593ae83d73a630c41ef752ae2a
+call
+./tmp/0xe35b565c3a8fecea6f01f0fb62797312a0afb913.json
+=====================================
+0x1eb031a8d1ac47b21a145e6ddd0089b2c8b82146830134b1f6230009b30f9c52
+0x1698e40770b8df736ac154a92a24a504d25f11ae
+0x1698e40770b8df736ac154a92a24a504d25f11ae
+call
+./tmp/0x6ae74982ba8a8014c5bc46b902d18187a8d5a9a1.json
+=====================================
+0x4527c1b751d939bc057ac9742717071bf7eb1fd65b7cc9741fec38bd4dd205e7
+0x77e2524cacdf032976704de779576c2144233996
+0x77e2524cacdf032976704de779576c2144233996
+call
+./tmp/0x78f0f87a7789cd930b0c519e6bd4c74df1a3e4ef.json
+=====================================
+0x89ecf5ebd3e4f7af480ef3dbafd3bdfadec2093f76bd02850696676b60a04457
+0x233e1b7bd861c99d5af4e71f2a33fdbb0163f05c
+0x233e1b7bd861c99d5af4e71f2a33fdbb0163f05c
+call
+./tmp/0xe985368464beffe724092b3290cbb5036df839d9.json
+=====================================
+0x8be2ff946aec41db46a56cb15d39b380a2ad3b750a2a043a802184cdf49f4094
+0x349918928b25bb299b274fc32f132aacc8ffec46
+0x349918928b25bb299b274fc32f132aacc8ffec46
+call
+./tmp/0x160f85c1e4dfd3b7784e553f431345d0048d8dee.json
+=====================================
+0x4e2641cd9cc0d83bffdda145739f4a2df3f8908267c10d370169b95f75c56bde
+0xf8ffbfddb829b5e66d627f8a77c2c27eef6a201f
+0xf8ffbfddb829b5e66d627f8a77c2c27eef6a201f
+call
+./tmp/0x6f5d54a1c5a8ae074d0109f2fd471388c22bda2d.json
+=====================================
+0x54bf6ee964cccf4e3796717adb1c056e0d6912e9f2d37b4da254faf12fdd3d59
+0xf8ffbfddb829b5e66d627f8a77c2c27eef6a201f
+0xf8ffbfddb829b5e66d627f8a77c2c27eef6a201f
+call
+./tmp/0x6f5d54a1c5a8ae074d0109f2fd471388c22bda2d.json
+=====================================
+0x3caf7a79aeb268c5efb605cb0c2a548202f65c0d2d0e8487c7138ae7b9cb08fb
+0x2c957378f847a05c7ca7b1be624d9c8ba7f66eff
+0x2c957378f847a05c7ca7b1be624d9c8ba7f66eff
+call
+./tmp/0x4a4cc88232b5cefdfca33908f01c8a1f2817a30e.json
+=====================================
+0x5f3202feb198522372210f225245abb98f09a11a02d4a69f6a372907d0457610
+0x2c957378f847a05c7ca7b1be624d9c8ba7f66eff
+0x2c957378f847a05c7ca7b1be624d9c8ba7f66eff
+call
+./tmp/0x4a4cc88232b5cefdfca33908f01c8a1f2817a30e.json
+=====================================
+0xe224b4361b2fd6e2092b98d634e1b82d7adce957550d2d63fd7a3e210af2e265
+0x2c957378f847a05c7ca7b1be624d9c8ba7f66eff
+0x2c957378f847a05c7ca7b1be624d9c8ba7f66eff
+call
+./tmp/0x4a4cc88232b5cefdfca33908f01c8a1f2817a30e.json
+=====================================
+0xfee0148566cb6794ba089ab2c14d4b54734ad52e445de4b598391e3875f601dc
+0x2c957378f847a05c7ca7b1be624d9c8ba7f66eff
+0x2c957378f847a05c7ca7b1be624d9c8ba7f66eff
+call
+./tmp/0x4a4cc88232b5cefdfca33908f01c8a1f2817a30e.json
+=====================================
+0xcae1e5e05e1b21d8bfd06617d17fc1dd6008eaf3fcb92a7a5d360228d7cc2a6e
+0x2c957378f847a05c7ca7b1be624d9c8ba7f66eff
+0x2c957378f847a05c7ca7b1be624d9c8ba7f66eff
+call
+./tmp/0x4a4cc88232b5cefdfca33908f01c8a1f2817a30e.json
+=====================================
+0x5cde6ec6eca4ac5d4abac9fa3a24bf93730391915afd2a4b8a7069031a0fd065
+0x2c957378f847a05c7ca7b1be624d9c8ba7f66eff
+0x2c957378f847a05c7ca7b1be624d9c8ba7f66eff
+call
+./tmp/0x4a4cc88232b5cefdfca33908f01c8a1f2817a30e.json
+=====================================
+0x344467fcd3a3b4ebec367a682fa28aacdb0882450ccc278aa8b797c64ac3fa7c
+0x2c957378f847a05c7ca7b1be624d9c8ba7f66eff
+0x2c957378f847a05c7ca7b1be624d9c8ba7f66eff
+call
+./tmp/0x4a4cc88232b5cefdfca33908f01c8a1f2817a30e.json
+=====================================
+0x2b8e5d7d6430fceb28e02cc9f4b8f125b54230259cd8eca7c99c5941f2528b78
+0x2c957378f847a05c7ca7b1be624d9c8ba7f66eff
+0x2c957378f847a05c7ca7b1be624d9c8ba7f66eff
+call
+./tmp/0x4a4cc88232b5cefdfca33908f01c8a1f2817a30e.json
+=====================================
+0x1b6bafeadbef8962d935da7dcd5809a406c2c1ca2975fa4e9c109d629c55af45
+0x2c957378f847a05c7ca7b1be624d9c8ba7f66eff
+0x2c957378f847a05c7ca7b1be624d9c8ba7f66eff
+call
+./tmp/0x4a4cc88232b5cefdfca33908f01c8a1f2817a30e.json
+=====================================
+0x43d56608fb3c100412934c6956eb04716a11fe3ba83e5d7e3a09f9aaa7a413cb
+0x2a6e07317424dfa497596a2b71d1500c53825463
+0x2a6e07317424dfa497596a2b71d1500c53825463
+call
+./tmp/0x1185a1b58bdd774a36cc9598c5e3531dfeb1b736.json
+=====================================
+0xdda21d3f30f8b758a63e2de66dc68fc03f69b19bd23c0ff45c1a8a241b8f078b
+0x5c660c649bf05755d28dd39c4e2909e0b8fc4321
+0x5c660c649bf05755d28dd39c4e2909e0b8fc4321
+call
+./tmp/0x6d175c46e29731cbc4e2e5cbceb04c5ea677ab91.json
+=====================================
+0x5c712b5f799502bde6aeb216183fce3d57ca5af4f17b55c7663c58dc7fc458f7
+0x5c660c649bf05755d28dd39c4e2909e0b8fc4321
+0x5c660c649bf05755d28dd39c4e2909e0b8fc4321
+call
+./tmp/0x6d175c46e29731cbc4e2e5cbceb04c5ea677ab91.json
+=====================================

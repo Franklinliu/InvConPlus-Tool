@@ -1,0 +1,332 @@
+Invariants with True value:86
+Invariants with False value:240
+
+True Invariants:
+approve(spender,tokens): Ensures block.timestamp == VeriSol.Old(block.timestamp)
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances))
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => balances[msg.sender] >= 0
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(balances[to]) >= 0
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => tokens < VeriSol.SumMapping(balances)
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => tokens < VeriSol.Old(VeriSol.SumMapping(balances))
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => tokens <= balances[to]
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => tokens <= VeriSol.Old(balances[msg.sender])
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(tokens) < VeriSol.SumMapping(balances)
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(tokens) <= balances[to]
+transfer(to,tokens): Ensures tokens <= balances[msg.sender] => VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances))
+transfer(to,tokens): Ensures tokens <= balances[msg.sender] => balances[msg.sender] >= 0
+transfer(to,tokens): Ensures tokens <= balances[msg.sender] => VeriSol.Old(balances[to]) >= 0
+transfer(to,tokens): Ensures tokens <= balances[msg.sender] => tokens <= balances[to]
+transfer(to,tokens): Ensures tokens <= balances[msg.sender] => tokens <= VeriSol.Old(balances[msg.sender])
+transfer(to,tokens): Ensures tokens <= balances[msg.sender] => VeriSol.Old(tokens) <= balances[to]
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances))
+transfer(to,tokens): Ensures tokens <= balances[msg.sender] => VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances))
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => balances[msg.sender] >= 0
+transfer(to,tokens): Ensures tokens <= balances[msg.sender] => balances[msg.sender] >= 0
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(balances[to]) >= 0
+transfer(to,tokens): Ensures tokens <= balances[msg.sender] => VeriSol.Old(balances[to]) >= 0
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => tokens < VeriSol.SumMapping(balances)
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => tokens < VeriSol.Old(VeriSol.SumMapping(balances))
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => tokens <= balances[to]
+transfer(to,tokens): Ensures tokens <= balances[msg.sender] => tokens <= balances[to]
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => tokens <= VeriSol.Old(balances[msg.sender])
+transfer(to,tokens): Ensures tokens <= balances[msg.sender] => tokens <= VeriSol.Old(balances[msg.sender])
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(tokens) < VeriSol.SumMapping(balances)
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(tokens) <= balances[to]
+transfer(to,tokens): Ensures tokens <= balances[msg.sender] => VeriSol.Old(tokens) <= balances[to]
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => balances[from] >= 0
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => tokens < VeriSol.Old(VeriSol.SumMapping(balances))
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => tokens <= balances[to]
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => tokens <= VeriSol.Old(balances[from])
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(tokens) <= balances[to]
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => - tokens - allowed[from][msg.sender] + VeriSol.Old(allowed[from][msg.sender]) == 0
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => - VeriSol.Old(tokens) - allowed[from][msg.sender] + VeriSol.Old(allowed[from][msg.sender]) == 0
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => balances[from] >= 0
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => tokens <= balances[to]
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => tokens <= VeriSol.Old(balances[from])
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => VeriSol.Old(tokens) <= balances[to]
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => - tokens - allowed[from][msg.sender] + VeriSol.Old(allowed[from][msg.sender]) == 0
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => - VeriSol.Old(tokens) - allowed[from][msg.sender] + VeriSol.Old(allowed[from][msg.sender]) == 0
+transferFrom(from,to,tokens): Ensures tokens < balances[to] => balances[from] >= 0
+transferFrom(from,to,tokens): Ensures tokens < balances[to] => tokens <= balances[to]
+transferFrom(from,to,tokens): Ensures tokens < balances[to] => tokens <= VeriSol.Old(balances[from])
+transferFrom(from,to,tokens): Ensures tokens < balances[to] => tokens < VeriSol.Old(balances[to])
+transferFrom(from,to,tokens): Ensures tokens < balances[to] => VeriSol.Old(tokens) <= balances[to]
+transferFrom(from,to,tokens): Ensures tokens < balances[to] => - tokens - allowed[from][msg.sender] + VeriSol.Old(allowed[from][msg.sender]) == 0
+transferFrom(from,to,tokens): Ensures tokens < balances[to] => - VeriSol.Old(tokens) - allowed[from][msg.sender] + VeriSol.Old(allowed[from][msg.sender]) == 0
+transferFrom(from,to,tokens): Ensures tokens < allowed[from][msg.sender] => balances[from] >= 0
+transferFrom(from,to,tokens): Ensures tokens < allowed[from][msg.sender] => tokens <= balances[to]
+transferFrom(from,to,tokens): Ensures tokens < allowed[from][msg.sender] => tokens <= VeriSol.Old(balances[from])
+transferFrom(from,to,tokens): Ensures tokens < allowed[from][msg.sender] => tokens < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures tokens < allowed[from][msg.sender] => VeriSol.Old(tokens) <= balances[to]
+transferFrom(from,to,tokens): Ensures tokens < allowed[from][msg.sender] => - tokens - allowed[from][msg.sender] + VeriSol.Old(allowed[from][msg.sender]) == 0
+transferFrom(from,to,tokens): Ensures tokens < allowed[from][msg.sender] => - VeriSol.Old(tokens) - allowed[from][msg.sender] + VeriSol.Old(allowed[from][msg.sender]) == 0
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => balances[from] >= 0
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => balances[from] >= 0
+transferFrom(from,to,tokens): Ensures tokens < balances[to] => balances[from] >= 0
+transferFrom(from,to,tokens): Ensures tokens < allowed[from][msg.sender] => balances[from] >= 0
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => tokens < VeriSol.Old(VeriSol.SumMapping(balances))
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => tokens <= balances[to]
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => tokens <= balances[to]
+transferFrom(from,to,tokens): Ensures tokens < balances[to] => tokens <= balances[to]
+transferFrom(from,to,tokens): Ensures tokens < allowed[from][msg.sender] => tokens <= balances[to]
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => tokens <= VeriSol.Old(balances[from])
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => tokens <= VeriSol.Old(balances[from])
+transferFrom(from,to,tokens): Ensures tokens < balances[to] => tokens <= VeriSol.Old(balances[from])
+transferFrom(from,to,tokens): Ensures tokens < allowed[from][msg.sender] => tokens <= VeriSol.Old(balances[from])
+transferFrom(from,to,tokens): Ensures tokens < balances[to] => tokens < VeriSol.Old(balances[to])
+transferFrom(from,to,tokens): Ensures tokens < allowed[from][msg.sender] => tokens < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(tokens) <= balances[to]
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => VeriSol.Old(tokens) <= balances[to]
+transferFrom(from,to,tokens): Ensures tokens < balances[to] => VeriSol.Old(tokens) <= balances[to]
+transferFrom(from,to,tokens): Ensures tokens < allowed[from][msg.sender] => VeriSol.Old(tokens) <= balances[to]
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => - tokens - allowed[from][msg.sender] + VeriSol.Old(allowed[from][msg.sender]) == 0
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => - tokens - allowed[from][msg.sender] + VeriSol.Old(allowed[from][msg.sender]) == 0
+transferFrom(from,to,tokens): Ensures tokens < balances[to] => - tokens - allowed[from][msg.sender] + VeriSol.Old(allowed[from][msg.sender]) == 0
+transferFrom(from,to,tokens): Ensures tokens < allowed[from][msg.sender] => - tokens - allowed[from][msg.sender] + VeriSol.Old(allowed[from][msg.sender]) == 0
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => - VeriSol.Old(tokens) - allowed[from][msg.sender] + VeriSol.Old(allowed[from][msg.sender]) == 0
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => - VeriSol.Old(tokens) - allowed[from][msg.sender] + VeriSol.Old(allowed[from][msg.sender]) == 0
+transferFrom(from,to,tokens): Ensures tokens < balances[to] => - VeriSol.Old(tokens) - allowed[from][msg.sender] + VeriSol.Old(allowed[from][msg.sender]) == 0
+transferFrom(from,to,tokens): Ensures tokens < allowed[from][msg.sender] => - VeriSol.Old(tokens) - allowed[from][msg.sender] + VeriSol.Old(allowed[from][msg.sender]) == 0
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] && tokens < allowed[from][msg.sender] => tokens < allowed[from][msg.sender]
+
+False Invariants:
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.SumMapping(balances) == 1000000000000000000000000000000 || VeriSol.Old(VeriSol.SumMapping(balances)) == 1000000000000000000000000000000
+transfer(to,tokens): Ensures VeriSol.SumMapping(balances) == 1000000000000000000000000000000 || VeriSol.Old(VeriSol.SumMapping(balances)) == 1000000000000000000000000000000
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(VeriSol.SumMapping(balances)) == 1000000000000000000000000000000 || balances[msg.sender] < VeriSol.Old(balances[msg.sender])
+transfer(to,tokens): Ensures VeriSol.Old(VeriSol.SumMapping(balances)) == 1000000000000000000000000000000 || balances[msg.sender] < VeriSol.Old(balances[msg.sender])
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => balances[msg.sender] < VeriSol.Old(balances[msg.sender]) || tokens - balances[to] + VeriSol.Old(balances[to]) == 0
+transfer(to,tokens): Ensures balances[msg.sender] < VeriSol.Old(balances[msg.sender]) || tokens - balances[to] + VeriSol.Old(balances[to]) == 0
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => tokens - balances[to] + VeriSol.Old(balances[to]) == 0 || tokens + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) == 0
+transfer(to,tokens): Ensures tokens - balances[to] + VeriSol.Old(balances[to]) == 0 || tokens + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) == 0
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => tokens + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) == 0 || VeriSol.Old(tokens) - balances[to] + VeriSol.Old(balances[to]) == 0
+transfer(to,tokens): Ensures tokens + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) == 0 || VeriSol.Old(tokens) - balances[to] + VeriSol.Old(balances[to]) == 0
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(tokens) - balances[to] + VeriSol.Old(balances[to]) == 0 || VeriSol.Old(tokens) + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) == 0
+transfer(to,tokens): Ensures VeriSol.Old(tokens) - balances[to] + VeriSol.Old(balances[to]) == 0 || VeriSol.Old(tokens) + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) == 0
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(tokens) + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) == 0 || VeriSol.SumMapping(balances) != VeriSol.Old(VeriSol.SumMapping(balances))
+transfer(to,tokens): Ensures VeriSol.Old(tokens) + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) == 0 || VeriSol.SumMapping(balances) != VeriSol.Old(VeriSol.SumMapping(balances))
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.SumMapping(balances) != VeriSol.Old(VeriSol.SumMapping(balances)) || VeriSol.SumMapping(balances) != 1000000000000000000000000000000
+transfer(to,tokens): Ensures VeriSol.SumMapping(balances) != VeriSol.Old(VeriSol.SumMapping(balances)) || VeriSol.SumMapping(balances) != 1000000000000000000000000000000
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.SumMapping(balances) != 1000000000000000000000000000000 || VeriSol.Old(VeriSol.SumMapping(balances)) != 1000000000000000000000000000000
+transfer(to,tokens): Ensures VeriSol.SumMapping(balances) != 1000000000000000000000000000000 || VeriSol.Old(VeriSol.SumMapping(balances)) != 1000000000000000000000000000000
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(VeriSol.SumMapping(balances)) != 1000000000000000000000000000000 || tokens - balances[to] + VeriSol.Old(balances[to]) != 0
+transfer(to,tokens): Ensures VeriSol.Old(VeriSol.SumMapping(balances)) != 1000000000000000000000000000000 || tokens - balances[to] + VeriSol.Old(balances[to]) != 0
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => tokens - balances[to] + VeriSol.Old(balances[to]) != 0 || tokens + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) != 0
+transfer(to,tokens): Ensures tokens - balances[to] + VeriSol.Old(balances[to]) != 0 || tokens + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) != 0
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => tokens + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) != 0 || VeriSol.Old(tokens) - balances[to] + VeriSol.Old(balances[to]) != 0
+transfer(to,tokens): Ensures tokens + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) != 0 || VeriSol.Old(tokens) - balances[to] + VeriSol.Old(balances[to]) != 0
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(tokens) - balances[to] + VeriSol.Old(balances[to]) != 0 || VeriSol.Old(tokens) + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) != 0
+transfer(to,tokens): Ensures VeriSol.Old(tokens) - balances[to] + VeriSol.Old(balances[to]) != 0 || VeriSol.Old(tokens) + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) != 0
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) && tokens <= balances[msg.sender] => VeriSol.Old(tokens) + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) != 0
+transfer(to,tokens): Ensures tokens <= balances[msg.sender] && tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.SumMapping(balances) == 1000000000000000000000000000000
+transfer(to,tokens): Ensures tokens <= balances[msg.sender] => VeriSol.Old(VeriSol.SumMapping(balances)) == 1000000000000000000000000000000 || VeriSol.SumMapping(balances) == 1000000000000000000000000000000
+transfer(to,tokens): Ensures VeriSol.Old(VeriSol.SumMapping(balances)) == 1000000000000000000000000000000 || VeriSol.SumMapping(balances) == 1000000000000000000000000000000
+transfer(to,tokens): Ensures tokens <= balances[msg.sender] => tokens < VeriSol.SumMapping(balances) || VeriSol.Old(VeriSol.SumMapping(balances)) == 1000000000000000000000000000000
+transfer(to,tokens): Ensures tokens < VeriSol.SumMapping(balances) || VeriSol.Old(VeriSol.SumMapping(balances)) == 1000000000000000000000000000000
+transfer(to,tokens): Ensures tokens <= balances[msg.sender] => tokens < VeriSol.Old(VeriSol.SumMapping(balances)) || tokens < VeriSol.SumMapping(balances)
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) || tokens < VeriSol.SumMapping(balances)
+transfer(to,tokens): Ensures tokens <= balances[msg.sender] => VeriSol.Old(tokens) < VeriSol.SumMapping(balances) || tokens < VeriSol.Old(VeriSol.SumMapping(balances))
+transfer(to,tokens): Ensures VeriSol.Old(tokens) < VeriSol.SumMapping(balances) || tokens < VeriSol.Old(VeriSol.SumMapping(balances))
+transfer(to,tokens): Ensures tokens <= balances[msg.sender] => balances[msg.sender] < VeriSol.Old(balances[msg.sender]) || VeriSol.Old(tokens) < VeriSol.SumMapping(balances)
+transfer(to,tokens): Ensures balances[msg.sender] < VeriSol.Old(balances[msg.sender]) || VeriSol.Old(tokens) < VeriSol.SumMapping(balances)
+transfer(to,tokens): Ensures tokens <= balances[msg.sender] => tokens - balances[to] + VeriSol.Old(balances[to]) == 0 || balances[msg.sender] < VeriSol.Old(balances[msg.sender])
+transfer(to,tokens): Ensures tokens - balances[to] + VeriSol.Old(balances[to]) == 0 || balances[msg.sender] < VeriSol.Old(balances[msg.sender])
+transfer(to,tokens): Ensures tokens <= balances[msg.sender] => tokens + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) == 0 || tokens - balances[to] + VeriSol.Old(balances[to]) == 0
+transfer(to,tokens): Ensures tokens + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) == 0 || tokens - balances[to] + VeriSol.Old(balances[to]) == 0
+transfer(to,tokens): Ensures tokens <= balances[msg.sender] => VeriSol.Old(tokens) - balances[to] + VeriSol.Old(balances[to]) == 0 || tokens + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) == 0
+transfer(to,tokens): Ensures VeriSol.Old(tokens) - balances[to] + VeriSol.Old(balances[to]) == 0 || tokens + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) == 0
+transfer(to,tokens): Ensures tokens <= balances[msg.sender] => VeriSol.Old(tokens) + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) == 0 || VeriSol.Old(tokens) - balances[to] + VeriSol.Old(balances[to]) == 0
+transfer(to,tokens): Ensures VeriSol.Old(tokens) + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) == 0 || VeriSol.Old(tokens) - balances[to] + VeriSol.Old(balances[to]) == 0
+transfer(to,tokens): Ensures tokens <= balances[msg.sender] => VeriSol.SumMapping(balances) != VeriSol.Old(VeriSol.SumMapping(balances)) || VeriSol.Old(tokens) + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) == 0
+transfer(to,tokens): Ensures VeriSol.SumMapping(balances) != VeriSol.Old(VeriSol.SumMapping(balances)) || VeriSol.Old(tokens) + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) == 0
+transfer(to,tokens): Ensures tokens <= balances[msg.sender] => VeriSol.SumMapping(balances) != 1000000000000000000000000000000 || VeriSol.SumMapping(balances) != VeriSol.Old(VeriSol.SumMapping(balances))
+transfer(to,tokens): Ensures VeriSol.SumMapping(balances) != 1000000000000000000000000000000 || VeriSol.SumMapping(balances) != VeriSol.Old(VeriSol.SumMapping(balances))
+transfer(to,tokens): Ensures tokens <= balances[msg.sender] => VeriSol.Old(VeriSol.SumMapping(balances)) != 1000000000000000000000000000000 || VeriSol.SumMapping(balances) != 1000000000000000000000000000000
+transfer(to,tokens): Ensures VeriSol.Old(VeriSol.SumMapping(balances)) != 1000000000000000000000000000000 || VeriSol.SumMapping(balances) != 1000000000000000000000000000000
+transfer(to,tokens): Ensures tokens <= balances[msg.sender] => tokens - balances[to] + VeriSol.Old(balances[to]) != 0 || VeriSol.Old(VeriSol.SumMapping(balances)) != 1000000000000000000000000000000
+transfer(to,tokens): Ensures tokens - balances[to] + VeriSol.Old(balances[to]) != 0 || VeriSol.Old(VeriSol.SumMapping(balances)) != 1000000000000000000000000000000
+transfer(to,tokens): Ensures tokens <= balances[msg.sender] => tokens + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) != 0 || tokens - balances[to] + VeriSol.Old(balances[to]) != 0
+transfer(to,tokens): Ensures tokens + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) != 0 || tokens - balances[to] + VeriSol.Old(balances[to]) != 0
+transfer(to,tokens): Ensures tokens <= balances[msg.sender] => VeriSol.Old(tokens) - balances[to] + VeriSol.Old(balances[to]) != 0 || tokens + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) != 0
+transfer(to,tokens): Ensures VeriSol.Old(tokens) - balances[to] + VeriSol.Old(balances[to]) != 0 || tokens + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) != 0
+transfer(to,tokens): Ensures tokens <= balances[msg.sender] => VeriSol.Old(tokens) + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) != 0 || VeriSol.Old(tokens) - balances[to] + VeriSol.Old(balances[to]) != 0
+transfer(to,tokens): Ensures VeriSol.Old(tokens) + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) != 0 || VeriSol.Old(tokens) - balances[to] + VeriSol.Old(balances[to]) != 0
+transfer(to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.SumMapping(balances) == 1000000000000000000000000000000 || VeriSol.Old(tokens) + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) != 0
+transfer(to,tokens): Ensures VeriSol.SumMapping(balances) == 1000000000000000000000000000000 || VeriSol.Old(tokens) + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) != 0
+transfer(to,tokens): Ensures tokens <= balances[msg.sender] => VeriSol.SumMapping(balances) == 1000000000000000000000000000000 || VeriSol.Old(tokens) + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) != 0
+transfer(to,tokens): Ensures VeriSol.SumMapping(balances) == 1000000000000000000000000000000 || VeriSol.Old(tokens) + balances[msg.sender] - VeriSol.Old(balances[msg.sender]) != 0
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances)) || VeriSol.SumMapping(balances) == 1000000000000000000000000000000
+transferFrom(from,to,tokens): Ensures VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances)) || VeriSol.SumMapping(balances) == 1000000000000000000000000000000
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.SumMapping(balances) == 1000000000000000000000000000000 || VeriSol.Old(VeriSol.SumMapping(balances)) == 1000000000000000000000000000000
+transferFrom(from,to,tokens): Ensures VeriSol.SumMapping(balances) == 1000000000000000000000000000000 || VeriSol.Old(VeriSol.SumMapping(balances)) == 1000000000000000000000000000000
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(VeriSol.SumMapping(balances)) == 1000000000000000000000000000000 || VeriSol.Old(allowed[from][to]) == 0
+transferFrom(from,to,tokens): Ensures VeriSol.Old(VeriSol.SumMapping(balances)) == 1000000000000000000000000000000 || VeriSol.Old(allowed[from][to]) == 0
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(allowed[from][to]) == 0 || tokens < VeriSol.SumMapping(balances)
+transferFrom(from,to,tokens): Ensures VeriSol.Old(allowed[from][to]) == 0 || tokens < VeriSol.SumMapping(balances)
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => tokens < VeriSol.SumMapping(balances) || tokens < VeriSol.Old(balances[to])
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.SumMapping(balances) || tokens < VeriSol.Old(balances[to])
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => tokens < VeriSol.Old(balances[to]) || tokens < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(balances[to]) || tokens < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => tokens < allowed[from][msg.sender] || tokens < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures tokens < allowed[from][msg.sender] || tokens < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => tokens < VeriSol.Old(allowed[from][msg.sender]) || VeriSol.Old(tokens) < VeriSol.SumMapping(balances)
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(allowed[from][msg.sender]) || VeriSol.Old(tokens) < VeriSol.SumMapping(balances)
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(tokens) < VeriSol.SumMapping(balances) || VeriSol.Old(tokens) < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures VeriSol.Old(tokens) < VeriSol.SumMapping(balances) || VeriSol.Old(tokens) < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(tokens) < allowed[from][msg.sender] || VeriSol.SumMapping(balances) < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures VeriSol.Old(tokens) < allowed[from][msg.sender] || VeriSol.SumMapping(balances) < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.SumMapping(balances) < allowed[from][msg.sender] || VeriSol.SumMapping(balances) < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures VeriSol.SumMapping(balances) < allowed[from][msg.sender] || VeriSol.SumMapping(balances) < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.SumMapping(balances) < VeriSol.Old(allowed[from][msg.sender]) || VeriSol.Old(VeriSol.SumMapping(balances)) < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures VeriSol.SumMapping(balances) < VeriSol.Old(allowed[from][msg.sender]) || VeriSol.Old(VeriSol.SumMapping(balances)) < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(VeriSol.SumMapping(balances)) < allowed[from][msg.sender] || VeriSol.Old(VeriSol.SumMapping(balances)) < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures VeriSol.Old(VeriSol.SumMapping(balances)) < allowed[from][msg.sender] || VeriSol.Old(VeriSol.SumMapping(balances)) < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(VeriSol.SumMapping(balances)) < VeriSol.Old(allowed[from][msg.sender]) || balances[from] < balances[to]
+transferFrom(from,to,tokens): Ensures VeriSol.Old(VeriSol.SumMapping(balances)) < VeriSol.Old(allowed[from][msg.sender]) || balances[from] < balances[to]
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => balances[from] < balances[to] || balances[from] < VeriSol.Old(balances[from])
+transferFrom(from,to,tokens): Ensures balances[from] < balances[to] || balances[from] < VeriSol.Old(balances[from])
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => balances[from] < VeriSol.Old(balances[from]) || balances[from] < VeriSol.Old(balances[to])
+transferFrom(from,to,tokens): Ensures balances[from] < VeriSol.Old(balances[from]) || balances[from] < VeriSol.Old(balances[to])
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => balances[from] < VeriSol.Old(balances[to]) || balances[from] < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures balances[from] < VeriSol.Old(balances[to]) || balances[from] < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => balances[from] < allowed[from][msg.sender] || balances[from] < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures balances[from] < allowed[from][msg.sender] || balances[from] < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => balances[from] < VeriSol.Old(allowed[from][msg.sender]) || balances[to] < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures balances[from] < VeriSol.Old(allowed[from][msg.sender]) || balances[to] < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => balances[to] < allowed[from][msg.sender] || balances[to] < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures balances[to] < allowed[from][msg.sender] || balances[to] < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => balances[to] < VeriSol.Old(allowed[from][msg.sender]) || VeriSol.Old(balances[from]) < VeriSol.Old(balances[to])
+transferFrom(from,to,tokens): Ensures balances[to] < VeriSol.Old(allowed[from][msg.sender]) || VeriSol.Old(balances[from]) < VeriSol.Old(balances[to])
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(balances[from]) < VeriSol.Old(balances[to]) || VeriSol.Old(balances[from]) < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures VeriSol.Old(balances[from]) < VeriSol.Old(balances[to]) || VeriSol.Old(balances[from]) < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(balances[from]) < allowed[from][msg.sender] || VeriSol.Old(balances[from]) < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures VeriSol.Old(balances[from]) < allowed[from][msg.sender] || VeriSol.Old(balances[from]) < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(balances[from]) < VeriSol.Old(allowed[from][msg.sender]) || VeriSol.Old(balances[to]) < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures VeriSol.Old(balances[from]) < VeriSol.Old(allowed[from][msg.sender]) || VeriSol.Old(balances[to]) < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(balances[to]) < allowed[from][msg.sender] || VeriSol.Old(balances[to]) < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures VeriSol.Old(balances[to]) < allowed[from][msg.sender] || VeriSol.Old(balances[to]) < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(balances[to]) < VeriSol.Old(allowed[from][msg.sender]) || allowed[from][msg.sender] > VeriSol.Old(allowed[from][to])
+transferFrom(from,to,tokens): Ensures VeriSol.Old(balances[to]) < VeriSol.Old(allowed[from][msg.sender]) || allowed[from][msg.sender] > VeriSol.Old(allowed[from][to])
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => allowed[from][msg.sender] > VeriSol.Old(allowed[from][to]) || allowed[from][msg.sender] < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures allowed[from][msg.sender] > VeriSol.Old(allowed[from][to]) || allowed[from][msg.sender] < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => allowed[from][msg.sender] < VeriSol.Old(allowed[from][msg.sender]) || VeriSol.Old(allowed[from][to]) < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures allowed[from][msg.sender] < VeriSol.Old(allowed[from][msg.sender]) || VeriSol.Old(allowed[from][to]) < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(allowed[from][to]) < VeriSol.Old(allowed[from][msg.sender]) || tokens + balances[from] - VeriSol.Old(balances[from]) == 0
+transferFrom(from,to,tokens): Ensures VeriSol.Old(allowed[from][to]) < VeriSol.Old(allowed[from][msg.sender]) || tokens + balances[from] - VeriSol.Old(balances[from]) == 0
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => tokens + balances[from] - VeriSol.Old(balances[from]) == 0 || tokens - balances[to] + VeriSol.Old(balances[to]) == 0
+transferFrom(from,to,tokens): Ensures tokens + balances[from] - VeriSol.Old(balances[from]) == 0 || tokens - balances[to] + VeriSol.Old(balances[to]) == 0
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => tokens - balances[to] + VeriSol.Old(balances[to]) == 0 || VeriSol.Old(tokens) + balances[from] - VeriSol.Old(balances[from]) == 0
+transferFrom(from,to,tokens): Ensures tokens - balances[to] + VeriSol.Old(balances[to]) == 0 || VeriSol.Old(tokens) + balances[from] - VeriSol.Old(balances[from]) == 0
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(tokens) + balances[from] - VeriSol.Old(balances[from]) == 0 || VeriSol.Old(tokens) - balances[to] + VeriSol.Old(balances[to]) == 0
+transferFrom(from,to,tokens): Ensures VeriSol.Old(tokens) + balances[from] - VeriSol.Old(balances[from]) == 0 || VeriSol.Old(tokens) - balances[to] + VeriSol.Old(balances[to]) == 0
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(tokens) - balances[to] + VeriSol.Old(balances[to]) == 0 || VeriSol.SumMapping(balances) != VeriSol.Old(VeriSol.SumMapping(balances))
+transferFrom(from,to,tokens): Ensures VeriSol.Old(tokens) - balances[to] + VeriSol.Old(balances[to]) == 0 || VeriSol.SumMapping(balances) != VeriSol.Old(VeriSol.SumMapping(balances))
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.SumMapping(balances) != VeriSol.Old(VeriSol.SumMapping(balances)) || VeriSol.SumMapping(balances) != 1000000000000000000000000000000
+transferFrom(from,to,tokens): Ensures VeriSol.SumMapping(balances) != VeriSol.Old(VeriSol.SumMapping(balances)) || VeriSol.SumMapping(balances) != 1000000000000000000000000000000
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.SumMapping(balances) != 1000000000000000000000000000000 || VeriSol.Old(VeriSol.SumMapping(balances)) != 1000000000000000000000000000000
+transferFrom(from,to,tokens): Ensures VeriSol.SumMapping(balances) != 1000000000000000000000000000000 || VeriSol.Old(VeriSol.SumMapping(balances)) != 1000000000000000000000000000000
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(VeriSol.SumMapping(balances)) != 1000000000000000000000000000000 || VeriSol.Old(allowed[from][to]) != 0
+transferFrom(from,to,tokens): Ensures VeriSol.Old(VeriSol.SumMapping(balances)) != 1000000000000000000000000000000 || VeriSol.Old(allowed[from][to]) != 0
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(allowed[from][to]) != 0 || tokens + balances[from] - VeriSol.Old(balances[from]) != 0
+transferFrom(from,to,tokens): Ensures VeriSol.Old(allowed[from][to]) != 0 || tokens + balances[from] - VeriSol.Old(balances[from]) != 0
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => tokens + balances[from] - VeriSol.Old(balances[from]) != 0 || tokens - balances[to] + VeriSol.Old(balances[to]) != 0
+transferFrom(from,to,tokens): Ensures tokens + balances[from] - VeriSol.Old(balances[from]) != 0 || tokens - balances[to] + VeriSol.Old(balances[to]) != 0
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => tokens - balances[to] + VeriSol.Old(balances[to]) != 0 || - tokens - allowed[from][msg.sender] + VeriSol.Old(allowed[from][msg.sender]) != 0
+transferFrom(from,to,tokens): Ensures tokens - balances[to] + VeriSol.Old(balances[to]) != 0 || - tokens - allowed[from][msg.sender] + VeriSol.Old(allowed[from][msg.sender]) != 0
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => - tokens - allowed[from][msg.sender] + VeriSol.Old(allowed[from][msg.sender]) != 0 || VeriSol.Old(tokens) + balances[from] - VeriSol.Old(balances[from]) != 0
+transferFrom(from,to,tokens): Ensures - tokens - allowed[from][msg.sender] + VeriSol.Old(allowed[from][msg.sender]) != 0 || VeriSol.Old(tokens) + balances[from] - VeriSol.Old(balances[from]) != 0
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(tokens) + balances[from] - VeriSol.Old(balances[from]) != 0 || VeriSol.Old(tokens) - balances[to] + VeriSol.Old(balances[to]) != 0
+transferFrom(from,to,tokens): Ensures VeriSol.Old(tokens) + balances[from] - VeriSol.Old(balances[from]) != 0 || VeriSol.Old(tokens) - balances[to] + VeriSol.Old(balances[to]) != 0
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.Old(tokens) - balances[to] + VeriSol.Old(balances[to]) != 0 || - VeriSol.Old(tokens) - allowed[from][msg.sender] + VeriSol.Old(allowed[from][msg.sender]) != 0
+transferFrom(from,to,tokens): Ensures VeriSol.Old(tokens) - balances[to] + VeriSol.Old(balances[to]) != 0 || - VeriSol.Old(tokens) - allowed[from][msg.sender] + VeriSol.Old(allowed[from][msg.sender]) != 0
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) && tokens <= balances[from] => - VeriSol.Old(tokens) - allowed[from][msg.sender] + VeriSol.Old(allowed[from][msg.sender]) != 0
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] && tokens < balances[to] => VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances))
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] && tokens < balances[to] => VeriSol.SumMapping(balances) == 1000000000000000000000000000000
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] && tokens < balances[to] => VeriSol.Old(VeriSol.SumMapping(balances)) == 1000000000000000000000000000000
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] && tokens < balances[to] => VeriSol.Old(allowed[from][to]) == 0
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] && tokens < balances[to] => tokens < VeriSol.SumMapping(balances)
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] && tokens < balances[to] => tokens < VeriSol.Old(VeriSol.SumMapping(balances))
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] && tokens < allowed[from][msg.sender] => tokens < VeriSol.Old(balances[to])
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => tokens < VeriSol.Old(allowed[from][msg.sender]) || VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances))
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(allowed[from][msg.sender]) || VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances))
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => VeriSol.Old(tokens) < VeriSol.SumMapping(balances) || VeriSol.SumMapping(balances) == 1000000000000000000000000000000
+transferFrom(from,to,tokens): Ensures VeriSol.Old(tokens) < VeriSol.SumMapping(balances) || VeriSol.SumMapping(balances) == 1000000000000000000000000000000
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => VeriSol.Old(tokens) < allowed[from][msg.sender] || VeriSol.Old(VeriSol.SumMapping(balances)) == 1000000000000000000000000000000
+transferFrom(from,to,tokens): Ensures VeriSol.Old(tokens) < allowed[from][msg.sender] || VeriSol.Old(VeriSol.SumMapping(balances)) == 1000000000000000000000000000000
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => VeriSol.SumMapping(balances) < allowed[from][msg.sender] || VeriSol.Old(allowed[from][to]) == 0
+transferFrom(from,to,tokens): Ensures VeriSol.SumMapping(balances) < allowed[from][msg.sender] || VeriSol.Old(allowed[from][to]) == 0
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => VeriSol.SumMapping(balances) < VeriSol.Old(allowed[from][msg.sender]) || tokens < VeriSol.SumMapping(balances)
+transferFrom(from,to,tokens): Ensures VeriSol.SumMapping(balances) < VeriSol.Old(allowed[from][msg.sender]) || tokens < VeriSol.SumMapping(balances)
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => VeriSol.Old(VeriSol.SumMapping(balances)) < allowed[from][msg.sender] || tokens < VeriSol.Old(VeriSol.SumMapping(balances))
+transferFrom(from,to,tokens): Ensures VeriSol.Old(VeriSol.SumMapping(balances)) < allowed[from][msg.sender] || tokens < VeriSol.Old(VeriSol.SumMapping(balances))
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => VeriSol.Old(VeriSol.SumMapping(balances)) < VeriSol.Old(allowed[from][msg.sender]) || tokens < VeriSol.Old(balances[to])
+transferFrom(from,to,tokens): Ensures VeriSol.Old(VeriSol.SumMapping(balances)) < VeriSol.Old(allowed[from][msg.sender]) || tokens < VeriSol.Old(balances[to])
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => balances[from] < balances[to] || tokens < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures balances[from] < balances[to] || tokens < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => balances[from] < VeriSol.Old(balances[from]) || tokens < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures balances[from] < VeriSol.Old(balances[from]) || tokens < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => balances[from] < VeriSol.Old(balances[to]) || VeriSol.Old(tokens) < VeriSol.SumMapping(balances)
+transferFrom(from,to,tokens): Ensures balances[from] < VeriSol.Old(balances[to]) || VeriSol.Old(tokens) < VeriSol.SumMapping(balances)
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => balances[from] < allowed[from][msg.sender] || VeriSol.Old(tokens) < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures balances[from] < allowed[from][msg.sender] || VeriSol.Old(tokens) < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => balances[from] < VeriSol.Old(allowed[from][msg.sender]) || VeriSol.SumMapping(balances) < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures balances[from] < VeriSol.Old(allowed[from][msg.sender]) || VeriSol.SumMapping(balances) < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => balances[to] < allowed[from][msg.sender] || VeriSol.SumMapping(balances) < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures balances[to] < allowed[from][msg.sender] || VeriSol.SumMapping(balances) < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => balances[to] < VeriSol.Old(allowed[from][msg.sender]) || VeriSol.Old(VeriSol.SumMapping(balances)) < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures balances[to] < VeriSol.Old(allowed[from][msg.sender]) || VeriSol.Old(VeriSol.SumMapping(balances)) < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => VeriSol.Old(balances[from]) < VeriSol.Old(balances[to]) || VeriSol.Old(VeriSol.SumMapping(balances)) < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures VeriSol.Old(balances[from]) < VeriSol.Old(balances[to]) || VeriSol.Old(VeriSol.SumMapping(balances)) < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => VeriSol.Old(balances[from]) < allowed[from][msg.sender] || balances[from] < balances[to]
+transferFrom(from,to,tokens): Ensures VeriSol.Old(balances[from]) < allowed[from][msg.sender] || balances[from] < balances[to]
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => VeriSol.Old(balances[from]) < VeriSol.Old(allowed[from][msg.sender]) || balances[from] < VeriSol.Old(balances[from])
+transferFrom(from,to,tokens): Ensures VeriSol.Old(balances[from]) < VeriSol.Old(allowed[from][msg.sender]) || balances[from] < VeriSol.Old(balances[from])
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => VeriSol.Old(balances[to]) < allowed[from][msg.sender] || balances[from] < VeriSol.Old(balances[to])
+transferFrom(from,to,tokens): Ensures VeriSol.Old(balances[to]) < allowed[from][msg.sender] || balances[from] < VeriSol.Old(balances[to])
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => VeriSol.Old(balances[to]) < VeriSol.Old(allowed[from][msg.sender]) || balances[from] < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures VeriSol.Old(balances[to]) < VeriSol.Old(allowed[from][msg.sender]) || balances[from] < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => allowed[from][msg.sender] > VeriSol.Old(allowed[from][to]) || balances[from] < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures allowed[from][msg.sender] > VeriSol.Old(allowed[from][to]) || balances[from] < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => allowed[from][msg.sender] < VeriSol.Old(allowed[from][msg.sender]) || balances[to] < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures allowed[from][msg.sender] < VeriSol.Old(allowed[from][msg.sender]) || balances[to] < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => VeriSol.Old(allowed[from][to]) < VeriSol.Old(allowed[from][msg.sender]) || balances[to] < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures VeriSol.Old(allowed[from][to]) < VeriSol.Old(allowed[from][msg.sender]) || balances[to] < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => tokens + balances[from] - VeriSol.Old(balances[from]) == 0 || VeriSol.Old(balances[from]) < VeriSol.Old(balances[to])
+transferFrom(from,to,tokens): Ensures tokens + balances[from] - VeriSol.Old(balances[from]) == 0 || VeriSol.Old(balances[from]) < VeriSol.Old(balances[to])
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => tokens - balances[to] + VeriSol.Old(balances[to]) == 0 || VeriSol.Old(balances[from]) < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures tokens - balances[to] + VeriSol.Old(balances[to]) == 0 || VeriSol.Old(balances[from]) < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => VeriSol.Old(tokens) + balances[from] - VeriSol.Old(balances[from]) == 0 || VeriSol.Old(balances[from]) < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures VeriSol.Old(tokens) + balances[from] - VeriSol.Old(balances[from]) == 0 || VeriSol.Old(balances[from]) < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => VeriSol.Old(tokens) - balances[to] + VeriSol.Old(balances[to]) == 0 || VeriSol.Old(balances[to]) < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures VeriSol.Old(tokens) - balances[to] + VeriSol.Old(balances[to]) == 0 || VeriSol.Old(balances[to]) < allowed[from][msg.sender]
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => VeriSol.SumMapping(balances) != VeriSol.Old(VeriSol.SumMapping(balances)) || VeriSol.Old(balances[to]) < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures VeriSol.SumMapping(balances) != VeriSol.Old(VeriSol.SumMapping(balances)) || VeriSol.Old(balances[to]) < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => VeriSol.SumMapping(balances) != 1000000000000000000000000000000 || allowed[from][msg.sender] > VeriSol.Old(allowed[from][to])
+transferFrom(from,to,tokens): Ensures VeriSol.SumMapping(balances) != 1000000000000000000000000000000 || allowed[from][msg.sender] > VeriSol.Old(allowed[from][to])
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => VeriSol.Old(VeriSol.SumMapping(balances)) != 1000000000000000000000000000000 || allowed[from][msg.sender] < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures VeriSol.Old(VeriSol.SumMapping(balances)) != 1000000000000000000000000000000 || allowed[from][msg.sender] < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => VeriSol.Old(allowed[from][to]) != 0 || VeriSol.Old(allowed[from][to]) < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures VeriSol.Old(allowed[from][to]) != 0 || VeriSol.Old(allowed[from][to]) < VeriSol.Old(allowed[from][msg.sender])
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => - tokens - allowed[from][msg.sender] + VeriSol.Old(allowed[from][msg.sender]) != 0 || VeriSol.Old(tokens) + balances[from] - VeriSol.Old(balances[from]) == 0
+transferFrom(from,to,tokens): Ensures - tokens - allowed[from][msg.sender] + VeriSol.Old(allowed[from][msg.sender]) != 0 || VeriSol.Old(tokens) + balances[from] - VeriSol.Old(balances[from]) == 0
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => VeriSol.Old(tokens) - balances[to] + VeriSol.Old(balances[to]) != 0 || VeriSol.SumMapping(balances) != VeriSol.Old(VeriSol.SumMapping(balances))
+transferFrom(from,to,tokens): Ensures VeriSol.Old(tokens) - balances[to] + VeriSol.Old(balances[to]) != 0 || VeriSol.SumMapping(balances) != VeriSol.Old(VeriSol.SumMapping(balances))
+transferFrom(from,to,tokens): Ensures tokens <= balances[from] => - VeriSol.Old(tokens) - allowed[from][msg.sender] + VeriSol.Old(allowed[from][msg.sender]) != 0 || VeriSol.SumMapping(balances) != 1000000000000000000000000000000
+transferFrom(from,to,tokens): Ensures - VeriSol.Old(tokens) - allowed[from][msg.sender] + VeriSol.Old(allowed[from][msg.sender]) != 0 || VeriSol.SumMapping(balances) != 1000000000000000000000000000000
+transferFrom(from,to,tokens): Ensures tokens < balances[to] => VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances)) || VeriSol.SumMapping(balances) != 1000000000000000000000000000000
+transferFrom(from,to,tokens): Ensures VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances)) || VeriSol.SumMapping(balances) != 1000000000000000000000000000000
+transferFrom(from,to,tokens): Ensures tokens < balances[to] => VeriSol.SumMapping(balances) == 1000000000000000000000000000000 || VeriSol.Old(VeriSol.SumMapping(balances)) != 1000000000000000000000000000000
+transferFrom(from,to,tokens): Ensures VeriSol.SumMapping(balances) == 1000000000000000000000000000000 || VeriSol.Old(VeriSol.SumMapping(balances)) != 1000000000000000000000000000000
+transferFrom(from,to,tokens): Ensures tokens < balances[to] => VeriSol.Old(VeriSol.SumMapping(balances)) == 1000000000000000000000000000000 || VeriSol.Old(allowed[from][to]) != 0
+transferFrom(from,to,tokens): Ensures VeriSol.Old(VeriSol.SumMapping(balances)) == 1000000000000000000000000000000 || VeriSol.Old(allowed[from][to]) != 0
+transferFrom(from,to,tokens): Ensures tokens < balances[to] => VeriSol.Old(allowed[from][to]) == 0 || tokens + balances[from] - VeriSol.Old(balances[from]) != 0
+transferFrom(from,to,tokens): Ensures VeriSol.Old(allowed[from][to]) == 0 || tokens + balances[from] - VeriSol.Old(balances[from]) != 0
+transferFrom(from,to,tokens): Ensures tokens < balances[to] => tokens < VeriSol.SumMapping(balances) || tokens - balances[to] + VeriSol.Old(balances[to]) != 0
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.SumMapping(balances) || tokens - balances[to] + VeriSol.Old(balances[to]) != 0
+transferFrom(from,to,tokens): Ensures tokens < balances[to] => tokens < VeriSol.Old(VeriSol.SumMapping(balances)) || - tokens - allowed[from][msg.sender] + VeriSol.Old(allowed[from][msg.sender]) != 0
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(VeriSol.SumMapping(balances)) || - tokens - allowed[from][msg.sender] + VeriSol.Old(allowed[from][msg.sender]) != 0
+transferFrom(from,to,tokens): Ensures tokens < balances[to] => tokens < allowed[from][msg.sender] || VeriSol.Old(tokens) + balances[from] - VeriSol.Old(balances[from]) != 0
+transferFrom(from,to,tokens): Ensures tokens < allowed[from][msg.sender] || VeriSol.Old(tokens) + balances[from] - VeriSol.Old(balances[from]) != 0
+transferFrom(from,to,tokens): Ensures tokens < balances[to] => tokens < VeriSol.Old(allowed[from][msg.sender]) || VeriSol.Old(tokens) - balances[to] + VeriSol.Old(balances[to]) != 0
+transferFrom(from,to,tokens): Ensures tokens < VeriSol.Old(allowed[from][msg.sender]) || VeriSol.Old(tokens) - balances[to] + VeriSol.Old(balances[to]) != 0
+transferFrom(from,to,tokens): Ensures tokens < balances[to] => VeriSol.Old(tokens) < VeriSol.SumMapping(balances) || - VeriSol.Old(tokens) - allowed[from][msg.sender] + VeriSol.Old(allowed[from][msg.sender]) != 0
+transferFrom(from,to,tokens): Ensures VeriSol.Old(tokens) < VeriSol.SumMapping(balances) || - VeriSol.Old(tokens) - allowed[from][msg.sender] + VeriSol.Old(allowed[from][msg.sender]) != 0

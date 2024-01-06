@@ -1,0 +1,63 @@
+[
+    {
+        "func": "transfer(to,amount)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "VeriSol.Requires(VeriSol.Old(uint256(decimals)) == 18)",
+            "VeriSol.Requires(VeriSol.Old(oneHundredPercent) == 100)",
+            "VeriSol.Requires(msg.sender != address(0))",
+            "VeriSol.Requires(to != address(0))",
+            "VeriSol.Requires(amount <= VeriSol.Old(balances[msg.sender]))",
+            "VeriSol.Requires(VeriSol.Old(VeriSol.SumMapping(balances)) == VeriSol.Old(_totalSupply))",
+            "VeriSol.Requires(VeriSol.Old(uint256(decimals)) < VeriSol.Old(oneHundredPercent))"
+        ],
+        "postconditions": [
+            "VeriSol.Ensures(decimals == 18)",
+            "VeriSol.Ensures(oneHundredPercent == 100)",
+            "VeriSol.Ensures(VeriSol.Old(VeriSol.SumMapping(balances)) >= VeriSol.SumMapping(balances))",
+            "VeriSol.Ensures(VeriSol.Old(VeriSol.SumMapping(balances)) >= _totalSupply)",
+            "VeriSol.Ensures(VeriSol.Old(uint256(decimals)) == decimals)",
+            "VeriSol.Ensures(VeriSol.Old(uint256(decimals)) < oneHundredPercent)",
+            "VeriSol.Ensures(decimals < oneHundredPercent)",
+            "VeriSol.Ensures(decimals < VeriSol.Old(oneHundredPercent))",
+            "VeriSol.Ensures(oneHundredPercent == VeriSol.Old(oneHundredPercent))",
+            "VeriSol.Ensures(VeriSol.Old(balances[msg.sender]) >= balances[msg.sender])",
+            "VeriSol.Ensures(VeriSol.Old(_totalSupply) >= VeriSol.SumMapping(balances))",
+            "VeriSol.Ensures(VeriSol.Old(_totalSupply) >= _totalSupply)",
+            "VeriSol.Ensures(VeriSol.SumMapping(balances) == _totalSupply)"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "approve(spender,amount)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "VeriSol.Requires(msg.sender != address(0))"
+        ],
+        "postconditions": [
+            "VeriSol.Ensures(amount == allowed[msg.sender][spender])",
+            "VeriSol.Ensures(VeriSol.Old(uint256(decimals)) == decimals)",
+            "VeriSol.Ensures(oneHundredPercent == VeriSol.Old(oneHundredPercent))",
+            "VeriSol.Ensures(VeriSol.Old(_totalSupply) == _totalSupply)"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": null,
+        "type": "PptType.CONTRACT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [
+            "VeriSol.Ensures(decimals == 18)",
+            "VeriSol.Ensures(oneHundredPercent == 100)",
+            "VeriSol.Ensures(_totalSupply == VeriSol.SumMapping(balances))",
+            "VeriSol.Ensures(decimals < oneHundredPercent)"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    }
+]

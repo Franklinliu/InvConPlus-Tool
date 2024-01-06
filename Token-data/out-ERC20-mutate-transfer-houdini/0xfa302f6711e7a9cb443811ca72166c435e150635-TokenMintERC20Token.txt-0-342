@@ -1,0 +1,13 @@
+Invariants with True value:5
+Invariants with False value:0
+
+True Invariants:
+approve(spender,value): Requires spender != address(0)
+approve(spender,value): Requires msg.sender != address(0)
+approve(spender,value): Ensures VeriSol.Old(_totalSupply) == _totalSupply
+approve(spender,value): Ensures _allowances[msg.sender][spender] == value
+TokenMintERC20Token: Ensures VeriSol.ContractInvariant(_totalSupply == VeriSol.SumMapping(_balances))
+
+False Invariants:
+
+ // ./gambit_out_transfer/mutants/342/verisol_test

@@ -1,0 +1,26 @@
+Invariants with True value:17
+Invariants with False value:1
+
+True Invariants:
+approve(spender,tokens): Requires msg.sender != address(0)
+approve(spender,tokens): Ensures VeriSol.Old(uint256(decimals)) == decimals
+approve(spender,tokens): Ensures _totalSupply == VeriSol.Old(_totalSupply)
+transfer(to,tokens): Requires msg.sender != address(0)
+transfer(to,tokens): Requires tokens <= VeriSol.Old(balances[msg.sender])
+transfer(to,tokens): Ensures tokens <= balances[to]
+transfer(to,tokens): Ensures VeriSol.Old(uint256(decimals)) == decimals
+transfer(to,tokens): Ensures balances[msg.sender] <= VeriSol.Old(balances[msg.sender])
+transfer(to,tokens): Ensures VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances))
+transfer(to,tokens): Ensures _totalSupply == VeriSol.Old(_totalSupply)
+transfer(to,tokens): Ensures balances[to] >= VeriSol.Old(balances[to])
+Goji: Ensures VeriSol.ContractInvariant(_totalSupply == 10000000000000000000)
+Goji: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == 10000000000000000000)
+Goji: Ensures VeriSol.ContractInvariant(decimals == 10)
+Goji: Ensures VeriSol.ContractInvariant(_totalSupply == VeriSol.SumMapping(balances))
+Goji: Ensures VeriSol.ContractInvariant(_totalSupply > decimals)
+Goji: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) > decimals)
+
+False Invariants:
+approve(spender,tokens): Ensures tokens == allowed[msg.sender][spender]
+
+ // ./gambit_out_approve/mutants/245/verisol_test

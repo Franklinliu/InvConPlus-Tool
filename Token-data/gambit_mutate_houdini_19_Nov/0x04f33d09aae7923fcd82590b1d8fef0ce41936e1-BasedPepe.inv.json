@@ -1,0 +1,52 @@
+[
+    {
+        "func": "approve(spender,tokens)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "VeriSol.Requires(msg.sender != address(0))"
+        ],
+        "postconditions": [
+            "VeriSol.Ensures(decimals == VeriSol.Old(uint256(decimals)))",
+            "VeriSol.Ensures(VeriSol.Old(_totalSupply) == _totalSupply)",
+            "VeriSol.Ensures(tokens == allowed[msg.sender][spender])"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "transfer(to,tokens)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "VeriSol.Requires(msg.sender != address(0))",
+            "VeriSol.Requires(VeriSol.Old(balances[msg.sender]) >= tokens)"
+        ],
+        "postconditions": [
+            "VeriSol.Ensures(decimals == VeriSol.Old(uint256(decimals)))",
+            "VeriSol.Ensures(VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances)))",
+            "VeriSol.Ensures(VeriSol.Old(_totalSupply) == _totalSupply)",
+            "VeriSol.Ensures(balances[msg.sender] <= VeriSol.Old(balances[msg.sender]))",
+            "VeriSol.Ensures(balances[to] >= tokens)",
+            "VeriSol.Ensures(balances[to] >= VeriSol.Old(balances[to]))"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": null,
+        "type": "PptType.CONTRACT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [
+            "VeriSol.Ensures(_totalSupply == 1000000000000000000000)",
+            "VeriSol.Ensures(decimals == 9)",
+            "VeriSol.Ensures(VeriSol.SumMapping(balances) == 1000000000000000000000)",
+            "VeriSol.Ensures(_totalSupply > decimals)",
+            "VeriSol.Ensures(_totalSupply == VeriSol.SumMapping(balances))",
+            "VeriSol.Ensures(decimals < VeriSol.SumMapping(balances))"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    }
+]

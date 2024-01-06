@@ -1,0 +1,14 @@
+original result: 21 invariants, smt-simplified result: 11 invariants
+transfer(to,tokens):
+Requires		msg.sender != address(0)
+Ensures		VeriSol.Old(uint256(decimals)) == decimals
+Ensures		VeriSol.Old(balances[to]) <= balances[to]
+Ensures		tokens <= balances[to]
+Ensures		_totalSupply == VeriSol.Old(_totalSupply)
+YCCToken:
+Ensures		decimals == 8
+Ensures		_totalSupply == 1000000000000000000
+Ensures		VeriSol.SumMapping(balances) > 0
+Ensures		decimals < _totalSupply
+Ensures		decimals < VeriSol.SumMapping(balances)
+Ensures		_totalSupply >= VeriSol.SumMapping(balances)

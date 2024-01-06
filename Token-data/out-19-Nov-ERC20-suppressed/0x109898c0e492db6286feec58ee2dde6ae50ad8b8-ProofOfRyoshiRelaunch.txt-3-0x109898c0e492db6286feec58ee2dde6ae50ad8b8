@@ -1,0 +1,13 @@
+original result: 30 invariants, smt-simplified result: 10 invariants
+approve(spender,value):
+Requires		msg.sender != address(0)
+Requires		spender != address(0)
+Ensures		_totalSupply == VeriSol.Old(_totalSupply)
+Ensures		value == _allowances[msg.sender][spender]
+Ensures		VeriSol.Old(_allowances[msg.sender][spender]) == 0 => _allowances[msg.sender][spender] >= VeriSol.Old(_allowances[msg.sender][spender])
+Ensures		value == VeriSol.Old(_allowances[msg.sender][spender]) => _allowances[msg.sender][spender] == VeriSol.Old(_allowances[msg.sender][spender])
+Ensures		value >= VeriSol.Old(_allowances[msg.sender][spender]) && value != VeriSol.Old(_allowances[msg.sender][spender]) => _allowances[msg.sender][spender] > VeriSol.Old(_allowances[msg.sender][spender])
+Ensures		value > VeriSol.Old(_allowances[msg.sender][spender]) && VeriSol.Old(_allowances[msg.sender][spender]) == 0 => _allowances[msg.sender][spender] > 0
+Ensures		value != VeriSol.Old(_allowances[msg.sender][spender]) && VeriSol.Old(_allowances[msg.sender][spender]) == 0 => _allowances[msg.sender][spender] > VeriSol.Old(_allowances[msg.sender][spender])
+ProofOfRyoshiRelaunch:
+Ensures		VeriSol.SumMapping(_balances) == _totalSupply

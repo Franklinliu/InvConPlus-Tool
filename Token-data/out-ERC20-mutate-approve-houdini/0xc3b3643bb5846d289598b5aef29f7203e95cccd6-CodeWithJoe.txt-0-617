@@ -1,0 +1,18 @@
+Invariants with True value:6
+Invariants with False value:4
+
+True Invariants:
+approve(spender,tokens): Requires msg.sender != address(0)
+approve(spender,tokens): Ensures tokens == allowed[msg.sender][spender]
+approve(spender,tokens): Ensures _totalSupply == VeriSol.Old(_totalSupply)
+approve(spender,tokens): Ensures decimals == VeriSol.Old(uint256(decimals))
+CodeWithJoe: Ensures VeriSol.ContractInvariant(decimals == 18)
+CodeWithJoe: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) >= _totalSupply)
+
+False Invariants:
+CodeWithJoe: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) > 0)
+CodeWithJoe: Ensures VeriSol.ContractInvariant(_totalSupply == 100000000000000000000000000)
+CodeWithJoe: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) > decimals)
+CodeWithJoe: Ensures VeriSol.ContractInvariant(decimals < _totalSupply)
+
+ // ./gambit_out_approve/mutants/617/verisol_test

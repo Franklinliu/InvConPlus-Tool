@@ -1,0 +1,211 @@
+Invariants with True value:28
+Invariants with False value:177
+
+True Invariants:
+transfer(recipient,amount): Ensures _totalSupply == VeriSol.Old(_totalSupply)
+transfer(recipient,amount): Ensures recipient == VeriSol.Old(recipient)
+transfer(recipient,amount): Ensures amount == VeriSol.Old(amount)
+transfer(recipient,amount): Ensures msg.sender == VeriSol.Old(msg.sender)
+transfer(recipient,amount): Ensures block.timestamp == VeriSol.Old(block.timestamp)
+transfer(recipient,amount): Ensures VeriSol.SumMapping(_balances) == VeriSol.Old(VeriSol.SumMapping(_balances))
+transfer(recipient,amount): Ensures amount <= _balances[recipient]
+transfer(recipient,amount): Ensures amount <= VeriSol.Old(_balances[msg.sender])
+transfer(recipient,amount): Ensures VeriSol.Old(amount) <= _balances[recipient]
+approve(spender,value): Ensures _totalSupply == VeriSol.Old(_totalSupply)
+approve(spender,value): Ensures spender == VeriSol.Old(spender)
+approve(spender,value): Ensures value == VeriSol.Old(value)
+approve(spender,value): Ensures value == _allowances[msg.sender][spender]
+approve(spender,value): Ensures msg.sender == VeriSol.Old(msg.sender)
+approve(spender,value): Ensures block.timestamp == VeriSol.Old(block.timestamp)
+approve(spender,value): Ensures VeriSol.Old(value) == _allowances[msg.sender][spender]
+transferFrom(sender,recipient,amount): Ensures _totalSupply == VeriSol.Old(_totalSupply)
+transferFrom(sender,recipient,amount): Ensures sender == VeriSol.Old(sender)
+transferFrom(sender,recipient,amount): Ensures recipient == VeriSol.Old(recipient)
+transferFrom(sender,recipient,amount): Ensures amount == VeriSol.Old(amount)
+transferFrom(sender,recipient,amount): Ensures msg.sender == VeriSol.Old(msg.sender)
+transferFrom(sender,recipient,amount): Ensures block.timestamp == VeriSol.Old(block.timestamp)
+transferFrom(sender,recipient,amount): Ensures _balances[sender] >= 0
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[recipient]
+transferFrom(sender,recipient,amount): Ensures amount <= VeriSol.Old(_balances[sender])
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(amount) <= _balances[recipient]
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => amount < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => amount < VeriSol.Old(_allowances[sender][msg.sender])
+
+False Invariants:
+transfer(recipient,amount): Ensures amount < VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.SumMapping(_balances) == 10000000000000000000 || VeriSol.Old(VeriSol.SumMapping(_balances)) == 10000000000000000000
+transfer(recipient,amount): Ensures VeriSol.SumMapping(_balances) == 10000000000000000000 || VeriSol.Old(VeriSol.SumMapping(_balances)) == 10000000000000000000
+transfer(recipient,amount): Ensures amount < VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(VeriSol.SumMapping(_balances)) == 10000000000000000000 || _balances[msg.sender] < VeriSol.Old(_balances[msg.sender])
+transfer(recipient,amount): Ensures VeriSol.Old(VeriSol.SumMapping(_balances)) == 10000000000000000000 || _balances[msg.sender] < VeriSol.Old(_balances[msg.sender])
+transfer(recipient,amount): Ensures amount < VeriSol.Old(VeriSol.SumMapping(_balances)) => _balances[msg.sender] < VeriSol.Old(_balances[msg.sender]) || VeriSol.SumMapping(_balances) != 10000000000000000000
+transfer(recipient,amount): Ensures _balances[msg.sender] < VeriSol.Old(_balances[msg.sender]) || VeriSol.SumMapping(_balances) != 10000000000000000000
+transfer(recipient,amount): Ensures amount < VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.SumMapping(_balances) != 10000000000000000000 || VeriSol.Old(VeriSol.SumMapping(_balances)) != 10000000000000000000
+transfer(recipient,amount): Ensures VeriSol.SumMapping(_balances) != 10000000000000000000 || VeriSol.Old(VeriSol.SumMapping(_balances)) != 10000000000000000000
+transfer(recipient,amount): Ensures amount < VeriSol.Old(VeriSol.SumMapping(_balances)) && amount <= _balances[msg.sender] => VeriSol.Old(VeriSol.SumMapping(_balances)) != 10000000000000000000
+transfer(recipient,amount): Ensures amount <= _balances[msg.sender] => VeriSol.SumMapping(_balances) == 10000000000000000000 || amount - _balances[recipient] + VeriSol.Old(_balances[recipient]) != 0
+transfer(recipient,amount): Ensures VeriSol.SumMapping(_balances) == 10000000000000000000 || amount - _balances[recipient] + VeriSol.Old(_balances[recipient]) != 0
+transfer(recipient,amount): Ensures amount <= _balances[msg.sender] => VeriSol.Old(VeriSol.SumMapping(_balances)) == 10000000000000000000 || amount + _balances[msg.sender] - VeriSol.Old(_balances[msg.sender]) != 0
+transfer(recipient,amount): Ensures VeriSol.Old(VeriSol.SumMapping(_balances)) == 10000000000000000000 || amount + _balances[msg.sender] - VeriSol.Old(_balances[msg.sender]) != 0
+transfer(recipient,amount): Ensures amount <= _balances[msg.sender] => amount < VeriSol.SumMapping(_balances) || VeriSol.Old(amount) - _balances[recipient] + VeriSol.Old(_balances[recipient]) != 0
+transfer(recipient,amount): Ensures amount < VeriSol.SumMapping(_balances) || VeriSol.Old(amount) - _balances[recipient] + VeriSol.Old(_balances[recipient]) != 0
+transfer(recipient,amount): Ensures amount <= _balances[msg.sender] => amount < VeriSol.Old(VeriSol.SumMapping(_balances)) || VeriSol.Old(amount) + _balances[msg.sender] - VeriSol.Old(_balances[msg.sender]) != 0
+transfer(recipient,amount): Ensures amount < VeriSol.Old(VeriSol.SumMapping(_balances)) || VeriSol.Old(amount) + _balances[msg.sender] - VeriSol.Old(_balances[msg.sender]) != 0
+transfer(recipient,amount): Ensures amount <= _balances[msg.sender] => VeriSol.Old(amount) < VeriSol.SumMapping(_balances) || VeriSol.SumMapping(_balances) == 10000000000000000000
+transfer(recipient,amount): Ensures VeriSol.Old(amount) < VeriSol.SumMapping(_balances) || VeriSol.SumMapping(_balances) == 10000000000000000000
+transfer(recipient,amount): Ensures amount <= _balances[msg.sender] => _balances[msg.sender] < VeriSol.Old(_balances[msg.sender]) || VeriSol.Old(VeriSol.SumMapping(_balances)) == 10000000000000000000
+transfer(recipient,amount): Ensures _balances[msg.sender] < VeriSol.Old(_balances[msg.sender]) || VeriSol.Old(VeriSol.SumMapping(_balances)) == 10000000000000000000
+transfer(recipient,amount): Ensures amount <= _balances[msg.sender] => amount - _balances[recipient] + VeriSol.Old(_balances[recipient]) == 0 || amount < VeriSol.SumMapping(_balances)
+transfer(recipient,amount): Ensures amount - _balances[recipient] + VeriSol.Old(_balances[recipient]) == 0 || amount < VeriSol.SumMapping(_balances)
+transfer(recipient,amount): Ensures amount <= _balances[msg.sender] => amount + _balances[msg.sender] - VeriSol.Old(_balances[msg.sender]) == 0 || amount < VeriSol.Old(VeriSol.SumMapping(_balances))
+transfer(recipient,amount): Ensures amount + _balances[msg.sender] - VeriSol.Old(_balances[msg.sender]) == 0 || amount < VeriSol.Old(VeriSol.SumMapping(_balances))
+transfer(recipient,amount): Ensures amount <= _balances[msg.sender] => VeriSol.Old(amount) - _balances[recipient] + VeriSol.Old(_balances[recipient]) == 0 || VeriSol.Old(amount) < VeriSol.SumMapping(_balances)
+transfer(recipient,amount): Ensures VeriSol.Old(amount) - _balances[recipient] + VeriSol.Old(_balances[recipient]) == 0 || VeriSol.Old(amount) < VeriSol.SumMapping(_balances)
+transfer(recipient,amount): Ensures amount <= _balances[msg.sender] => VeriSol.Old(amount) + _balances[msg.sender] - VeriSol.Old(_balances[msg.sender]) == 0 || _balances[msg.sender] < VeriSol.Old(_balances[msg.sender])
+transfer(recipient,amount): Ensures VeriSol.Old(amount) + _balances[msg.sender] - VeriSol.Old(_balances[msg.sender]) == 0 || _balances[msg.sender] < VeriSol.Old(_balances[msg.sender])
+transfer(recipient,amount): Ensures amount <= _balances[msg.sender] => VeriSol.SumMapping(_balances) != 10000000000000000000 || amount - _balances[recipient] + VeriSol.Old(_balances[recipient]) == 0
+transfer(recipient,amount): Ensures VeriSol.SumMapping(_balances) != 10000000000000000000 || amount - _balances[recipient] + VeriSol.Old(_balances[recipient]) == 0
+transfer(recipient,amount): Ensures amount <= _balances[msg.sender] => VeriSol.Old(VeriSol.SumMapping(_balances)) != 10000000000000000000 || amount + _balances[msg.sender] - VeriSol.Old(_balances[msg.sender]) == 0
+transfer(recipient,amount): Ensures VeriSol.Old(VeriSol.SumMapping(_balances)) != 10000000000000000000 || amount + _balances[msg.sender] - VeriSol.Old(_balances[msg.sender]) == 0
+transfer(recipient,amount): Ensures amount <= _balances[msg.sender] => VeriSol.Old(amount) - _balances[recipient] + VeriSol.Old(_balances[recipient]) != 0 || VeriSol.SumMapping(_balances) != 10000000000000000000
+transfer(recipient,amount): Ensures VeriSol.Old(amount) - _balances[recipient] + VeriSol.Old(_balances[recipient]) != 0 || VeriSol.SumMapping(_balances) != 10000000000000000000
+transfer(recipient,amount): Ensures amount <= _balances[msg.sender] => VeriSol.Old(amount) + _balances[msg.sender] - VeriSol.Old(_balances[msg.sender]) != 0 || VeriSol.Old(VeriSol.SumMapping(_balances)) != 10000000000000000000
+transfer(recipient,amount): Ensures VeriSol.Old(amount) + _balances[msg.sender] - VeriSol.Old(_balances[msg.sender]) != 0 || VeriSol.Old(VeriSol.SumMapping(_balances)) != 10000000000000000000
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => VeriSol.SumMapping(_balances) == 10000000000000000000 || VeriSol.Old(_allowances[sender][recipient]) == 0
+transferFrom(sender,recipient,amount): Ensures VeriSol.SumMapping(_balances) == 10000000000000000000 || VeriSol.Old(_allowances[sender][recipient]) == 0
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => VeriSol.Old(_allowances[sender][recipient]) == 0 || VeriSol.Old(_allowances[sender][msg.sender]) == 115792089237316195423570985008687907853269984665640564039457584007913129639935
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(_allowances[sender][recipient]) == 0 || VeriSol.Old(_allowances[sender][msg.sender]) == 115792089237316195423570985008687907853269984665640564039457584007913129639935
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => VeriSol.Old(_allowances[sender][msg.sender]) == 115792089237316195423570985008687907853269984665640564039457584007913129639935 || amount <= VeriSol.SumMapping(_balances)
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(_allowances[sender][msg.sender]) == 115792089237316195423570985008687907853269984665640564039457584007913129639935 || amount <= VeriSol.SumMapping(_balances)
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => amount <= VeriSol.SumMapping(_balances) || amount < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures amount <= VeriSol.SumMapping(_balances) || amount < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => amount < _allowances[sender][msg.sender] || amount < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] || amount < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => amount < VeriSol.Old(_allowances[sender][msg.sender]) || VeriSol.Old(amount) <= VeriSol.SumMapping(_balances)
+transferFrom(sender,recipient,amount): Ensures amount < VeriSol.Old(_allowances[sender][msg.sender]) || VeriSol.Old(amount) <= VeriSol.SumMapping(_balances)
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => VeriSol.Old(amount) <= VeriSol.SumMapping(_balances) || VeriSol.Old(amount) < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(amount) <= VeriSol.SumMapping(_balances) || VeriSol.Old(amount) < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => VeriSol.Old(amount) < _allowances[sender][msg.sender] || VeriSol.SumMapping(_balances) < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(amount) < _allowances[sender][msg.sender] || VeriSol.SumMapping(_balances) < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => VeriSol.SumMapping(_balances) < _allowances[sender][msg.sender] || VeriSol.SumMapping(_balances) < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures VeriSol.SumMapping(_balances) < _allowances[sender][msg.sender] || VeriSol.SumMapping(_balances) < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => VeriSol.SumMapping(_balances) < VeriSol.Old(_allowances[sender][msg.sender]) || VeriSol.Old(VeriSol.SumMapping(_balances)) < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures VeriSol.SumMapping(_balances) < VeriSol.Old(_allowances[sender][msg.sender]) || VeriSol.Old(VeriSol.SumMapping(_balances)) < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => VeriSol.Old(VeriSol.SumMapping(_balances)) < _allowances[sender][msg.sender] || VeriSol.Old(VeriSol.SumMapping(_balances)) < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(VeriSol.SumMapping(_balances)) < _allowances[sender][msg.sender] || VeriSol.Old(VeriSol.SumMapping(_balances)) < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => VeriSol.Old(VeriSol.SumMapping(_balances)) < VeriSol.Old(_allowances[sender][msg.sender]) || _balances[sender] < _balances[recipient]
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(VeriSol.SumMapping(_balances)) < VeriSol.Old(_allowances[sender][msg.sender]) || _balances[sender] < _balances[recipient]
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => _balances[sender] < _balances[recipient] || _balances[sender] < VeriSol.Old(_balances[sender])
+transferFrom(sender,recipient,amount): Ensures _balances[sender] < _balances[recipient] || _balances[sender] < VeriSol.Old(_balances[sender])
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => _balances[sender] < VeriSol.Old(_balances[sender]) || _balances[sender] < VeriSol.Old(_balances[recipient])
+transferFrom(sender,recipient,amount): Ensures _balances[sender] < VeriSol.Old(_balances[sender]) || _balances[sender] < VeriSol.Old(_balances[recipient])
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => _balances[sender] < VeriSol.Old(_balances[recipient]) || _balances[sender] < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures _balances[sender] < VeriSol.Old(_balances[recipient]) || _balances[sender] < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => _balances[sender] < _allowances[sender][msg.sender] || _balances[sender] < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures _balances[sender] < _allowances[sender][msg.sender] || _balances[sender] < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => _balances[sender] < VeriSol.Old(_allowances[sender][msg.sender]) || _balances[recipient] < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures _balances[sender] < VeriSol.Old(_allowances[sender][msg.sender]) || _balances[recipient] < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => _balances[recipient] < _allowances[sender][msg.sender] || _balances[recipient] < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures _balances[recipient] < _allowances[sender][msg.sender] || _balances[recipient] < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => _balances[recipient] < VeriSol.Old(_allowances[sender][msg.sender]) || VeriSol.Old(_balances[sender]) < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures _balances[recipient] < VeriSol.Old(_allowances[sender][msg.sender]) || VeriSol.Old(_balances[sender]) < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => VeriSol.Old(_balances[sender]) < _allowances[sender][msg.sender] || VeriSol.Old(_balances[sender]) < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(_balances[sender]) < _allowances[sender][msg.sender] || VeriSol.Old(_balances[sender]) < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => VeriSol.Old(_balances[sender]) < VeriSol.Old(_allowances[sender][msg.sender]) || VeriSol.Old(_balances[recipient]) < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(_balances[sender]) < VeriSol.Old(_allowances[sender][msg.sender]) || VeriSol.Old(_balances[recipient]) < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => VeriSol.Old(_balances[recipient]) < _allowances[sender][msg.sender] || VeriSol.Old(_balances[recipient]) < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(_balances[recipient]) < _allowances[sender][msg.sender] || VeriSol.Old(_balances[recipient]) < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => VeriSol.Old(_balances[recipient]) < VeriSol.Old(_allowances[sender][msg.sender]) || _allowances[sender][msg.sender] > VeriSol.Old(_allowances[sender][recipient])
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(_balances[recipient]) < VeriSol.Old(_allowances[sender][msg.sender]) || _allowances[sender][msg.sender] > VeriSol.Old(_allowances[sender][recipient])
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => _allowances[sender][msg.sender] > VeriSol.Old(_allowances[sender][recipient]) || _allowances[sender][msg.sender] < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures _allowances[sender][msg.sender] > VeriSol.Old(_allowances[sender][recipient]) || _allowances[sender][msg.sender] < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => _allowances[sender][msg.sender] < VeriSol.Old(_allowances[sender][msg.sender]) || VeriSol.Old(_allowances[sender][recipient]) < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures _allowances[sender][msg.sender] < VeriSol.Old(_allowances[sender][msg.sender]) || VeriSol.Old(_allowances[sender][recipient]) < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => VeriSol.Old(_allowances[sender][recipient]) < VeriSol.Old(_allowances[sender][msg.sender]) || amount - _balances[recipient] + VeriSol.Old(_balances[recipient]) == 0
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(_allowances[sender][recipient]) < VeriSol.Old(_allowances[sender][msg.sender]) || amount - _balances[recipient] + VeriSol.Old(_balances[recipient]) == 0
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => amount - _balances[recipient] + VeriSol.Old(_balances[recipient]) == 0 || VeriSol.Old(amount) - _balances[recipient] + VeriSol.Old(_balances[recipient]) == 0
+transferFrom(sender,recipient,amount): Ensures amount - _balances[recipient] + VeriSol.Old(_balances[recipient]) == 0 || VeriSol.Old(amount) - _balances[recipient] + VeriSol.Old(_balances[recipient]) == 0
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => VeriSol.Old(amount) - _balances[recipient] + VeriSol.Old(_balances[recipient]) == 0 || _balances[recipient] - VeriSol.Old(_balances[sender]) - VeriSol.Old(_balances[recipient]) == 0
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(amount) - _balances[recipient] + VeriSol.Old(_balances[recipient]) == 0 || _balances[recipient] - VeriSol.Old(_balances[sender]) - VeriSol.Old(_balances[recipient]) == 0
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => _balances[recipient] - VeriSol.Old(_balances[sender]) - VeriSol.Old(_balances[recipient]) == 0 || VeriSol.SumMapping(_balances) != 10000000000000000000
+transferFrom(sender,recipient,amount): Ensures _balances[recipient] - VeriSol.Old(_balances[sender]) - VeriSol.Old(_balances[recipient]) == 0 || VeriSol.SumMapping(_balances) != 10000000000000000000
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => VeriSol.SumMapping(_balances) != 10000000000000000000 || VeriSol.Old(_allowances[sender][recipient]) != 0
+transferFrom(sender,recipient,amount): Ensures VeriSol.SumMapping(_balances) != 10000000000000000000 || VeriSol.Old(_allowances[sender][recipient]) != 0
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => VeriSol.Old(_allowances[sender][recipient]) != 0 || VeriSol.Old(_allowances[sender][msg.sender]) != 115792089237316195423570985008687907853269984665640564039457584007913129639935
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(_allowances[sender][recipient]) != 0 || VeriSol.Old(_allowances[sender][msg.sender]) != 115792089237316195423570985008687907853269984665640564039457584007913129639935
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => VeriSol.Old(_allowances[sender][msg.sender]) != 115792089237316195423570985008687907853269984665640564039457584007913129639935 || amount - _balances[recipient] + VeriSol.Old(_balances[recipient]) != 0
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(_allowances[sender][msg.sender]) != 115792089237316195423570985008687907853269984665640564039457584007913129639935 || amount - _balances[recipient] + VeriSol.Old(_balances[recipient]) != 0
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => amount - _balances[recipient] + VeriSol.Old(_balances[recipient]) != 0 || VeriSol.Old(amount) - _balances[recipient] + VeriSol.Old(_balances[recipient]) != 0
+transferFrom(sender,recipient,amount): Ensures amount - _balances[recipient] + VeriSol.Old(_balances[recipient]) != 0 || VeriSol.Old(amount) - _balances[recipient] + VeriSol.Old(_balances[recipient]) != 0
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => VeriSol.Old(amount) - _balances[recipient] + VeriSol.Old(_balances[recipient]) != 0 || _balances[recipient] - VeriSol.Old(_balances[sender]) - VeriSol.Old(_balances[recipient]) != 0
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(amount) - _balances[recipient] + VeriSol.Old(_balances[recipient]) != 0 || _balances[recipient] - VeriSol.Old(_balances[sender]) - VeriSol.Old(_balances[recipient]) != 0
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] && amount < _allowances[sender][msg.sender] => _balances[recipient] - VeriSol.Old(_balances[sender]) - VeriSol.Old(_balances[recipient]) != 0
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] && amount <= _balances[sender] => VeriSol.SumMapping(_balances) == 10000000000000000000
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => VeriSol.Old(_allowances[sender][recipient]) == 0 || VeriSol.SumMapping(_balances) == 10000000000000000000
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(_allowances[sender][recipient]) == 0 || VeriSol.SumMapping(_balances) == 10000000000000000000
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => VeriSol.Old(_allowances[sender][msg.sender]) == 115792089237316195423570985008687907853269984665640564039457584007913129639935 || VeriSol.Old(_allowances[sender][recipient]) == 0
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(_allowances[sender][msg.sender]) == 115792089237316195423570985008687907853269984665640564039457584007913129639935 || VeriSol.Old(_allowances[sender][recipient]) == 0
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => amount <= VeriSol.SumMapping(_balances) || VeriSol.Old(_allowances[sender][msg.sender]) == 115792089237316195423570985008687907853269984665640564039457584007913129639935
+transferFrom(sender,recipient,amount): Ensures amount <= VeriSol.SumMapping(_balances) || VeriSol.Old(_allowances[sender][msg.sender]) == 115792089237316195423570985008687907853269984665640564039457584007913129639935
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => amount < _allowances[sender][msg.sender] || amount <= VeriSol.SumMapping(_balances)
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] || amount <= VeriSol.SumMapping(_balances)
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => VeriSol.Old(amount) <= VeriSol.SumMapping(_balances) || amount < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(amount) <= VeriSol.SumMapping(_balances) || amount < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => VeriSol.Old(amount) < _allowances[sender][msg.sender] || VeriSol.Old(amount) <= VeriSol.SumMapping(_balances)
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(amount) < _allowances[sender][msg.sender] || VeriSol.Old(amount) <= VeriSol.SumMapping(_balances)
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => VeriSol.SumMapping(_balances) < _allowances[sender][msg.sender] || VeriSol.Old(amount) < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures VeriSol.SumMapping(_balances) < _allowances[sender][msg.sender] || VeriSol.Old(amount) < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => VeriSol.SumMapping(_balances) < VeriSol.Old(_allowances[sender][msg.sender]) || VeriSol.SumMapping(_balances) < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures VeriSol.SumMapping(_balances) < VeriSol.Old(_allowances[sender][msg.sender]) || VeriSol.SumMapping(_balances) < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => VeriSol.Old(VeriSol.SumMapping(_balances)) < _allowances[sender][msg.sender] || VeriSol.SumMapping(_balances) < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(VeriSol.SumMapping(_balances)) < _allowances[sender][msg.sender] || VeriSol.SumMapping(_balances) < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => VeriSol.Old(VeriSol.SumMapping(_balances)) < VeriSol.Old(_allowances[sender][msg.sender]) || VeriSol.Old(VeriSol.SumMapping(_balances)) < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(VeriSol.SumMapping(_balances)) < VeriSol.Old(_allowances[sender][msg.sender]) || VeriSol.Old(VeriSol.SumMapping(_balances)) < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => _balances[sender] < _balances[recipient] || VeriSol.Old(VeriSol.SumMapping(_balances)) < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures _balances[sender] < _balances[recipient] || VeriSol.Old(VeriSol.SumMapping(_balances)) < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => _balances[sender] < VeriSol.Old(_balances[sender]) || _balances[sender] < _balances[recipient]
+transferFrom(sender,recipient,amount): Ensures _balances[sender] < VeriSol.Old(_balances[sender]) || _balances[sender] < _balances[recipient]
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => _balances[sender] < VeriSol.Old(_balances[recipient]) || _balances[sender] < VeriSol.Old(_balances[sender])
+transferFrom(sender,recipient,amount): Ensures _balances[sender] < VeriSol.Old(_balances[recipient]) || _balances[sender] < VeriSol.Old(_balances[sender])
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => _balances[sender] < _allowances[sender][msg.sender] || _balances[sender] < VeriSol.Old(_balances[recipient])
+transferFrom(sender,recipient,amount): Ensures _balances[sender] < _allowances[sender][msg.sender] || _balances[sender] < VeriSol.Old(_balances[recipient])
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => _balances[sender] < VeriSol.Old(_allowances[sender][msg.sender]) || _balances[sender] < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures _balances[sender] < VeriSol.Old(_allowances[sender][msg.sender]) || _balances[sender] < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => _balances[recipient] < _allowances[sender][msg.sender] || _balances[sender] < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures _balances[recipient] < _allowances[sender][msg.sender] || _balances[sender] < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => _balances[recipient] < VeriSol.Old(_allowances[sender][msg.sender]) || _balances[recipient] < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures _balances[recipient] < VeriSol.Old(_allowances[sender][msg.sender]) || _balances[recipient] < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => VeriSol.Old(_balances[sender]) < _allowances[sender][msg.sender] || _balances[recipient] < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(_balances[sender]) < _allowances[sender][msg.sender] || _balances[recipient] < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => VeriSol.Old(_balances[sender]) < VeriSol.Old(_allowances[sender][msg.sender]) || VeriSol.Old(_balances[sender]) < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(_balances[sender]) < VeriSol.Old(_allowances[sender][msg.sender]) || VeriSol.Old(_balances[sender]) < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => VeriSol.Old(_balances[recipient]) < _allowances[sender][msg.sender] || VeriSol.Old(_balances[sender]) < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(_balances[recipient]) < _allowances[sender][msg.sender] || VeriSol.Old(_balances[sender]) < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => VeriSol.Old(_balances[recipient]) < VeriSol.Old(_allowances[sender][msg.sender]) || VeriSol.Old(_balances[recipient]) < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(_balances[recipient]) < VeriSol.Old(_allowances[sender][msg.sender]) || VeriSol.Old(_balances[recipient]) < _allowances[sender][msg.sender]
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => _allowances[sender][msg.sender] > VeriSol.Old(_allowances[sender][recipient]) || VeriSol.Old(_balances[recipient]) < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures _allowances[sender][msg.sender] > VeriSol.Old(_allowances[sender][recipient]) || VeriSol.Old(_balances[recipient]) < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => _allowances[sender][msg.sender] < VeriSol.Old(_allowances[sender][msg.sender]) || _allowances[sender][msg.sender] > VeriSol.Old(_allowances[sender][recipient])
+transferFrom(sender,recipient,amount): Ensures _allowances[sender][msg.sender] < VeriSol.Old(_allowances[sender][msg.sender]) || _allowances[sender][msg.sender] > VeriSol.Old(_allowances[sender][recipient])
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => VeriSol.Old(_allowances[sender][recipient]) < VeriSol.Old(_allowances[sender][msg.sender]) || _allowances[sender][msg.sender] < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(_allowances[sender][recipient]) < VeriSol.Old(_allowances[sender][msg.sender]) || _allowances[sender][msg.sender] < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => amount - _balances[recipient] + VeriSol.Old(_balances[recipient]) == 0 || VeriSol.Old(_allowances[sender][recipient]) < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures amount - _balances[recipient] + VeriSol.Old(_balances[recipient]) == 0 || VeriSol.Old(_allowances[sender][recipient]) < VeriSol.Old(_allowances[sender][msg.sender])
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => VeriSol.Old(amount) - _balances[recipient] + VeriSol.Old(_balances[recipient]) == 0 || amount - _balances[recipient] + VeriSol.Old(_balances[recipient]) == 0
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(amount) - _balances[recipient] + VeriSol.Old(_balances[recipient]) == 0 || amount - _balances[recipient] + VeriSol.Old(_balances[recipient]) == 0
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => _balances[recipient] - VeriSol.Old(_balances[sender]) - VeriSol.Old(_balances[recipient]) == 0 || VeriSol.Old(amount) - _balances[recipient] + VeriSol.Old(_balances[recipient]) == 0
+transferFrom(sender,recipient,amount): Ensures _balances[recipient] - VeriSol.Old(_balances[sender]) - VeriSol.Old(_balances[recipient]) == 0 || VeriSol.Old(amount) - _balances[recipient] + VeriSol.Old(_balances[recipient]) == 0
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => VeriSol.SumMapping(_balances) != 10000000000000000000 || _balances[recipient] - VeriSol.Old(_balances[sender]) - VeriSol.Old(_balances[recipient]) == 0
+transferFrom(sender,recipient,amount): Ensures VeriSol.SumMapping(_balances) != 10000000000000000000 || _balances[recipient] - VeriSol.Old(_balances[sender]) - VeriSol.Old(_balances[recipient]) == 0
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => VeriSol.Old(_allowances[sender][recipient]) != 0 || VeriSol.SumMapping(_balances) != 10000000000000000000
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(_allowances[sender][recipient]) != 0 || VeriSol.SumMapping(_balances) != 10000000000000000000
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => VeriSol.Old(_allowances[sender][msg.sender]) != 115792089237316195423570985008687907853269984665640564039457584007913129639935 || VeriSol.Old(_allowances[sender][recipient]) != 0
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(_allowances[sender][msg.sender]) != 115792089237316195423570985008687907853269984665640564039457584007913129639935 || VeriSol.Old(_allowances[sender][recipient]) != 0
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => amount - _balances[recipient] + VeriSol.Old(_balances[recipient]) != 0 || VeriSol.Old(_allowances[sender][msg.sender]) != 115792089237316195423570985008687907853269984665640564039457584007913129639935
+transferFrom(sender,recipient,amount): Ensures amount - _balances[recipient] + VeriSol.Old(_balances[recipient]) != 0 || VeriSol.Old(_allowances[sender][msg.sender]) != 115792089237316195423570985008687907853269984665640564039457584007913129639935
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => VeriSol.Old(amount) - _balances[recipient] + VeriSol.Old(_balances[recipient]) != 0 || amount - _balances[recipient] + VeriSol.Old(_balances[recipient]) != 0
+transferFrom(sender,recipient,amount): Ensures VeriSol.Old(amount) - _balances[recipient] + VeriSol.Old(_balances[recipient]) != 0 || amount - _balances[recipient] + VeriSol.Old(_balances[recipient]) != 0
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => _balances[recipient] - VeriSol.Old(_balances[sender]) - VeriSol.Old(_balances[recipient]) != 0 || VeriSol.Old(amount) - _balances[recipient] + VeriSol.Old(_balances[recipient]) != 0
+transferFrom(sender,recipient,amount): Ensures _balances[recipient] - VeriSol.Old(_balances[sender]) - VeriSol.Old(_balances[recipient]) != 0 || VeriSol.Old(amount) - _balances[recipient] + VeriSol.Old(_balances[recipient]) != 0
+transferFrom(sender,recipient,amount): Ensures amount <= _balances[sender] => VeriSol.SumMapping(_balances) == 10000000000000000000 || _balances[recipient] - VeriSol.Old(_balances[sender]) - VeriSol.Old(_balances[recipient]) != 0
+transferFrom(sender,recipient,amount): Ensures VeriSol.SumMapping(_balances) == 10000000000000000000 || _balances[recipient] - VeriSol.Old(_balances[sender]) - VeriSol.Old(_balances[recipient]) != 0
+transferFrom(sender,recipient,amount): Ensures amount < _allowances[sender][msg.sender] => VeriSol.SumMapping(_balances) == 10000000000000000000 || _balances[recipient] - VeriSol.Old(_balances[sender]) - VeriSol.Old(_balances[recipient]) != 0
+transferFrom(sender,recipient,amount): Ensures VeriSol.SumMapping(_balances) == 10000000000000000000 || _balances[recipient] - VeriSol.Old(_balances[sender]) - VeriSol.Old(_balances[recipient]) != 0

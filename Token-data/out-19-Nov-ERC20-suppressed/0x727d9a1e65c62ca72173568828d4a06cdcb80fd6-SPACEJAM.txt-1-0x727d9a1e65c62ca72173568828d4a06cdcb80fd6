@@ -1,0 +1,609 @@
+original result: 10846 invariants, smt-simplified result: 605 invariants
+transfer(to,value):
+Requires		value > 0
+Requires		VeriSol.Old(_totalSupply) > 0
+Requires		VeriSol.Old(_balances[msg.sender]) > 0
+Requires		VeriSol.Old(uint256(_decimals)) > 0
+Requires		VeriSol.Old(basePercent) == 100
+Requires		VeriSol.Old(VeriSol.SumMapping(_balances)) > 0
+Requires		msg.sender != address(0)
+Requires		VeriSol.Old(_lastTokenSupply) == 200000000000000000000000
+Requires		VeriSol.Old(_burnStopAmount) == 0
+Requires		to != address(0)
+Requires		value < VeriSol.Old(_totalSupply)
+Requires		value <= VeriSol.Old(_balances[msg.sender])
+Requires		value < VeriSol.Old(VeriSol.SumMapping(_balances))
+Requires		value != VeriSol.Old(_lastTokenSupply)
+Requires		value > VeriSol.Old(_burnStopAmount)
+Requires		VeriSol.Old(_totalSupply) > VeriSol.Old(uint256(_decimals))
+Requires		VeriSol.Old(_totalSupply) > VeriSol.Old(basePercent)
+Requires		VeriSol.Old(_totalSupply) >= VeriSol.Old(VeriSol.SumMapping(_balances))
+Requires		VeriSol.Old(_totalSupply) > VeriSol.Old(_lastTokenSupply)
+Requires		VeriSol.Old(_totalSupply) > VeriSol.Old(_burnStopAmount)
+Requires		VeriSol.Old(_balances[to]) >= VeriSol.Old(_burnStopAmount)
+Requires		VeriSol.Old(_balances[msg.sender]) > VeriSol.Old(uint256(_decimals))
+Requires		VeriSol.Old(_balances[msg.sender]) > VeriSol.Old(_burnStopAmount)
+Requires		VeriSol.Old(uint256(_decimals)) < VeriSol.Old(basePercent)
+Requires		VeriSol.Old(uint256(_decimals)) < VeriSol.Old(VeriSol.SumMapping(_balances))
+Requires		VeriSol.Old(uint256(_decimals)) < VeriSol.Old(_lastTokenSupply)
+Requires		VeriSol.Old(uint256(_decimals)) > VeriSol.Old(_burnStopAmount)
+Requires		VeriSol.Old(basePercent) < VeriSol.Old(VeriSol.SumMapping(_balances))
+Requires		VeriSol.Old(basePercent) < VeriSol.Old(_lastTokenSupply)
+Requires		VeriSol.Old(basePercent) > VeriSol.Old(_burnStopAmount)
+Requires		VeriSol.Old(VeriSol.SumMapping(_balances)) > VeriSol.Old(_lastTokenSupply)
+Requires		VeriSol.Old(VeriSol.SumMapping(_balances)) > VeriSol.Old(_burnStopAmount)
+Requires		VeriSol.Old(_lastTokenSupply) > VeriSol.Old(_burnStopAmount)
+Ensures		VeriSol.SumMapping(_balances) > 0
+Ensures		_burnStopAmount == 0
+Ensures		basePercent == 100
+Ensures		_balances[to] > 0
+Ensures		_lastTokenSupply == 200000000000000000000000
+Ensures		_decimals > 0
+Ensures		_totalSupply > 0
+Ensures		value > _burnStopAmount
+Ensures		value != basePercent
+Ensures		value != _lastTokenSupply
+Ensures		value > _decimals
+Ensures		value != _totalSupply
+Ensures		VeriSol.Old(_totalSupply) > VeriSol.SumMapping(_balances)
+Ensures		VeriSol.Old(_totalSupply) > _burnStopAmount
+Ensures		VeriSol.Old(_totalSupply) > basePercent
+Ensures		VeriSol.Old(_totalSupply) > _lastTokenSupply
+Ensures		VeriSol.Old(_totalSupply) > _decimals
+Ensures		VeriSol.Old(_totalSupply) > _totalSupply
+Ensures		VeriSol.Old(_balances[to]) >= _burnStopAmount
+Ensures		VeriSol.Old(_balances[to]) != _balances[to]
+Ensures		VeriSol.Old(_balances[msg.sender]) > _burnStopAmount
+Ensures		VeriSol.Old(_balances[msg.sender]) > _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[msg.sender]) > _decimals
+Ensures		VeriSol.SumMapping(_balances) > VeriSol.Old(uint256(_decimals))
+Ensures		VeriSol.SumMapping(_balances) > VeriSol.Old(basePercent)
+Ensures		VeriSol.SumMapping(_balances) < VeriSol.Old(VeriSol.SumMapping(_balances))
+Ensures		VeriSol.SumMapping(_balances) > _burnStopAmount
+Ensures		VeriSol.SumMapping(_balances) > basePercent
+Ensures		VeriSol.SumMapping(_balances) > VeriSol.Old(_burnStopAmount)
+Ensures		VeriSol.SumMapping(_balances) > _decimals
+Ensures		VeriSol.SumMapping(_balances) < _totalSupply
+Ensures		VeriSol.Old(uint256(_decimals)) > _burnStopAmount
+Ensures		VeriSol.Old(uint256(_decimals)) < basePercent
+Ensures		VeriSol.Old(uint256(_decimals)) <= _balances[to]
+Ensures		VeriSol.Old(uint256(_decimals)) < _lastTokenSupply
+Ensures		VeriSol.Old(uint256(_decimals)) == _decimals
+Ensures		VeriSol.Old(uint256(_decimals)) < _totalSupply
+Ensures		VeriSol.Old(basePercent) > _burnStopAmount
+Ensures		VeriSol.Old(basePercent) == basePercent
+Ensures		VeriSol.Old(basePercent) < _lastTokenSupply
+Ensures		VeriSol.Old(basePercent) > _decimals
+Ensures		VeriSol.Old(basePercent) < _totalSupply
+Ensures		VeriSol.Old(VeriSol.SumMapping(_balances)) > _burnStopAmount
+Ensures		VeriSol.Old(VeriSol.SumMapping(_balances)) > basePercent
+Ensures		VeriSol.Old(VeriSol.SumMapping(_balances)) > _lastTokenSupply
+Ensures		VeriSol.Old(VeriSol.SumMapping(_balances)) > _decimals
+Ensures		_burnStopAmount < VeriSol.Old(_lastTokenSupply)
+Ensures		_burnStopAmount < basePercent
+Ensures		_burnStopAmount < _balances[to]
+Ensures		_burnStopAmount <= _balances[msg.sender]
+Ensures		_burnStopAmount < _lastTokenSupply
+Ensures		_burnStopAmount == VeriSol.Old(_burnStopAmount)
+Ensures		_burnStopAmount < _decimals
+Ensures		_burnStopAmount < _totalSupply
+Ensures		VeriSol.Old(_lastTokenSupply) > basePercent
+Ensures		VeriSol.Old(_lastTokenSupply) == _lastTokenSupply
+Ensures		VeriSol.Old(_lastTokenSupply) > _decimals
+Ensures		VeriSol.Old(_lastTokenSupply) != _totalSupply
+Ensures		basePercent < _lastTokenSupply
+Ensures		basePercent > VeriSol.Old(_burnStopAmount)
+Ensures		basePercent > _decimals
+Ensures		basePercent < _totalSupply
+Ensures		_balances[to] > VeriSol.Old(_burnStopAmount)
+Ensures		_balances[to] >= _decimals
+Ensures		_balances[msg.sender] >= VeriSol.Old(_burnStopAmount)
+Ensures		_lastTokenSupply > VeriSol.Old(_burnStopAmount)
+Ensures		_lastTokenSupply > _decimals
+Ensures		_lastTokenSupply < _totalSupply
+Ensures		VeriSol.Old(_burnStopAmount) < _decimals
+Ensures		VeriSol.Old(_burnStopAmount) < _totalSupply
+Ensures		_decimals < _totalSupply
+Ensures		value != VeriSol.Old(basePercent) => value == VeriSol.SumMapping(_balances)
+Ensures		value != VeriSol.Old(basePercent) => value == _balances[to]
+Ensures		value != VeriSol.Old(basePercent) => value == _balances[msg.sender]
+Ensures		value != VeriSol.Old(basePercent) => value < _totalSupply
+Ensures		value != VeriSol.Old(basePercent) => VeriSol.Old(_totalSupply) == _balances[to]
+Ensures		value != VeriSol.Old(basePercent) => VeriSol.Old(_totalSupply) == _balances[msg.sender]
+Ensures		value != VeriSol.Old(basePercent) => VeriSol.Old(_balances[to]) == VeriSol.SumMapping(_balances)
+Ensures		value != VeriSol.Old(basePercent) => VeriSol.Old(_balances[to]) == basePercent
+Ensures		value != VeriSol.Old(basePercent) => VeriSol.Old(_balances[to]) < _balances[to]
+Ensures		value != VeriSol.Old(basePercent) => VeriSol.Old(_balances[to]) == _balances[msg.sender]
+Ensures		value != VeriSol.Old(basePercent) => VeriSol.Old(_balances[to]) == _totalSupply
+Ensures		value != VeriSol.Old(basePercent) => VeriSol.Old(_balances[msg.sender]) == VeriSol.SumMapping(_balances)
+Ensures		value != VeriSol.Old(basePercent) => VeriSol.Old(_balances[msg.sender]) == basePercent
+Ensures		value != VeriSol.Old(basePercent) => VeriSol.Old(_balances[msg.sender]) == _balances[to]
+Ensures		value != VeriSol.Old(basePercent) => VeriSol.Old(_balances[msg.sender]) == _totalSupply
+Ensures		value != VeriSol.Old(basePercent) => VeriSol.SumMapping(_balances) == _balances[to]
+Ensures		value != VeriSol.Old(basePercent) => VeriSol.SumMapping(_balances) == _balances[msg.sender]
+Ensures		value != VeriSol.Old(basePercent) => VeriSol.Old(basePercent) == _balances[to]
+Ensures		value != VeriSol.Old(basePercent) => VeriSol.Old(basePercent) == _balances[msg.sender]
+Ensures		value != VeriSol.Old(basePercent) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _balances[to]
+Ensures		value != VeriSol.Old(basePercent) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _balances[msg.sender]
+Ensures		value != VeriSol.Old(basePercent) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _totalSupply
+Ensures		value != VeriSol.Old(basePercent) => basePercent == _balances[to]
+Ensures		value != VeriSol.Old(basePercent) => basePercent == _balances[msg.sender]
+Ensures		value != VeriSol.Old(basePercent) => _balances[to] == _balances[msg.sender]
+Ensures		value != VeriSol.Old(basePercent) => _balances[to] == _totalSupply
+Ensures		value != VeriSol.Old(basePercent) => _balances[msg.sender] == _totalSupply
+Ensures		value != VeriSol.Old(basePercent) => _balances[msg.sender] > 0
+Ensures		value <= VeriSol.Old(VeriSol.SumMapping(_balances)) => value == VeriSol.SumMapping(_balances)
+Ensures		value <= VeriSol.Old(VeriSol.SumMapping(_balances)) => value == _balances[to]
+Ensures		value <= VeriSol.Old(VeriSol.SumMapping(_balances)) => value == _balances[msg.sender]
+Ensures		value <= VeriSol.Old(VeriSol.SumMapping(_balances)) => value < _totalSupply
+Ensures		value <= VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_totalSupply) == _balances[to]
+Ensures		value <= VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_totalSupply) == _balances[msg.sender]
+Ensures		value <= VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_balances[to]) == VeriSol.SumMapping(_balances)
+Ensures		value <= VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_balances[to]) == basePercent
+Ensures		value <= VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_balances[to]) < _balances[to]
+Ensures		value <= VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_balances[to]) == _balances[msg.sender]
+Ensures		value <= VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_balances[to]) == _totalSupply
+Ensures		value <= VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_balances[msg.sender]) == VeriSol.SumMapping(_balances)
+Ensures		value <= VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_balances[msg.sender]) == basePercent
+Ensures		value <= VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_balances[msg.sender]) == _balances[to]
+Ensures		value <= VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_balances[msg.sender]) == _totalSupply
+Ensures		value <= VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.SumMapping(_balances) == _balances[to]
+Ensures		value <= VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.SumMapping(_balances) == _balances[msg.sender]
+Ensures		value <= VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(basePercent) == _balances[to]
+Ensures		value <= VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(basePercent) == _balances[msg.sender]
+Ensures		value <= VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _balances[to]
+Ensures		value <= VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _balances[msg.sender]
+Ensures		value <= VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _totalSupply
+Ensures		value <= VeriSol.Old(VeriSol.SumMapping(_balances)) => basePercent == _balances[to]
+Ensures		value <= VeriSol.Old(VeriSol.SumMapping(_balances)) => basePercent == _balances[msg.sender]
+Ensures		value <= VeriSol.Old(VeriSol.SumMapping(_balances)) => _balances[to] == _balances[msg.sender]
+Ensures		value <= VeriSol.Old(VeriSol.SumMapping(_balances)) => _balances[to] == _totalSupply
+Ensures		value <= VeriSol.Old(VeriSol.SumMapping(_balances)) => _balances[msg.sender] == _totalSupply
+Ensures		value <= VeriSol.Old(VeriSol.SumMapping(_balances)) => _balances[msg.sender] > 0
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[to]) => value == VeriSol.SumMapping(_balances)
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[to]) => value == _balances[to]
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[to]) => value == _balances[msg.sender]
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[to]) => value < _totalSupply
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[to]) => VeriSol.Old(_totalSupply) == _balances[to]
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[to]) => VeriSol.Old(_totalSupply) == _balances[msg.sender]
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[to]) => VeriSol.Old(_balances[to]) == VeriSol.SumMapping(_balances)
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[to]) => VeriSol.Old(_balances[to]) == basePercent
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[to]) => VeriSol.Old(_balances[to]) < _balances[to]
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[to]) => VeriSol.Old(_balances[to]) == _balances[msg.sender]
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[to]) => VeriSol.Old(_balances[to]) == _totalSupply
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[to]) => VeriSol.Old(_balances[msg.sender]) == VeriSol.SumMapping(_balances)
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[to]) => VeriSol.Old(_balances[msg.sender]) == basePercent
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[to]) => VeriSol.Old(_balances[msg.sender]) == _balances[to]
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[to]) => VeriSol.Old(_balances[msg.sender]) == _totalSupply
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[to]) => VeriSol.SumMapping(_balances) == _balances[to]
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[to]) => VeriSol.SumMapping(_balances) == _balances[msg.sender]
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[to]) => VeriSol.Old(basePercent) == _balances[to]
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[to]) => VeriSol.Old(basePercent) == _balances[msg.sender]
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[to]) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _balances[to]
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[to]) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _balances[msg.sender]
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[to]) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _totalSupply
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[to]) => basePercent == _balances[to]
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[to]) => basePercent == _balances[msg.sender]
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[to]) => _balances[to] == _balances[msg.sender]
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[to]) => _balances[to] == _totalSupply
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[to]) => _balances[msg.sender] == _totalSupply
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[to]) => _balances[msg.sender] > 0
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[msg.sender]) => value == VeriSol.SumMapping(_balances)
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[msg.sender]) => value == _balances[to]
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[msg.sender]) => value == _balances[msg.sender]
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(_totalSupply) == _balances[msg.sender]
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(_balances[to]) == VeriSol.SumMapping(_balances)
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(_balances[to]) == basePercent
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(_balances[to]) < _balances[to]
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(_balances[to]) == _balances[msg.sender]
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(_balances[msg.sender]) == VeriSol.SumMapping(_balances)
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(_balances[msg.sender]) == basePercent
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(_balances[msg.sender]) == _balances[to]
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(_balances[msg.sender]) == _totalSupply
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[msg.sender]) => VeriSol.SumMapping(_balances) == _balances[to]
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[msg.sender]) => VeriSol.SumMapping(_balances) == _balances[msg.sender]
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(basePercent) == _balances[to]
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(basePercent) == _balances[msg.sender]
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _balances[to]
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _balances[msg.sender]
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[msg.sender]) => basePercent == _balances[to]
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[msg.sender]) => basePercent == _balances[msg.sender]
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[msg.sender]) => _balances[to] == _balances[msg.sender]
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[msg.sender]) => _balances[msg.sender] == _totalSupply
+Ensures		VeriSol.Old(_totalSupply) != VeriSol.Old(_balances[msg.sender]) => _balances[msg.sender] > 0
+Ensures		VeriSol.Old(_balances[to]) <= VeriSol.Old(basePercent) => value == VeriSol.SumMapping(_balances)
+Ensures		VeriSol.Old(_balances[to]) <= VeriSol.Old(basePercent) => value == _balances[to]
+Ensures		VeriSol.Old(_balances[to]) <= VeriSol.Old(basePercent) => value == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) <= VeriSol.Old(basePercent) => value < _totalSupply
+Ensures		VeriSol.Old(_balances[to]) <= VeriSol.Old(basePercent) => VeriSol.Old(_totalSupply) == _balances[to]
+Ensures		VeriSol.Old(_balances[to]) <= VeriSol.Old(basePercent) => VeriSol.Old(_totalSupply) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) <= VeriSol.Old(basePercent) => VeriSol.Old(_balances[to]) == VeriSol.SumMapping(_balances)
+Ensures		VeriSol.Old(_balances[to]) <= VeriSol.Old(basePercent) => VeriSol.Old(_balances[to]) == basePercent
+Ensures		VeriSol.Old(_balances[to]) <= VeriSol.Old(basePercent) => VeriSol.Old(_balances[to]) < _balances[to]
+Ensures		VeriSol.Old(_balances[to]) <= VeriSol.Old(basePercent) => VeriSol.Old(_balances[to]) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) <= VeriSol.Old(basePercent) => VeriSol.Old(_balances[to]) == _totalSupply
+Ensures		VeriSol.Old(_balances[to]) <= VeriSol.Old(basePercent) => VeriSol.Old(_balances[msg.sender]) == VeriSol.SumMapping(_balances)
+Ensures		VeriSol.Old(_balances[to]) <= VeriSol.Old(basePercent) => VeriSol.Old(_balances[msg.sender]) == basePercent
+Ensures		VeriSol.Old(_balances[to]) <= VeriSol.Old(basePercent) => VeriSol.Old(_balances[msg.sender]) == _balances[to]
+Ensures		VeriSol.Old(_balances[to]) <= VeriSol.Old(basePercent) => VeriSol.Old(_balances[msg.sender]) == _totalSupply
+Ensures		VeriSol.Old(_balances[to]) <= VeriSol.Old(basePercent) => VeriSol.SumMapping(_balances) == _balances[to]
+Ensures		VeriSol.Old(_balances[to]) <= VeriSol.Old(basePercent) => VeriSol.SumMapping(_balances) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) <= VeriSol.Old(basePercent) => VeriSol.Old(basePercent) == _balances[to]
+Ensures		VeriSol.Old(_balances[to]) <= VeriSol.Old(basePercent) => VeriSol.Old(basePercent) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) <= VeriSol.Old(basePercent) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _balances[to]
+Ensures		VeriSol.Old(_balances[to]) <= VeriSol.Old(basePercent) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) <= VeriSol.Old(basePercent) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _totalSupply
+Ensures		VeriSol.Old(_balances[to]) <= VeriSol.Old(basePercent) => basePercent == _balances[to]
+Ensures		VeriSol.Old(_balances[to]) <= VeriSol.Old(basePercent) => basePercent == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) <= VeriSol.Old(basePercent) => _balances[to] == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) <= VeriSol.Old(basePercent) => _balances[to] == _totalSupply
+Ensures		VeriSol.Old(_balances[to]) <= VeriSol.Old(basePercent) => _balances[msg.sender] == _totalSupply
+Ensures		VeriSol.Old(_balances[to]) != 0 => VeriSol.Old(basePercent) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => value == VeriSol.SumMapping(_balances)
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => value == _balances[to]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => value == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => value < _totalSupply
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_totalSupply) == _balances[to]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_totalSupply) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_balances[to]) == VeriSol.SumMapping(_balances)
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_balances[to]) == basePercent
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_balances[to]) < _balances[to]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_balances[to]) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_balances[to]) == _totalSupply
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_balances[msg.sender]) == VeriSol.SumMapping(_balances)
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_balances[msg.sender]) == basePercent
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_balances[msg.sender]) == _balances[to]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_balances[msg.sender]) == _totalSupply
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.SumMapping(_balances) == _balances[to]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.SumMapping(_balances) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(basePercent) == _balances[to]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(basePercent) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _balances[to]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _totalSupply
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => basePercent == _balances[to]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => basePercent == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => _balances[to] == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => _balances[to] == _totalSupply
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => _balances[msg.sender] == _totalSupply
+Ensures		VeriSol.Old(_balances[to]) != 0 => VeriSol.Old(VeriSol.SumMapping(_balances)) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(basePercent) => value == VeriSol.SumMapping(_balances)
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(basePercent) => value == _balances[to]
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(basePercent) => value == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(basePercent) => value < _totalSupply
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(basePercent) => VeriSol.Old(_totalSupply) == _balances[to]
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(basePercent) => VeriSol.Old(_totalSupply) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(basePercent) => VeriSol.Old(_balances[to]) == VeriSol.SumMapping(_balances)
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(basePercent) => VeriSol.Old(_balances[to]) < _balances[to]
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(basePercent) => VeriSol.Old(_balances[to]) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(basePercent) => VeriSol.Old(_balances[to]) == _totalSupply
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(basePercent) => VeriSol.Old(_balances[msg.sender]) == VeriSol.SumMapping(_balances)
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(basePercent) => VeriSol.Old(_balances[msg.sender]) == basePercent
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(basePercent) => VeriSol.Old(_balances[msg.sender]) == _balances[to]
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(basePercent) => VeriSol.Old(_balances[msg.sender]) == _totalSupply
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(basePercent) => VeriSol.SumMapping(_balances) == _balances[to]
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(basePercent) => VeriSol.SumMapping(_balances) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(basePercent) => VeriSol.Old(basePercent) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(basePercent) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _balances[to]
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(basePercent) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(basePercent) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _totalSupply
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(basePercent) => basePercent == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(basePercent) => _balances[to] == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(basePercent) => _balances[to] == _totalSupply
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(basePercent) => _balances[msg.sender] == _totalSupply
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(basePercent) => _balances[msg.sender] > 0
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => value == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_totalSupply) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_balances[to]) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_balances[msg.sender]) == VeriSol.SumMapping(_balances)
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_balances[msg.sender]) == basePercent
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_balances[msg.sender]) == _balances[to]
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_balances[msg.sender]) == _totalSupply
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.SumMapping(_balances) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(basePercent) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => basePercent == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => _balances[to] == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => _balances[msg.sender] == _totalSupply
+Ensures		VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(VeriSol.SumMapping(_balances)) => _balances[msg.sender] > 0
+Ensures		msg.sender == to => value == VeriSol.SumMapping(_balances)
+Ensures		msg.sender == to => value == _balances[to]
+Ensures		msg.sender == to => value == _balances[msg.sender]
+Ensures		msg.sender == to => value < _totalSupply
+Ensures		msg.sender == to => VeriSol.Old(_totalSupply) == _balances[to]
+Ensures		msg.sender == to => VeriSol.Old(_totalSupply) == _balances[msg.sender]
+Ensures		msg.sender == to => VeriSol.Old(_balances[to]) == VeriSol.SumMapping(_balances)
+Ensures		msg.sender == to => VeriSol.Old(_balances[to]) == basePercent
+Ensures		msg.sender == to => VeriSol.Old(_balances[to]) < _balances[to]
+Ensures		msg.sender == to => VeriSol.Old(_balances[to]) == _balances[msg.sender]
+Ensures		msg.sender == to => VeriSol.Old(_balances[to]) == _totalSupply
+Ensures		msg.sender == to => VeriSol.Old(_balances[msg.sender]) == VeriSol.SumMapping(_balances)
+Ensures		msg.sender == to => VeriSol.Old(_balances[msg.sender]) == basePercent
+Ensures		msg.sender == to => VeriSol.Old(_balances[msg.sender]) == _balances[to]
+Ensures		msg.sender == to => VeriSol.Old(_balances[msg.sender]) == _totalSupply
+Ensures		msg.sender == to => VeriSol.SumMapping(_balances) == _balances[to]
+Ensures		msg.sender == to => VeriSol.SumMapping(_balances) == _balances[msg.sender]
+Ensures		msg.sender == to => VeriSol.Old(basePercent) == _balances[to]
+Ensures		msg.sender == to => VeriSol.Old(basePercent) == _balances[msg.sender]
+Ensures		msg.sender == to => VeriSol.Old(VeriSol.SumMapping(_balances)) == _balances[to]
+Ensures		msg.sender == to => VeriSol.Old(VeriSol.SumMapping(_balances)) == _balances[msg.sender]
+Ensures		msg.sender == to => VeriSol.Old(VeriSol.SumMapping(_balances)) == _totalSupply
+Ensures		msg.sender == to => basePercent == _balances[to]
+Ensures		msg.sender == to => basePercent == _balances[msg.sender]
+Ensures		msg.sender == to => _balances[to] == _balances[msg.sender]
+Ensures		msg.sender == to => _balances[to] == _totalSupply
+Ensures		msg.sender == to => _balances[msg.sender] == _totalSupply
+Ensures		msg.sender == to => _balances[msg.sender] > 0
+Ensures		VeriSol.Old(_balances[to]) != 0 => value == VeriSol.SumMapping(_balances)
+Ensures		value != VeriSol.Old(_balances[to]) => value == VeriSol.SumMapping(_balances)
+Ensures		value == VeriSol.Old(_balances[msg.sender]) => value == VeriSol.SumMapping(_balances)
+Ensures		VeriSol.Old(_totalSupply) == VeriSol.Old(VeriSol.SumMapping(_balances)) => value == VeriSol.SumMapping(_balances)
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(_balances[msg.sender]) => value == VeriSol.SumMapping(_balances)
+Ensures		VeriSol.Old(_balances[to]) != 0 => value == _balances[to]
+Ensures		value != VeriSol.Old(_balances[to]) => value == _balances[to]
+Ensures		value == VeriSol.Old(_balances[msg.sender]) => value == _balances[to]
+Ensures		VeriSol.Old(_totalSupply) == VeriSol.Old(VeriSol.SumMapping(_balances)) => value == _balances[to]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(_balances[msg.sender]) => value == _balances[to]
+Ensures		VeriSol.Old(_balances[to]) != 0 => value == _balances[msg.sender]
+Ensures		value != VeriSol.Old(_balances[to]) => value == _balances[msg.sender]
+Ensures		value == VeriSol.Old(_balances[msg.sender]) => value == _balances[msg.sender]
+Ensures		VeriSol.Old(_totalSupply) == VeriSol.Old(VeriSol.SumMapping(_balances)) => value == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(_balances[msg.sender]) => value == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) != 0 => value < _totalSupply
+Ensures		value != VeriSol.Old(_balances[to]) => value < _totalSupply
+Ensures		value == VeriSol.Old(_balances[msg.sender]) => value < _totalSupply
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(_balances[msg.sender]) => value < _totalSupply
+Ensures		VeriSol.Old(_balances[to]) != 0 => VeriSol.Old(_totalSupply) == _balances[to]
+Ensures		value != VeriSol.Old(_balances[to]) => VeriSol.Old(_totalSupply) == _balances[to]
+Ensures		value == VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(_totalSupply) == _balances[to]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(_totalSupply) == _balances[to]
+Ensures		VeriSol.Old(_balances[to]) != 0 => VeriSol.Old(_totalSupply) == _balances[msg.sender]
+Ensures		value != VeriSol.Old(_balances[to]) => VeriSol.Old(_totalSupply) == _balances[msg.sender]
+Ensures		value == VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(_totalSupply) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(_totalSupply) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) != 0 => VeriSol.Old(_balances[to]) == VeriSol.SumMapping(_balances)
+Ensures		value != VeriSol.Old(_balances[to]) => VeriSol.Old(_balances[to]) == VeriSol.SumMapping(_balances)
+Ensures		value == VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(_balances[to]) == VeriSol.SumMapping(_balances)
+Ensures		VeriSol.Old(_totalSupply) == VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_balances[to]) == VeriSol.SumMapping(_balances)
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(_balances[to]) == VeriSol.SumMapping(_balances)
+Ensures		VeriSol.Old(_balances[to]) != 0 => VeriSol.Old(_balances[to]) == basePercent
+Ensures		value != VeriSol.Old(_balances[to]) => VeriSol.Old(_balances[to]) == basePercent
+Ensures		value == VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(_balances[to]) == basePercent
+Ensures		VeriSol.Old(_totalSupply) == VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_balances[to]) == basePercent
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(_balances[to]) == basePercent
+Ensures		VeriSol.Old(_balances[to]) != 0 => VeriSol.Old(_balances[to]) < _balances[to]
+Ensures		value != VeriSol.Old(_balances[to]) => VeriSol.Old(_balances[to]) < _balances[to]
+Ensures		value == VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(_balances[to]) < _balances[to]
+Ensures		VeriSol.Old(_totalSupply) == VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_balances[to]) < _balances[to]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(_balances[to]) < _balances[to]
+Ensures		VeriSol.Old(_balances[to]) != 0 => VeriSol.Old(_balances[to]) == _balances[msg.sender]
+Ensures		value != VeriSol.Old(_balances[to]) => VeriSol.Old(_balances[to]) == _balances[msg.sender]
+Ensures		value == VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(_balances[to]) == _balances[msg.sender]
+Ensures		VeriSol.Old(_totalSupply) == VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_balances[to]) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(_balances[to]) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) != 0 => VeriSol.Old(_balances[to]) == _totalSupply
+Ensures		value != VeriSol.Old(_balances[to]) => VeriSol.Old(_balances[to]) == _totalSupply
+Ensures		value == VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(_balances[to]) == _totalSupply
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(_balances[to]) == _totalSupply
+Ensures		VeriSol.Old(_balances[to]) != 0 => VeriSol.Old(_balances[msg.sender]) == VeriSol.SumMapping(_balances)
+Ensures		value != VeriSol.Old(_balances[to]) => VeriSol.Old(_balances[msg.sender]) == VeriSol.SumMapping(_balances)
+Ensures		value == VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(_balances[msg.sender]) == VeriSol.SumMapping(_balances)
+Ensures		VeriSol.Old(_totalSupply) == VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_balances[msg.sender]) == VeriSol.SumMapping(_balances)
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(_balances[msg.sender]) == VeriSol.SumMapping(_balances)
+Ensures		VeriSol.Old(_balances[to]) != 0 => VeriSol.Old(_balances[msg.sender]) == basePercent
+Ensures		value != VeriSol.Old(_balances[to]) => VeriSol.Old(_balances[msg.sender]) == basePercent
+Ensures		value == VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(_balances[msg.sender]) == basePercent
+Ensures		VeriSol.Old(_totalSupply) == VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_balances[msg.sender]) == basePercent
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(_balances[msg.sender]) == basePercent
+Ensures		VeriSol.Old(_balances[to]) != 0 => VeriSol.Old(_balances[msg.sender]) == _balances[to]
+Ensures		value != VeriSol.Old(_balances[to]) => VeriSol.Old(_balances[msg.sender]) == _balances[to]
+Ensures		value == VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(_balances[msg.sender]) == _balances[to]
+Ensures		VeriSol.Old(_totalSupply) == VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(_balances[msg.sender]) == _balances[to]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(_balances[msg.sender]) == _balances[to]
+Ensures		VeriSol.Old(_balances[to]) != 0 => VeriSol.Old(_balances[msg.sender]) == _totalSupply
+Ensures		value != VeriSol.Old(_balances[to]) => VeriSol.Old(_balances[msg.sender]) == _totalSupply
+Ensures		value == VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(_balances[msg.sender]) == _totalSupply
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(_balances[msg.sender]) == _totalSupply
+Ensures		VeriSol.Old(_balances[to]) != 0 => VeriSol.SumMapping(_balances) == _balances[to]
+Ensures		value != VeriSol.Old(_balances[to]) => VeriSol.SumMapping(_balances) == _balances[to]
+Ensures		value == VeriSol.Old(_balances[msg.sender]) => VeriSol.SumMapping(_balances) == _balances[to]
+Ensures		VeriSol.Old(_totalSupply) == VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.SumMapping(_balances) == _balances[to]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(_balances[msg.sender]) => VeriSol.SumMapping(_balances) == _balances[to]
+Ensures		VeriSol.Old(_balances[to]) != 0 => VeriSol.SumMapping(_balances) == _balances[msg.sender]
+Ensures		value != VeriSol.Old(_balances[to]) => VeriSol.SumMapping(_balances) == _balances[msg.sender]
+Ensures		value == VeriSol.Old(_balances[msg.sender]) => VeriSol.SumMapping(_balances) == _balances[msg.sender]
+Ensures		VeriSol.Old(_totalSupply) == VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.SumMapping(_balances) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(_balances[msg.sender]) => VeriSol.SumMapping(_balances) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) != 0 => VeriSol.Old(basePercent) == _balances[to]
+Ensures		value != VeriSol.Old(_balances[to]) => VeriSol.Old(basePercent) == _balances[to]
+Ensures		value == VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(basePercent) == _balances[to]
+Ensures		VeriSol.Old(_totalSupply) == VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(basePercent) == _balances[to]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(basePercent) == _balances[to]
+Ensures		value != VeriSol.Old(_balances[to]) => VeriSol.Old(basePercent) == _balances[msg.sender]
+Ensures		value == VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(basePercent) == _balances[msg.sender]
+Ensures		VeriSol.Old(_totalSupply) == VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(basePercent) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(basePercent) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) != 0 => VeriSol.Old(VeriSol.SumMapping(_balances)) == _balances[to]
+Ensures		value != VeriSol.Old(_balances[to]) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _balances[to]
+Ensures		value == VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _balances[to]
+Ensures		VeriSol.Old(_totalSupply) == VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _balances[to]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _balances[to]
+Ensures		value != VeriSol.Old(_balances[to]) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _balances[msg.sender]
+Ensures		value == VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _balances[msg.sender]
+Ensures		VeriSol.Old(_totalSupply) == VeriSol.Old(VeriSol.SumMapping(_balances)) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) != 0 => VeriSol.Old(VeriSol.SumMapping(_balances)) == _totalSupply
+Ensures		value != VeriSol.Old(_balances[to]) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _totalSupply
+Ensures		value == VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _totalSupply
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(_balances[msg.sender]) => VeriSol.Old(VeriSol.SumMapping(_balances)) == _totalSupply
+Ensures		VeriSol.Old(_balances[to]) != 0 => basePercent == _balances[to]
+Ensures		value != VeriSol.Old(_balances[to]) => basePercent == _balances[to]
+Ensures		value == VeriSol.Old(_balances[msg.sender]) => basePercent == _balances[to]
+Ensures		VeriSol.Old(_totalSupply) == VeriSol.Old(VeriSol.SumMapping(_balances)) => basePercent == _balances[to]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(_balances[msg.sender]) => basePercent == _balances[to]
+Ensures		VeriSol.Old(_balances[to]) != 0 => basePercent == _balances[msg.sender]
+Ensures		value != VeriSol.Old(_balances[to]) => basePercent == _balances[msg.sender]
+Ensures		value == VeriSol.Old(_balances[msg.sender]) => basePercent == _balances[msg.sender]
+Ensures		VeriSol.Old(_totalSupply) == VeriSol.Old(VeriSol.SumMapping(_balances)) => basePercent == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(_balances[msg.sender]) => basePercent == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) != 0 => _balances[to] == _balances[msg.sender]
+Ensures		value != VeriSol.Old(_balances[to]) => _balances[to] == _balances[msg.sender]
+Ensures		value == VeriSol.Old(_balances[msg.sender]) => _balances[to] == _balances[msg.sender]
+Ensures		VeriSol.Old(_totalSupply) == VeriSol.Old(VeriSol.SumMapping(_balances)) => _balances[to] == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(_balances[msg.sender]) => _balances[to] == _balances[msg.sender]
+Ensures		VeriSol.Old(_balances[to]) != 0 => _balances[to] == _totalSupply
+Ensures		value != VeriSol.Old(_balances[to]) => _balances[to] == _totalSupply
+Ensures		value == VeriSol.Old(_balances[msg.sender]) => _balances[to] == _totalSupply
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(_balances[msg.sender]) => _balances[to] == _totalSupply
+Ensures		VeriSol.Old(_balances[to]) != 0 => _balances[msg.sender] == _totalSupply
+Ensures		value != VeriSol.Old(_balances[to]) => _balances[msg.sender] == _totalSupply
+Ensures		value == VeriSol.Old(_balances[msg.sender]) => _balances[msg.sender] == _totalSupply
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(_balances[msg.sender]) => _balances[msg.sender] == _totalSupply
+Ensures		VeriSol.Old(_balances[to]) != 0 => _balances[msg.sender] > 0
+Ensures		value != VeriSol.Old(_balances[to]) => _balances[msg.sender] > 0
+Ensures		value == VeriSol.Old(_balances[msg.sender]) => _balances[msg.sender] > 0
+Ensures		VeriSol.Old(_totalSupply) == VeriSol.Old(VeriSol.SumMapping(_balances)) => _balances[msg.sender] > 0
+Ensures		VeriSol.Old(_balances[to]) != VeriSol.Old(_balances[msg.sender]) => _balances[msg.sender] > 0
+approve(spender,value):
+Requires		value > 0
+Requires		VeriSol.Old(_totalSupply) > 0
+Requires		VeriSol.Old(uint256(_decimals)) == 18
+Requires		spender != address(0)
+Requires		VeriSol.Old(basePercent) == 100
+Requires		VeriSol.Old(VeriSol.SumMapping(_balances)) > 0
+Requires		msg.sender != address(0)
+Requires		VeriSol.Old(_lastTokenSupply) == 200000000000000000000000
+Requires		VeriSol.Old(_burnStopAmount) == 0
+Requires		value > VeriSol.Old(_totalSupply)
+Requires		value > VeriSol.Old(uint256(_decimals))
+Requires		value > VeriSol.Old(basePercent)
+Requires		value > VeriSol.Old(VeriSol.SumMapping(_balances))
+Requires		value > VeriSol.Old(_lastTokenSupply)
+Requires		value > VeriSol.Old(_allowed[msg.sender][spender])
+Requires		value > VeriSol.Old(_burnStopAmount)
+Requires		VeriSol.Old(_totalSupply) > VeriSol.Old(uint256(_decimals))
+Requires		VeriSol.Old(_totalSupply) > VeriSol.Old(basePercent)
+Requires		VeriSol.Old(_totalSupply) > VeriSol.Old(VeriSol.SumMapping(_balances))
+Requires		VeriSol.Old(_totalSupply) > VeriSol.Old(_lastTokenSupply)
+Requires		VeriSol.Old(_totalSupply) != VeriSol.Old(_allowed[msg.sender][spender])
+Requires		VeriSol.Old(_totalSupply) > VeriSol.Old(_burnStopAmount)
+Requires		VeriSol.Old(uint256(_decimals)) < VeriSol.Old(basePercent)
+Requires		VeriSol.Old(uint256(_decimals)) < VeriSol.Old(VeriSol.SumMapping(_balances))
+Requires		VeriSol.Old(uint256(_decimals)) < VeriSol.Old(_lastTokenSupply)
+Requires		VeriSol.Old(uint256(_decimals)) != VeriSol.Old(_allowed[msg.sender][spender])
+Requires		VeriSol.Old(uint256(_decimals)) > VeriSol.Old(_burnStopAmount)
+Requires		spender != msg.sender
+Requires		VeriSol.Old(basePercent) < VeriSol.Old(VeriSol.SumMapping(_balances))
+Requires		VeriSol.Old(basePercent) < VeriSol.Old(_lastTokenSupply)
+Requires		VeriSol.Old(basePercent) != VeriSol.Old(_allowed[msg.sender][spender])
+Requires		VeriSol.Old(basePercent) > VeriSol.Old(_burnStopAmount)
+Requires		VeriSol.Old(VeriSol.SumMapping(_balances)) > VeriSol.Old(_lastTokenSupply)
+Requires		VeriSol.Old(VeriSol.SumMapping(_balances)) != VeriSol.Old(_allowed[msg.sender][spender])
+Requires		VeriSol.Old(VeriSol.SumMapping(_balances)) > VeriSol.Old(_burnStopAmount)
+Requires		VeriSol.Old(_lastTokenSupply) != VeriSol.Old(_allowed[msg.sender][spender])
+Requires		VeriSol.Old(_lastTokenSupply) > VeriSol.Old(_burnStopAmount)
+Requires		VeriSol.Old(_allowed[msg.sender][spender]) >= VeriSol.Old(_burnStopAmount)
+Ensures		_allowed[msg.sender][spender] > 0
+Ensures		VeriSol.SumMapping(_balances) > 0
+Ensures		_burnStopAmount == 0
+Ensures		basePercent == 100
+Ensures		_lastTokenSupply == 200000000000000000000000
+Ensures		_decimals == 18
+Ensures		_totalSupply > 0
+Ensures		value == _allowed[msg.sender][spender]
+Ensures		value > VeriSol.SumMapping(_balances)
+Ensures		value > _burnStopAmount
+Ensures		value > basePercent
+Ensures		value > _lastTokenSupply
+Ensures		value > _decimals
+Ensures		value > _totalSupply
+Ensures		VeriSol.Old(_totalSupply) < _allowed[msg.sender][spender]
+Ensures		VeriSol.Old(_totalSupply) > VeriSol.SumMapping(_balances)
+Ensures		VeriSol.Old(_totalSupply) > _burnStopAmount
+Ensures		VeriSol.Old(_totalSupply) > basePercent
+Ensures		VeriSol.Old(_totalSupply) > _lastTokenSupply
+Ensures		VeriSol.Old(_totalSupply) > _decimals
+Ensures		VeriSol.Old(_totalSupply) == _totalSupply
+Ensures		_allowed[msg.sender][spender] > VeriSol.SumMapping(_balances)
+Ensures		_allowed[msg.sender][spender] > VeriSol.Old(uint256(_decimals))
+Ensures		_allowed[msg.sender][spender] > VeriSol.Old(basePercent)
+Ensures		_allowed[msg.sender][spender] > VeriSol.Old(VeriSol.SumMapping(_balances))
+Ensures		_allowed[msg.sender][spender] > _burnStopAmount
+Ensures		_allowed[msg.sender][spender] > VeriSol.Old(_lastTokenSupply)
+Ensures		_allowed[msg.sender][spender] > basePercent
+Ensures		_allowed[msg.sender][spender] > VeriSol.Old(_allowed[msg.sender][spender])
+Ensures		_allowed[msg.sender][spender] > _lastTokenSupply
+Ensures		_allowed[msg.sender][spender] > VeriSol.Old(_burnStopAmount)
+Ensures		_allowed[msg.sender][spender] > _decimals
+Ensures		_allowed[msg.sender][spender] > _totalSupply
+Ensures		VeriSol.SumMapping(_balances) > VeriSol.Old(uint256(_decimals))
+Ensures		VeriSol.SumMapping(_balances) > VeriSol.Old(basePercent)
+Ensures		VeriSol.SumMapping(_balances) == VeriSol.Old(VeriSol.SumMapping(_balances))
+Ensures		VeriSol.SumMapping(_balances) > _burnStopAmount
+Ensures		VeriSol.SumMapping(_balances) > VeriSol.Old(_lastTokenSupply)
+Ensures		VeriSol.SumMapping(_balances) > basePercent
+Ensures		VeriSol.SumMapping(_balances) != VeriSol.Old(_allowed[msg.sender][spender])
+Ensures		VeriSol.SumMapping(_balances) > _lastTokenSupply
+Ensures		VeriSol.SumMapping(_balances) > VeriSol.Old(_burnStopAmount)
+Ensures		VeriSol.SumMapping(_balances) > _decimals
+Ensures		VeriSol.SumMapping(_balances) < _totalSupply
+Ensures		VeriSol.Old(uint256(_decimals)) > _burnStopAmount
+Ensures		VeriSol.Old(uint256(_decimals)) < basePercent
+Ensures		VeriSol.Old(uint256(_decimals)) < _lastTokenSupply
+Ensures		VeriSol.Old(uint256(_decimals)) == _decimals
+Ensures		VeriSol.Old(uint256(_decimals)) < _totalSupply
+Ensures		VeriSol.Old(basePercent) > _burnStopAmount
+Ensures		VeriSol.Old(basePercent) == basePercent
+Ensures		VeriSol.Old(basePercent) < _lastTokenSupply
+Ensures		VeriSol.Old(basePercent) > _decimals
+Ensures		VeriSol.Old(basePercent) < _totalSupply
+Ensures		VeriSol.Old(VeriSol.SumMapping(_balances)) > _burnStopAmount
+Ensures		VeriSol.Old(VeriSol.SumMapping(_balances)) > basePercent
+Ensures		VeriSol.Old(VeriSol.SumMapping(_balances)) > _lastTokenSupply
+Ensures		VeriSol.Old(VeriSol.SumMapping(_balances)) > _decimals
+Ensures		VeriSol.Old(VeriSol.SumMapping(_balances)) < _totalSupply
+Ensures		_burnStopAmount < VeriSol.Old(_lastTokenSupply)
+Ensures		_burnStopAmount < basePercent
+Ensures		_burnStopAmount <= VeriSol.Old(_allowed[msg.sender][spender])
+Ensures		_burnStopAmount < _lastTokenSupply
+Ensures		_burnStopAmount == VeriSol.Old(_burnStopAmount)
+Ensures		_burnStopAmount < _decimals
+Ensures		_burnStopAmount < _totalSupply
+Ensures		VeriSol.Old(_lastTokenSupply) > basePercent
+Ensures		VeriSol.Old(_lastTokenSupply) == _lastTokenSupply
+Ensures		VeriSol.Old(_lastTokenSupply) > _decimals
+Ensures		VeriSol.Old(_lastTokenSupply) < _totalSupply
+Ensures		basePercent != VeriSol.Old(_allowed[msg.sender][spender])
+Ensures		basePercent < _lastTokenSupply
+Ensures		basePercent > VeriSol.Old(_burnStopAmount)
+Ensures		basePercent > _decimals
+Ensures		basePercent < _totalSupply
+Ensures		VeriSol.Old(_allowed[msg.sender][spender]) != _lastTokenSupply
+Ensures		VeriSol.Old(_allowed[msg.sender][spender]) != _decimals
+Ensures		VeriSol.Old(_allowed[msg.sender][spender]) != _totalSupply
+Ensures		_lastTokenSupply > VeriSol.Old(_burnStopAmount)
+Ensures		_lastTokenSupply > _decimals
+Ensures		_lastTokenSupply < _totalSupply
+Ensures		VeriSol.Old(_burnStopAmount) < _decimals
+Ensures		VeriSol.Old(_burnStopAmount) < _totalSupply
+Ensures		_decimals < _totalSupply
+SPACEJAM:
+Ensures		VeriSol.SumMapping(_balances) > 0
+Ensures		_burnStopAmount == 0
+Ensures		basePercent == 100
+Ensures		_lastTokenSupply == 200000000000000000000000
+Ensures		_totalSupply > 0
+Ensures		VeriSol.SumMapping(_balances) > _burnStopAmount
+Ensures		VeriSol.SumMapping(_balances) > basePercent
+Ensures		VeriSol.SumMapping(_balances) != _decimals
+Ensures		VeriSol.SumMapping(_balances) <= _totalSupply
+Ensures		_burnStopAmount < basePercent
+Ensures		_burnStopAmount < _lastTokenSupply
+Ensures		_burnStopAmount < _decimals
+Ensures		_burnStopAmount < _totalSupply
+Ensures		basePercent < _lastTokenSupply
+Ensures		basePercent > _decimals
+Ensures		basePercent < _totalSupply
+Ensures		_lastTokenSupply > _decimals
+Ensures		_lastTokenSupply < _totalSupply
+Ensures		_decimals < _totalSupply

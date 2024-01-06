@@ -1,0 +1,477 @@
+Daikon version 5.8.6, released December 2, 2020; http://plse.cs.washington.edu/daikon.
+Reading declaration files Processing trace data; reading 1 dtrace file:
+Warning: Daikon is using a dataflow hierarchy analysis on a data trace that does not appear to be over a program execution, consider running Daikon with the --nohierarchy flag.
+
+===========================================================================
+EXODUS2.approve(address,uint256):::EXIT1
+this == orig(this)
+this._supportedInterfaces == orig(this._supportedInterfaces)
+this._supportedInterfaces[].getValue() == this._operatorApprovals[].getSubValue()
+this._supportedInterfaces[].getValue() == orig(this._supportedInterfaces[].getValue())
+this._supportedInterfaces[].getValue() == orig(this._operatorApprovals[].getSubValue())
+this._tokenOwner == orig(this._tokenOwner)
+this._tokenApprovals == orig(this._tokenApprovals)
+this._ownedTokensCount == orig(this._ownedTokensCount)
+this._operatorApprovals == orig(this._operatorApprovals)
+this._operatorApprovals[].getSubLength() == orig(this._operatorApprovals[].getSubLength())
+this._ownedTokens == orig(this._ownedTokens)
+this._ownedTokens[].getLength() == orig(this._ownedTokens[].getLength())
+this._ownedTokensIndex == orig(this._ownedTokensIndex)
+this._allTokens == orig(this._allTokens)
+this._allTokensIndex == orig(this._allTokensIndex)
+this._tokenURIs == orig(this._tokenURIs)
+this.stanzas == orig(this.stanzas)
+to == orig(to)
+tokenId == orig(tokenId)
+msg.sender == orig(msg.sender)
+msg.value == orig(msg.value)
+msg.value == sum(this._allTokens[])
+block.timestamp == orig(block.timestamp)
+orig(msg.value) == sum(this._allTokens[])
+sum(this._tokenOwner[]) == sum(orig(this._tokenOwner[]))
+sum(this._tokenOwner[]) == this._ownedTokens[orig(to)].getValue()
+sum(this._ownedTokensCount[].getValue()) == sum(orig(this._ownedTokensCount[].getValue()))
+sum(this._ownedTokensCount[].getValue()) == this._ownedTokens[orig(msg.sender)].getValue()
+sum(this._operatorApprovals[].getSubLength()) == sum(orig(this._operatorApprovals[].getSubLength()))
+sum(this._ownedTokens[].getLength()) == sum(orig(this._ownedTokens[].getLength()))
+sum(this._ownedTokens[].getValue()) == sum(orig(this._ownedTokens[].getValue()))
+sum(this._ownedTokensIndex[]) == sum(orig(this._ownedTokensIndex[]))
+sum(this._ownedTokensIndex[]) == this._ownedTokens[orig(msg.sender)].getValue()
+sum(this._ownedTokensIndex[].getValue()) == sum(orig(this._ownedTokensIndex[].getValue()))
+sum(orig(this._tokenOwner[])) == this._ownedTokens[orig(to)].getValue()
+sum(orig(this._tokenApprovals[])) == this._ownedTokens[orig(to)].getValue()
+sum(orig(this._ownedTokensCount[].getValue())) == this._ownedTokens[orig(msg.sender)].getValue()
+sum(orig(this._ownedTokensIndex[])) == this._ownedTokens[orig(msg.sender)].getValue()
+this._ownedTokensCount[orig(to)].getValue() == this._ownedTokens[orig(to)].getValue()
+this._ownedTokens[to].getLength() == this._ownedTokens[orig(to)].getLength()
+this._ownedTokens[msg.sender].getLength() == this._ownedTokens[orig(to)].getLength()
+this._ownedTokens[orig(to)].getLength() == this._ownedTokens[orig(msg.sender)].getLength()
+this._ownedTokens[orig(to)].getLength() == orig(this._ownedTokens[post(to)].getLength())
+this._ownedTokens[orig(to)].getLength() == orig(this._ownedTokens[post(msg.sender)].getLength())
+this._ownedTokens[orig(to)].getLength() == orig(this._ownedTokens[to].getLength())
+this._ownedTokens[orig(to)].getLength() == orig(this._ownedTokens[msg.sender].getLength())
+this._supportedInterfaces == null
+this._supportedInterfaces[].getValue() elements != null
+this._tokenOwner has only one value
+this._tokenOwner[] elements >= 1
+this._tokenOwner[] sorted by <
+this._tokenOwner[] sorted by <=
+this._tokenApprovals has only one value
+this._tokenApprovals[] elements >= 1
+this._tokenApprovals[] sorted by <
+this._tokenApprovals[] sorted by <=
+this._ownedTokensCount has only one value
+this._operatorApprovals has only one value
+this._ownedTokens has only one value
+this._ownedTokens[].getLength() elements are equal
+this._ownedTokens[].getValue() elements >= 1
+this._ownedTokensIndex has only one value
+this._ownedTokensIndex[].getValue() elements >= 0
+this._allTokens has only one value
+this._allTokensIndex has only one value
+this._tokenURIs has only one value
+this.stanzas has only one value
+msg.value == 0
+orig(this) has only one value
+orig(this) != null
+orig(this._tokenApprovals[]) elements >= 1
+orig(this._tokenApprovals[]) sorted by <
+orig(this._tokenApprovals[]) sorted by <=
+orig(msg.value) == 0
+sum(this._ownedTokensCount[].getValue()) one of { 0, 19 }
+sum(this._operatorApprovals[].getSubLength()) == 0
+sum(this._allTokens[]) == 0
+sum(orig(this._ownedTokensCount[].getValue())) one of { 0, 19 }
+this._ownedTokens[orig(to)].getValue() == 1
+this._ownedTokens[orig(msg.sender)].getValue() == 19
+this._operatorApprovals[].getSubLength() <= this._ownedTokens[].getLength() (lexically)
+this._ownedTokens[].getLength() elements > sum(this._operatorApprovals[].getSubLength())
+this._ownedTokens[].getLength() elements < sum(this._ownedTokens[].getLength())
+this._ownedTokens[].getLength() elements == this._ownedTokens[orig(to)].getLength()
+this._ownedTokens[orig(to)].getLength() in this._ownedTokens[].getLength()
+tokenId < block.timestamp
+tokenId < orig(block.timestamp)
+tokenId <= sum(this._tokenApprovals[])
+msg.value < block.timestamp
+msg.value < orig(tokenId)
+msg.value < orig(block.timestamp)
+msg.value <= sum(this._tokenOwner[])
+msg.value < sum(this._tokenApprovals[])
+msg.value <= sum(this._ownedTokensCount[].getValue())
+msg.value <= sum(this._ownedTokens[].getValue())
+msg.value <= sum(this._ownedTokensIndex[])
+msg.value <= sum(this._ownedTokensIndex[].getValue())
+msg.value <= sum(orig(this._tokenOwner[]))
+msg.value <= sum(orig(this._tokenApprovals[]))
+msg.value <= sum(orig(this._ownedTokensCount[].getValue()))
+msg.value <= sum(orig(this._ownedTokens[].getValue()))
+msg.value <= sum(orig(this._ownedTokensIndex[]))
+msg.value <= sum(orig(this._ownedTokensIndex[].getValue()))
+msg.value < this._ownedTokensCount[orig(to)].getValue()
+msg.value < this._ownedTokensCount[orig(msg.sender)].getValue()
+orig(to) != orig(msg.sender)
+orig(tokenId) < orig(block.timestamp)
+orig(tokenId) <= sum(this._tokenApprovals[])
+orig(msg.value) < orig(block.timestamp)
+orig(msg.value) <= sum(this._tokenOwner[])
+orig(msg.value) < sum(this._tokenApprovals[])
+orig(msg.value) <= sum(this._ownedTokensCount[].getValue())
+orig(msg.value) <= sum(this._ownedTokens[].getValue())
+orig(msg.value) <= sum(this._ownedTokensIndex[])
+orig(msg.value) <= sum(this._ownedTokensIndex[].getValue())
+orig(msg.value) <= sum(orig(this._tokenOwner[]))
+orig(msg.value) <= sum(orig(this._tokenApprovals[]))
+orig(msg.value) <= sum(orig(this._ownedTokensCount[].getValue()))
+orig(msg.value) <= sum(orig(this._ownedTokens[].getValue()))
+orig(msg.value) <= sum(orig(this._ownedTokensIndex[]))
+orig(msg.value) <= sum(orig(this._ownedTokensIndex[].getValue()))
+orig(msg.value) < this._ownedTokensCount[orig(to)].getValue()
+orig(msg.value) < this._ownedTokensCount[orig(msg.sender)].getValue()
+sum(this._tokenOwner[]) < sum(this._tokenApprovals[])
+sum(this._tokenOwner[]) <= sum(this._ownedTokens[].getValue())
+sum(this._tokenOwner[]) <= sum(this._ownedTokensIndex[])
+sum(this._tokenOwner[]) >= sum(this._ownedTokensIndex[].getValue())
+sum(this._tokenOwner[]) >= sum(this._allTokens[])
+sum(this._tokenOwner[]) <= sum(orig(this._tokenApprovals[]))
+sum(this._tokenOwner[]) <= sum(orig(this._ownedTokens[].getValue()))
+sum(this._tokenOwner[]) <= sum(orig(this._ownedTokensIndex[]))
+sum(this._tokenOwner[]) >= sum(orig(this._ownedTokensIndex[].getValue()))
+sum(this._ownedTokensCount[].getValue()) <= sum(this._ownedTokens[].getValue())
+sum(this._ownedTokensCount[].getValue()) <= sum(this._ownedTokensIndex[])
+sum(this._ownedTokensCount[].getValue()) >= sum(this._allTokens[])
+sum(this._ownedTokensCount[].getValue()) <= sum(orig(this._ownedTokens[].getValue()))
+sum(this._ownedTokensCount[].getValue()) <= sum(orig(this._ownedTokensIndex[]))
+sum(this._operatorApprovals[].getSubLength()) <= sum(this._ownedTokens[].getLength())
+sum(this._operatorApprovals[].getSubLength()) < this._ownedTokens[orig(to)].getLength()
+sum(this._ownedTokens[].getLength()) - 2 * this._ownedTokens[orig(to)].getLength() == 0
+sum(this._ownedTokens[].getLength()) > this._ownedTokens[orig(to)].getLength()
+sum(this._ownedTokens[].getValue()) >= sum(this._ownedTokensIndex[].getValue())
+sum(this._ownedTokens[].getValue()) >= sum(this._allTokens[])
+sum(this._ownedTokens[].getValue()) >= sum(orig(this._tokenOwner[]))
+sum(this._ownedTokens[].getValue()) >= sum(orig(this._ownedTokensCount[].getValue()))
+sum(this._ownedTokens[].getValue()) >= sum(orig(this._ownedTokensIndex[].getValue()))
+sum(this._ownedTokensIndex[]) >= sum(this._ownedTokensIndex[].getValue())
+sum(this._ownedTokensIndex[]) >= sum(this._allTokens[])
+sum(this._ownedTokensIndex[]) >= sum(orig(this._tokenOwner[]))
+sum(this._ownedTokensIndex[]) >= sum(orig(this._ownedTokensIndex[].getValue()))
+sum(this._ownedTokensIndex[].getValue()) <= sum(orig(this._tokenOwner[]))
+sum(this._ownedTokensIndex[].getValue()) <= sum(orig(this._tokenApprovals[]))
+sum(this._ownedTokensIndex[].getValue()) <= sum(orig(this._ownedTokens[].getValue()))
+sum(this._ownedTokensIndex[].getValue()) <= sum(orig(this._ownedTokensIndex[]))
+sum(this._allTokens[]) <= sum(orig(this._tokenOwner[]))
+sum(this._allTokens[]) <= sum(orig(this._tokenApprovals[]))
+sum(this._allTokens[]) <= sum(orig(this._ownedTokensCount[].getValue()))
+sum(this._allTokens[]) <= sum(orig(this._ownedTokens[].getValue()))
+sum(this._allTokens[]) <= sum(orig(this._ownedTokensIndex[]))
+sum(this._allTokens[]) < this._ownedTokensCount[orig(to)].getValue()
+sum(this._allTokens[]) < this._ownedTokensCount[orig(msg.sender)].getValue()
+sum(orig(this._tokenOwner[])) <= sum(orig(this._tokenApprovals[]))
+sum(orig(this._tokenOwner[])) <= sum(orig(this._ownedTokens[].getValue()))
+sum(orig(this._tokenOwner[])) <= sum(orig(this._ownedTokensIndex[]))
+sum(orig(this._tokenOwner[])) >= sum(orig(this._ownedTokensIndex[].getValue()))
+sum(orig(this._tokenApprovals[])) >= sum(orig(this._ownedTokensIndex[].getValue()))
+sum(orig(this._ownedTokensCount[].getValue())) <= sum(orig(this._ownedTokens[].getValue()))
+sum(orig(this._ownedTokens[].getValue())) >= sum(orig(this._ownedTokensIndex[].getValue()))
+sum(orig(this._ownedTokensIndex[])) >= sum(orig(this._ownedTokensIndex[].getValue()))
+tokenId - sum(this._tokenApprovals[]) + sum(orig(this._tokenApprovals[])) == 0
+orig(tokenId) - sum(this._tokenApprovals[]) + sum(orig(this._tokenApprovals[])) == 0
+===========================================================================
+EXODUS2.setApprovalForAll(address,bool):::EXIT1
+this == orig(this)
+this._supportedInterfaces == orig(this._supportedInterfaces)
+this._supportedInterfaces[].getValue() == orig(this._supportedInterfaces[].getValue())
+this._tokenOwner == orig(this._tokenOwner)
+this._tokenApprovals == orig(this._tokenApprovals)
+this._ownedTokensCount == orig(this._ownedTokensCount)
+this._operatorApprovals == orig(this._operatorApprovals)
+this._ownedTokens == orig(this._ownedTokens)
+this._ownedTokens[].getLength() == orig(this._ownedTokens[].getLength())
+this._ownedTokensIndex == orig(this._ownedTokensIndex)
+this._allTokens == orig(this._allTokens)
+this._allTokensIndex == orig(this._allTokensIndex)
+this._tokenURIs == orig(this._tokenURIs)
+this.stanzas == orig(this.stanzas)
+to == orig(to)
+approved == orig(approved)
+msg.sender == orig(msg.sender)
+msg.value == orig(msg.value)
+msg.value == sum(this._allTokens[])
+block.timestamp == orig(block.timestamp)
+orig(msg.value) == sum(this._allTokens[])
+sum(this._tokenOwner[]) == sum(orig(this._tokenOwner[]))
+sum(this._tokenApprovals[]) == sum(orig(this._tokenApprovals[]))
+sum(this._ownedTokensCount[].getValue()) == sum(orig(this._ownedTokensCount[].getValue()))
+sum(this._ownedTokens[].getLength()) == sum(orig(this._ownedTokens[].getLength()))
+sum(this._ownedTokens[].getValue()) == sum(orig(this._ownedTokens[].getValue()))
+sum(this._ownedTokensIndex[]) == sum(orig(this._ownedTokensIndex[]))
+sum(this._ownedTokensIndex[].getValue()) == sum(orig(this._ownedTokensIndex[].getValue()))
+this._ownedTokens[msg.sender].getLength() == this._ownedTokens[orig(msg.sender)].getLength()
+this._ownedTokens[orig(msg.sender)].getLength() == orig(this._ownedTokens[post(msg.sender)].getLength())
+this._ownedTokens[orig(msg.sender)].getLength() == orig(this._ownedTokens[msg.sender].getLength())
+this._supportedInterfaces == null
+this._tokenOwner has only one value
+this._tokenApprovals has only one value
+this._ownedTokensCount has only one value
+this._ownedTokensCount[].getValue() elements >= 0
+this._operatorApprovals has only one value
+this._operatorApprovals[].getSubLength() elements == 1
+this._operatorApprovals[].getSubValue() elements == true
+this._ownedTokens has only one value
+this._ownedTokens[].getLength() elements >= 1
+this._ownedTokens[].getValue() elements >= 0
+this._ownedTokensIndex has only one value
+this._ownedTokensIndex[].getValue() elements >= 0
+this._allTokens has only one value
+this._allTokensIndex has only one value
+this._tokenURIs has only one value
+this.stanzas has only one value
+msg.value == 0
+block.timestamp one of { 1627184281, 1630379435 }
+orig(this) has only one value
+orig(this._operatorApprovals[].getSubLength()) elements == 1
+orig(this._operatorApprovals[].getSubValue()) elements == true
+orig(approved) == true
+orig(msg.value) == 0
+orig(block.timestamp) one of { 1627184281, 1630379435 }
+sum(this._tokenOwner[]) == 138
+sum(this._tokenApprovals[]) == 163
+sum(this._ownedTokensCount[].getValue()) one of { 18, 19 }
+sum(this._operatorApprovals[].getSubLength()) one of { 1, 2 }
+sum(this._ownedTokens[].getLength()) one of { 26, 27 }
+sum(this._ownedTokens[].getValue()) == 200
+sum(this._ownedTokensIndex[]) == 177
+sum(this._ownedTokensIndex[].getValue()) one of { 30, 38 }
+sum(this._allTokens[]) == 0
+sum(orig(this._tokenOwner[])) == 138
+sum(orig(this._tokenApprovals[])) == 163
+sum(orig(this._ownedTokensCount[].getValue())) one of { 18, 19 }
+sum(orig(this._operatorApprovals[].getSubLength())) one of { 0, 1 }
+sum(orig(this._ownedTokens[].getValue())) == 200
+sum(orig(this._ownedTokensIndex[])) == 177
+sum(orig(this._ownedTokensIndex[].getValue())) one of { 30, 38 }
+this._ownedTokensCount[orig(msg.sender)].getValue() one of { 1, 3 }
+this._ownedTokens[orig(msg.sender)].getLength() one of { 1, 3 }
+orig(approved) in this._operatorApprovals[].getSubValue()
+this._operatorApprovals[].getSubValue() elements == orig(approved)
+this._ownedTokens[orig(msg.sender)].getLength() in this._ownedTokens[].getLength()
+orig(this._operatorApprovals[].getSubLength()) elements == sum(orig(this._operatorApprovals[].getSubLength()))
+orig(this._operatorApprovals[].getSubLength()) elements == this._ownedTokens[orig(msg.sender)].getLength()
+orig(this._operatorApprovals[].getSubValue()) elements == orig(approved)
+===========================================================================
+EXODUS2.transferFrom(address,address,uint256):::EXIT1
+this == orig(this)
+this._supportedInterfaces == orig(this._supportedInterfaces)
+this._supportedInterfaces[].getValue() == orig(this._supportedInterfaces[].getValue())
+this._tokenOwner == orig(this._tokenOwner)
+this._tokenApprovals == orig(this._tokenApprovals)
+this._ownedTokensCount == orig(this._ownedTokensCount)
+this._operatorApprovals == orig(this._operatorApprovals)
+this._operatorApprovals[].getSubLength() == orig(this._operatorApprovals[].getSubLength())
+this._operatorApprovals[].getSubValue() == orig(this._operatorApprovals[].getSubValue())
+this._ownedTokens == orig(this._ownedTokens)
+this._ownedTokensIndex == orig(this._ownedTokensIndex)
+this._allTokens == orig(this._allTokens)
+this._allTokensIndex == orig(this._allTokensIndex)
+this._tokenURIs == orig(this._tokenURIs)
+this.stanzas == orig(this.stanzas)
+from == orig(from)
+to == orig(to)
+tokenId == orig(tokenId)
+tokenId == this._ownedTokens[orig(to)].getValue()
+msg.sender == orig(msg.sender)
+msg.value == orig(msg.value)
+msg.value == sum(this._allTokens[])
+block.timestamp == orig(block.timestamp)
+orig(tokenId) == this._ownedTokens[orig(to)].getValue()
+orig(msg.value) == sum(this._allTokens[])
+sum(this._tokenOwner[]) == this._ownedTokens[orig(to)].getValue()
+sum(this._tokenApprovals[]) == this._ownedTokens[orig(to)].getValue()
+sum(this._ownedTokensCount[].getValue()) == this._ownedTokens[orig(from)].getValue()
+sum(this._ownedTokensCount[].getValue()) == orig(this._ownedTokens[post(from)].getValue())
+sum(this._operatorApprovals[].getSubLength()) == sum(orig(this._operatorApprovals[].getSubLength()))
+sum(this._ownedTokensIndex[]) == this._ownedTokens[orig(from)].getValue()
+sum(orig(this._tokenOwner[])) == orig(this._ownedTokens[post(to)].getValue())
+sum(orig(this._tokenApprovals[])) == this._ownedTokens[orig(to)].getValue()
+sum(orig(this._ownedTokensCount[].getValue())) == orig(this._ownedTokens[post(from)].getValue())
+sum(orig(this._ownedTokensIndex[])) == orig(this._ownedTokens[post(from)].getValue())
+this._ownedTokensCount[orig(from)].getValue() == orig(this._ownedTokensIndex[post(tokenId)].getValue())
+this._ownedTokensCount[orig(to)].getValue() == this._ownedTokens[orig(to)].getValue()
+this._ownedTokensCount[orig(msg.sender)].getValue() == this._ownedTokens[orig(to)].getValue()
+this._ownedTokens[from].getLength() == this._ownedTokens[orig(from)].getLength()
+this._ownedTokens[to].getLength() == this._ownedTokens[orig(to)].getLength()
+this._ownedTokens[msg.sender].getLength() == this._ownedTokens[orig(from)].getLength()
+this._ownedTokens[orig(from)].getLength() == this._ownedTokens[orig(msg.sender)].getLength()
+orig(this._ownedTokens[post(from)].getLength()) == orig(this._ownedTokens[post(msg.sender)].getLength())
+orig(this._ownedTokens[post(from)].getLength()) == orig(this._ownedTokens[from].getLength())
+orig(this._ownedTokens[post(from)].getLength()) == orig(this._ownedTokens[msg.sender].getLength())
+orig(this._ownedTokensCount[post(to)].getValue()) == orig(this._ownedTokens[post(to)].getValue())
+orig(this._ownedTokens[post(to)].getLength()) == orig(this._ownedTokens[to].getLength())
+orig(this._ownedTokens[post(to)].getValue()) == orig(this._ownedTokensCount[post(msg.sender)].getValue())
+this._supportedInterfaces == null
+this._supportedInterfaces[].getValue() elements != null
+this._tokenOwner has only one value
+this._tokenOwner[] elements >= 1
+this._tokenApprovals has only one value
+this._tokenApprovals[] elements >= 1
+this._tokenApprovals[] sorted by <
+this._tokenApprovals[] sorted by <=
+this._ownedTokensCount has only one value
+this._ownedTokensCount[].getValue() elements >= 0
+this._operatorApprovals has only one value
+this._operatorApprovals[].getSubLength() elements == 1
+this._operatorApprovals[].getSubValue() elements == true
+this._operatorApprovals[].getSubValue() elements != null
+this._ownedTokens has only one value
+this._ownedTokens[].getLength() elements >= 1
+this._ownedTokens[].getLength() sorted by >=
+this._ownedTokens[].getValue() elements >= 0
+this._ownedTokensIndex has only one value
+this._ownedTokensIndex[].getValue() elements >= 0
+this._allTokens has only one value
+this._allTokensIndex has only one value
+this._tokenURIs has only one value
+this.stanzas has only one value
+msg.value == 0
+orig(this) has only one value
+orig(this) != null
+orig(this._tokenOwner[]) elements >= 1
+orig(this._tokenApprovals[]) elements >= 1
+orig(this._tokenApprovals[]) sorted by <
+orig(this._tokenApprovals[]) sorted by <=
+orig(this._ownedTokensCount[].getValue()) elements >= 0
+orig(this._ownedTokens[].getLength()) elements >= 1
+orig(this._ownedTokens[].getLength()) sorted by >=
+orig(this._ownedTokens[].getValue()) elements >= 0
+orig(this._ownedTokensIndex[].getValue()) elements >= 0
+orig(msg.value) == 0
+sum(this._ownedTokensCount[].getValue()) one of { 18, 19 }
+sum(this._operatorApprovals[].getSubLength()) one of { 0, 1, 2 }
+sum(this._allTokens[]) == 0
+sum(orig(this._ownedTokensCount[].getValue())) one of { 0, 18, 19 }
+this._ownedTokensCount[orig(to)].getValue() >= 1
+this._ownedTokens[orig(from)].getValue() == 19
+this._ownedTokens[orig(to)].getValue() == 1
+this._ownedTokensIndex[orig(tokenId)].getValue() >= 0
+orig(this._ownedTokens[post(from)].getValue()) == 19
+orig(this._ownedTokens[post(to)].getValue()) == 1
+this._operatorApprovals[].getSubLength() < this._ownedTokens[].getLength() (lexically)
+this._operatorApprovals[].getSubLength() <= this._ownedTokens[].getLength() (lexically)
+this._operatorApprovals[].getSubLength() <= orig(this._ownedTokens[].getLength()) (lexically)
+this._operatorApprovals[].getSubLength() elements == this._ownedTokens[orig(to)].getLength()
+this._operatorApprovals[].getSubLength() elements == orig(this._ownedTokens[post(to)].getLength())
+this._ownedTokens[].getLength() >= orig(this._ownedTokens[].getLength()) (lexically)
+this._ownedTokens[].getLength() elements < sum(this._ownedTokens[].getLength())
+this._ownedTokens[orig(from)].getLength() in this._ownedTokens[].getLength()
+this._ownedTokens[orig(to)].getLength() in this._ownedTokens[].getLength()
+tokenId < block.timestamp
+tokenId < orig(block.timestamp)
+tokenId <= sum(this._tokenOwner[])
+tokenId <= sum(this._tokenApprovals[])
+tokenId <= sum(this._ownedTokensCount[].getValue())
+tokenId < sum(this._ownedTokens[].getValue())
+tokenId < sum(this._ownedTokensIndex[])
+tokenId <= sum(orig(this._tokenApprovals[]))
+msg.value < block.timestamp
+msg.value < orig(tokenId)
+msg.value < orig(block.timestamp)
+msg.value < sum(this._tokenOwner[])
+msg.value < sum(this._tokenApprovals[])
+msg.value < sum(this._ownedTokensCount[].getValue())
+msg.value < sum(this._ownedTokens[].getValue())
+msg.value < sum(this._ownedTokensIndex[])
+msg.value <= sum(this._ownedTokensIndex[].getValue())
+msg.value <= sum(orig(this._tokenOwner[]))
+msg.value < sum(orig(this._tokenApprovals[]))
+msg.value <= sum(orig(this._ownedTokensCount[].getValue()))
+msg.value <= sum(orig(this._ownedTokens[].getValue()))
+msg.value <= sum(orig(this._ownedTokensIndex[]))
+msg.value <= sum(orig(this._ownedTokensIndex[].getValue()))
+msg.value <= this._ownedTokensCount[orig(from)].getValue()
+msg.value < this._ownedTokensCount[orig(to)].getValue()
+msg.value <= this._ownedTokensCount[orig(msg.sender)].getValue()
+msg.value <= this._ownedTokensIndex[orig(tokenId)].getValue()
+msg.value < orig(this._ownedTokensCount[post(from)].getValue())
+msg.value < orig(this._ownedTokensCount[post(to)].getValue())
+msg.value <= orig(this._ownedTokensIndex[post(tokenId)].getValue())
+msg.value < orig(this._ownedTokensCount[post(msg.sender)].getValue())
+orig(this._ownedTokens[].getLength()) elements < sum(this._ownedTokens[].getLength())
+orig(this._ownedTokens[].getLength()) elements < sum(orig(this._ownedTokens[].getLength()))
+orig(this._ownedTokens[post(from)].getLength()) in orig(this._ownedTokens[].getLength())
+orig(this._ownedTokens[post(to)].getLength()) in orig(this._ownedTokens[].getLength())
+orig(from) != orig(to)
+orig(tokenId) < orig(block.timestamp)
+orig(tokenId) <= sum(this._tokenOwner[])
+orig(tokenId) <= sum(this._tokenApprovals[])
+orig(tokenId) <= sum(this._ownedTokensCount[].getValue())
+orig(tokenId) < sum(this._ownedTokens[].getValue())
+orig(tokenId) < sum(this._ownedTokensIndex[])
+orig(tokenId) <= sum(orig(this._tokenApprovals[]))
+orig(msg.value) < orig(block.timestamp)
+orig(msg.value) < sum(this._tokenOwner[])
+orig(msg.value) < sum(this._tokenApprovals[])
+orig(msg.value) < sum(this._ownedTokensCount[].getValue())
+orig(msg.value) < sum(this._ownedTokens[].getValue())
+orig(msg.value) < sum(this._ownedTokensIndex[])
+orig(msg.value) <= sum(this._ownedTokensIndex[].getValue())
+orig(msg.value) <= sum(orig(this._tokenOwner[]))
+orig(msg.value) < sum(orig(this._tokenApprovals[]))
+orig(msg.value) <= sum(orig(this._ownedTokensCount[].getValue()))
+orig(msg.value) <= sum(orig(this._ownedTokens[].getValue()))
+orig(msg.value) <= sum(orig(this._ownedTokensIndex[]))
+orig(msg.value) <= sum(orig(this._ownedTokensIndex[].getValue()))
+orig(msg.value) <= this._ownedTokensCount[orig(from)].getValue()
+orig(msg.value) < this._ownedTokensCount[orig(to)].getValue()
+orig(msg.value) <= this._ownedTokensCount[orig(msg.sender)].getValue()
+orig(msg.value) <= this._ownedTokensIndex[orig(tokenId)].getValue()
+orig(msg.value) < orig(this._ownedTokensCount[post(from)].getValue())
+orig(msg.value) < orig(this._ownedTokensCount[post(to)].getValue())
+orig(msg.value) <= orig(this._ownedTokensIndex[post(tokenId)].getValue())
+orig(msg.value) < orig(this._ownedTokensCount[post(msg.sender)].getValue())
+sum(this._tokenOwner[]) <= sum(this._tokenApprovals[])
+sum(this._ownedTokensCount[].getValue()) < sum(this._ownedTokens[].getValue())
+sum(this._ownedTokensCount[].getValue()) <= sum(this._ownedTokensIndex[])
+sum(this._operatorApprovals[].getSubLength()) < sum(this._ownedTokens[].getLength())
+sum(this._operatorApprovals[].getSubLength()) <= sum(orig(this._ownedTokens[].getLength()))
+sum(this._operatorApprovals[].getSubLength()) < this._ownedTokens[orig(from)].getLength()
+sum(this._operatorApprovals[].getSubLength()) % this._ownedTokens[orig(to)].getLength() == 0
+sum(this._operatorApprovals[].getSubLength()) < orig(this._ownedTokens[post(from)].getLength())
+sum(this._operatorApprovals[].getSubLength()) % orig(this._ownedTokens[post(to)].getLength()) == 0
+sum(this._operatorApprovals[].getSubLength()) < orig(this._ownedTokens[post(to)].getLength())
+sum(this._ownedTokens[].getLength()) >= sum(orig(this._ownedTokens[].getLength()))
+sum(this._ownedTokens[].getLength()) > this._ownedTokens[orig(from)].getLength()
+sum(this._ownedTokens[].getLength()) > this._ownedTokens[orig(to)].getLength()
+sum(this._ownedTokens[].getLength()) > orig(this._ownedTokens[post(from)].getLength())
+sum(this._ownedTokens[].getLength()) > orig(this._ownedTokens[post(to)].getLength())
+sum(this._ownedTokensIndex[].getValue()) >= sum(this._allTokens[])
+sum(this._ownedTokensIndex[].getValue()) <= sum(orig(this._ownedTokens[].getValue()))
+sum(this._ownedTokensIndex[].getValue()) <= sum(orig(this._ownedTokensIndex[]))
+sum(this._allTokens[]) <= sum(orig(this._tokenOwner[]))
+sum(this._allTokens[]) < sum(orig(this._tokenApprovals[]))
+sum(this._allTokens[]) <= sum(orig(this._ownedTokensCount[].getValue()))
+sum(this._allTokens[]) <= sum(orig(this._ownedTokens[].getValue()))
+sum(this._allTokens[]) <= sum(orig(this._ownedTokensIndex[]))
+sum(this._allTokens[]) <= sum(orig(this._ownedTokensIndex[].getValue()))
+sum(this._allTokens[]) <= this._ownedTokensCount[orig(from)].getValue()
+sum(this._allTokens[]) < this._ownedTokensCount[orig(to)].getValue()
+sum(this._allTokens[]) <= this._ownedTokensCount[orig(msg.sender)].getValue()
+sum(this._allTokens[]) <= this._ownedTokensIndex[orig(tokenId)].getValue()
+sum(this._allTokens[]) < orig(this._ownedTokensCount[post(from)].getValue())
+sum(this._allTokens[]) < orig(this._ownedTokensCount[post(to)].getValue())
+sum(this._allTokens[]) <= orig(this._ownedTokensIndex[post(tokenId)].getValue())
+sum(this._allTokens[]) < orig(this._ownedTokensCount[post(msg.sender)].getValue())
+sum(orig(this._tokenOwner[])) >= sum(orig(this._ownedTokensIndex[].getValue()))
+sum(orig(this._ownedTokensCount[].getValue())) <= sum(orig(this._ownedTokens[].getValue()))
+sum(orig(this._ownedTokensCount[].getValue())) <= sum(orig(this._ownedTokensIndex[]))
+sum(orig(this._ownedTokens[].getLength())) > orig(this._ownedTokens[post(from)].getLength())
+sum(orig(this._ownedTokens[].getLength())) % orig(this._ownedTokens[post(to)].getLength()) == 0
+sum(orig(this._ownedTokens[].getLength())) > orig(this._ownedTokens[post(to)].getLength())
+sum(orig(this._ownedTokens[].getValue())) >= sum(orig(this._ownedTokensIndex[].getValue()))
+sum(orig(this._ownedTokensIndex[])) >= sum(orig(this._ownedTokensIndex[].getValue()))
+this._ownedTokensCount[orig(from)].getValue() < orig(this._ownedTokensCount[post(from)].getValue())
+this._ownedTokens[orig(from)].getLength() >= this._ownedTokens[orig(to)].getLength()
+this._ownedTokens[orig(from)].getLength() >= orig(this._ownedTokens[post(from)].getLength())
+this._ownedTokens[orig(from)].getLength() >= orig(this._ownedTokens[post(to)].getLength())
+this._ownedTokens[orig(to)].getLength() >= orig(this._ownedTokens[post(to)].getLength())
+orig(this._ownedTokens[post(from)].getLength()) >= orig(this._ownedTokens[post(to)].getLength())
+orig(this._ownedTokensCount[post(to)].getValue()) <= orig(this._ownedTokensCount[post(msg.sender)].getValue())
+Exiting Daikon.

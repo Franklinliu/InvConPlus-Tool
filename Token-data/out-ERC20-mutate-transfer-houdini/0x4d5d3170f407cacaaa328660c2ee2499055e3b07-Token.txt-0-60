@@ -1,0 +1,17 @@
+Invariants with True value:6
+Invariants with False value:3
+
+True Invariants:
+transfer(_to,_value): Requires msg.sender != address(0)
+transfer(_to,_value): Requires VeriSol.Old(balanceOf[msg.sender]) >= _value
+transfer(_to,_value): Ensures VeriSol.Old(balanceOf[msg.sender]) >= balanceOf[msg.sender]
+transfer(_to,_value): Ensures VeriSol.Old(uint256(decimals)) == decimals
+transfer(_to,_value): Ensures totalSupply == VeriSol.Old(totalSupply)
+Token: Ensures VeriSol.ContractInvariant(decimals == 6)
+
+False Invariants:
+transfer(_to,_value): Ensures VeriSol.SumMapping(balanceOf) == VeriSol.Old(VeriSol.SumMapping(balanceOf))
+transfer(_to,_value): Ensures balanceOf[_to] >= VeriSol.Old(balanceOf[_to])
+Token: Ensures VeriSol.ContractInvariant(totalSupply == VeriSol.SumMapping(balanceOf))
+
+ // ./gambit_out_transfer/mutants/60/verisol_test

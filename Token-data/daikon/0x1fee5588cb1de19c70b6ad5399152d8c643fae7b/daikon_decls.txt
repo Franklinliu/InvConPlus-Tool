@@ -1,0 +1,4664 @@
+// Declarations for Smart Contract Runtime Invariant Identification
+// Declarations automatically written by Liu Ye 
+
+decl-version 2.0
+var-comparability implicit
+ppt PhunToken:::Object
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags non_null
+  comparability 0
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+
+
+ppt PhunToken.approve(address,uint256):::ENTER
+ppt-type enter
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable spender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.approve(address,uint256):::EXIT1
+ppt-type subexit
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable spender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.approve(address,uint256):::EXIT2
+ppt-type subexit
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable spender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.transferFrom(address,address,uint256):::ENTER
+ppt-type enter
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable from
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable to
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.transferFrom(address,address,uint256):::EXIT1
+ppt-type subexit
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable from
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable to
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.transferFrom(address,address,uint256):::EXIT2
+ppt-type subexit
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable from
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable to
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.increaseAllowance(address,uint256):::ENTER
+ppt-type enter
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable spender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable addedValue
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.increaseAllowance(address,uint256):::EXIT1
+ppt-type subexit
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable spender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable addedValue
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.increaseAllowance(address,uint256):::EXIT2
+ppt-type subexit
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable spender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable addedValue
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.unpause():::ENTER
+ppt-type enter
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.unpause():::EXIT1
+ppt-type subexit
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.unpause():::EXIT2
+ppt-type subexit
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.burn(uint256):::ENTER
+ppt-type enter
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable amount
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.burn(uint256):::EXIT1
+ppt-type subexit
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable amount
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.burn(uint256):::EXIT2
+ppt-type subexit
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable amount
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.renouncePauser():::ENTER
+ppt-type enter
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.renouncePauser():::EXIT1
+ppt-type subexit
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.renouncePauser():::EXIT2
+ppt-type subexit
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.burnFrom(address,uint256):::ENTER
+ppt-type enter
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable account
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable amount
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.burnFrom(address,uint256):::EXIT1
+ppt-type subexit
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable account
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable amount
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.burnFrom(address,uint256):::EXIT2
+ppt-type subexit
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable account
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable amount
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.addPauser(address):::ENTER
+ppt-type enter
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable account
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.addPauser(address):::EXIT1
+ppt-type subexit
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable account
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.addPauser(address):::EXIT2
+ppt-type subexit
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable account
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.pause():::ENTER
+ppt-type enter
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.pause():::EXIT1
+ppt-type subexit
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.pause():::EXIT2
+ppt-type subexit
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.decreaseAllowance(address,uint256):::ENTER
+ppt-type enter
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable spender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable subtractedValue
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.decreaseAllowance(address,uint256):::EXIT1
+ppt-type subexit
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable spender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable subtractedValue
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.decreaseAllowance(address,uint256):::EXIT2
+ppt-type subexit
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable spender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable subtractedValue
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.transfer(address,uint256):::ENTER
+ppt-type enter
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable to
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.transfer(address,uint256):::EXIT1
+ppt-type subexit
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable to
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt PhunToken.transfer(address,uint256):::EXIT2
+ppt-type subexit
+parent parent PhunToken:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type PhunToken
+  rep-type hashcode
+  flags is_param nomod
+  parent PhunToken:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances
+    var-kind field _allowances
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowances[..]
+    var-kind array
+    enclosing-var this._allowances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent PhunToken:::Object 1
+variable this._allowances[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent PhunToken:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent PhunToken:::Object 1
+variable this._pausers
+    var-kind field _pausers
+    enclosing-var this
+    dec-type Roles.Role
+    rep-type hashcode
+    flags non_null
+    comparability 10
+    parent PhunToken:::Object 1
+variable this._paused
+    var-kind field _paused
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent PhunToken:::Object 1
+variable to
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+

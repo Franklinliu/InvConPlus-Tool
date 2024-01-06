@@ -1,0 +1,37 @@
+Invariants with True value:28
+Invariants with False value:1
+
+True Invariants:
+transfer(to,amount): Requires decimals == 18
+transfer(to,amount): Requires msg.sender != address(0)
+transfer(to,amount): Requires to != address(0)
+transfer(to,amount): Requires oneHundredPercent == 100
+transfer(to,amount): Requires VeriSol.Old(VeriSol.SumMapping(balances)) == VeriSol.Old(_totalSupply)
+transfer(to,amount): Requires VeriSol.Old(uint256(decimals)) < VeriSol.Old(oneHundredPercent)
+transfer(to,amount): Requires amount <= VeriSol.Old(balances[msg.sender])
+transfer(to,amount): Ensures decimals == 18
+transfer(to,amount): Ensures oneHundredPercent == 100
+transfer(to,amount): Ensures VeriSol.Old(VeriSol.SumMapping(balances)) >= _totalSupply
+transfer(to,amount): Ensures VeriSol.Old(VeriSol.SumMapping(balances)) >= VeriSol.SumMapping(balances)
+transfer(to,amount): Ensures _totalSupply <= VeriSol.Old(_totalSupply)
+transfer(to,amount): Ensures _totalSupply == VeriSol.SumMapping(balances)
+transfer(to,amount): Ensures VeriSol.Old(uint256(decimals)) == decimals
+transfer(to,amount): Ensures VeriSol.Old(uint256(decimals)) < oneHundredPercent
+transfer(to,amount): Ensures VeriSol.Old(_totalSupply) >= VeriSol.SumMapping(balances)
+transfer(to,amount): Ensures decimals < VeriSol.Old(oneHundredPercent)
+transfer(to,amount): Ensures decimals < oneHundredPercent
+transfer(to,amount): Ensures balances[msg.sender] <= VeriSol.Old(balances[msg.sender])
+transfer(to,amount): Ensures VeriSol.Old(oneHundredPercent) == oneHundredPercent
+approve(spender,amount): Requires msg.sender != address(0)
+approve(spender,amount): Ensures VeriSol.Old(uint256(decimals)) == decimals
+approve(spender,amount): Ensures _totalSupply == VeriSol.Old(_totalSupply)
+approve(spender,amount): Ensures VeriSol.Old(oneHundredPercent) == oneHundredPercent
+MaronInu: Ensures VeriSol.ContractInvariant(decimals == 18)
+MaronInu: Ensures VeriSol.ContractInvariant(oneHundredPercent == 100)
+MaronInu: Ensures VeriSol.ContractInvariant(_totalSupply == VeriSol.SumMapping(balances))
+MaronInu: Ensures VeriSol.ContractInvariant(decimals < oneHundredPercent)
+
+False Invariants:
+approve(spender,amount): Ensures allowed[msg.sender][spender] == amount
+
+ // ./gambit_out_approve/mutants/1100/verisol_test

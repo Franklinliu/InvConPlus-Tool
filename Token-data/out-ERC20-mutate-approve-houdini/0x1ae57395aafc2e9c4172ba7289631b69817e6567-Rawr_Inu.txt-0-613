@@ -1,0 +1,12 @@
+Invariants with True value:4
+Invariants with False value:0
+
+True Invariants:
+approve(spender,tokens): Requires msg.sender != address(0)
+approve(spender,tokens): Ensures _totalSupply == VeriSol.Old(_totalSupply)
+approve(spender,tokens): Ensures decimals == VeriSol.Old(uint256(decimals))
+approve(spender,tokens): Ensures allowed[msg.sender][spender] == tokens
+
+False Invariants:
+
+ // ./gambit_out_approve/mutants/613/verisol_test

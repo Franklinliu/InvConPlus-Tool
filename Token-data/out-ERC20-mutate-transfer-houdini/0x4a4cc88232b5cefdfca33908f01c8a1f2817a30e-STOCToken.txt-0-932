@@ -1,0 +1,22 @@
+Invariants with True value:9
+Invariants with False value:5
+
+True Invariants:
+transfer(to,tokens): Requires msg.sender != address(0)
+transfer(to,tokens): Ensures VeriSol.Old(_totalSupply) == _totalSupply
+transfer(to,tokens): Ensures VeriSol.Old(uint256(decimals)) == decimals
+transfer(to,tokens): Ensures balances[to] >= VeriSol.Old(balances[to])
+transfer(to,tokens): Ensures balances[to] >= tokens
+STOCToken: Ensures VeriSol.ContractInvariant(decimals == 18)
+STOCToken: Ensures VeriSol.ContractInvariant(_totalSupply == 9999999999000000000000000000)
+STOCToken: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) > decimals)
+STOCToken: Ensures VeriSol.ContractInvariant(decimals < _totalSupply)
+
+False Invariants:
+transfer(to,tokens): Requires VeriSol.Old(balances[msg.sender]) >= tokens
+transfer(to,tokens): Ensures VeriSol.Old(VeriSol.SumMapping(balances)) == VeriSol.SumMapping(balances)
+transfer(to,tokens): Ensures balances[msg.sender] <= VeriSol.Old(balances[msg.sender])
+STOCToken: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == 9999999999000000000000000000)
+STOCToken: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == _totalSupply)
+
+ // ./gambit_out_transfer/mutants/932/verisol_test

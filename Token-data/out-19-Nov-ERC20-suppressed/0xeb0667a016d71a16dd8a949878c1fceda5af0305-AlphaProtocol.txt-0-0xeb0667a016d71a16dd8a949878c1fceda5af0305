@@ -1,0 +1,8 @@
+original result: 11 invariants, smt-simplified result: 5 invariants
+approve(spender,value):
+Requires		spender != address(0)
+Requires		msg.sender != address(0)
+Ensures		VeriSol.Old(_totalSupply) == _totalSupply
+Ensures		value == _allowances[msg.sender][spender]
+AlphaProtocol:
+Ensures		_totalSupply == VeriSol.SumMapping(_balances)

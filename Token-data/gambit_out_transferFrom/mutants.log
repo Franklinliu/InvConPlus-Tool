@@ -1,0 +1,385 @@
+1,DeleteExpressionMutation,verisol_test/0x2dd1b9410c73e16b60240e529e38e30425f00d4e.etherscan.io-TokenMintERC20Token.sol,347:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+2,DeleteExpressionMutation,verisol_test/0x2dd1b9410c73e16b60240e529e38e30425f00d4e.etherscan.io-TokenMintERC20Token.sol,405:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+3,RequireMutation,verisol_test/0x2dd1b9410c73e16b60240e529e38e30425f00d4e.etherscan.io-TokenMintERC20Token.sol,405:17,owner != address(0),true
+4,RequireMutation,verisol_test/0x2dd1b9410c73e16b60240e529e38e30425f00d4e.etherscan.io-TokenMintERC20Token.sol,406:17,spender != address(0),false
+5,DeleteExpressionMutation,verisol_test/0x2dd1b9410c73e16b60240e529e38e30425f00d4e.etherscan.io-TokenMintERC20Token.sol,408:9,_allowances[owner][spender] = value,assert(true)
+6,DeleteExpressionMutation,verisol_test/0xa148518ac4ac3c6477d506969f8ca74dd87fc6ea.etherscan.io-YakuzaInu.sol,348:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+7,DeleteExpressionMutation,verisol_test/0xa148518ac4ac3c6477d506969f8ca74dd87fc6ea.etherscan.io-YakuzaInu.sol,406:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+8,RequireMutation,verisol_test/0xa148518ac4ac3c6477d506969f8ca74dd87fc6ea.etherscan.io-YakuzaInu.sol,406:17,owner != address(0),true
+9,RequireMutation,verisol_test/0xa148518ac4ac3c6477d506969f8ca74dd87fc6ea.etherscan.io-YakuzaInu.sol,407:17,spender != address(0),false
+10,DeleteExpressionMutation,verisol_test/0xa148518ac4ac3c6477d506969f8ca74dd87fc6ea.etherscan.io-YakuzaInu.sol,409:9,_allowances[owner][spender] = value,assert(true)
+11,DeleteExpressionMutation,verisol_test/0x9c30a3469392c4a152054efa923c664f040e8a07.etherscan.io-BONE.sol,49:9,"name = ""Shiba Inu Bone""",assert(true)
+12,DeleteExpressionMutation,verisol_test/0x9c30a3469392c4a152054efa923c664f040e8a07.etherscan.io-BONE.sol,54:9,balances[msg.sender] = _totalSupply,assert(true)
+13,DeleteExpressionMutation,verisol_test/0x9c30a3469392c4a152054efa923c664f040e8a07.etherscan.io-BONE.sol,84:9,"balances[from] = safeSub(balances[from], tokens)",assert(true)
+14,DeleteExpressionMutation,verisol_test/0x9c30a3469392c4a152054efa923c664f040e8a07.etherscan.io-BONE.sol,85:9,"allowed[from][msg.sender] = safeSub(allowed[from][msg.sender], tokens)",assert(true)
+15,DeleteExpressionMutation,verisol_test/0x9c30a3469392c4a152054efa923c664f040e8a07.etherscan.io-BONE.sol,86:9,"balances[to] = safeAdd(balances[to], tokens)",assert(true)
+16,RequireMutation,verisol_test/0x4d935d75889c0ce66aa50aac50508af502d6eb86.etherscan.io-BezosBucks.sol,140:13,value <= _balances[from],true
+17,DeleteExpressionMutation,verisol_test/0x4d935d75889c0ce66aa50aac50508af502d6eb86.etherscan.io-BezosBucks.sol,141:5,require(value <= _allowed[from][msg.sender]),assert(true)
+18,DeleteExpressionMutation,verisol_test/0x4d935d75889c0ce66aa50aac50508af502d6eb86.etherscan.io-BezosBucks.sol,142:5,require(to != address(0)),assert(true)
+19,DeleteExpressionMutation,verisol_test/0x4d935d75889c0ce66aa50aac50508af502d6eb86.etherscan.io-BezosBucks.sol,144:5,_balances[from] = _balances[from].sub(value),assert(true)
+20,DeleteExpressionMutation,verisol_test/0x4d935d75889c0ce66aa50aac50508af502d6eb86.etherscan.io-BezosBucks.sol,149:5,_balances[to] = _balances[to].add(tokensToTransfer),assert(true)
+21,BinaryOpMutation,verisol_test/0x4d935d75889c0ce66aa50aac50508af502d6eb86.etherscan.io-BezosBucks.sol,32:13, - ,**
+22,BinaryOpMutation,verisol_test/0x4d935d75889c0ce66aa50aac50508af502d6eb86.etherscan.io-BezosBucks.sol,36:18, + ,-
+23,BinaryOpMutation,verisol_test/0x4d935d75889c0ce66aa50aac50508af502d6eb86.etherscan.io-BezosBucks.sol,36:18, + ,%
+24,BinaryOpMutation,verisol_test/0x4d935d75889c0ce66aa50aac50508af502d6eb86.etherscan.io-BezosBucks.sol,36:18, + ,**
+25,DeleteExpressionMutation,verisol_test/0x4d935d75889c0ce66aa50aac50508af502d6eb86.etherscan.io-BezosBucks.sol,37:5,assert(c >= a),assert(true)
+26,DeleteExpressionMutation,verisol_test/0x00521c351e842f7c4c92c2949eaaf33dbf08e49a.etherscan.io-LumaParty.sol,350:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+27,DeleteExpressionMutation,verisol_test/0x00521c351e842f7c4c92c2949eaaf33dbf08e49a.etherscan.io-LumaParty.sol,408:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+28,RequireMutation,verisol_test/0x00521c351e842f7c4c92c2949eaaf33dbf08e49a.etherscan.io-LumaParty.sol,408:17,owner != address(0),true
+29,RequireMutation,verisol_test/0x00521c351e842f7c4c92c2949eaaf33dbf08e49a.etherscan.io-LumaParty.sol,409:17,spender != address(0),false
+30,DeleteExpressionMutation,verisol_test/0x00521c351e842f7c4c92c2949eaaf33dbf08e49a.etherscan.io-LumaParty.sol,411:9,_allowances[owner][spender] = value,assert(true)
+31,DeleteExpressionMutation,verisol_test/0x73cea1d52eaae08f87178dfcbda80e29cb1333ef.etherscan.io-NewCommunityERC.sol,364:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+32,DeleteExpressionMutation,verisol_test/0x73cea1d52eaae08f87178dfcbda80e29cb1333ef.etherscan.io-NewCommunityERC.sol,422:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+33,RequireMutation,verisol_test/0x73cea1d52eaae08f87178dfcbda80e29cb1333ef.etherscan.io-NewCommunityERC.sol,422:17,owner != address(0),true
+34,RequireMutation,verisol_test/0x73cea1d52eaae08f87178dfcbda80e29cb1333ef.etherscan.io-NewCommunityERC.sol,423:17,spender != address(0),false
+35,DeleteExpressionMutation,verisol_test/0x73cea1d52eaae08f87178dfcbda80e29cb1333ef.etherscan.io-NewCommunityERC.sol,425:9,_allowances[owner][spender] = value,assert(true)
+36,DeleteExpressionMutation,verisol_test/0x4245acecd4eef3ae8fbfe09939c9b63595887063.etherscan.io-TokenMintERC20Token.sol,341:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+37,DeleteExpressionMutation,verisol_test/0x4245acecd4eef3ae8fbfe09939c9b63595887063.etherscan.io-TokenMintERC20Token.sol,399:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+38,RequireMutation,verisol_test/0x4245acecd4eef3ae8fbfe09939c9b63595887063.etherscan.io-TokenMintERC20Token.sol,399:17,owner != address(0),true
+39,RequireMutation,verisol_test/0x4245acecd4eef3ae8fbfe09939c9b63595887063.etherscan.io-TokenMintERC20Token.sol,400:17,spender != address(0),false
+40,DeleteExpressionMutation,verisol_test/0x4245acecd4eef3ae8fbfe09939c9b63595887063.etherscan.io-TokenMintERC20Token.sol,402:9,_allowances[owner][spender] = value,assert(true)
+41,DeleteExpressionMutation,verisol_test/0xc786864b37b6bf056f32deb5fc80c1f38bfcf4ab.etherscan.io-Cassandra.sol,363:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+42,DeleteExpressionMutation,verisol_test/0xc786864b37b6bf056f32deb5fc80c1f38bfcf4ab.etherscan.io-Cassandra.sol,421:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+43,RequireMutation,verisol_test/0xc786864b37b6bf056f32deb5fc80c1f38bfcf4ab.etherscan.io-Cassandra.sol,421:17,owner != address(0),true
+44,RequireMutation,verisol_test/0xc786864b37b6bf056f32deb5fc80c1f38bfcf4ab.etherscan.io-Cassandra.sol,422:17,spender != address(0),false
+45,DeleteExpressionMutation,verisol_test/0xc786864b37b6bf056f32deb5fc80c1f38bfcf4ab.etherscan.io-Cassandra.sol,424:9,_allowances[owner][spender] = value,assert(true)
+46,DeleteExpressionMutation,verisol_test/0x35cd5afde3994608934f3bec6621ba2f0606985f.etherscan.io-TokenMintERC20Token.sol,352:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+47,DeleteExpressionMutation,verisol_test/0x35cd5afde3994608934f3bec6621ba2f0606985f.etherscan.io-TokenMintERC20Token.sol,410:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+48,RequireMutation,verisol_test/0x35cd5afde3994608934f3bec6621ba2f0606985f.etherscan.io-TokenMintERC20Token.sol,410:17,owner != address(0),true
+49,RequireMutation,verisol_test/0x35cd5afde3994608934f3bec6621ba2f0606985f.etherscan.io-TokenMintERC20Token.sol,411:17,spender != address(0),false
+50,DeleteExpressionMutation,verisol_test/0x35cd5afde3994608934f3bec6621ba2f0606985f.etherscan.io-TokenMintERC20Token.sol,413:9,_allowances[owner][spender] = value,assert(true)
+51,BinaryOpMutation,verisol_test/0x727d9a1e65c62ca72173568828d4a06cdcb80fd6.etherscan.io-SPACEJAM.sol,94:36, *,%
+52,RequireMutation,verisol_test/0x727d9a1e65c62ca72173568828d4a06cdcb80fd6.etherscan.io-SPACEJAM.sol,155:13,value <= _balances[from],true
+53,RequireMutation,verisol_test/0x727d9a1e65c62ca72173568828d4a06cdcb80fd6.etherscan.io-SPACEJAM.sol,155:13,value <= _balances[from],false
+54,DeleteExpressionMutation,verisol_test/0x727d9a1e65c62ca72173568828d4a06cdcb80fd6.etherscan.io-SPACEJAM.sol,157:5,require(to != address(0)),assert(true)
+55,DeleteExpressionMutation,verisol_test/0x727d9a1e65c62ca72173568828d4a06cdcb80fd6.etherscan.io-SPACEJAM.sol,159:5,_balances[from] = _balances[from].sub(value),assert(true)
+56,BinaryOpMutation,verisol_test/0x727d9a1e65c62ca72173568828d4a06cdcb80fd6.etherscan.io-SPACEJAM.sol,44:13, - ,**
+57,BinaryOpMutation,verisol_test/0x727d9a1e65c62ca72173568828d4a06cdcb80fd6.etherscan.io-SPACEJAM.sol,48:18, + ,-
+58,BinaryOpMutation,verisol_test/0x727d9a1e65c62ca72173568828d4a06cdcb80fd6.etherscan.io-SPACEJAM.sol,48:18, + ,%
+59,BinaryOpMutation,verisol_test/0x727d9a1e65c62ca72173568828d4a06cdcb80fd6.etherscan.io-SPACEJAM.sol,48:18, + ,**
+60,DeleteExpressionMutation,verisol_test/0x727d9a1e65c62ca72173568828d4a06cdcb80fd6.etherscan.io-SPACEJAM.sol,49:5,assert(c >= a),assert(true)
+61,DeleteExpressionMutation,verisol_test/0x631c6b3332dcc35314faf56e81eea792ffcc3c2a.etherscan.io-TokenMintERC20Token.sol,341:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+62,DeleteExpressionMutation,verisol_test/0x631c6b3332dcc35314faf56e81eea792ffcc3c2a.etherscan.io-TokenMintERC20Token.sol,399:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+63,RequireMutation,verisol_test/0x631c6b3332dcc35314faf56e81eea792ffcc3c2a.etherscan.io-TokenMintERC20Token.sol,399:17,owner != address(0),true
+64,RequireMutation,verisol_test/0x631c6b3332dcc35314faf56e81eea792ffcc3c2a.etherscan.io-TokenMintERC20Token.sol,400:17,spender != address(0),false
+65,DeleteExpressionMutation,verisol_test/0x631c6b3332dcc35314faf56e81eea792ffcc3c2a.etherscan.io-TokenMintERC20Token.sol,402:9,_allowances[owner][spender] = value,assert(true)
+66,DeleteExpressionMutation,verisol_test/0x5183633579015b296f1dd86b0f12a628f8eac66f.etherscan.io-LimitMax.sol,50:9,"name = ""LimitMax""",assert(true)
+67,DeleteExpressionMutation,verisol_test/0x5183633579015b296f1dd86b0f12a628f8eac66f.etherscan.io-LimitMax.sol,55:9,balances[msg.sender] = _totalSupply,assert(true)
+68,DeleteExpressionMutation,verisol_test/0x5183633579015b296f1dd86b0f12a628f8eac66f.etherscan.io-LimitMax.sol,85:9,"balances[from] = safeSub(balances[from], tokens)",assert(true)
+69,DeleteExpressionMutation,verisol_test/0x5183633579015b296f1dd86b0f12a628f8eac66f.etherscan.io-LimitMax.sol,86:9,"allowed[from][msg.sender] = safeSub(allowed[from][msg.sender], tokens)",assert(true)
+70,DeleteExpressionMutation,verisol_test/0x5183633579015b296f1dd86b0f12a628f8eac66f.etherscan.io-LimitMax.sol,87:9,"balances[to] = safeAdd(balances[to], tokens)",assert(true)
+71,DeleteExpressionMutation,verisol_test/0x4c6719bf85903d18c295da44216f862b01b36f43.etherscan.io-AlloHash.sol,50:9,"name = ""AlloHash""",assert(true)
+72,DeleteExpressionMutation,verisol_test/0x4c6719bf85903d18c295da44216f862b01b36f43.etherscan.io-AlloHash.sol,55:9,balances[msg.sender] = _totalSupply,assert(true)
+73,DeleteExpressionMutation,verisol_test/0x4c6719bf85903d18c295da44216f862b01b36f43.etherscan.io-AlloHash.sol,85:9,"balances[from] = safeSub(balances[from], tokens)",assert(true)
+74,DeleteExpressionMutation,verisol_test/0x4c6719bf85903d18c295da44216f862b01b36f43.etherscan.io-AlloHash.sol,86:9,"allowed[from][msg.sender] = safeSub(allowed[from][msg.sender], tokens)",assert(true)
+75,DeleteExpressionMutation,verisol_test/0x4c6719bf85903d18c295da44216f862b01b36f43.etherscan.io-AlloHash.sol,87:9,"balances[to] = safeAdd(balances[to], tokens)",assert(true)
+76,BinaryOpMutation,verisol_test/0x669b2360e3e33d0b4d60cbe05a5cdc0c0f2e8346.etherscan.io-SAFEPEPPA.sol,82:39, *,%
+77,RequireMutation,verisol_test/0x669b2360e3e33d0b4d60cbe05a5cdc0c0f2e8346.etherscan.io-SAFEPEPPA.sol,143:13,value <= _balances[from],true
+78,RequireMutation,verisol_test/0x669b2360e3e33d0b4d60cbe05a5cdc0c0f2e8346.etherscan.io-SAFEPEPPA.sol,143:13,value <= _balances[from],false
+79,DeleteExpressionMutation,verisol_test/0x669b2360e3e33d0b4d60cbe05a5cdc0c0f2e8346.etherscan.io-SAFEPEPPA.sol,145:5,require(to != address(0)),assert(true)
+80,DeleteExpressionMutation,verisol_test/0x669b2360e3e33d0b4d60cbe05a5cdc0c0f2e8346.etherscan.io-SAFEPEPPA.sol,147:5,_balances[from] = _balances[from].sub(value),assert(true)
+81,BinaryOpMutation,verisol_test/0x669b2360e3e33d0b4d60cbe05a5cdc0c0f2e8346.etherscan.io-SAFEPEPPA.sol,32:13, - ,**
+82,BinaryOpMutation,verisol_test/0x669b2360e3e33d0b4d60cbe05a5cdc0c0f2e8346.etherscan.io-SAFEPEPPA.sol,36:18, + ,-
+83,BinaryOpMutation,verisol_test/0x669b2360e3e33d0b4d60cbe05a5cdc0c0f2e8346.etherscan.io-SAFEPEPPA.sol,36:18, + ,%
+84,BinaryOpMutation,verisol_test/0x669b2360e3e33d0b4d60cbe05a5cdc0c0f2e8346.etherscan.io-SAFEPEPPA.sol,36:18, + ,**
+85,DeleteExpressionMutation,verisol_test/0x669b2360e3e33d0b4d60cbe05a5cdc0c0f2e8346.etherscan.io-SAFEPEPPA.sol,37:5,assert(c >= a),assert(true)
+86,DeleteExpressionMutation,verisol_test/0x1f6cb817ee3e64afe0c03617e51c55e047a2953e.etherscan.io-CHIMERA.sol,355:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+87,DeleteExpressionMutation,verisol_test/0x1f6cb817ee3e64afe0c03617e51c55e047a2953e.etherscan.io-CHIMERA.sol,413:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+88,RequireMutation,verisol_test/0x1f6cb817ee3e64afe0c03617e51c55e047a2953e.etherscan.io-CHIMERA.sol,413:17,owner != address(0),true
+89,RequireMutation,verisol_test/0x1f6cb817ee3e64afe0c03617e51c55e047a2953e.etherscan.io-CHIMERA.sol,414:17,spender != address(0),false
+90,DeleteExpressionMutation,verisol_test/0x1f6cb817ee3e64afe0c03617e51c55e047a2953e.etherscan.io-CHIMERA.sol,416:9,_allowances[owner][spender] = value,assert(true)
+91,DeleteExpressionMutation,verisol_test/0xcfa6ab49f69800b877070f231f22496249990cee.etherscan.io-Brahma.sol,50:9,"name = ""Brahma""",assert(true)
+92,DeleteExpressionMutation,verisol_test/0xcfa6ab49f69800b877070f231f22496249990cee.etherscan.io-Brahma.sol,55:9,balances[msg.sender] = _totalSupply,assert(true)
+93,DeleteExpressionMutation,verisol_test/0xcfa6ab49f69800b877070f231f22496249990cee.etherscan.io-Brahma.sol,85:9,"balances[from] = safeSub(balances[from], tokens)",assert(true)
+94,DeleteExpressionMutation,verisol_test/0xcfa6ab49f69800b877070f231f22496249990cee.etherscan.io-Brahma.sol,86:9,"allowed[from][msg.sender] = safeSub(allowed[from][msg.sender], tokens)",assert(true)
+95,DeleteExpressionMutation,verisol_test/0xcfa6ab49f69800b877070f231f22496249990cee.etherscan.io-Brahma.sol,87:9,"balances[to] = safeAdd(balances[to], tokens)",assert(true)
+96,DeleteExpressionMutation,verisol_test/0xea75671ab1d5c71b29399c0c4eccd5a9dbe41370.etherscan.io-TokenMintERC20Token.sol,347:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+97,DeleteExpressionMutation,verisol_test/0xea75671ab1d5c71b29399c0c4eccd5a9dbe41370.etherscan.io-TokenMintERC20Token.sol,405:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+98,RequireMutation,verisol_test/0xea75671ab1d5c71b29399c0c4eccd5a9dbe41370.etherscan.io-TokenMintERC20Token.sol,405:17,owner != address(0),true
+99,RequireMutation,verisol_test/0xea75671ab1d5c71b29399c0c4eccd5a9dbe41370.etherscan.io-TokenMintERC20Token.sol,406:17,spender != address(0),false
+100,DeleteExpressionMutation,verisol_test/0xea75671ab1d5c71b29399c0c4eccd5a9dbe41370.etherscan.io-TokenMintERC20Token.sol,408:9,_allowances[owner][spender] = value,assert(true)
+101,DeleteExpressionMutation,verisol_test/0x47d920a911cb9a0ad4618698ba3fef800abc868d.etherscan.io-TokenMintERC20Token.sol,343:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+102,DeleteExpressionMutation,verisol_test/0x47d920a911cb9a0ad4618698ba3fef800abc868d.etherscan.io-TokenMintERC20Token.sol,401:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+103,RequireMutation,verisol_test/0x47d920a911cb9a0ad4618698ba3fef800abc868d.etherscan.io-TokenMintERC20Token.sol,401:17,owner != address(0),true
+104,RequireMutation,verisol_test/0x47d920a911cb9a0ad4618698ba3fef800abc868d.etherscan.io-TokenMintERC20Token.sol,402:17,spender != address(0),false
+105,DeleteExpressionMutation,verisol_test/0x47d920a911cb9a0ad4618698ba3fef800abc868d.etherscan.io-TokenMintERC20Token.sol,404:9,_allowances[owner][spender] = value,assert(true)
+106,DeleteExpressionMutation,verisol_test/0x80e9dd5d9c01082f4ff1620f0d19c8b95307403e.etherscan.io-InuClassic.sol,386:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+107,DeleteExpressionMutation,verisol_test/0x80e9dd5d9c01082f4ff1620f0d19c8b95307403e.etherscan.io-InuClassic.sol,444:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+108,RequireMutation,verisol_test/0x80e9dd5d9c01082f4ff1620f0d19c8b95307403e.etherscan.io-InuClassic.sol,444:17,owner != address(0),true
+109,RequireMutation,verisol_test/0x80e9dd5d9c01082f4ff1620f0d19c8b95307403e.etherscan.io-InuClassic.sol,445:17,spender != address(0),false
+110,DeleteExpressionMutation,verisol_test/0x80e9dd5d9c01082f4ff1620f0d19c8b95307403e.etherscan.io-InuClassic.sol,447:9,_allowances[owner][spender] = value,assert(true)
+111,DeleteExpressionMutation,verisol_test/0x52ba20ec24e585f90745ccdfb7abce265c677854.etherscan.io-TokenMintERC20Token.sol,351:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+112,DeleteExpressionMutation,verisol_test/0x52ba20ec24e585f90745ccdfb7abce265c677854.etherscan.io-TokenMintERC20Token.sol,409:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+113,RequireMutation,verisol_test/0x52ba20ec24e585f90745ccdfb7abce265c677854.etherscan.io-TokenMintERC20Token.sol,409:17,owner != address(0),true
+114,RequireMutation,verisol_test/0x52ba20ec24e585f90745ccdfb7abce265c677854.etherscan.io-TokenMintERC20Token.sol,410:17,spender != address(0),false
+115,DeleteExpressionMutation,verisol_test/0x52ba20ec24e585f90745ccdfb7abce265c677854.etherscan.io-TokenMintERC20Token.sol,412:9,_allowances[owner][spender] = value,assert(true)
+116,DeleteExpressionMutation,verisol_test/0x706cbdaf9fb714491cecf22f236fc5fa26ae590f.etherscan.io-MonkeCoin.sol,45:9,"name = ""MonkeCoin""",assert(true)
+117,DeleteExpressionMutation,verisol_test/0x706cbdaf9fb714491cecf22f236fc5fa26ae590f.etherscan.io-MonkeCoin.sol,50:9,balances[msg.sender] = _totalSupply,assert(true)
+118,DeleteExpressionMutation,verisol_test/0x706cbdaf9fb714491cecf22f236fc5fa26ae590f.etherscan.io-MonkeCoin.sol,80:9,"balances[from] = safeSub(balances[from], tokens)",assert(true)
+119,DeleteExpressionMutation,verisol_test/0x706cbdaf9fb714491cecf22f236fc5fa26ae590f.etherscan.io-MonkeCoin.sol,81:9,"allowed[from][msg.sender] = safeSub(allowed[from][msg.sender], tokens)",assert(true)
+120,DeleteExpressionMutation,verisol_test/0x706cbdaf9fb714491cecf22f236fc5fa26ae590f.etherscan.io-MonkeCoin.sol,82:9,"balances[to] = safeAdd(balances[to], tokens)",assert(true)
+121,DeleteExpressionMutation,verisol_test/0x70665f330191abababc772f5e51ba1ecf61672ef.etherscan.io-TokenMintERC20Token.sol,349:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+122,DeleteExpressionMutation,verisol_test/0x70665f330191abababc772f5e51ba1ecf61672ef.etherscan.io-TokenMintERC20Token.sol,407:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+123,RequireMutation,verisol_test/0x70665f330191abababc772f5e51ba1ecf61672ef.etherscan.io-TokenMintERC20Token.sol,407:17,owner != address(0),true
+124,RequireMutation,verisol_test/0x70665f330191abababc772f5e51ba1ecf61672ef.etherscan.io-TokenMintERC20Token.sol,408:17,spender != address(0),false
+125,DeleteExpressionMutation,verisol_test/0x70665f330191abababc772f5e51ba1ecf61672ef.etherscan.io-TokenMintERC20Token.sol,410:9,_allowances[owner][spender] = value,assert(true)
+126,DeleteExpressionMutation,verisol_test/0x8fe0bda7272b0dba2b3ed4a53b26ca8000eb0515.etherscan.io-CodeWithJoe.sol,49:9,"name = ""BEAR INU""",assert(true)
+127,DeleteExpressionMutation,verisol_test/0x8fe0bda7272b0dba2b3ed4a53b26ca8000eb0515.etherscan.io-CodeWithJoe.sol,54:9,balances[msg.sender] = _totalSupply,assert(true)
+128,DeleteExpressionMutation,verisol_test/0x8fe0bda7272b0dba2b3ed4a53b26ca8000eb0515.etherscan.io-CodeWithJoe.sol,84:9,"balances[from] = safeSub(balances[from], tokens)",assert(true)
+129,DeleteExpressionMutation,verisol_test/0x8fe0bda7272b0dba2b3ed4a53b26ca8000eb0515.etherscan.io-CodeWithJoe.sol,85:9,"allowed[from][msg.sender] = safeSub(allowed[from][msg.sender], tokens)",assert(true)
+130,DeleteExpressionMutation,verisol_test/0x8fe0bda7272b0dba2b3ed4a53b26ca8000eb0515.etherscan.io-CodeWithJoe.sol,86:9,"balances[to] = safeAdd(balances[to], tokens)",assert(true)
+131,DeleteExpressionMutation,verisol_test/0xcee97db72b803ba82f8decb78155ee9b1ced43b3.etherscan.io-TokenMintERC20Token.sol,351:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+132,DeleteExpressionMutation,verisol_test/0xcee97db72b803ba82f8decb78155ee9b1ced43b3.etherscan.io-TokenMintERC20Token.sol,409:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+133,RequireMutation,verisol_test/0xcee97db72b803ba82f8decb78155ee9b1ced43b3.etherscan.io-TokenMintERC20Token.sol,409:17,owner != address(0),true
+134,RequireMutation,verisol_test/0xcee97db72b803ba82f8decb78155ee9b1ced43b3.etherscan.io-TokenMintERC20Token.sol,410:17,spender != address(0),false
+135,DeleteExpressionMutation,verisol_test/0xcee97db72b803ba82f8decb78155ee9b1ced43b3.etherscan.io-TokenMintERC20Token.sol,412:9,_allowances[owner][spender] = value,assert(true)
+136,DeleteExpressionMutation,verisol_test/0x6a137df19d3e987e3207e8c94387bece89d385f8.etherscan.io-SACHS.sol,49:9,"name = ""sachs.link""",assert(true)
+137,DeleteExpressionMutation,verisol_test/0x6a137df19d3e987e3207e8c94387bece89d385f8.etherscan.io-SACHS.sol,54:9,balances[msg.sender] = _totalSupply,assert(true)
+138,DeleteExpressionMutation,verisol_test/0x6a137df19d3e987e3207e8c94387bece89d385f8.etherscan.io-SACHS.sol,84:9,"balances[from] = safeSub(balances[from], tokens)",assert(true)
+139,DeleteExpressionMutation,verisol_test/0x6a137df19d3e987e3207e8c94387bece89d385f8.etherscan.io-SACHS.sol,85:9,"allowed[from][msg.sender] = safeSub(allowed[from][msg.sender], tokens)",assert(true)
+140,DeleteExpressionMutation,verisol_test/0x6a137df19d3e987e3207e8c94387bece89d385f8.etherscan.io-SACHS.sol,86:9,"balances[to] = safeAdd(balances[to], tokens)",assert(true)
+141,DeleteExpressionMutation,verisol_test/0x0f51bb10119727a7e5ea3538074fb341f56b09ad.etherscan.io-Token.sol,343:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+142,DeleteExpressionMutation,verisol_test/0x0f51bb10119727a7e5ea3538074fb341f56b09ad.etherscan.io-Token.sol,401:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+143,RequireMutation,verisol_test/0x0f51bb10119727a7e5ea3538074fb341f56b09ad.etherscan.io-Token.sol,401:17,owner != address(0),true
+144,RequireMutation,verisol_test/0x0f51bb10119727a7e5ea3538074fb341f56b09ad.etherscan.io-Token.sol,402:17,spender != address(0),false
+145,DeleteExpressionMutation,verisol_test/0x0f51bb10119727a7e5ea3538074fb341f56b09ad.etherscan.io-Token.sol,404:9,_allowances[owner][spender] = value,assert(true)
+146,DeleteExpressionMutation,verisol_test/0xc305d7101f1fca1a14186c3b88034b336ca46c5c.etherscan.io-LUNACAT.sol,270:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+147,DeleteExpressionMutation,verisol_test/0xc305d7101f1fca1a14186c3b88034b336ca46c5c.etherscan.io-LUNACAT.sol,295:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+148,RequireMutation,verisol_test/0xc305d7101f1fca1a14186c3b88034b336ca46c5c.etherscan.io-LUNACAT.sol,295:17,owner != address(0),true
+149,RequireMutation,verisol_test/0xc305d7101f1fca1a14186c3b88034b336ca46c5c.etherscan.io-LUNACAT.sol,296:17,spender != address(0),false
+150,DeleteExpressionMutation,verisol_test/0xc305d7101f1fca1a14186c3b88034b336ca46c5c.etherscan.io-LUNACAT.sol,298:9,_allowances[owner][spender] = value,assert(true)
+151,DeleteExpressionMutation,verisol_test/0x9ab8432a7794566c27f051c087adedbf64337eea.etherscan.io-GrandTheftArlen.sol,143:5,require(value <= _balances[from]),assert(true)
+152,DeleteExpressionMutation,verisol_test/0x9ab8432a7794566c27f051c087adedbf64337eea.etherscan.io-GrandTheftArlen.sol,145:5,require(to != address(0)),assert(true)
+153,RequireMutation,verisol_test/0x9ab8432a7794566c27f051c087adedbf64337eea.etherscan.io-GrandTheftArlen.sol,145:13,to != address(0),false
+154,DeleteExpressionMutation,verisol_test/0x9ab8432a7794566c27f051c087adedbf64337eea.etherscan.io-GrandTheftArlen.sol,147:5,_balances[from] = _balances[from].sub(value),assert(true)
+155,DeleteExpressionMutation,verisol_test/0x9ab8432a7794566c27f051c087adedbf64337eea.etherscan.io-GrandTheftArlen.sol,153:5,_totalSupply = _totalSupply.sub(tokensToBurn),assert(true)
+156,BinaryOpMutation,verisol_test/0x9ab8432a7794566c27f051c087adedbf64337eea.etherscan.io-GrandTheftArlen.sol,37:13, - ,**
+157,BinaryOpMutation,verisol_test/0x9ab8432a7794566c27f051c087adedbf64337eea.etherscan.io-GrandTheftArlen.sol,41:18, + ,-
+158,BinaryOpMutation,verisol_test/0x9ab8432a7794566c27f051c087adedbf64337eea.etherscan.io-GrandTheftArlen.sol,41:18, + ,%
+159,BinaryOpMutation,verisol_test/0x9ab8432a7794566c27f051c087adedbf64337eea.etherscan.io-GrandTheftArlen.sol,41:18, + ,**
+160,DeleteExpressionMutation,verisol_test/0x9ab8432a7794566c27f051c087adedbf64337eea.etherscan.io-GrandTheftArlen.sol,42:5,assert(c >= a),assert(true)
+161,DeleteExpressionMutation,verisol_test/0x881dfbdcbccb440aa9e8b4285103832f5978b6e6.etherscan.io-TokenMintERC20Token.sol,343:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+162,DeleteExpressionMutation,verisol_test/0x881dfbdcbccb440aa9e8b4285103832f5978b6e6.etherscan.io-TokenMintERC20Token.sol,401:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+163,RequireMutation,verisol_test/0x881dfbdcbccb440aa9e8b4285103832f5978b6e6.etherscan.io-TokenMintERC20Token.sol,401:17,owner != address(0),true
+164,RequireMutation,verisol_test/0x881dfbdcbccb440aa9e8b4285103832f5978b6e6.etherscan.io-TokenMintERC20Token.sol,402:17,spender != address(0),false
+165,DeleteExpressionMutation,verisol_test/0x881dfbdcbccb440aa9e8b4285103832f5978b6e6.etherscan.io-TokenMintERC20Token.sol,404:9,_allowances[owner][spender] = value,assert(true)
+166,DeleteExpressionMutation,verisol_test/0x966bcaa41e532c98dbd17364ba0c847bd692983c.etherscan.io-ETF.sol,109:7,require(amount <= balances[from]),assert(true)
+167,DeleteExpressionMutation,verisol_test/0x966bcaa41e532c98dbd17364ba0c847bd692983c.etherscan.io-ETF.sol,111:7,require(to != address(0)),assert(true)
+168,RequireMutation,verisol_test/0x966bcaa41e532c98dbd17364ba0c847bd692983c.etherscan.io-ETF.sol,111:15,to != address(0),false
+169,DeleteExpressionMutation,verisol_test/0x966bcaa41e532c98dbd17364ba0c847bd692983c.etherscan.io-ETF.sol,113:7,balances[from] = balances[from].sub(amount),assert(true)
+170,DeleteExpressionMutation,verisol_test/0x966bcaa41e532c98dbd17364ba0c847bd692983c.etherscan.io-ETF.sol,119:7,_totalSupply = _totalSupply.sub(tokensToBurn),assert(true)
+171,BinaryOpMutation,verisol_test/0x966bcaa41e532c98dbd17364ba0c847bd692983c.etherscan.io-ETF.sol,5:20, + ,*
+172,SwapArgumentsOperatorMutation,verisol_test/0x966bcaa41e532c98dbd17364ba0c847bd692983c.etherscan.io-ETF.sol,6:15,c >= a,a >= c
+173,RequireMutation,verisol_test/0x966bcaa41e532c98dbd17364ba0c847bd692983c.etherscan.io-ETF.sol,11:15,b <= a,false
+174,BinaryOpMutation,verisol_test/0x966bcaa41e532c98dbd17364ba0c847bd692983c.etherscan.io-ETF.sol,12:20, - ,+
+175,BinaryOpMutation,verisol_test/0x966bcaa41e532c98dbd17364ba0c847bd692983c.etherscan.io-ETF.sol,12:20, - ,/
+176,DeleteExpressionMutation,verisol_test/0x62406995cafd18f57e7375e8e0060725acebce58.etherscan.io-FirulaisWalletToken.sol,685:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+177,DeleteExpressionMutation,verisol_test/0x62406995cafd18f57e7375e8e0060725acebce58.etherscan.io-FirulaisWalletToken.sol,801:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+178,RequireMutation,verisol_test/0x62406995cafd18f57e7375e8e0060725acebce58.etherscan.io-FirulaisWalletToken.sol,801:17,owner != address(0),true
+179,RequireMutation,verisol_test/0x62406995cafd18f57e7375e8e0060725acebce58.etherscan.io-FirulaisWalletToken.sol,803:17,spender != address(0),false
+180,DeleteExpressionMutation,verisol_test/0x62406995cafd18f57e7375e8e0060725acebce58.etherscan.io-FirulaisWalletToken.sol,807:9,_allowances[owner][spender] = value,assert(true)
+181,DeleteExpressionMutation,verisol_test/0xb874921bfc23e4800a72d0108458cb14ccd12601.etherscan.io-PreciousMetalCapital.sol,343:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+182,DeleteExpressionMutation,verisol_test/0xb874921bfc23e4800a72d0108458cb14ccd12601.etherscan.io-PreciousMetalCapital.sol,401:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+183,RequireMutation,verisol_test/0xb874921bfc23e4800a72d0108458cb14ccd12601.etherscan.io-PreciousMetalCapital.sol,401:17,owner != address(0),true
+184,RequireMutation,verisol_test/0xb874921bfc23e4800a72d0108458cb14ccd12601.etherscan.io-PreciousMetalCapital.sol,402:17,spender != address(0),false
+185,DeleteExpressionMutation,verisol_test/0xb874921bfc23e4800a72d0108458cb14ccd12601.etherscan.io-PreciousMetalCapital.sol,404:9,_allowances[owner][spender] = value,assert(true)
+186,DeleteExpressionMutation,verisol_test/0x3f058a384c44a02fbeba30fdea467dbc94416ac9.etherscan.io-Privok.sol,50:9,"name = ""Privok""",assert(true)
+187,DeleteExpressionMutation,verisol_test/0x3f058a384c44a02fbeba30fdea467dbc94416ac9.etherscan.io-Privok.sol,55:9,balances[msg.sender] = _totalSupply,assert(true)
+188,DeleteExpressionMutation,verisol_test/0x3f058a384c44a02fbeba30fdea467dbc94416ac9.etherscan.io-Privok.sol,85:9,"balances[from] = safeSub(balances[from], tokens)",assert(true)
+189,DeleteExpressionMutation,verisol_test/0x3f058a384c44a02fbeba30fdea467dbc94416ac9.etherscan.io-Privok.sol,86:9,"allowed[from][msg.sender] = safeSub(allowed[from][msg.sender], tokens)",assert(true)
+190,DeleteExpressionMutation,verisol_test/0x3f058a384c44a02fbeba30fdea467dbc94416ac9.etherscan.io-Privok.sol,87:9,"balances[to] = safeAdd(balances[to], tokens)",assert(true)
+191,DeleteExpressionMutation,verisol_test/0x04db919876162e249801c6c70f2beabb775bd5ea.etherscan.io-CLOWN.sol,50:9,"name = ""Clown Inu""",assert(true)
+192,DeleteExpressionMutation,verisol_test/0x04db919876162e249801c6c70f2beabb775bd5ea.etherscan.io-CLOWN.sol,55:9,balances[msg.sender] = _totalSupply,assert(true)
+193,DeleteExpressionMutation,verisol_test/0x04db919876162e249801c6c70f2beabb775bd5ea.etherscan.io-CLOWN.sol,85:9,"balances[from] = safeSub(balances[from], tokens)",assert(true)
+194,DeleteExpressionMutation,verisol_test/0x04db919876162e249801c6c70f2beabb775bd5ea.etherscan.io-CLOWN.sol,86:9,"allowed[from][msg.sender] = safeSub(allowed[from][msg.sender], tokens)",assert(true)
+195,DeleteExpressionMutation,verisol_test/0x04db919876162e249801c6c70f2beabb775bd5ea.etherscan.io-CLOWN.sol,87:9,"balances[to] = safeAdd(balances[to], tokens)",assert(true)
+196,DeleteExpressionMutation,verisol_test/0x5e5948c6a1c48b5b6a19852928af3b72e974ef8d.etherscan.io-BigBabyInu.sol,47:9,"name = ""BigBabyInu""",assert(true)
+197,DeleteExpressionMutation,verisol_test/0x5e5948c6a1c48b5b6a19852928af3b72e974ef8d.etherscan.io-BigBabyInu.sol,52:9,balances[msg.sender] = _totalSupply,assert(true)
+198,DeleteExpressionMutation,verisol_test/0x5e5948c6a1c48b5b6a19852928af3b72e974ef8d.etherscan.io-BigBabyInu.sol,82:9,"balances[from] = safeSub(balances[from], tokens)",assert(true)
+199,DeleteExpressionMutation,verisol_test/0x5e5948c6a1c48b5b6a19852928af3b72e974ef8d.etherscan.io-BigBabyInu.sol,83:9,"allowed[from][msg.sender] = safeSub(allowed[from][msg.sender], tokens)",assert(true)
+200,DeleteExpressionMutation,verisol_test/0x5e5948c6a1c48b5b6a19852928af3b72e974ef8d.etherscan.io-BigBabyInu.sol,84:9,"balances[to] = safeAdd(balances[to], tokens)",assert(true)
+201,DeleteExpressionMutation,verisol_test/0x78132543d8e20d2417d8a07d9ae199d458a0d581.etherscan.io-TokenMintERC20Token.sol,345:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+202,DeleteExpressionMutation,verisol_test/0x78132543d8e20d2417d8a07d9ae199d458a0d581.etherscan.io-TokenMintERC20Token.sol,403:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+203,RequireMutation,verisol_test/0x78132543d8e20d2417d8a07d9ae199d458a0d581.etherscan.io-TokenMintERC20Token.sol,403:17,owner != address(0),true
+204,RequireMutation,verisol_test/0x78132543d8e20d2417d8a07d9ae199d458a0d581.etherscan.io-TokenMintERC20Token.sol,404:17,spender != address(0),false
+205,DeleteExpressionMutation,verisol_test/0x78132543d8e20d2417d8a07d9ae199d458a0d581.etherscan.io-TokenMintERC20Token.sol,406:9,_allowances[owner][spender] = value,assert(true)
+206,DeleteExpressionMutation,verisol_test/0xf45b8a487ede08aef7f033376b7aaf57c043363b.etherscan.io-TokenMintERC20Token.sol,348:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+207,DeleteExpressionMutation,verisol_test/0xf45b8a487ede08aef7f033376b7aaf57c043363b.etherscan.io-TokenMintERC20Token.sol,406:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+208,RequireMutation,verisol_test/0xf45b8a487ede08aef7f033376b7aaf57c043363b.etherscan.io-TokenMintERC20Token.sol,406:17,owner != address(0),true
+209,RequireMutation,verisol_test/0xf45b8a487ede08aef7f033376b7aaf57c043363b.etherscan.io-TokenMintERC20Token.sol,407:17,spender != address(0),false
+210,DeleteExpressionMutation,verisol_test/0xf45b8a487ede08aef7f033376b7aaf57c043363b.etherscan.io-TokenMintERC20Token.sol,409:9,_allowances[owner][spender] = value,assert(true)
+211,DeleteExpressionMutation,verisol_test/0x28c5d11436cf68fb0e7b21bb0c570f9ec62199a1.etherscan.io-TokenMintERC20Token.sol,394:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+212,DeleteExpressionMutation,verisol_test/0x28c5d11436cf68fb0e7b21bb0c570f9ec62199a1.etherscan.io-TokenMintERC20Token.sol,452:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+213,RequireMutation,verisol_test/0x28c5d11436cf68fb0e7b21bb0c570f9ec62199a1.etherscan.io-TokenMintERC20Token.sol,452:17,owner != address(0),true
+214,RequireMutation,verisol_test/0x28c5d11436cf68fb0e7b21bb0c570f9ec62199a1.etherscan.io-TokenMintERC20Token.sol,453:17,spender != address(0),false
+215,DeleteExpressionMutation,verisol_test/0x28c5d11436cf68fb0e7b21bb0c570f9ec62199a1.etherscan.io-TokenMintERC20Token.sol,455:9,_allowances[owner][spender] = value,assert(true)
+216,DeleteExpressionMutation,verisol_test/0x1f25ada422b1c54643996b3751dfa0f008f543b8.etherscan.io-TokenMintERC20Token.sol,353:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+217,DeleteExpressionMutation,verisol_test/0x1f25ada422b1c54643996b3751dfa0f008f543b8.etherscan.io-TokenMintERC20Token.sol,411:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+218,RequireMutation,verisol_test/0x1f25ada422b1c54643996b3751dfa0f008f543b8.etherscan.io-TokenMintERC20Token.sol,411:17,owner != address(0),true
+219,RequireMutation,verisol_test/0x1f25ada422b1c54643996b3751dfa0f008f543b8.etherscan.io-TokenMintERC20Token.sol,412:17,spender != address(0),false
+220,DeleteExpressionMutation,verisol_test/0x1f25ada422b1c54643996b3751dfa0f008f543b8.etherscan.io-TokenMintERC20Token.sol,414:9,_allowances[owner][spender] = value,assert(true)
+221,DeleteExpressionMutation,verisol_test/0x62c8179b08b72acd4e745b33415aa512f2aa4097.etherscan.io-TheHound.sol,50:9,"name = ""The Hound""",assert(true)
+222,DeleteExpressionMutation,verisol_test/0x62c8179b08b72acd4e745b33415aa512f2aa4097.etherscan.io-TheHound.sol,55:9,balances[msg.sender] = _totalSupply,assert(true)
+223,DeleteExpressionMutation,verisol_test/0x62c8179b08b72acd4e745b33415aa512f2aa4097.etherscan.io-TheHound.sol,85:9,"balances[from] = safeSub(balances[from], tokens)",assert(true)
+224,DeleteExpressionMutation,verisol_test/0x62c8179b08b72acd4e745b33415aa512f2aa4097.etherscan.io-TheHound.sol,86:9,"allowed[from][msg.sender] = safeSub(allowed[from][msg.sender], tokens)",assert(true)
+225,DeleteExpressionMutation,verisol_test/0x62c8179b08b72acd4e745b33415aa512f2aa4097.etherscan.io-TheHound.sol,87:9,"balances[to] = safeAdd(balances[to], tokens)",assert(true)
+226,DeleteExpressionMutation,verisol_test/0x3be4f8f548f86573ee165a5514016477b91dec0e.etherscan.io-TokenMintERC20Token.sol,351:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+227,DeleteExpressionMutation,verisol_test/0x3be4f8f548f86573ee165a5514016477b91dec0e.etherscan.io-TokenMintERC20Token.sol,409:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+228,RequireMutation,verisol_test/0x3be4f8f548f86573ee165a5514016477b91dec0e.etherscan.io-TokenMintERC20Token.sol,409:17,owner != address(0),true
+229,RequireMutation,verisol_test/0x3be4f8f548f86573ee165a5514016477b91dec0e.etherscan.io-TokenMintERC20Token.sol,410:17,spender != address(0),false
+230,DeleteExpressionMutation,verisol_test/0x3be4f8f548f86573ee165a5514016477b91dec0e.etherscan.io-TokenMintERC20Token.sol,412:9,_allowances[owner][spender] = value,assert(true)
+231,DeleteExpressionMutation,verisol_test/0xa77768fbcfe812af69ab4c3e1e3f9ef9f5651bfd.etherscan.io-ERC20Detailed.sol,305:9,"_transfer(sender, recipient, amount)",assert(true)
+232,DeleteExpressionMutation,verisol_test/0xa77768fbcfe812af69ab4c3e1e3f9ef9f5651bfd.etherscan.io-ERC20Detailed.sol,326:9,"require(recipient != address(0), ""ERC20: transfer to the zero address"")",assert(true)
+233,RequireMutation,verisol_test/0xa77768fbcfe812af69ab4c3e1e3f9ef9f5651bfd.etherscan.io-ERC20Detailed.sol,326:17,recipient != address(0),true
+234,DeleteExpressionMutation,verisol_test/0xa77768fbcfe812af69ab4c3e1e3f9ef9f5651bfd.etherscan.io-ERC20Detailed.sol,332:13,_balances[recipient] = _balances[recipient].add(amount.mul(90).div(100)),assert(true)
+235,DeleteExpressionMutation,verisol_test/0xa77768fbcfe812af69ab4c3e1e3f9ef9f5651bfd.etherscan.io-ERC20Detailed.sol,328:13,_balances[sender] = _balances[sender].sub(amount),assert(true)
+236,BinaryOpMutation,verisol_test/0x9682e720ddf3b8c667966a72bb62649c58a53d5e.etherscan.io-DOGHOUSE.sol,83:39, *,%
+237,RequireMutation,verisol_test/0x9682e720ddf3b8c667966a72bb62649c58a53d5e.etherscan.io-DOGHOUSE.sol,144:13,value <= _balances[from],true
+238,RequireMutation,verisol_test/0x9682e720ddf3b8c667966a72bb62649c58a53d5e.etherscan.io-DOGHOUSE.sol,144:13,value <= _balances[from],false
+239,DeleteExpressionMutation,verisol_test/0x9682e720ddf3b8c667966a72bb62649c58a53d5e.etherscan.io-DOGHOUSE.sol,146:5,require(to != address(0)),assert(true)
+240,DeleteExpressionMutation,verisol_test/0x9682e720ddf3b8c667966a72bb62649c58a53d5e.etherscan.io-DOGHOUSE.sol,148:5,_balances[from] = _balances[from].sub(value),assert(true)
+241,BinaryOpMutation,verisol_test/0x9682e720ddf3b8c667966a72bb62649c58a53d5e.etherscan.io-DOGHOUSE.sol,33:13, - ,**
+242,BinaryOpMutation,verisol_test/0x9682e720ddf3b8c667966a72bb62649c58a53d5e.etherscan.io-DOGHOUSE.sol,37:18, + ,-
+243,BinaryOpMutation,verisol_test/0x9682e720ddf3b8c667966a72bb62649c58a53d5e.etherscan.io-DOGHOUSE.sol,37:18, + ,%
+244,BinaryOpMutation,verisol_test/0x9682e720ddf3b8c667966a72bb62649c58a53d5e.etherscan.io-DOGHOUSE.sol,37:18, + ,**
+245,DeleteExpressionMutation,verisol_test/0x9682e720ddf3b8c667966a72bb62649c58a53d5e.etherscan.io-DOGHOUSE.sol,38:5,assert(c >= a),assert(true)
+246,DeleteExpressionMutation,verisol_test/0x6767615a97a8204298bbac44c57ef1a615eed244.etherscan.io-CribnbERC20.sol,50:9,"name = ""CribnbERC20""",assert(true)
+247,DeleteExpressionMutation,verisol_test/0x6767615a97a8204298bbac44c57ef1a615eed244.etherscan.io-CribnbERC20.sol,55:9,balances[msg.sender] = _totalSupply,assert(true)
+248,DeleteExpressionMutation,verisol_test/0x6767615a97a8204298bbac44c57ef1a615eed244.etherscan.io-CribnbERC20.sol,85:9,"balances[from] = safeSub(balances[from], tokens)",assert(true)
+249,DeleteExpressionMutation,verisol_test/0x6767615a97a8204298bbac44c57ef1a615eed244.etherscan.io-CribnbERC20.sol,86:9,"allowed[from][msg.sender] = safeSub(allowed[from][msg.sender], tokens)",assert(true)
+250,DeleteExpressionMutation,verisol_test/0x6767615a97a8204298bbac44c57ef1a615eed244.etherscan.io-CribnbERC20.sol,87:9,"balances[to] = safeAdd(balances[to], tokens)",assert(true)
+251,DeleteExpressionMutation,verisol_test/0x07bc8d1a87c2b7caa596abce2d5bb41efc475c5c.etherscan.io-InfernoHound.sol,346:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+252,DeleteExpressionMutation,verisol_test/0x07bc8d1a87c2b7caa596abce2d5bb41efc475c5c.etherscan.io-InfernoHound.sol,397:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+253,RequireMutation,verisol_test/0x07bc8d1a87c2b7caa596abce2d5bb41efc475c5c.etherscan.io-InfernoHound.sol,397:17,owner != address(0),true
+254,RequireMutation,verisol_test/0x07bc8d1a87c2b7caa596abce2d5bb41efc475c5c.etherscan.io-InfernoHound.sol,398:17,spender != address(0),false
+255,DeleteExpressionMutation,verisol_test/0x07bc8d1a87c2b7caa596abce2d5bb41efc475c5c.etherscan.io-InfernoHound.sol,400:9,_allowances[owner][spender] = value,assert(true)
+256,DeleteExpressionMutation,verisol_test/0x6f95df342e9d336275b05b1d7a43459c26be1963.etherscan.io-TokenMintERC20Token.sol,341:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+257,DeleteExpressionMutation,verisol_test/0x6f95df342e9d336275b05b1d7a43459c26be1963.etherscan.io-TokenMintERC20Token.sol,399:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+258,RequireMutation,verisol_test/0x6f95df342e9d336275b05b1d7a43459c26be1963.etherscan.io-TokenMintERC20Token.sol,399:17,owner != address(0),true
+259,RequireMutation,verisol_test/0x6f95df342e9d336275b05b1d7a43459c26be1963.etherscan.io-TokenMintERC20Token.sol,400:17,spender != address(0),false
+260,DeleteExpressionMutation,verisol_test/0x6f95df342e9d336275b05b1d7a43459c26be1963.etherscan.io-TokenMintERC20Token.sol,402:9,_allowances[owner][spender] = value,assert(true)
+261,DeleteExpressionMutation,verisol_test/0x286b0975a1af3639cff798f615439e2790840d62.etherscan.io-NewMonarch.sol,341:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+262,DeleteExpressionMutation,verisol_test/0x286b0975a1af3639cff798f615439e2790840d62.etherscan.io-NewMonarch.sol,399:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+263,RequireMutation,verisol_test/0x286b0975a1af3639cff798f615439e2790840d62.etherscan.io-NewMonarch.sol,399:17,owner != address(0),true
+264,RequireMutation,verisol_test/0x286b0975a1af3639cff798f615439e2790840d62.etherscan.io-NewMonarch.sol,400:17,spender != address(0),false
+265,DeleteExpressionMutation,verisol_test/0x286b0975a1af3639cff798f615439e2790840d62.etherscan.io-NewMonarch.sol,402:9,_allowances[owner][spender] = value,assert(true)
+266,DeleteExpressionMutation,verisol_test/0x9ec88cdb70a8a3d032a11ae41ecd31a074e22dd0.etherscan.io-Dalmatians.sol,54:9,"name = ""101 DALMATIANS INU""",assert(true)
+267,DeleteExpressionMutation,verisol_test/0x9ec88cdb70a8a3d032a11ae41ecd31a074e22dd0.etherscan.io-Dalmatians.sol,59:9,balances[msg.sender] = _totalSupply,assert(true)
+268,DeleteExpressionMutation,verisol_test/0x9ec88cdb70a8a3d032a11ae41ecd31a074e22dd0.etherscan.io-Dalmatians.sol,89:9,"balances[from] = safeSub(balances[from], tokens)",assert(true)
+269,DeleteExpressionMutation,verisol_test/0x9ec88cdb70a8a3d032a11ae41ecd31a074e22dd0.etherscan.io-Dalmatians.sol,90:9,"allowed[from][msg.sender] = safeSub(allowed[from][msg.sender], tokens)",assert(true)
+270,DeleteExpressionMutation,verisol_test/0x9ec88cdb70a8a3d032a11ae41ecd31a074e22dd0.etherscan.io-Dalmatians.sol,91:9,"balances[to] = safeAdd(balances[to], tokens)",assert(true)
+271,DeleteExpressionMutation,verisol_test/0x8ec39e54303269cfea50bb0555cf7a73fd933f73.etherscan.io-TokenMintERC20Token.sol,345:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+272,DeleteExpressionMutation,verisol_test/0x8ec39e54303269cfea50bb0555cf7a73fd933f73.etherscan.io-TokenMintERC20Token.sol,403:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+273,RequireMutation,verisol_test/0x8ec39e54303269cfea50bb0555cf7a73fd933f73.etherscan.io-TokenMintERC20Token.sol,403:17,owner != address(0),true
+274,RequireMutation,verisol_test/0x8ec39e54303269cfea50bb0555cf7a73fd933f73.etherscan.io-TokenMintERC20Token.sol,404:17,spender != address(0),false
+275,DeleteExpressionMutation,verisol_test/0x8ec39e54303269cfea50bb0555cf7a73fd933f73.etherscan.io-TokenMintERC20Token.sol,406:9,_allowances[owner][spender] = value,assert(true)
+276,DeleteExpressionMutation,verisol_test/0x8f12dfc7981de79a8a34070a732471f2d335eece.etherscan.io-CryptoExcellence.sol,50:9,"name = ""Crypto Excellence""",assert(true)
+277,DeleteExpressionMutation,verisol_test/0x8f12dfc7981de79a8a34070a732471f2d335eece.etherscan.io-CryptoExcellence.sol,55:9,balances[msg.sender] = _totalSupply,assert(true)
+278,DeleteExpressionMutation,verisol_test/0x8f12dfc7981de79a8a34070a732471f2d335eece.etherscan.io-CryptoExcellence.sol,85:9,"balances[from] = safeSub(balances[from], tokens)",assert(true)
+279,DeleteExpressionMutation,verisol_test/0x8f12dfc7981de79a8a34070a732471f2d335eece.etherscan.io-CryptoExcellence.sol,86:9,"allowed[from][msg.sender] = safeSub(allowed[from][msg.sender], tokens)",assert(true)
+280,DeleteExpressionMutation,verisol_test/0x8f12dfc7981de79a8a34070a732471f2d335eece.etherscan.io-CryptoExcellence.sol,87:9,"balances[to] = safeAdd(balances[to], tokens)",assert(true)
+281,DeleteExpressionMutation,verisol_test/0x509ed91b94972adc72bf7a7b326cfa6ba6378e7e.etherscan.io-LilShiba.sol,351:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+282,DeleteExpressionMutation,verisol_test/0x509ed91b94972adc72bf7a7b326cfa6ba6378e7e.etherscan.io-LilShiba.sol,409:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+283,RequireMutation,verisol_test/0x509ed91b94972adc72bf7a7b326cfa6ba6378e7e.etherscan.io-LilShiba.sol,409:17,owner != address(0),true
+284,RequireMutation,verisol_test/0x509ed91b94972adc72bf7a7b326cfa6ba6378e7e.etherscan.io-LilShiba.sol,410:17,spender != address(0),false
+285,DeleteExpressionMutation,verisol_test/0x509ed91b94972adc72bf7a7b326cfa6ba6378e7e.etherscan.io-LilShiba.sol,412:9,_allowances[owner][spender] = value,assert(true)
+286,DeleteExpressionMutation,verisol_test/0x6aafc0d754a108b1988fcc7a278af5df8082915b.etherscan.io-TokenMintERC20Token.sol,354:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+287,DeleteExpressionMutation,verisol_test/0x6aafc0d754a108b1988fcc7a278af5df8082915b.etherscan.io-TokenMintERC20Token.sol,412:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+288,RequireMutation,verisol_test/0x6aafc0d754a108b1988fcc7a278af5df8082915b.etherscan.io-TokenMintERC20Token.sol,412:17,owner != address(0),true
+289,RequireMutation,verisol_test/0x6aafc0d754a108b1988fcc7a278af5df8082915b.etherscan.io-TokenMintERC20Token.sol,413:17,spender != address(0),false
+290,DeleteExpressionMutation,verisol_test/0x6aafc0d754a108b1988fcc7a278af5df8082915b.etherscan.io-TokenMintERC20Token.sol,415:9,_allowances[owner][spender] = value,assert(true)
+291,DeleteExpressionMutation,verisol_test/0x48cd2a4947aa70251654312a2cbfa99663560cbd.etherscan.io-CodeWithJoe.sol,50:9,"name = ""ethereummoon""",assert(true)
+292,DeleteExpressionMutation,verisol_test/0x48cd2a4947aa70251654312a2cbfa99663560cbd.etherscan.io-CodeWithJoe.sol,55:9,balances[msg.sender] = _totalSupply,assert(true)
+293,DeleteExpressionMutation,verisol_test/0x48cd2a4947aa70251654312a2cbfa99663560cbd.etherscan.io-CodeWithJoe.sol,85:9,"balances[from] = safeSub(balances[from], tokens)",assert(true)
+294,DeleteExpressionMutation,verisol_test/0x48cd2a4947aa70251654312a2cbfa99663560cbd.etherscan.io-CodeWithJoe.sol,86:9,"allowed[from][msg.sender] = safeSub(allowed[from][msg.sender], tokens)",assert(true)
+295,DeleteExpressionMutation,verisol_test/0x48cd2a4947aa70251654312a2cbfa99663560cbd.etherscan.io-CodeWithJoe.sol,87:9,"balances[to] = safeAdd(balances[to], tokens)",assert(true)
+296,DeleteExpressionMutation,verisol_test/0x97b3c9aa2ddf4d215a71090c1ee5990e2ad60fd1.etherscan.io-SteveJobs.sol,50:9,"name = ""SteveJobs""",assert(true)
+297,DeleteExpressionMutation,verisol_test/0x97b3c9aa2ddf4d215a71090c1ee5990e2ad60fd1.etherscan.io-SteveJobs.sol,55:9,balances[msg.sender] = _totalSupply,assert(true)
+298,DeleteExpressionMutation,verisol_test/0x97b3c9aa2ddf4d215a71090c1ee5990e2ad60fd1.etherscan.io-SteveJobs.sol,85:9,"balances[from] = safeSub(balances[from], tokens)",assert(true)
+299,DeleteExpressionMutation,verisol_test/0x97b3c9aa2ddf4d215a71090c1ee5990e2ad60fd1.etherscan.io-SteveJobs.sol,86:9,"allowed[from][msg.sender] = safeSub(allowed[from][msg.sender], tokens)",assert(true)
+300,DeleteExpressionMutation,verisol_test/0x97b3c9aa2ddf4d215a71090c1ee5990e2ad60fd1.etherscan.io-SteveJobs.sol,87:9,"balances[to] = safeAdd(balances[to], tokens)",assert(true)
+301,DeleteExpressionMutation,verisol_test/0xaeb56b273e18399d5fbd086ce805ad534120bb2f.etherscan.io-TokenMintERC20Token.sol,343:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+302,DeleteExpressionMutation,verisol_test/0xaeb56b273e18399d5fbd086ce805ad534120bb2f.etherscan.io-TokenMintERC20Token.sol,401:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+303,RequireMutation,verisol_test/0xaeb56b273e18399d5fbd086ce805ad534120bb2f.etherscan.io-TokenMintERC20Token.sol,401:17,owner != address(0),true
+304,RequireMutation,verisol_test/0xaeb56b273e18399d5fbd086ce805ad534120bb2f.etherscan.io-TokenMintERC20Token.sol,402:17,spender != address(0),false
+305,DeleteExpressionMutation,verisol_test/0xaeb56b273e18399d5fbd086ce805ad534120bb2f.etherscan.io-TokenMintERC20Token.sol,404:9,_allowances[owner][spender] = value,assert(true)
+306,DeleteExpressionMutation,verisol_test/0x7ed61015c637baf69abe9cb6ba1e33ff67a70b9f.etherscan.io-TokenMintERC20Token.sol,351:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+307,DeleteExpressionMutation,verisol_test/0x7ed61015c637baf69abe9cb6ba1e33ff67a70b9f.etherscan.io-TokenMintERC20Token.sol,409:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+308,RequireMutation,verisol_test/0x7ed61015c637baf69abe9cb6ba1e33ff67a70b9f.etherscan.io-TokenMintERC20Token.sol,409:17,owner != address(0),true
+309,RequireMutation,verisol_test/0x7ed61015c637baf69abe9cb6ba1e33ff67a70b9f.etherscan.io-TokenMintERC20Token.sol,410:17,spender != address(0),false
+310,DeleteExpressionMutation,verisol_test/0x7ed61015c637baf69abe9cb6ba1e33ff67a70b9f.etherscan.io-TokenMintERC20Token.sol,412:9,_allowances[owner][spender] = value,assert(true)
+311,BinaryOpMutation,verisol_test/0x1b1f07cfbb73c5c6e2fe19abeb018da7b40173c3.etherscan.io-PEEL.sol,82:36, *,%
+312,RequireMutation,verisol_test/0x1b1f07cfbb73c5c6e2fe19abeb018da7b40173c3.etherscan.io-PEEL.sol,143:13,value <= _balances[from],true
+313,RequireMutation,verisol_test/0x1b1f07cfbb73c5c6e2fe19abeb018da7b40173c3.etherscan.io-PEEL.sol,143:13,value <= _balances[from],false
+314,DeleteExpressionMutation,verisol_test/0x1b1f07cfbb73c5c6e2fe19abeb018da7b40173c3.etherscan.io-PEEL.sol,145:5,require(to != address(0)),assert(true)
+315,DeleteExpressionMutation,verisol_test/0x1b1f07cfbb73c5c6e2fe19abeb018da7b40173c3.etherscan.io-PEEL.sol,147:5,_balances[from] = _balances[from].sub(value),assert(true)
+316,BinaryOpMutation,verisol_test/0x1b1f07cfbb73c5c6e2fe19abeb018da7b40173c3.etherscan.io-PEEL.sol,32:13, - ,**
+317,BinaryOpMutation,verisol_test/0x1b1f07cfbb73c5c6e2fe19abeb018da7b40173c3.etherscan.io-PEEL.sol,36:18, + ,-
+318,BinaryOpMutation,verisol_test/0x1b1f07cfbb73c5c6e2fe19abeb018da7b40173c3.etherscan.io-PEEL.sol,36:18, + ,%
+319,BinaryOpMutation,verisol_test/0x1b1f07cfbb73c5c6e2fe19abeb018da7b40173c3.etherscan.io-PEEL.sol,36:18, + ,**
+320,DeleteExpressionMutation,verisol_test/0x1b1f07cfbb73c5c6e2fe19abeb018da7b40173c3.etherscan.io-PEEL.sol,37:5,assert(c >= a),assert(true)
+321,DeleteExpressionMutation,verisol_test/0xeb2fce02460b095f7b084081c4799db0fb0b8a84.etherscan.io-Cheese2.sol,357:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+322,DeleteExpressionMutation,verisol_test/0xeb2fce02460b095f7b084081c4799db0fb0b8a84.etherscan.io-Cheese2.sol,415:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+323,RequireMutation,verisol_test/0xeb2fce02460b095f7b084081c4799db0fb0b8a84.etherscan.io-Cheese2.sol,415:17,owner != address(0),true
+324,RequireMutation,verisol_test/0xeb2fce02460b095f7b084081c4799db0fb0b8a84.etherscan.io-Cheese2.sol,416:17,spender != address(0),false
+325,DeleteExpressionMutation,verisol_test/0xeb2fce02460b095f7b084081c4799db0fb0b8a84.etherscan.io-Cheese2.sol,418:9,_allowances[owner][spender] = value,assert(true)
+326,DeleteExpressionMutation,verisol_test/0x7b52118bcd20d43861cdb112150a9b0342677d3b.etherscan.io-TokenMintERC20Token.sol,351:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+327,DeleteExpressionMutation,verisol_test/0x7b52118bcd20d43861cdb112150a9b0342677d3b.etherscan.io-TokenMintERC20Token.sol,409:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+328,RequireMutation,verisol_test/0x7b52118bcd20d43861cdb112150a9b0342677d3b.etherscan.io-TokenMintERC20Token.sol,409:17,owner != address(0),true
+329,RequireMutation,verisol_test/0x7b52118bcd20d43861cdb112150a9b0342677d3b.etherscan.io-TokenMintERC20Token.sol,410:17,spender != address(0),false
+330,DeleteExpressionMutation,verisol_test/0x7b52118bcd20d43861cdb112150a9b0342677d3b.etherscan.io-TokenMintERC20Token.sol,412:9,_allowances[owner][spender] = value,assert(true)
+331,DeleteExpressionMutation,verisol_test/0xe9cfbec0ec1821d89d30e70f588026a539d08a00.etherscan.io-TokenMintERC20Token.sol,343:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+332,DeleteExpressionMutation,verisol_test/0xe9cfbec0ec1821d89d30e70f588026a539d08a00.etherscan.io-TokenMintERC20Token.sol,401:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+333,RequireMutation,verisol_test/0xe9cfbec0ec1821d89d30e70f588026a539d08a00.etherscan.io-TokenMintERC20Token.sol,401:17,owner != address(0),true
+334,RequireMutation,verisol_test/0xe9cfbec0ec1821d89d30e70f588026a539d08a00.etherscan.io-TokenMintERC20Token.sol,402:17,spender != address(0),false
+335,DeleteExpressionMutation,verisol_test/0xe9cfbec0ec1821d89d30e70f588026a539d08a00.etherscan.io-TokenMintERC20Token.sol,404:9,_allowances[owner][spender] = value,assert(true)
+336,DeleteExpressionMutation,verisol_test/0x43b0bc65935a59ec7d6ce15e6d3112691a8e1dd9.etherscan.io-TokenMintERC20Token.sol,347:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+337,DeleteExpressionMutation,verisol_test/0x43b0bc65935a59ec7d6ce15e6d3112691a8e1dd9.etherscan.io-TokenMintERC20Token.sol,405:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+338,RequireMutation,verisol_test/0x43b0bc65935a59ec7d6ce15e6d3112691a8e1dd9.etherscan.io-TokenMintERC20Token.sol,405:17,owner != address(0),true
+339,RequireMutation,verisol_test/0x43b0bc65935a59ec7d6ce15e6d3112691a8e1dd9.etherscan.io-TokenMintERC20Token.sol,406:17,spender != address(0),false
+340,DeleteExpressionMutation,verisol_test/0x43b0bc65935a59ec7d6ce15e6d3112691a8e1dd9.etherscan.io-TokenMintERC20Token.sol,408:9,_allowances[owner][spender] = value,assert(true)
+341,DeleteExpressionMutation,verisol_test/0x8de4644406933728ac9df5bc648d1482fb628406.etherscan.io-TokenMintERC20Token.sol,343:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+342,DeleteExpressionMutation,verisol_test/0x8de4644406933728ac9df5bc648d1482fb628406.etherscan.io-TokenMintERC20Token.sol,401:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+343,RequireMutation,verisol_test/0x8de4644406933728ac9df5bc648d1482fb628406.etherscan.io-TokenMintERC20Token.sol,401:17,owner != address(0),true
+344,RequireMutation,verisol_test/0x8de4644406933728ac9df5bc648d1482fb628406.etherscan.io-TokenMintERC20Token.sol,402:17,spender != address(0),false
+345,DeleteExpressionMutation,verisol_test/0x8de4644406933728ac9df5bc648d1482fb628406.etherscan.io-TokenMintERC20Token.sol,404:9,_allowances[owner][spender] = value,assert(true)
+346,DeleteExpressionMutation,verisol_test/0x4c88868fb696ab8c19cdd06517dca60ae1e9ec3c.etherscan.io-TokenMintERC20Token.sol,343:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+347,DeleteExpressionMutation,verisol_test/0x4c88868fb696ab8c19cdd06517dca60ae1e9ec3c.etherscan.io-TokenMintERC20Token.sol,401:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+348,RequireMutation,verisol_test/0x4c88868fb696ab8c19cdd06517dca60ae1e9ec3c.etherscan.io-TokenMintERC20Token.sol,401:17,owner != address(0),true
+349,RequireMutation,verisol_test/0x4c88868fb696ab8c19cdd06517dca60ae1e9ec3c.etherscan.io-TokenMintERC20Token.sol,402:17,spender != address(0),false
+350,DeleteExpressionMutation,verisol_test/0x4c88868fb696ab8c19cdd06517dca60ae1e9ec3c.etherscan.io-TokenMintERC20Token.sol,404:9,_allowances[owner][spender] = value,assert(true)
+351,DeleteExpressionMutation,verisol_test/0x71ff17244fb9df0b5f937cc1ec361e2d3193fddb.etherscan.io-TokenMintERC20Token.sol,356:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+352,DeleteExpressionMutation,verisol_test/0x71ff17244fb9df0b5f937cc1ec361e2d3193fddb.etherscan.io-TokenMintERC20Token.sol,414:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+353,RequireMutation,verisol_test/0x71ff17244fb9df0b5f937cc1ec361e2d3193fddb.etherscan.io-TokenMintERC20Token.sol,414:17,owner != address(0),true
+354,RequireMutation,verisol_test/0x71ff17244fb9df0b5f937cc1ec361e2d3193fddb.etherscan.io-TokenMintERC20Token.sol,415:17,spender != address(0),false
+355,DeleteExpressionMutation,verisol_test/0x71ff17244fb9df0b5f937cc1ec361e2d3193fddb.etherscan.io-TokenMintERC20Token.sol,417:9,_allowances[owner][spender] = value,assert(true)
+356,DeleteExpressionMutation,verisol_test/0xeb855dfcfe5ec90e124f943eb980f8f053043c6f.etherscan.io-BMASYA.sol,346:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+357,DeleteExpressionMutation,verisol_test/0xeb855dfcfe5ec90e124f943eb980f8f053043c6f.etherscan.io-BMASYA.sol,404:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+358,RequireMutation,verisol_test/0xeb855dfcfe5ec90e124f943eb980f8f053043c6f.etherscan.io-BMASYA.sol,404:17,owner != address(0),true
+359,RequireMutation,verisol_test/0xeb855dfcfe5ec90e124f943eb980f8f053043c6f.etherscan.io-BMASYA.sol,405:17,spender != address(0),false
+360,DeleteExpressionMutation,verisol_test/0xeb855dfcfe5ec90e124f943eb980f8f053043c6f.etherscan.io-BMASYA.sol,407:9,_allowances[owner][spender] = value,assert(true)
+361,DeleteExpressionMutation,verisol_test/0x243cacb4d5ff6814ad668c3e225246efa886ad5a.etherscan.io-TokenMintERC20Token.sol,348:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+362,DeleteExpressionMutation,verisol_test/0x243cacb4d5ff6814ad668c3e225246efa886ad5a.etherscan.io-TokenMintERC20Token.sol,406:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+363,RequireMutation,verisol_test/0x243cacb4d5ff6814ad668c3e225246efa886ad5a.etherscan.io-TokenMintERC20Token.sol,406:17,owner != address(0),true
+364,RequireMutation,verisol_test/0x243cacb4d5ff6814ad668c3e225246efa886ad5a.etherscan.io-TokenMintERC20Token.sol,407:17,spender != address(0),false
+365,DeleteExpressionMutation,verisol_test/0x243cacb4d5ff6814ad668c3e225246efa886ad5a.etherscan.io-TokenMintERC20Token.sol,409:9,_allowances[owner][spender] = value,assert(true)
+366,DeleteExpressionMutation,verisol_test/0xb98717fdbe00ddc418eb3431b1219fc6183d3eda.etherscan.io-TokenMintERC20Token.sol,352:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+367,DeleteExpressionMutation,verisol_test/0xb98717fdbe00ddc418eb3431b1219fc6183d3eda.etherscan.io-TokenMintERC20Token.sol,410:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+368,RequireMutation,verisol_test/0xb98717fdbe00ddc418eb3431b1219fc6183d3eda.etherscan.io-TokenMintERC20Token.sol,410:17,owner != address(0),true
+369,RequireMutation,verisol_test/0xb98717fdbe00ddc418eb3431b1219fc6183d3eda.etherscan.io-TokenMintERC20Token.sol,411:17,spender != address(0),false
+370,DeleteExpressionMutation,verisol_test/0xb98717fdbe00ddc418eb3431b1219fc6183d3eda.etherscan.io-TokenMintERC20Token.sol,413:9,_allowances[owner][spender] = value,assert(true)
+371,BinaryOpMutation,verisol_test/0x2dbd83241e85b15197362b2a11cc994842458552.etherscan.io-DUMBLEDOGE.sol,82:39, *,%
+372,RequireMutation,verisol_test/0x2dbd83241e85b15197362b2a11cc994842458552.etherscan.io-DUMBLEDOGE.sol,143:13,value <= _balances[from],true
+373,RequireMutation,verisol_test/0x2dbd83241e85b15197362b2a11cc994842458552.etherscan.io-DUMBLEDOGE.sol,143:13,value <= _balances[from],false
+374,DeleteExpressionMutation,verisol_test/0x2dbd83241e85b15197362b2a11cc994842458552.etherscan.io-DUMBLEDOGE.sol,145:5,require(to != address(0)),assert(true)
+375,DeleteExpressionMutation,verisol_test/0x2dbd83241e85b15197362b2a11cc994842458552.etherscan.io-DUMBLEDOGE.sol,147:5,_balances[from] = _balances[from].sub(value),assert(true)
+376,BinaryOpMutation,verisol_test/0x2dbd83241e85b15197362b2a11cc994842458552.etherscan.io-DUMBLEDOGE.sol,32:13, - ,**
+377,BinaryOpMutation,verisol_test/0x2dbd83241e85b15197362b2a11cc994842458552.etherscan.io-DUMBLEDOGE.sol,36:18, + ,-
+378,BinaryOpMutation,verisol_test/0x2dbd83241e85b15197362b2a11cc994842458552.etherscan.io-DUMBLEDOGE.sol,36:18, + ,%
+379,BinaryOpMutation,verisol_test/0x2dbd83241e85b15197362b2a11cc994842458552.etherscan.io-DUMBLEDOGE.sol,36:18, + ,**
+380,DeleteExpressionMutation,verisol_test/0x2dbd83241e85b15197362b2a11cc994842458552.etherscan.io-DUMBLEDOGE.sol,37:5,assert(c >= a),assert(true)
+381,DeleteExpressionMutation,verisol_test/0x4dd981f0f2e7934b6b50c9d1beda2b5456924df6.etherscan.io-TokenMintERC20Token.sol,339:9,"require(sender != address(0), ""ERC20: transfer from the zero address"")",assert(true)
+382,DeleteExpressionMutation,verisol_test/0x4dd981f0f2e7934b6b50c9d1beda2b5456924df6.etherscan.io-TokenMintERC20Token.sol,397:9,"require(owner != address(0), ""ERC20: approve from the zero address"")",assert(true)
+383,RequireMutation,verisol_test/0x4dd981f0f2e7934b6b50c9d1beda2b5456924df6.etherscan.io-TokenMintERC20Token.sol,397:17,owner != address(0),true
+384,RequireMutation,verisol_test/0x4dd981f0f2e7934b6b50c9d1beda2b5456924df6.etherscan.io-TokenMintERC20Token.sol,398:17,spender != address(0),false
+385,DeleteExpressionMutation,verisol_test/0x4dd981f0f2e7934b6b50c9d1beda2b5456924df6.etherscan.io-TokenMintERC20Token.sol,400:9,_allowances[owner][spender] = value,assert(true)

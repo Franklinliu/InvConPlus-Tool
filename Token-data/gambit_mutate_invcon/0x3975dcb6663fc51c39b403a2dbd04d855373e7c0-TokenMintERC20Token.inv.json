@@ -1,0 +1,35 @@
+[
+    {
+        "func": "approve(spender,value)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "VeriSol.Requires(VeriSol.Old(Account) != address(0))",
+            "VeriSol.Requires(msg.sender != address(0))",
+            "VeriSol.Requires(VeriSol.Old(VeriSol.SumMapping(_balances)) == 1010000000000000000000000000000000)",
+            "VeriSol.Requires(value == 115792089237316195423570985008687907853269984665640564039457584007913129639935)",
+            "VeriSol.Requires(spender != address(0))",
+            "VeriSol.Requires(VeriSol.Old(_totalSupply) == 1000000000000000000000000000000000)",
+            "VeriSol.Requires(VeriSol.Old(Account) != msg.sender)",
+            "VeriSol.Requires(VeriSol.Old(Account) != spender)",
+            "VeriSol.Requires(VeriSol.Old(_allowances[msg.sender][spender]) != VeriSol.Old(VeriSol.SumMapping(_balances)))",
+            "VeriSol.Requires(VeriSol.Old(_allowances[msg.sender][spender]) <= value)",
+            "VeriSol.Requires(VeriSol.Old(_allowances[msg.sender][spender]) != VeriSol.Old(_totalSupply))",
+            "VeriSol.Requires(msg.sender != spender)",
+            "VeriSol.Requires(VeriSol.Old(VeriSol.SumMapping(_balances)) < value)",
+            "VeriSol.Requires(VeriSol.Old(VeriSol.SumMapping(_balances)) > VeriSol.Old(_totalSupply))",
+            "VeriSol.Requires(value > VeriSol.Old(_totalSupply))"
+        ],
+        "postconditions": [
+            "VeriSol.Ensures(VeriSol.SumMapping(_balances) == 1010000000000000000000000000000000)",
+            "VeriSol.Ensures(_allowances[msg.sender][spender] == 115792089237316195423570985008687907853269984665640564039457584007913129639935)",
+            "VeriSol.Ensures(Account != address(0))",
+            "VeriSol.Ensures(_totalSupply == 1000000000000000000000000000000000)",
+            "VeriSol.Ensures(VeriSol.SumMapping(_balances) <= _allowances[msg.sender][spender])",
+            "VeriSol.Ensures(!(VeriSol.Old(_allowances[msg.sender][spender]) == 0 ) || ( _allowances[msg.sender][spender] >= VeriSol.Old(_allowances[msg.sender][spender])))",
+            "VeriSol.Ensures(!(VeriSol.Old(_allowances[msg.sender][spender]) < value ) || ( _allowances[msg.sender][spender] >= VeriSol.Old(_allowances[msg.sender][spender])))"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    }
+]

@@ -1,0 +1,22 @@
+original result: 39 invariants, smt-simplified result: 18 invariants
+approve(spender,tokens):
+Requires		msg.sender != address(0)
+Ensures		allowed[msg.sender][spender] == tokens
+Ensures		decimals == VeriSol.Old(uint256(decimals))
+Ensures		VeriSol.Old(_totalSupply) == _totalSupply
+transfer(to,tokens):
+Requires		msg.sender != address(0)
+Requires		tokens <= VeriSol.Old(balances[msg.sender])
+Ensures		balances[to] >= tokens
+Ensures		balances[to] >= VeriSol.Old(balances[to])
+Ensures		balances[msg.sender] <= VeriSol.Old(balances[msg.sender])
+Ensures		VeriSol.Old(VeriSol.SumMapping(balances)) == VeriSol.SumMapping(balances)
+Ensures		decimals == VeriSol.Old(uint256(decimals))
+Ensures		VeriSol.Old(_totalSupply) == _totalSupply
+BONE:
+Ensures		_totalSupply == 100000000000000000000000000000000
+Ensures		VeriSol.SumMapping(balances) == 100000000000000000000000000000000
+Ensures		decimals == 18
+Ensures		_totalSupply == VeriSol.SumMapping(balances)
+Ensures		_totalSupply > decimals
+Ensures		VeriSol.SumMapping(balances) > decimals

@@ -1,0 +1,56 @@
+original result: 98 invariants, smt-simplified result: 53 invariants
+setApprovalForAll(to,approved):
+Requires		msg.sender != address(0)
+Requires		to != msg.sender
+Ensures		approved == _operatorApprovals[msg.sender][to]
+Ensures		approved != VeriSol.Old(_operatorApprovals[msg.sender][to]) => _operatorApprovals[msg.sender][to] != VeriSol.Old(_operatorApprovals[msg.sender][to])
+transferFrom(from,to,tokenId):
+Requires		from != address(0)
+Requires		to != address(0)
+Requires		msg.sender != address(0)
+Ensures		_tokenOwner[tokenId] != address(0)
+Ensures		_tokenOwner[tokenId] == to
+Ensures		VeriSol.Old(address(_tokenOwner[tokenId])) == address(0) => address(_tokenApprovals[tokenId]) == address(0)
+Ensures		VeriSol.Old(address(_tokenOwner[tokenId])) == address(0) => _tokenOwner[tokenId] != VeriSol.Old(address(_tokenOwner[tokenId]))
+Ensures		VeriSol.Old(address(_tokenOwner[tokenId])) == address(0) => _tokenOwner[tokenId] != _tokenApprovals[tokenId]
+Ensures		VeriSol.Old(address(_tokenOwner[tokenId])) == address(0) => _tokenOwner[tokenId] != from
+Ensures		VeriSol.Old(address(_tokenOwner[tokenId])) == address(0) => _tokenOwner[tokenId] != VeriSol.Old(address(_tokenApprovals[tokenId]))
+Ensures		VeriSol.Old(address(_tokenOwner[tokenId])) == address(0) => _tokenOwner[tokenId] != msg.sender
+Ensures		VeriSol.Old(address(_tokenOwner[tokenId])) == address(0) => VeriSol.Old(address(_tokenOwner[tokenId])) == _tokenApprovals[tokenId]
+Ensures		VeriSol.Old(address(_tokenOwner[tokenId])) == address(0) => _tokenApprovals[tokenId] != from
+Ensures		VeriSol.Old(address(_tokenOwner[tokenId])) == address(0) => _tokenApprovals[tokenId] != to
+Ensures		VeriSol.Old(address(_tokenOwner[tokenId])) == address(0) => _tokenApprovals[tokenId] == VeriSol.Old(address(_tokenApprovals[tokenId]))
+Ensures		VeriSol.Old(address(_tokenOwner[tokenId])) == address(0) => _tokenApprovals[tokenId] != msg.sender
+Ensures		VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => address(_tokenApprovals[tokenId]) == address(0)
+Ensures		VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _tokenOwner[tokenId] != _tokenApprovals[tokenId]
+Ensures		VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _tokenOwner[tokenId] != VeriSol.Old(address(_tokenApprovals[tokenId]))
+Ensures		VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _tokenApprovals[tokenId] != from
+Ensures		VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _tokenApprovals[tokenId] != to
+Ensures		VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _tokenApprovals[tokenId] == VeriSol.Old(address(_tokenApprovals[tokenId]))
+Ensures		VeriSol.Old(address(_tokenApprovals[tokenId])) == address(0) => _tokenApprovals[tokenId] != msg.sender
+Ensures		VeriSol.Old(address(_tokenOwner[tokenId])) != from => address(_tokenApprovals[tokenId]) == address(0)
+Ensures		VeriSol.Old(address(_tokenOwner[tokenId])) != from => _tokenOwner[tokenId] != VeriSol.Old(address(_tokenOwner[tokenId]))
+Ensures		VeriSol.Old(address(_tokenOwner[tokenId])) != from => _tokenOwner[tokenId] != _tokenApprovals[tokenId]
+Ensures		VeriSol.Old(address(_tokenOwner[tokenId])) != from => _tokenOwner[tokenId] != from
+Ensures		VeriSol.Old(address(_tokenOwner[tokenId])) != from => _tokenOwner[tokenId] != VeriSol.Old(address(_tokenApprovals[tokenId]))
+Ensures		VeriSol.Old(address(_tokenOwner[tokenId])) != from => _tokenOwner[tokenId] != msg.sender
+Ensures		VeriSol.Old(address(_tokenOwner[tokenId])) != from => VeriSol.Old(address(_tokenOwner[tokenId])) == _tokenApprovals[tokenId]
+Ensures		VeriSol.Old(address(_tokenOwner[tokenId])) != from => _tokenApprovals[tokenId] != from
+Ensures		VeriSol.Old(address(_tokenOwner[tokenId])) != from => _tokenApprovals[tokenId] != to
+Ensures		VeriSol.Old(address(_tokenOwner[tokenId])) != from => _tokenApprovals[tokenId] == VeriSol.Old(address(_tokenApprovals[tokenId]))
+Ensures		VeriSol.Old(address(_tokenOwner[tokenId])) != from => _tokenApprovals[tokenId] != msg.sender
+Ensures		VeriSol.Old(address(_tokenOwner[tokenId])) != to => _tokenOwner[tokenId] != VeriSol.Old(address(_tokenOwner[tokenId]))
+Ensures		VeriSol.Old(address(_tokenOwner[tokenId])) != to => _tokenOwner[tokenId] != from
+Ensures		VeriSol.Old(address(_tokenOwner[tokenId])) != to => _tokenApprovals[tokenId] != from
+Ensures		from != to => _tokenOwner[tokenId] != VeriSol.Old(address(_tokenOwner[tokenId]))
+Ensures		from != to => _tokenOwner[tokenId] != from
+Ensures		from != to => _tokenApprovals[tokenId] != from
+Ensures		from != VeriSol.Old(address(_tokenApprovals[tokenId])) => address(_tokenApprovals[tokenId]) == address(0)
+Ensures		from != VeriSol.Old(address(_tokenApprovals[tokenId])) => _tokenOwner[tokenId] != _tokenApprovals[tokenId]
+Ensures		from != VeriSol.Old(address(_tokenApprovals[tokenId])) => _tokenApprovals[tokenId] != from
+Ensures		from != VeriSol.Old(address(_tokenApprovals[tokenId])) => _tokenApprovals[tokenId] != to
+Ensures		from != VeriSol.Old(address(_tokenApprovals[tokenId])) => _tokenApprovals[tokenId] != msg.sender
+Ensures		to != VeriSol.Old(address(_tokenApprovals[tokenId])) => _tokenOwner[tokenId] != VeriSol.Old(address(_tokenApprovals[tokenId]))
+Ensures		to != VeriSol.Old(address(_tokenApprovals[tokenId])) => _tokenApprovals[tokenId] != from
+Ensures		to != msg.sender => _tokenOwner[tokenId] != msg.sender
+Ensures		to != msg.sender => _tokenApprovals[tokenId] != msg.sender

@@ -1,0 +1,12 @@
+original result: 30 invariants, smt-simplified result: 9 invariants
+approve(spender,value):
+Requires		spender != address(0)
+Requires		msg.sender != address(0)
+Ensures		VeriSol.Old(_totalSupply) == _totalSupply
+Ensures		_allowances[msg.sender][spender] == value
+Ensures		VeriSol.Old(_allowances[msg.sender][spender]) == value => _allowances[msg.sender][spender] == VeriSol.Old(_allowances[msg.sender][spender])
+Ensures		VeriSol.Old(_allowances[msg.sender][spender]) == 0 => _allowances[msg.sender][spender] >= VeriSol.Old(_allowances[msg.sender][spender])
+Ensures		VeriSol.Old(_allowances[msg.sender][spender]) != value && VeriSol.Old(_allowances[msg.sender][spender]) == 0 => _allowances[msg.sender][spender] > 0
+Ensures		VeriSol.Old(_allowances[msg.sender][spender]) != 0 => _allowances[msg.sender][spender] != VeriSol.Old(_allowances[msg.sender][spender]) || _allowances[msg.sender][spender] > 0
+AudioInu:
+Ensures		_totalSupply == VeriSol.SumMapping(_balances)

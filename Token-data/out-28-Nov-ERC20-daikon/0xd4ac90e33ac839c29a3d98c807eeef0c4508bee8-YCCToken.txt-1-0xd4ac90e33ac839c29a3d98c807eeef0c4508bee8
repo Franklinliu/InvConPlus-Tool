@@ -1,0 +1,73 @@
+Invariants with True value:33
+Invariants with False value:34
+
+True Invariants:
+transfer(to,tokens): Requires decimals == _totalSupply
+transfer(to,tokens): Requires decimals == allowed[to][msg.sender]
+transfer(to,tokens): Requires _totalSupply == allowed[to][msg.sender]
+transfer(to,tokens): Requires decimals == 0
+transfer(to,tokens): Requires _totalSupply == 0
+transfer(to,tokens): Requires decimals < tokens
+transfer(to,tokens): Requires decimals < block.timestamp
+transfer(to,tokens): Requires decimals <= VeriSol.Old(VeriSol.SumMapping(balances))
+transfer(to,tokens): Requires decimals <= balances[to]
+transfer(to,tokens): Requires decimals < balances[msg.sender]
+transfer(to,tokens): Requires _totalSupply < tokens
+transfer(to,tokens): Requires _totalSupply < block.timestamp
+transfer(to,tokens): Requires _totalSupply <= VeriSol.Old(VeriSol.SumMapping(balances))
+transfer(to,tokens): Requires _totalSupply <= balances[to]
+transfer(to,tokens): Requires _totalSupply < balances[msg.sender]
+transfer(to,tokens): Requires tokens <= balances[msg.sender]
+transfer(to,tokens): Requires block.timestamp < balances[msg.sender]
+transfer(to,tokens): Ensures decimals == _totalSupply
+transfer(to,tokens): Ensures decimals == VeriSol.Old(decimals)
+transfer(to,tokens): Ensures decimals == VeriSol.Old(_totalSupply)
+transfer(to,tokens): Ensures decimals == VeriSol.Old(allowed[to][msg.sender])
+transfer(to,tokens): Ensures _totalSupply == VeriSol.Old(decimals)
+transfer(to,tokens): Ensures _totalSupply == VeriSol.Old(_totalSupply)
+transfer(to,tokens): Ensures _totalSupply == VeriSol.Old(allowed[to][msg.sender])
+transfer(to,tokens): Ensures to == VeriSol.Old(to)
+transfer(to,tokens): Ensures tokens == VeriSol.Old(tokens)
+transfer(to,tokens): Ensures msg.sender == VeriSol.Old(msg.sender)
+transfer(to,tokens): Ensures block.timestamp == VeriSol.Old(block.timestamp)
+transfer(to,tokens): Ensures decimals == 0
+transfer(to,tokens): Ensures _totalSupply == 0
+transfer(to,tokens): Ensures balances[msg.sender] >= 0
+transfer(to,tokens): Ensures VeriSol.Old(allowed[to][msg.sender]) == 0
+transfer(to,tokens): Ensures decimals < tokens
+
+False Invariants:
+transfer(to,tokens): Ensures decimals < block.timestamp
+transfer(to,tokens): Ensures decimals < VeriSol.Old(tokens)
+transfer(to,tokens): Ensures decimals < VeriSol.Old(block.timestamp)
+transfer(to,tokens): Ensures decimals < VeriSol.SumMapping(balances)
+transfer(to,tokens): Ensures decimals <= VeriSol.Old(VeriSol.SumMapping(balances))
+transfer(to,tokens): Ensures decimals < balances[to]
+transfer(to,tokens): Ensures decimals <= balances[msg.sender]
+transfer(to,tokens): Ensures decimals <= VeriSol.Old(balances[to])
+transfer(to,tokens): Ensures decimals < VeriSol.Old(balances[msg.sender])
+transfer(to,tokens): Ensures _totalSupply < tokens
+transfer(to,tokens): Ensures _totalSupply < block.timestamp
+transfer(to,tokens): Ensures _totalSupply < VeriSol.Old(tokens)
+transfer(to,tokens): Ensures _totalSupply < VeriSol.Old(block.timestamp)
+transfer(to,tokens): Ensures _totalSupply < VeriSol.SumMapping(balances)
+transfer(to,tokens): Ensures _totalSupply <= VeriSol.Old(VeriSol.SumMapping(balances))
+transfer(to,tokens): Ensures _totalSupply < balances[to]
+transfer(to,tokens): Ensures _totalSupply <= balances[msg.sender]
+transfer(to,tokens): Ensures _totalSupply <= VeriSol.Old(balances[to])
+transfer(to,tokens): Ensures _totalSupply < VeriSol.Old(balances[msg.sender])
+transfer(to,tokens): Ensures tokens <= VeriSol.SumMapping(balances)
+transfer(to,tokens): Ensures tokens <= balances[to]
+transfer(to,tokens): Ensures tokens <= VeriSol.Old(balances[msg.sender])
+transfer(to,tokens): Ensures block.timestamp < VeriSol.SumMapping(balances)
+transfer(to,tokens): Ensures block.timestamp < VeriSol.Old(balances[msg.sender])
+transfer(to,tokens): Ensures VeriSol.Old(decimals) < VeriSol.SumMapping(balances)
+transfer(to,tokens): Ensures VeriSol.Old(decimals) < balances[to]
+transfer(to,tokens): Ensures VeriSol.Old(decimals) <= balances[msg.sender]
+transfer(to,tokens): Ensures VeriSol.Old(_totalSupply) < VeriSol.SumMapping(balances)
+transfer(to,tokens): Ensures VeriSol.Old(_totalSupply) < balances[to]
+transfer(to,tokens): Ensures VeriSol.Old(_totalSupply) <= balances[msg.sender]
+transfer(to,tokens): Ensures VeriSol.Old(to) != VeriSol.Old(msg.sender)
+transfer(to,tokens): Ensures VeriSol.Old(tokens) <= VeriSol.SumMapping(balances)
+transfer(to,tokens): Ensures VeriSol.Old(tokens) <= balances[to]
+transfer(to,tokens): Ensures VeriSol.Old(block.timestamp) < VeriSol.SumMapping(balances)

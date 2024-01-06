@@ -1,0 +1,15 @@
+Invariants with True value:7
+Invariants with False value:0
+
+True Invariants:
+approve(spender,tokens): Requires msg.sender != address(0)
+approve(spender,tokens): Ensures _totalSupply == VeriSol.Old(_totalSupply)
+approve(spender,tokens): Ensures decimals == VeriSol.Old(uint256(decimals))
+approve(spender,tokens): Ensures allowed[msg.sender][spender] == tokens
+approve(spender,tokens): Ensures !(VeriSol.Old(allowed[msg.sender][spender]) == 0 ) || ( allowed[msg.sender][spender] >= VeriSol.Old(allowed[msg.sender][spender]))
+approve(spender,tokens): Ensures !(tokens == VeriSol.Old(allowed[msg.sender][spender]) ) || ( allowed[msg.sender][spender] == VeriSol.Old(allowed[msg.sender][spender]))
+approve(spender,tokens): Ensures !(VeriSol.Old(allowed[msg.sender][spender]) == 0 ) || ( allowed[msg.sender][spender] != VeriSol.Old(allowed[msg.sender][spender]) || allowed[msg.sender][spender] != 115792089237316195423570985008687907853269984665640564039457584007913129639935)
+
+False Invariants:
+
+ // ./gambit_out_approve/mutants/613/verisol_test

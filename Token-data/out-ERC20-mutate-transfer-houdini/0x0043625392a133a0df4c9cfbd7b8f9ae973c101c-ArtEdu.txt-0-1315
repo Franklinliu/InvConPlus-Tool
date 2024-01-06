@@ -1,0 +1,29 @@
+Invariants with True value:21
+Invariants with False value:0
+
+True Invariants:
+renounceOwnership(): Requires msg.sender != address(0)
+renounceOwnership(): Requires VeriSol.Old(_owner) != address(0)
+renounceOwnership(): Requires msg.sender == VeriSol.Old(_owner)
+renounceOwnership(): Ensures _owner == address(0)
+renounceOwnership(): Ensures _pendingowner == VeriSol.Old(_pendingowner)
+renounceOwnership(): Ensures _owner != msg.sender
+renounceOwnership(): Ensures _owner != VeriSol.Old(_owner)
+transfer(recipient,amount): Requires msg.sender != address(0)
+transfer(recipient,amount): Requires recipient != address(0)
+transfer(recipient,amount): Requires VeriSol.Old(paused) == false
+transfer(recipient,amount): Requires amount <= VeriSol.Old(_balances[msg.sender])
+transfer(recipient,amount): Ensures paused == false
+transfer(recipient,amount): Ensures _pendingowner == VeriSol.Old(_pendingowner)
+transfer(recipient,amount): Ensures amount <= _balances[recipient]
+transfer(recipient,amount): Ensures VeriSol.Old(_balances[recipient]) <= _balances[recipient]
+transfer(recipient,amount): Ensures _owner == VeriSol.Old(_owner)
+transfer(recipient,amount): Ensures _decimals == VeriSol.Old(uint256(_decimals))
+transfer(recipient,amount): Ensures VeriSol.Old(VeriSol.SumMapping(_balances)) == VeriSol.SumMapping(_balances)
+transfer(recipient,amount): Ensures _totalSupply == VeriSol.Old(_totalSupply)
+transfer(recipient,amount): Ensures VeriSol.Old(_balances[msg.sender]) >= _balances[msg.sender]
+ArtEdu: Ensures VeriSol.ContractInvariant(_decimals == 18)
+
+False Invariants:
+
+ // ./gambit_out_transfer/mutants/1315/verisol_test

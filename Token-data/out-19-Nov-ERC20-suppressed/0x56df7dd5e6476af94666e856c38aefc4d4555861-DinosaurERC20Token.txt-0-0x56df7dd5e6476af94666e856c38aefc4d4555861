@@ -1,0 +1,17 @@
+original result: 23 invariants, smt-simplified result: 13 invariants
+transfer(recipient,amount):
+Requires		recipient != address(0)
+Requires		msg.sender != address(0)
+Requires		amount <= VeriSol.Old(_balances[msg.sender])
+Ensures		VeriSol.Old(_balances[recipient]) <= _balances[recipient]
+Ensures		_totalSupply == VeriSol.Old(_totalSupply)
+Ensures		_balances[msg.sender] <= VeriSol.Old(_balances[msg.sender])
+Ensures		VeriSol.SumMapping(_balances) == VeriSol.Old(VeriSol.SumMapping(_balances))
+Ensures		amount <= _balances[recipient]
+approve(spender,value):
+Requires		msg.sender != address(0)
+Requires		spender != address(0)
+Ensures		_totalSupply == VeriSol.Old(_totalSupply)
+Ensures		_allowances[msg.sender][spender] == value
+DinosaurERC20Token:
+Ensures		VeriSol.SumMapping(_balances) == _totalSupply

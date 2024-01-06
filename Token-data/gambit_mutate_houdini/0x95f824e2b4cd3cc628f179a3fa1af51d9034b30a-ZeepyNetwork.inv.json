@@ -1,0 +1,52 @@
+[
+    {
+        "func": "approve(spender,tokens)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "VeriSol.Requires(msg.sender != address(0))"
+        ],
+        "postconditions": [
+            "VeriSol.Ensures(VeriSol.Old(uint256(decimals)) == decimals)",
+            "VeriSol.Ensures(tokens == allowed[msg.sender][spender])",
+            "VeriSol.Ensures(_totalSupply == VeriSol.Old(_totalSupply))"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "transfer(to,tokens)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "VeriSol.Requires(msg.sender != address(0))",
+            "VeriSol.Requires(tokens <= VeriSol.Old(balances[msg.sender]))"
+        ],
+        "postconditions": [
+            "VeriSol.Ensures(VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances)))",
+            "VeriSol.Ensures(VeriSol.Old(uint256(decimals)) == decimals)",
+            "VeriSol.Ensures(tokens <= balances[to])",
+            "VeriSol.Ensures(VeriSol.Old(balances[to]) <= balances[to])",
+            "VeriSol.Ensures(_totalSupply == VeriSol.Old(_totalSupply))",
+            "VeriSol.Ensures(VeriSol.Old(balances[msg.sender]) >= balances[msg.sender])"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": null,
+        "type": "PptType.CONTRACT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [
+            "VeriSol.Ensures(VeriSol.SumMapping(balances) == 1000000000000000000000000000000000)",
+            "VeriSol.Ensures(decimals == 18)",
+            "VeriSol.Ensures(_totalSupply == 1000000000000000000000000000000000)",
+            "VeriSol.Ensures(VeriSol.SumMapping(balances) > decimals)",
+            "VeriSol.Ensures(VeriSol.SumMapping(balances) == _totalSupply)",
+            "VeriSol.Ensures(decimals < _totalSupply)"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    }
+]

@@ -1,0 +1,26 @@
+Invariants with True value:15
+Invariants with False value:3
+
+True Invariants:
+approve(spender,tokens): Requires msg.sender != address(0)
+approve(spender,tokens): Ensures _totalSupply == VeriSol.Old(_totalSupply)
+approve(spender,tokens): Ensures VeriSol.Old(uint256(decimals)) == decimals
+approve(spender,tokens): Ensures tokens == allowed[msg.sender][spender]
+transfer(to,tokens): Requires msg.sender != address(0)
+transfer(to,tokens): Requires VeriSol.Old(balances[msg.sender]) >= tokens
+transfer(to,tokens): Ensures _totalSupply == VeriSol.Old(_totalSupply)
+transfer(to,tokens): Ensures VeriSol.Old(uint256(decimals)) == decimals
+transfer(to,tokens): Ensures VeriSol.Old(balances[msg.sender]) >= balances[msg.sender]
+transfer(to,tokens): Ensures balances[to] >= tokens
+transfer(to,tokens): Ensures balances[to] >= VeriSol.Old(balances[to])
+transfer(to,tokens): Ensures VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances))
+PIXIUFINANCE: Ensures VeriSol.ContractInvariant(decimals == 0)
+PIXIUFINANCE: Ensures VeriSol.ContractInvariant(_totalSupply == 10000000)
+PIXIUFINANCE: Ensures VeriSol.ContractInvariant(decimals < _totalSupply)
+
+False Invariants:
+PIXIUFINANCE: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == 10000000)
+PIXIUFINANCE: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) > decimals)
+PIXIUFINANCE: Ensures VeriSol.ContractInvariant(VeriSol.SumMapping(balances) == _totalSupply)
+
+ // ./gambit_out_approve/mutants/1451/verisol_test

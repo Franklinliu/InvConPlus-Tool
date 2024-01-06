@@ -1,0 +1,59 @@
+Invariants with True value:11
+Invariants with False value:42
+
+True Invariants:
+transfer(recipient,amount): Ensures _totalSupply == VeriSol.Old(_totalSupply)
+transfer(recipient,amount): Ensures Account == VeriSol.Old(Account)
+transfer(recipient,amount): Ensures recipient == VeriSol.Old(recipient)
+transfer(recipient,amount): Ensures amount == VeriSol.Old(amount)
+transfer(recipient,amount): Ensures msg.sender == VeriSol.Old(msg.sender)
+transfer(recipient,amount): Ensures block.timestamp == VeriSol.Old(block.timestamp)
+transfer(recipient,amount): Ensures _balances[msg.sender] >= 0
+transfer(recipient,amount): Ensures VeriSol.Old(_balances[recipient]) >= 0
+transfer(recipient,amount): Ensures amount <= _balances[recipient]
+transfer(recipient,amount): Ensures amount <= VeriSol.Old(_balances[msg.sender])
+transfer(recipient,amount): Ensures VeriSol.Old(amount) <= _balances[recipient]
+
+False Invariants:
+transfer(recipient,amount): Requires _totalSupply == _allowances[recipient][msg.sender]
+transfer(recipient,amount): Requires _totalSupply == 0
+transfer(recipient,amount): Requires _totalSupply < amount
+transfer(recipient,amount): Requires _totalSupply < block.timestamp
+transfer(recipient,amount): Requires _totalSupply <= VeriSol.Old(VeriSol.SumMapping(_balances))
+transfer(recipient,amount): Requires _totalSupply <= _balances[recipient]
+transfer(recipient,amount): Requires _totalSupply < _balances[msg.sender]
+transfer(recipient,amount): Requires amount <= _balances[msg.sender]
+transfer(recipient,amount): Requires block.timestamp < _balances[msg.sender]
+transfer(recipient,amount): Ensures _totalSupply == VeriSol.Old(_allowances[recipient][msg.sender])
+transfer(recipient,amount): Ensures _totalSupply == 0
+transfer(recipient,amount): Ensures VeriSol.SumMapping(_balances) == 500000000000000000000000000
+transfer(recipient,amount): Ensures VeriSol.Old(_allowances[recipient][msg.sender]) == 0
+transfer(recipient,amount): Ensures _totalSupply < amount
+transfer(recipient,amount): Ensures _totalSupply < block.timestamp
+transfer(recipient,amount): Ensures _totalSupply < VeriSol.Old(amount)
+transfer(recipient,amount): Ensures _totalSupply < VeriSol.Old(block.timestamp)
+transfer(recipient,amount): Ensures _totalSupply < VeriSol.SumMapping(_balances)
+transfer(recipient,amount): Ensures _totalSupply <= VeriSol.Old(VeriSol.SumMapping(_balances))
+transfer(recipient,amount): Ensures _totalSupply < _balances[recipient]
+transfer(recipient,amount): Ensures _totalSupply <= _balances[msg.sender]
+transfer(recipient,amount): Ensures _totalSupply <= VeriSol.Old(_balances[recipient])
+transfer(recipient,amount): Ensures _totalSupply < VeriSol.Old(_balances[msg.sender])
+transfer(recipient,amount): Ensures Account != VeriSol.Old(recipient)
+transfer(recipient,amount): Ensures Account != VeriSol.Old(msg.sender)
+transfer(recipient,amount): Ensures amount < VeriSol.SumMapping(_balances)
+transfer(recipient,amount): Ensures block.timestamp < VeriSol.Old(amount)
+transfer(recipient,amount): Ensures block.timestamp < VeriSol.SumMapping(_balances)
+transfer(recipient,amount): Ensures block.timestamp < _balances[recipient]
+transfer(recipient,amount): Ensures block.timestamp < VeriSol.Old(_balances[msg.sender])
+transfer(recipient,amount): Ensures VeriSol.Old(_totalSupply) < VeriSol.SumMapping(_balances)
+transfer(recipient,amount): Ensures VeriSol.Old(_totalSupply) < _balances[recipient]
+transfer(recipient,amount): Ensures VeriSol.Old(_totalSupply) <= _balances[msg.sender]
+transfer(recipient,amount): Ensures VeriSol.Old(recipient) != VeriSol.Old(msg.sender)
+transfer(recipient,amount): Ensures VeriSol.Old(amount) < VeriSol.SumMapping(_balances)
+transfer(recipient,amount): Ensures VeriSol.Old(block.timestamp) < VeriSol.SumMapping(_balances)
+transfer(recipient,amount): Ensures VeriSol.Old(block.timestamp) < _balances[recipient]
+transfer(recipient,amount): Ensures _balances[msg.sender] < VeriSol.Old(_balances[msg.sender])
+transfer(recipient,amount): Ensures amount - _balances[recipient] + VeriSol.Old(_balances[recipient]) == 0
+transfer(recipient,amount): Ensures amount + _balances[msg.sender] - VeriSol.Old(_balances[msg.sender]) == 0
+transfer(recipient,amount): Ensures VeriSol.Old(amount) - _balances[recipient] + VeriSol.Old(_balances[recipient]) == 0
+transfer(recipient,amount): Ensures VeriSol.Old(amount) + _balances[msg.sender] - VeriSol.Old(_balances[msg.sender]) == 0

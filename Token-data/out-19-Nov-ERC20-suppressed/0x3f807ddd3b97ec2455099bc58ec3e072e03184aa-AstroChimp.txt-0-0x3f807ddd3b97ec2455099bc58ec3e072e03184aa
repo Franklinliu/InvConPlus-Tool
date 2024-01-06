@@ -1,0 +1,9 @@
+original result: 13 invariants, smt-simplified result: 6 invariants
+approve(spender,value):
+Requires		spender != address(0)
+Requires		msg.sender != address(0)
+Ensures		value == _allowances[msg.sender][spender]
+Ensures		VeriSol.Old(_totalSupply) == _totalSupply
+AstroChimp:
+Ensures		_decimals == 18
+Ensures		VeriSol.SumMapping(_balances) == _totalSupply

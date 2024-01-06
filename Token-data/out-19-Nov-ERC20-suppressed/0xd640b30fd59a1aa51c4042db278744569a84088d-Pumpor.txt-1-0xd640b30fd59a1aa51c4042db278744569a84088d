@@ -1,0 +1,10 @@
+original result: 27 invariants, smt-simplified result: 7 invariants
+approve(spender,value):
+Requires		msg.sender != address(0)
+Requires		spender != address(0)
+Ensures		_allowances[msg.sender][spender] == value
+Ensures		VeriSol.Old(_totalSupply) == _totalSupply
+Ensures		VeriSol.Old(_allowances[msg.sender][spender]) == 0 => VeriSol.Old(_allowances[msg.sender][spender]) <= _allowances[msg.sender][spender]
+Ensures		VeriSol.Old(_allowances[msg.sender][spender]) == value => VeriSol.Old(_allowances[msg.sender][spender]) == _allowances[msg.sender][spender]
+Pumpor:
+Ensures		_totalSupply == VeriSol.SumMapping(_balances)

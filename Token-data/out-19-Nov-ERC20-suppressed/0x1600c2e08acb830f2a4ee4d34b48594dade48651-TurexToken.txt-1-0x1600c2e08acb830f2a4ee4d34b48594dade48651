@@ -1,0 +1,22 @@
+original result: 42 invariants, smt-simplified result: 18 invariants
+unfreeze():
+Requires		VeriSol.Old(unfrozen) == false
+Requires		VeriSol.Old(owner) != address(0)
+Requires		msg.sender != address(0)
+Requires		VeriSol.Old(owner) == msg.sender
+Ensures		unfrozen == true
+Ensures		owner != address(0)
+Ensures		VeriSol.Old(totalSupply_) == totalSupply_
+Ensures		VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances))
+Ensures		VeriSol.Old(owner) == owner
+Ensures		owner == msg.sender
+transfer(_to,_value):
+Requires		_to != address(0)
+Requires		msg.sender != address(0)
+Ensures		VeriSol.Old(totalSupply_) == totalSupply_
+Ensures		VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances))
+Ensures		VeriSol.Old(owner) == owner
+Ensures		VeriSol.Old(VeriSol.SumMapping(balances)) == _value => VeriSol.SumMapping(balances) == _value
+Ensures		VeriSol.Old(VeriSol.SumMapping(balances)) > _value => VeriSol.SumMapping(balances) > 0
+TurexToken:
+Ensures		VeriSol.SumMapping(balances) == totalSupply_

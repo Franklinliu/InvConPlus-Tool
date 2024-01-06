@@ -1,0 +1,50 @@
+[
+    {
+        "func": "unfreeze()",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "VeriSol.Requires(VeriSol.Old(unfrozen) == false)",
+            "VeriSol.Requires(VeriSol.Old(owner) != address(0))",
+            "VeriSol.Requires(msg.sender != address(0))",
+            "VeriSol.Requires(VeriSol.Old(owner) == msg.sender)"
+        ],
+        "postconditions": [
+            "VeriSol.Ensures(unfrozen == true)",
+            "VeriSol.Ensures(owner != address(0))",
+            "VeriSol.Ensures(VeriSol.Old(totalSupply_) == totalSupply_)",
+            "VeriSol.Ensures(VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances)))",
+            "VeriSol.Ensures(VeriSol.Old(owner) == owner)",
+            "VeriSol.Ensures(owner == msg.sender)"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "transfer(_to,_value)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "VeriSol.Requires(_to != address(0))",
+            "VeriSol.Requires(msg.sender != address(0))"
+        ],
+        "postconditions": [
+            "VeriSol.Ensures(VeriSol.Old(totalSupply_) == totalSupply_)",
+            "VeriSol.Ensures(VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances)))",
+            "VeriSol.Ensures(VeriSol.Old(owner) == owner)"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": null,
+        "type": "PptType.CONTRACT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [
+            "VeriSol.Ensures(VeriSol.SumMapping(balances) == totalSupply_)"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    }
+]

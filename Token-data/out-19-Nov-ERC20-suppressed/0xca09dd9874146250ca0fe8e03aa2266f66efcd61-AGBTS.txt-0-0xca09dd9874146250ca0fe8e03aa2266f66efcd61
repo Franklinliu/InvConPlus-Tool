@@ -1,0 +1,36 @@
+original result: 38 invariants, smt-simplified result: 31 invariants
+transferOwnership(newOwner):
+Requires		msg.sender != address(0)
+Requires		VeriSol.Old(_owner) != address(0)
+Requires		msg.sender == VeriSol.Old(_owner)
+Ensures		_owner != address(0)
+Ensures		_pendingowner == newOwner
+Ensures		msg.sender == _owner
+Ensures		_owner == VeriSol.Old(_owner)
+claimOwnership():
+Requires		msg.sender != address(0)
+Requires		VeriSol.Old(_pendingowner) != address(0)
+Requires		msg.sender == VeriSol.Old(_pendingowner)
+Ensures		_pendingowner != address(0)
+Ensures		_owner != address(0)
+Ensures		_pendingowner == msg.sender
+Ensures		_pendingowner == _owner
+Ensures		_pendingowner == VeriSol.Old(_pendingowner)
+Ensures		msg.sender == _owner
+Ensures		_owner == VeriSol.Old(_pendingowner)
+transfer(recipient,amount):
+Requires		msg.sender != address(0)
+Requires		recipient != address(0)
+Requires		VeriSol.Old(paused) == false
+Requires		VeriSol.Old(_balances[msg.sender]) >= amount
+Ensures		paused == false
+Ensures		_pendingowner == VeriSol.Old(_pendingowner)
+Ensures		VeriSol.Old(_balances[recipient]) <= _balances[recipient]
+Ensures		_owner == VeriSol.Old(_owner)
+Ensures		_balances[msg.sender] <= VeriSol.Old(_balances[msg.sender])
+Ensures		_totalSupply == VeriSol.Old(_totalSupply)
+Ensures		_decimals == VeriSol.Old(uint256(_decimals))
+Ensures		amount <= _balances[recipient]
+Ensures		VeriSol.SumMapping(_balances) == VeriSol.Old(VeriSol.SumMapping(_balances))
+AGBTS:
+Ensures		_decimals == 18

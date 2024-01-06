@@ -1,0 +1,50 @@
+original result: 311 invariants, smt-simplified result: 47 invariants
+transfer(to,tokens):
+Requires		msg.sender != address(0)
+Requires		tokens <= VeriSol.Old(balances[msg.sender])
+Ensures		tokens <= balances[to]
+Ensures		VeriSol.SumMapping(balances) == VeriSol.Old(VeriSol.SumMapping(balances))
+Ensures		_totalSupply == VeriSol.Old(_totalSupply)
+Ensures		balances[msg.sender] <= VeriSol.Old(balances[msg.sender])
+Ensures		balances[to] >= VeriSol.Old(balances[to])
+Ensures		decimals == VeriSol.Old(uint256(decimals))
+Ensures		tokens == VeriSol.Old(VeriSol.SumMapping(balances)) => tokens == VeriSol.SumMapping(balances)
+Ensures		tokens < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.SumMapping(balances) > 0
+Ensures		VeriSol.Old(balances[msg.sender]) < VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.SumMapping(balances) > balances[msg.sender]
+Ensures		VeriSol.Old(balances[msg.sender]) == VeriSol.Old(VeriSol.SumMapping(balances)) => VeriSol.SumMapping(balances) == VeriSol.Old(balances[msg.sender])
+Ensures		VeriSol.Old(balances[msg.sender]) < VeriSol.Old(VeriSol.SumMapping(balances)) => balances[msg.sender] < VeriSol.Old(VeriSol.SumMapping(balances))
+Ensures		VeriSol.Old(VeriSol.SumMapping(balances)) == VeriSol.Old(balances[to]) => VeriSol.SumMapping(balances) == VeriSol.Old(balances[to])
+Ensures		VeriSol.Old(balances[to]) != 0 => balances[to] > 0
+Ensures		tokens != VeriSol.Old(balances[to]) => balances[to] > 0
+Ensures		VeriSol.Old(balances[msg.sender]) < VeriSol.Old(balances[to]) => balances[to] > 0
+Ensures		VeriSol.Old(balances[to]) == 0 => tokens == balances[to]
+Ensures		VeriSol.Old(balances[to]) == 0 => balances[msg.sender] >= VeriSol.Old(balances[to])
+Ensures		VeriSol.Old(balances[to]) == 0 => balances[to] <= VeriSol.Old(balances[msg.sender])
+Ensures		to == msg.sender => tokens <= balances[msg.sender]
+Ensures		to == msg.sender => balances[msg.sender] == balances[to]
+Ensures		to == msg.sender => balances[msg.sender] == VeriSol.Old(balances[msg.sender])
+Ensures		to == msg.sender => balances[msg.sender] == VeriSol.Old(balances[to])
+Ensures		to == msg.sender => balances[to] == VeriSol.Old(balances[msg.sender])
+Ensures		to == msg.sender => balances[to] == VeriSol.Old(balances[to])
+Ensures		to != msg.sender => VeriSol.Old(balances[msg.sender]) - balances[msg.sender] == tokens
+Ensures		tokens >= VeriSol.Old(balances[msg.sender]) => tokens >= balances[msg.sender]
+Ensures		tokens >= VeriSol.Old(balances[msg.sender]) => balances[msg.sender] <= balances[to]
+Ensures		tokens >= VeriSol.Old(balances[msg.sender]) => balances[msg.sender] <= VeriSol.Old(balances[to])
+Ensures		tokens >= VeriSol.Old(balances[msg.sender]) => balances[to] >= VeriSol.Old(balances[msg.sender])
+Ensures		tokens != VeriSol.Old(balances[msg.sender]) => balances[msg.sender] > 0
+Ensures		tokens > VeriSol.Old(balances[to]) => balances[msg.sender] < VeriSol.Old(balances[msg.sender])
+Ensures		tokens > VeriSol.Old(balances[to]) => balances[to] > VeriSol.Old(balances[to])
+Ensures		tokens > VeriSol.Old(balances[to]) => VeriSol.Old(balances[msg.sender]) - balances[msg.sender] == tokens
+Ensures		tokens < VeriSol.Old(balances[to]) => tokens < balances[to]
+Ensures		VeriSol.Old(balances[msg.sender]) < VeriSol.Old(balances[to]) => balances[msg.sender] < balances[to]
+Ensures		VeriSol.Old(balances[msg.sender]) < VeriSol.Old(balances[to]) => balances[msg.sender] < VeriSol.Old(balances[to])
+Ensures		VeriSol.Old(balances[msg.sender]) < VeriSol.Old(balances[to]) => balances[to] > VeriSol.Old(balances[msg.sender])
+Ensures		VeriSol.Old(balances[msg.sender]) != VeriSol.Old(balances[to]) => VeriSol.Old(balances[msg.sender]) - balances[msg.sender] == tokens
+Ensures		VeriSol.Old(balances[msg.sender]) < VeriSol.Old(balances[to]) => tokens < balances[to]
+TetherUSD:
+Ensures		VeriSol.SumMapping(balances) == 100000000000000000000000000
+Ensures		decimals == 18
+Ensures		_totalSupply == 100000000000000000000000000
+Ensures		VeriSol.SumMapping(balances) > decimals
+Ensures		VeriSol.SumMapping(balances) == _totalSupply
+Ensures		decimals < _totalSupply

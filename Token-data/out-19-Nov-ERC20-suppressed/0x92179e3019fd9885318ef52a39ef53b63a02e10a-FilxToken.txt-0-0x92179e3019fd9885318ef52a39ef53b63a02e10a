@@ -1,0 +1,10 @@
+original result: 13 invariants, smt-simplified result: 7 invariants
+transfer(_to,_value):
+Requires		msg.sender != address(0)
+Requires		_value <= VeriSol.Old(balanceOf[msg.sender])
+Ensures		balanceOf[_to] >= VeriSol.Old(balanceOf[_to])
+Ensures		VeriSol.Old(totalSupply) == totalSupply
+Ensures		VeriSol.Old(balanceOf[msg.sender]) >= balanceOf[msg.sender]
+Ensures		VeriSol.SumMapping(balanceOf) == VeriSol.Old(VeriSol.SumMapping(balanceOf))
+FilxToken:
+Ensures		totalSupply == VeriSol.SumMapping(balanceOf)

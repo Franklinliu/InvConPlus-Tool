@@ -1,0 +1,4262 @@
+// Declarations for Smart Contract Runtime Invariant Identification
+// Declarations automatically written by Liu Ye 
+
+decl-version 2.0
+var-comparability implicit
+ppt WCX:::Object
+ppt-type object
+variable this
+  var-kind variable
+  dec-type WCX
+  rep-type hashcode
+  flags non_null
+  comparability 0
+variable this.totalSupply
+    var-kind field totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+variable this.status
+    var-kind field status
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+variable this.frozenAccount
+    var-kind field frozenAccount
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozenAccount[..]
+    var-kind array
+    enclosing-var this.frozenAccount
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+variable this.frozenAccount[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozenAccount[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+variable this.init
+    var-kind field init
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+variable this.controllerAddress
+    var-kind field controllerAddress
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+
+
+ppt WCX.turnon():::ENTER
+ppt-type enter
+parent parent WCX:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type WCX
+  rep-type hashcode
+  flags is_param nomod
+  parent WCX:::Object 1
+variable this.totalSupply
+    var-kind field totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.status
+    var-kind field status
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.frozenAccount
+    var-kind field frozenAccount
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozenAccount[..]
+    var-kind array
+    enclosing-var this.frozenAccount
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.frozenAccount[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozenAccount[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent WCX:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.init
+    var-kind field init
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.controllerAddress
+    var-kind field controllerAddress
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent WCX:::Object 1
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt WCX.turnon():::EXIT1
+ppt-type subexit
+parent parent WCX:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type WCX
+  rep-type hashcode
+  flags is_param nomod
+  parent WCX:::Object 1
+variable this.totalSupply
+    var-kind field totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.status
+    var-kind field status
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.frozenAccount
+    var-kind field frozenAccount
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozenAccount[..]
+    var-kind array
+    enclosing-var this.frozenAccount
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.frozenAccount[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozenAccount[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent WCX:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.init
+    var-kind field init
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.controllerAddress
+    var-kind field controllerAddress
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent WCX:::Object 1
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt WCX.turnon():::EXIT2
+ppt-type subexit
+parent parent WCX:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type WCX
+  rep-type hashcode
+  flags is_param nomod
+  parent WCX:::Object 1
+variable this.totalSupply
+    var-kind field totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.status
+    var-kind field status
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.frozenAccount
+    var-kind field frozenAccount
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozenAccount[..]
+    var-kind array
+    enclosing-var this.frozenAccount
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.frozenAccount[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozenAccount[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent WCX:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.init
+    var-kind field init
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.controllerAddress
+    var-kind field controllerAddress
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent WCX:::Object 1
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt WCX.approve(address,uint256):::ENTER
+ppt-type enter
+parent parent WCX:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type WCX
+  rep-type hashcode
+  flags is_param nomod
+  parent WCX:::Object 1
+variable this.totalSupply
+    var-kind field totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.status
+    var-kind field status
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.frozenAccount
+    var-kind field frozenAccount
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozenAccount[..]
+    var-kind array
+    enclosing-var this.frozenAccount
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.frozenAccount[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozenAccount[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent WCX:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.init
+    var-kind field init
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.controllerAddress
+    var-kind field controllerAddress
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent WCX:::Object 1
+variable _spender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable _value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt WCX.approve(address,uint256):::EXIT1
+ppt-type subexit
+parent parent WCX:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type WCX
+  rep-type hashcode
+  flags is_param nomod
+  parent WCX:::Object 1
+variable this.totalSupply
+    var-kind field totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.status
+    var-kind field status
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.frozenAccount
+    var-kind field frozenAccount
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozenAccount[..]
+    var-kind array
+    enclosing-var this.frozenAccount
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.frozenAccount[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozenAccount[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent WCX:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.init
+    var-kind field init
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.controllerAddress
+    var-kind field controllerAddress
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent WCX:::Object 1
+variable _spender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable _value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt WCX.approve(address,uint256):::EXIT2
+ppt-type subexit
+parent parent WCX:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type WCX
+  rep-type hashcode
+  flags is_param nomod
+  parent WCX:::Object 1
+variable this.totalSupply
+    var-kind field totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.status
+    var-kind field status
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.frozenAccount
+    var-kind field frozenAccount
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozenAccount[..]
+    var-kind array
+    enclosing-var this.frozenAccount
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.frozenAccount[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozenAccount[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent WCX:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.init
+    var-kind field init
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.controllerAddress
+    var-kind field controllerAddress
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent WCX:::Object 1
+variable _spender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable _value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt WCX.transferFrom(address,address,uint256):::ENTER
+ppt-type enter
+parent parent WCX:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type WCX
+  rep-type hashcode
+  flags is_param nomod
+  parent WCX:::Object 1
+variable this.totalSupply
+    var-kind field totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.status
+    var-kind field status
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.frozenAccount
+    var-kind field frozenAccount
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozenAccount[..]
+    var-kind array
+    enclosing-var this.frozenAccount
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.frozenAccount[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozenAccount[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent WCX:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.init
+    var-kind field init
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.controllerAddress
+    var-kind field controllerAddress
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent WCX:::Object 1
+variable _from
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable _to
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable _value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt WCX.transferFrom(address,address,uint256):::EXIT1
+ppt-type subexit
+parent parent WCX:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type WCX
+  rep-type hashcode
+  flags is_param nomod
+  parent WCX:::Object 1
+variable this.totalSupply
+    var-kind field totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.status
+    var-kind field status
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.frozenAccount
+    var-kind field frozenAccount
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozenAccount[..]
+    var-kind array
+    enclosing-var this.frozenAccount
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.frozenAccount[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozenAccount[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent WCX:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.init
+    var-kind field init
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.controllerAddress
+    var-kind field controllerAddress
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent WCX:::Object 1
+variable _from
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable _to
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable _value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt WCX.transferFrom(address,address,uint256):::EXIT2
+ppt-type subexit
+parent parent WCX:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type WCX
+  rep-type hashcode
+  flags is_param nomod
+  parent WCX:::Object 1
+variable this.totalSupply
+    var-kind field totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.status
+    var-kind field status
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.frozenAccount
+    var-kind field frozenAccount
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozenAccount[..]
+    var-kind array
+    enclosing-var this.frozenAccount
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.frozenAccount[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozenAccount[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent WCX:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.init
+    var-kind field init
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.controllerAddress
+    var-kind field controllerAddress
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent WCX:::Object 1
+variable _from
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable _to
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable _value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt WCX.mint(address,uint256):::ENTER
+ppt-type enter
+parent parent WCX:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type WCX
+  rep-type hashcode
+  flags is_param nomod
+  parent WCX:::Object 1
+variable this.totalSupply
+    var-kind field totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.status
+    var-kind field status
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.frozenAccount
+    var-kind field frozenAccount
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozenAccount[..]
+    var-kind array
+    enclosing-var this.frozenAccount
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.frozenAccount[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozenAccount[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent WCX:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.init
+    var-kind field init
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.controllerAddress
+    var-kind field controllerAddress
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent WCX:::Object 1
+variable _to
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable _amount
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt WCX.mint(address,uint256):::EXIT1
+ppt-type subexit
+parent parent WCX:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type WCX
+  rep-type hashcode
+  flags is_param nomod
+  parent WCX:::Object 1
+variable this.totalSupply
+    var-kind field totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.status
+    var-kind field status
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.frozenAccount
+    var-kind field frozenAccount
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozenAccount[..]
+    var-kind array
+    enclosing-var this.frozenAccount
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.frozenAccount[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozenAccount[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent WCX:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.init
+    var-kind field init
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.controllerAddress
+    var-kind field controllerAddress
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent WCX:::Object 1
+variable _to
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable _amount
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt WCX.mint(address,uint256):::EXIT2
+ppt-type subexit
+parent parent WCX:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type WCX
+  rep-type hashcode
+  flags is_param nomod
+  parent WCX:::Object 1
+variable this.totalSupply
+    var-kind field totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.status
+    var-kind field status
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.frozenAccount
+    var-kind field frozenAccount
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozenAccount[..]
+    var-kind array
+    enclosing-var this.frozenAccount
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.frozenAccount[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozenAccount[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent WCX:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.init
+    var-kind field init
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.controllerAddress
+    var-kind field controllerAddress
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent WCX:::Object 1
+variable _to
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable _amount
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt WCX.burn(uint256):::ENTER
+ppt-type enter
+parent parent WCX:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type WCX
+  rep-type hashcode
+  flags is_param nomod
+  parent WCX:::Object 1
+variable this.totalSupply
+    var-kind field totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.status
+    var-kind field status
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.frozenAccount
+    var-kind field frozenAccount
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozenAccount[..]
+    var-kind array
+    enclosing-var this.frozenAccount
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.frozenAccount[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozenAccount[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent WCX:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.init
+    var-kind field init
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.controllerAddress
+    var-kind field controllerAddress
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent WCX:::Object 1
+variable _value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt WCX.burn(uint256):::EXIT1
+ppt-type subexit
+parent parent WCX:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type WCX
+  rep-type hashcode
+  flags is_param nomod
+  parent WCX:::Object 1
+variable this.totalSupply
+    var-kind field totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.status
+    var-kind field status
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.frozenAccount
+    var-kind field frozenAccount
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozenAccount[..]
+    var-kind array
+    enclosing-var this.frozenAccount
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.frozenAccount[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozenAccount[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent WCX:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.init
+    var-kind field init
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.controllerAddress
+    var-kind field controllerAddress
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent WCX:::Object 1
+variable _value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt WCX.burn(uint256):::EXIT2
+ppt-type subexit
+parent parent WCX:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type WCX
+  rep-type hashcode
+  flags is_param nomod
+  parent WCX:::Object 1
+variable this.totalSupply
+    var-kind field totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.status
+    var-kind field status
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.frozenAccount
+    var-kind field frozenAccount
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozenAccount[..]
+    var-kind array
+    enclosing-var this.frozenAccount
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.frozenAccount[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozenAccount[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent WCX:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.init
+    var-kind field init
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.controllerAddress
+    var-kind field controllerAddress
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent WCX:::Object 1
+variable _value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt WCX.turnoff():::ENTER
+ppt-type enter
+parent parent WCX:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type WCX
+  rep-type hashcode
+  flags is_param nomod
+  parent WCX:::Object 1
+variable this.totalSupply
+    var-kind field totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.status
+    var-kind field status
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.frozenAccount
+    var-kind field frozenAccount
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozenAccount[..]
+    var-kind array
+    enclosing-var this.frozenAccount
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.frozenAccount[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozenAccount[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent WCX:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.init
+    var-kind field init
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.controllerAddress
+    var-kind field controllerAddress
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent WCX:::Object 1
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt WCX.turnoff():::EXIT1
+ppt-type subexit
+parent parent WCX:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type WCX
+  rep-type hashcode
+  flags is_param nomod
+  parent WCX:::Object 1
+variable this.totalSupply
+    var-kind field totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.status
+    var-kind field status
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.frozenAccount
+    var-kind field frozenAccount
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozenAccount[..]
+    var-kind array
+    enclosing-var this.frozenAccount
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.frozenAccount[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozenAccount[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent WCX:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.init
+    var-kind field init
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.controllerAddress
+    var-kind field controllerAddress
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent WCX:::Object 1
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt WCX.turnoff():::EXIT2
+ppt-type subexit
+parent parent WCX:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type WCX
+  rep-type hashcode
+  flags is_param nomod
+  parent WCX:::Object 1
+variable this.totalSupply
+    var-kind field totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.status
+    var-kind field status
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.frozenAccount
+    var-kind field frozenAccount
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozenAccount[..]
+    var-kind array
+    enclosing-var this.frozenAccount
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.frozenAccount[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozenAccount[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent WCX:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.init
+    var-kind field init
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.controllerAddress
+    var-kind field controllerAddress
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent WCX:::Object 1
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt WCX.transfer(address,uint256):::ENTER
+ppt-type enter
+parent parent WCX:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type WCX
+  rep-type hashcode
+  flags is_param nomod
+  parent WCX:::Object 1
+variable this.totalSupply
+    var-kind field totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.status
+    var-kind field status
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.frozenAccount
+    var-kind field frozenAccount
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozenAccount[..]
+    var-kind array
+    enclosing-var this.frozenAccount
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.frozenAccount[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozenAccount[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent WCX:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.init
+    var-kind field init
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.controllerAddress
+    var-kind field controllerAddress
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent WCX:::Object 1
+variable _to
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable _value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt WCX.transfer(address,uint256):::EXIT1
+ppt-type subexit
+parent parent WCX:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type WCX
+  rep-type hashcode
+  flags is_param nomod
+  parent WCX:::Object 1
+variable this.totalSupply
+    var-kind field totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.status
+    var-kind field status
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.frozenAccount
+    var-kind field frozenAccount
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozenAccount[..]
+    var-kind array
+    enclosing-var this.frozenAccount
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.frozenAccount[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozenAccount[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent WCX:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.init
+    var-kind field init
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.controllerAddress
+    var-kind field controllerAddress
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent WCX:::Object 1
+variable _to
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable _value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt WCX.transfer(address,uint256):::EXIT2
+ppt-type subexit
+parent parent WCX:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type WCX
+  rep-type hashcode
+  flags is_param nomod
+  parent WCX:::Object 1
+variable this.totalSupply
+    var-kind field totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.status
+    var-kind field status
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.frozenAccount
+    var-kind field frozenAccount
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozenAccount[..]
+    var-kind array
+    enclosing-var this.frozenAccount
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.frozenAccount[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozenAccount[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent WCX:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.init
+    var-kind field init
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.controllerAddress
+    var-kind field controllerAddress
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent WCX:::Object 1
+variable _to
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable _value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt WCX.freezeAccount(address,bool):::ENTER
+ppt-type enter
+parent parent WCX:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type WCX
+  rep-type hashcode
+  flags is_param nomod
+  parent WCX:::Object 1
+variable this.totalSupply
+    var-kind field totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.status
+    var-kind field status
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.frozenAccount
+    var-kind field frozenAccount
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozenAccount[..]
+    var-kind array
+    enclosing-var this.frozenAccount
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.frozenAccount[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozenAccount[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent WCX:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.init
+    var-kind field init
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.controllerAddress
+    var-kind field controllerAddress
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent WCX:::Object 1
+variable target
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable freeze
+    var-kind variable
+    dec-type bool
+    rep-type boolean
+    flags is_param non_null is_readonly nomod
+    comparability 9
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt WCX.freezeAccount(address,bool):::EXIT1
+ppt-type subexit
+parent parent WCX:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type WCX
+  rep-type hashcode
+  flags is_param nomod
+  parent WCX:::Object 1
+variable this.totalSupply
+    var-kind field totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.status
+    var-kind field status
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.frozenAccount
+    var-kind field frozenAccount
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozenAccount[..]
+    var-kind array
+    enclosing-var this.frozenAccount
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.frozenAccount[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozenAccount[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent WCX:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.init
+    var-kind field init
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.controllerAddress
+    var-kind field controllerAddress
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent WCX:::Object 1
+variable target
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable freeze
+    var-kind variable
+    dec-type bool
+    rep-type boolean
+    flags is_param non_null is_readonly nomod
+    comparability 9
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt WCX.freezeAccount(address,bool):::EXIT2
+ppt-type subexit
+parent parent WCX:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type WCX
+  rep-type hashcode
+  flags is_param nomod
+  parent WCX:::Object 1
+variable this.totalSupply
+    var-kind field totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.status
+    var-kind field status
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.frozenAccount
+    var-kind field frozenAccount
+    enclosing-var this
+    dec-type mapping(address_=>_bool)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.frozenAccount[..]
+    var-kind array
+    enclosing-var this.frozenAccount
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.frozenAccount[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.frozenAccount[..]
+    array 1
+    dec-type bool[]
+    rep-type boolean[]
+    flags non_null
+    comparability 9[11]
+    parent WCX:::Object 1
+variable this.balances
+    var-kind field balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.balances[..]
+    var-kind array
+    enclosing-var this.balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this.balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed
+    var-kind field allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this.allowed[..]
+    var-kind array
+    enclosing-var this.allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent WCX:::Object 1
+variable this.allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this.allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent WCX:::Object 1
+variable this.decimals
+    var-kind field decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent WCX:::Object 1
+variable this.init
+    var-kind field init
+    enclosing-var this
+    dec-type bool
+    rep-type boolean
+    flags non_null
+    comparability 9
+    parent WCX:::Object 1
+variable this.controllerAddress
+    var-kind field controllerAddress
+    enclosing-var this
+    dec-type address
+    rep-type java.lang.String
+    flags non_null
+    comparability 8
+    parent WCX:::Object 1
+variable target
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable freeze
+    var-kind variable
+    dec-type bool
+    rep-type boolean
+    flags is_param non_null is_readonly nomod
+    comparability 9
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+

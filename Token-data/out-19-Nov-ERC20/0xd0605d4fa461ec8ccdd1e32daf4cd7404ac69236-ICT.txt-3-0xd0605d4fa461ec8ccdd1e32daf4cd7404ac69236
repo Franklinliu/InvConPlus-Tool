@@ -1,0 +1,22 @@
+Invariants with True value:0
+Invariants with False value:16
+
+True Invariants:
+
+False Invariants:
+transfer(to,value): Ensures msg.sender != address(0) => VeriSol.SumMapping(_balances) > 0 || VeriSol.SumMapping(_balances) >= value || VeriSol.SumMapping(_balances) >= value || VeriSol.SumMapping(_balances) > value
+transfer(to,value): Ensures VeriSol.SumMapping(_balances) > 0 || VeriSol.SumMapping(_balances) >= value || VeriSol.SumMapping(_balances) >= value || VeriSol.SumMapping(_balances) > value
+transfer(to,value): Ensures msg.sender != address(0) => VeriSol.SumMapping(_balances) >= value || VeriSol.SumMapping(_balances) > value || VeriSol.SumMapping(_balances) > value || VeriSol.SumMapping(_balances) != value
+transfer(to,value): Ensures VeriSol.SumMapping(_balances) >= value || VeriSol.SumMapping(_balances) > value || VeriSol.SumMapping(_balances) > value || VeriSol.SumMapping(_balances) != value
+transfer(to,value): Ensures msg.sender != address(0) => VeriSol.SumMapping(_balances) > value || VeriSol.SumMapping(_balances) != value || VeriSol.SumMapping(_balances) != value || VeriSol.SumMapping(_balances) == VeriSol.Old(VeriSol.SumMapping(_balances))
+transfer(to,value): Ensures VeriSol.SumMapping(_balances) > value || VeriSol.SumMapping(_balances) != value || VeriSol.SumMapping(_balances) != value || VeriSol.SumMapping(_balances) == VeriSol.Old(VeriSol.SumMapping(_balances))
+transfer(to,value): Ensures msg.sender != address(0) => VeriSol.SumMapping(_balances) != value || VeriSol.SumMapping(_balances) == VeriSol.Old(VeriSol.SumMapping(_balances)) || VeriSol.SumMapping(_balances) == VeriSol.Old(VeriSol.SumMapping(_balances)) || VeriSol.SumMapping(_balances) >= VeriSol.Old(VeriSol.SumMapping(_balances))
+transfer(to,value): Ensures VeriSol.SumMapping(_balances) != value || VeriSol.SumMapping(_balances) == VeriSol.Old(VeriSol.SumMapping(_balances)) || VeriSol.SumMapping(_balances) == VeriSol.Old(VeriSol.SumMapping(_balances)) || VeriSol.SumMapping(_balances) >= VeriSol.Old(VeriSol.SumMapping(_balances))
+transfer(to,value): Ensures msg.sender != address(0) => VeriSol.SumMapping(_balances) == VeriSol.Old(VeriSol.SumMapping(_balances)) || VeriSol.SumMapping(_balances) >= VeriSol.Old(VeriSol.SumMapping(_balances)) || VeriSol.SumMapping(_balances) >= VeriSol.Old(VeriSol.SumMapping(_balances)) || VeriSol.SumMapping(_balances) <= VeriSol.Old(VeriSol.SumMapping(_balances))
+transfer(to,value): Ensures VeriSol.SumMapping(_balances) == VeriSol.Old(VeriSol.SumMapping(_balances)) || VeriSol.SumMapping(_balances) >= VeriSol.Old(VeriSol.SumMapping(_balances)) || VeriSol.SumMapping(_balances) >= VeriSol.Old(VeriSol.SumMapping(_balances)) || VeriSol.SumMapping(_balances) <= VeriSol.Old(VeriSol.SumMapping(_balances))
+transfer(to,value): Ensures msg.sender != address(0) => VeriSol.SumMapping(_balances) >= VeriSol.Old(VeriSol.SumMapping(_balances)) || VeriSol.SumMapping(_balances) <= VeriSol.Old(VeriSol.SumMapping(_balances)) || VeriSol.SumMapping(_balances) <= VeriSol.Old(VeriSol.SumMapping(_balances)) || VeriSol.SumMapping(_balances) == value
+transfer(to,value): Ensures VeriSol.SumMapping(_balances) >= VeriSol.Old(VeriSol.SumMapping(_balances)) || VeriSol.SumMapping(_balances) <= VeriSol.Old(VeriSol.SumMapping(_balances)) || VeriSol.SumMapping(_balances) <= VeriSol.Old(VeriSol.SumMapping(_balances)) || VeriSol.SumMapping(_balances) == value
+transfer(to,value): Ensures msg.sender != address(0) => VeriSol.SumMapping(_balances) <= VeriSol.Old(VeriSol.SumMapping(_balances)) || VeriSol.SumMapping(_balances) == value || VeriSol.SumMapping(_balances) == value || VeriSol.SumMapping(_balances) != VeriSol.Old(VeriSol.SumMapping(_balances))
+transfer(to,value): Ensures VeriSol.SumMapping(_balances) <= VeriSol.Old(VeriSol.SumMapping(_balances)) || VeriSol.SumMapping(_balances) == value || VeriSol.SumMapping(_balances) == value || VeriSol.SumMapping(_balances) != VeriSol.Old(VeriSol.SumMapping(_balances))
+transfer(to,value): Ensures msg.sender != address(0) => VeriSol.SumMapping(_balances) == value || VeriSol.SumMapping(_balances) != VeriSol.Old(VeriSol.SumMapping(_balances)) || VeriSol.SumMapping(_balances) >= value || VeriSol.SumMapping(_balances) != VeriSol.Old(VeriSol.SumMapping(_balances))
+transfer(to,value): Ensures VeriSol.SumMapping(_balances) == value || VeriSol.SumMapping(_balances) != VeriSol.Old(VeriSol.SumMapping(_balances)) || VeriSol.SumMapping(_balances) >= value || VeriSol.SumMapping(_balances) != VeriSol.Old(VeriSol.SumMapping(_balances))

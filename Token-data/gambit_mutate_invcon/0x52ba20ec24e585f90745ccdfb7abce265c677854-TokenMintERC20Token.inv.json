@@ -1,0 +1,80 @@
+[
+    {
+        "func": "transfer(recipient,amount)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "VeriSol.Requires(recipient != address(0))",
+            "VeriSol.Requires(msg.sender != address(0))",
+            "VeriSol.Requires(VeriSol.Old(_balances[msg.sender]) >= amount)"
+        ],
+        "postconditions": [
+            "VeriSol.Ensures(VeriSol.Old(_balances[msg.sender]) >= _balances[msg.sender])",
+            "VeriSol.Ensures(VeriSol.Old(_balances[recipient]) <= _balances[recipient])",
+            "VeriSol.Ensures(VeriSol.Old(VeriSol.SumMapping(_balances)) == VeriSol.SumMapping(_balances))",
+            "VeriSol.Ensures(_totalSupply == VeriSol.Old(_totalSupply))",
+            "VeriSol.Ensures(_balances[recipient] >= amount)",
+            "VeriSol.Ensures(!(amount > 0 ) || ( _balances[recipient] > 0))",
+            "VeriSol.Ensures(!(VeriSol.Old(_balances[msg.sender]) == VeriSol.Old(VeriSol.SumMapping(_balances)) ) || ( VeriSol.Old(_balances[msg.sender]) == VeriSol.SumMapping(_balances)))",
+            "VeriSol.Ensures(!(VeriSol.Old(_balances[msg.sender]) < VeriSol.Old(VeriSol.SumMapping(_balances)) ) || ( _balances[msg.sender] < VeriSol.Old(VeriSol.SumMapping(_balances))))",
+            "VeriSol.Ensures(!(VeriSol.Old(_balances[msg.sender]) < VeriSol.Old(VeriSol.SumMapping(_balances)) ) || ( _balances[msg.sender] < VeriSol.SumMapping(_balances)))",
+            "VeriSol.Ensures(!(VeriSol.Old(_balances[msg.sender]) < VeriSol.Old(VeriSol.SumMapping(_balances)) ) || ( amount < VeriSol.SumMapping(_balances)))",
+            "VeriSol.Ensures(!(VeriSol.Old(_balances[msg.sender]) < VeriSol.Old(VeriSol.SumMapping(_balances)) ) || ( VeriSol.SumMapping(_balances) > 0))",
+            "VeriSol.Ensures(!(VeriSol.Old(_balances[msg.sender]) <= amount ) || ( VeriSol.Old(_balances[msg.sender]) <= _balances[recipient]))",
+            "VeriSol.Ensures(!(VeriSol.Old(_balances[msg.sender]) <= amount ) || ( VeriSol.Old(_balances[recipient]) >= _balances[msg.sender]))",
+            "VeriSol.Ensures(!(VeriSol.Old(_balances[msg.sender]) <= amount ) || ( _balances[msg.sender] <= _balances[recipient]))",
+            "VeriSol.Ensures(!(VeriSol.Old(_balances[msg.sender]) <= amount ) || ( _balances[msg.sender] <= amount))",
+            "VeriSol.Ensures(!(VeriSol.Old(_balances[recipient]) == VeriSol.Old(VeriSol.SumMapping(_balances)) ) || ( VeriSol.Old(_balances[recipient]) == VeriSol.SumMapping(_balances)))",
+            "VeriSol.Ensures(!(VeriSol.Old(_balances[recipient]) < VeriSol.Old(VeriSol.SumMapping(_balances)) ) || ( VeriSol.SumMapping(_balances) > 0))",
+            "VeriSol.Ensures(!(VeriSol.Old(_balances[recipient]) != amount ) || ( _balances[recipient] > 0))",
+            "VeriSol.Ensures(!(VeriSol.Old(_balances[recipient]) < amount ) || ( VeriSol.Old(_balances[msg.sender]) > _balances[msg.sender]))",
+            "VeriSol.Ensures(!(VeriSol.Old(_balances[recipient]) < amount ) || ( VeriSol.Old(_balances[recipient]) < _balances[recipient]))",
+            "VeriSol.Ensures(!(VeriSol.Old(VeriSol.SumMapping(_balances)) > amount ) || ( VeriSol.SumMapping(_balances) > 0))",
+            "VeriSol.Ensures(!(VeriSol.Old(_balances[msg.sender]) == VeriSol.Old(_balances[recipient]) ) || ( VeriSol.Old(_balances[msg.sender]) <= _balances[recipient]))",
+            "VeriSol.Ensures(!(recipient == msg.sender ) || ( VeriSol.Old(_balances[msg.sender]) == _balances[recipient]))",
+            "VeriSol.Ensures(!(VeriSol.Old(_balances[msg.sender]) == VeriSol.Old(_balances[recipient]) ) || ( VeriSol.Old(_balances[recipient]) >= _balances[msg.sender]))",
+            "VeriSol.Ensures(!(recipient == msg.sender ) || ( VeriSol.Old(_balances[recipient]) == _balances[msg.sender]))",
+            "VeriSol.Ensures(!(VeriSol.Old(_balances[msg.sender]) == VeriSol.Old(_balances[recipient]) ) || ( _balances[msg.sender] <= _balances[recipient]))",
+            "VeriSol.Ensures(!(recipient == msg.sender ) || ( _balances[msg.sender] == _balances[recipient]))",
+            "VeriSol.Ensures(!(VeriSol.Old(_balances[msg.sender]) != amount ) || ( _balances[msg.sender] != 0))",
+            "VeriSol.Ensures(!(recipient == msg.sender ) || ( VeriSol.Old(_balances[msg.sender]) == _balances[msg.sender]))",
+            "VeriSol.Ensures(!(recipient == msg.sender ) || ( VeriSol.Old(_balances[recipient]) == _balances[recipient]))",
+            "VeriSol.Ensures(!(VeriSol.Old(_balances[recipient]) == 3678545682598701010951 && VeriSol.Old(_balances[msg.sender]) != VeriSol.Old(_balances[recipient]) ) || ( _balances[recipient] > amount))",
+            "VeriSol.Ensures(!(amount > 0 && VeriSol.Old(_balances[msg.sender]) <= VeriSol.Old(VeriSol.SumMapping(_balances)) ) || ( VeriSol.SumMapping(_balances) > 0))",
+            "VeriSol.Ensures(!(VeriSol.Old(_balances[msg.sender]) > VeriSol.Old(_balances[recipient]) ) || ( VeriSol.Old(_balances[recipient]) < _balances[recipient] || VeriSol.Old(_balances[recipient]) != _balances[msg.sender]))",
+            "VeriSol.Ensures(!(VeriSol.Old(_balances[msg.sender]) == amount && VeriSol.Old(VeriSol.SumMapping(_balances)) == amount ) || ( VeriSol.Old(_balances[msg.sender]) <= VeriSol.SumMapping(_balances)))",
+            "VeriSol.Ensures(!(VeriSol.Old(_balances[msg.sender]) == amount && VeriSol.Old(VeriSol.SumMapping(_balances)) == amount ) || ( _balances[msg.sender] <= VeriSol.Old(VeriSol.SumMapping(_balances))))"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": "approve(spender,value)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "VeriSol.Requires(spender != address(0))",
+            "VeriSol.Requires(msg.sender != address(0))"
+        ],
+        "postconditions": [
+            "VeriSol.Ensures(value == _allowances[msg.sender][spender])",
+            "VeriSol.Ensures(_totalSupply == VeriSol.Old(_totalSupply))",
+            "VeriSol.Ensures(!(value != VeriSol.Old(_allowances[msg.sender][spender]) ) || ( _allowances[msg.sender][spender] != VeriSol.Old(_allowances[msg.sender][spender])))",
+            "VeriSol.Ensures(!(value > VeriSol.Old(_allowances[msg.sender][spender]) ) || ( _allowances[msg.sender][spender] > 0))",
+            "VeriSol.Ensures(!(VeriSol.Old(_allowances[msg.sender][spender]) == 0 ) || ( _allowances[msg.sender][spender] >= VeriSol.Old(_allowances[msg.sender][spender])))"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": null,
+        "type": "PptType.CONTRACT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [
+            "VeriSol.Ensures(VeriSol.SumMapping(_balances) == _totalSupply)"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    }
+]

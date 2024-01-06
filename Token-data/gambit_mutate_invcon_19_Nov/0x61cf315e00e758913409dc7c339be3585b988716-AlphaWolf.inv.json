@@ -1,0 +1,36 @@
+[
+    {
+        "func": "approve(spender,tokens)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "VeriSol.Requires(msg.sender != address(0))"
+        ],
+        "postconditions": [
+            "VeriSol.Ensures(allowed[msg.sender][spender] == tokens)",
+            "VeriSol.Ensures(_totalSupply == VeriSol.Old(_totalSupply))",
+            "VeriSol.Ensures(decimals == VeriSol.Old(uint256(decimals)))",
+            "VeriSol.Ensures(!(VeriSol.Old(allowed[msg.sender][spender]) == 0 ) || ( allowed[msg.sender][spender] >= VeriSol.Old(allowed[msg.sender][spender])))",
+            "VeriSol.Ensures(!(VeriSol.Old(allowed[msg.sender][spender]) == tokens ) || ( allowed[msg.sender][spender] == VeriSol.Old(allowed[msg.sender][spender])))",
+            "VeriSol.Ensures(!(VeriSol.Old(allowed[msg.sender][spender]) == 0 ) || ( allowed[msg.sender][spender] != VeriSol.Old(allowed[msg.sender][spender]) || allowed[msg.sender][spender] != 115792089237316195423570985008687907853269984665640564039457584007913129639935))"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": null,
+        "type": "PptType.CONTRACT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [
+            "VeriSol.Ensures(VeriSol.SumMapping(balances) == 1000000000000000000000000000000)",
+            "VeriSol.Ensures(_totalSupply == 1000000000000000000000000000000)",
+            "VeriSol.Ensures(decimals == 18)",
+            "VeriSol.Ensures(VeriSol.SumMapping(balances) == _totalSupply)",
+            "VeriSol.Ensures(VeriSol.SumMapping(balances) > decimals)",
+            "VeriSol.Ensures(_totalSupply > decimals)"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    }
+]

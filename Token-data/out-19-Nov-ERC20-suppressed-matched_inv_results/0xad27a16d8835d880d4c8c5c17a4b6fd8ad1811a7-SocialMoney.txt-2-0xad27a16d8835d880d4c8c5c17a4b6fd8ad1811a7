@@ -1,0 +1,42 @@
+[
+    [
+        "msg.sender != address(0)",
+        "msg.sender != address(0)"
+    ],
+    [
+        "to != address(0)",
+        "to != address(0)"
+    ],
+    [
+        "_totalSupply == VeriSol.Old(_totalSupply)",
+        "_totalSupply == VeriSol.Old(_totalSupply)"
+    ],
+    [
+        "msg.sender != to => VeriSol.Old(_balances[msg.sender]) - value == _balances[msg.sender]",
+        "to != msg.sender => _balances[msg.sender] == VeriSol.Old(_balances[msg.sender]) - value"
+    ],
+    [
+        "msg.sender != to => _balances[to] - value == VeriSol.Old(_balances[to])",
+        "to != msg.sender => _balances[to] == VeriSol.Old(_balances[to]) + value"
+    ],
+    [
+        "msg.sender == to => _balances[msg.sender] == VeriSol.Old(_balances[to])",
+        "to == msg.sender => _balances[msg.sender] == VeriSol.Old(_balances[to])"
+    ],
+    [
+        "msg.sender == to => _balances[to] == VeriSol.Old(_balances[msg.sender])",
+        "to == msg.sender => _balances[to] == VeriSol.Old(_balances[msg.sender])"
+    ],
+    [
+        "msg.sender == to => _balances[msg.sender] == VeriSol.Old(_balances[msg.sender])",
+        "to == msg.sender => _balances[msg.sender] == VeriSol.Old(_balances[msg.sender])"
+    ],
+    [
+        "msg.sender == to => VeriSol.Old(_balances[to]) == _balances[to]",
+        "to == msg.sender => _balances[to] == VeriSol.Old(_balances[to])"
+    ],
+    [
+        "VeriSol.SumMapping(_balances) == _totalSupply",
+        "_totalSupply == VeriSol.SumMapping(_balances)"
+    ]
+]

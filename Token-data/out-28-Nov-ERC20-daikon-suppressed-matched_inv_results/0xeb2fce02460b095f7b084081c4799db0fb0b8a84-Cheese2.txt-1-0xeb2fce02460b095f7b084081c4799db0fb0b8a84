@@ -1,0 +1,22 @@
+[
+    [
+        "_totalSupply == VeriSol.Old(_totalSupply)",
+        "_totalSupply == VeriSol.Old(_totalSupply)"
+    ],
+    [
+        "_totalSupply == VeriSol.Old(_totalSupply)",
+        "_totalSupply == VeriSol.Old(_totalSupply)"
+    ],
+    [
+        "value == _allowances[msg.sender][spender]",
+        "_allowances[msg.sender][spender] == value"
+    ],
+    [
+        "_totalSupply == VeriSol.Old(_totalSupply)",
+        "_totalSupply == VeriSol.Old(_totalSupply)"
+    ],
+    [
+        "- ( amount ) - _allowances[sender][msg.sender] + VeriSol.Old(_allowances[sender][msg.sender]) == 0",
+        "_allowances[sender][msg.sender] == VeriSol.Old(_allowances[sender][msg.sender]) - amount"
+    ]
+]

@@ -1,0 +1,3759 @@
+// Declarations for Smart Contract Runtime Invariant Identification
+// Declarations automatically written by Liu Ye 
+
+decl-version 2.0
+var-comparability implicit
+ppt BURN:::Object
+ppt-type object
+variable this
+  var-kind variable
+  dec-type BURN
+  rep-type hashcode
+  flags non_null
+  comparability 0
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+variable this._allowed
+    var-kind field _allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowed[..]
+    var-kind array
+    enclosing-var this._allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+variable this._allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+variable this._allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+variable this._allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+variable this.basePercent
+    var-kind field basePercent
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+variable this._burnStopAmount
+    var-kind field _burnStopAmount
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+variable this._lastTokenSupply
+    var-kind field _lastTokenSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+
+
+ppt BURN.approve(address,uint256):::ENTER
+ppt-type enter
+parent parent BURN:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type BURN
+  rep-type hashcode
+  flags is_param nomod
+  parent BURN:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed
+    var-kind field _allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowed[..]
+    var-kind array
+    enclosing-var this._allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this.basePercent
+    var-kind field basePercent
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._burnStopAmount
+    var-kind field _burnStopAmount
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._lastTokenSupply
+    var-kind field _lastTokenSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable spender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt BURN.approve(address,uint256):::EXIT1
+ppt-type subexit
+parent parent BURN:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type BURN
+  rep-type hashcode
+  flags is_param nomod
+  parent BURN:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed
+    var-kind field _allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowed[..]
+    var-kind array
+    enclosing-var this._allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this.basePercent
+    var-kind field basePercent
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._burnStopAmount
+    var-kind field _burnStopAmount
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._lastTokenSupply
+    var-kind field _lastTokenSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable spender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt BURN.approve(address,uint256):::EXIT2
+ppt-type subexit
+parent parent BURN:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type BURN
+  rep-type hashcode
+  flags is_param nomod
+  parent BURN:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed
+    var-kind field _allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowed[..]
+    var-kind array
+    enclosing-var this._allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this.basePercent
+    var-kind field basePercent
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._burnStopAmount
+    var-kind field _burnStopAmount
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._lastTokenSupply
+    var-kind field _lastTokenSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable spender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt BURN.multiTransfer(address[],uint256[]):::ENTER
+ppt-type enter
+parent parent BURN:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type BURN
+  rep-type hashcode
+  flags is_param nomod
+  parent BURN:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed
+    var-kind field _allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowed[..]
+    var-kind array
+    enclosing-var this._allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this.basePercent
+    var-kind field basePercent
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._burnStopAmount
+    var-kind field _burnStopAmount
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._lastTokenSupply
+    var-kind field _lastTokenSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable receivers
+    var-kind variable
+    dec-type hashcode
+    rep-type hashcode
+    flags is_param non_null is_readonly nomod
+    comparability 11
+variable receivers[..]
+    var-kind array
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    enclosing-var receivers
+    flags is_param non_null is_readonly nomod
+    comparability 8[11]
+variable amounts
+    var-kind variable
+    dec-type hashcode
+    rep-type hashcode
+    flags is_param non_null is_readonly nomod
+    comparability 11
+variable amounts[..]
+    var-kind array
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    enclosing-var amounts
+    flags is_param non_null is_readonly nomod
+    comparability 5[11]
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt BURN.multiTransfer(address[],uint256[]):::EXIT1
+ppt-type subexit
+parent parent BURN:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type BURN
+  rep-type hashcode
+  flags is_param nomod
+  parent BURN:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed
+    var-kind field _allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowed[..]
+    var-kind array
+    enclosing-var this._allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this.basePercent
+    var-kind field basePercent
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._burnStopAmount
+    var-kind field _burnStopAmount
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._lastTokenSupply
+    var-kind field _lastTokenSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable receivers
+    var-kind variable
+    dec-type hashcode
+    rep-type hashcode
+    flags is_param non_null is_readonly nomod
+    comparability 11
+variable receivers[..]
+    var-kind array
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    enclosing-var receivers
+    flags is_param non_null is_readonly nomod
+    comparability 8[11]
+variable amounts
+    var-kind variable
+    dec-type hashcode
+    rep-type hashcode
+    flags is_param non_null is_readonly nomod
+    comparability 11
+variable amounts[..]
+    var-kind array
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    enclosing-var amounts
+    flags is_param non_null is_readonly nomod
+    comparability 5[11]
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt BURN.multiTransfer(address[],uint256[]):::EXIT2
+ppt-type subexit
+parent parent BURN:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type BURN
+  rep-type hashcode
+  flags is_param nomod
+  parent BURN:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed
+    var-kind field _allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowed[..]
+    var-kind array
+    enclosing-var this._allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this.basePercent
+    var-kind field basePercent
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._burnStopAmount
+    var-kind field _burnStopAmount
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._lastTokenSupply
+    var-kind field _lastTokenSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable receivers
+    var-kind variable
+    dec-type hashcode
+    rep-type hashcode
+    flags is_param non_null is_readonly nomod
+    comparability 11
+variable receivers[..]
+    var-kind array
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    enclosing-var receivers
+    flags is_param non_null is_readonly nomod
+    comparability 8[11]
+variable amounts
+    var-kind variable
+    dec-type hashcode
+    rep-type hashcode
+    flags is_param non_null is_readonly nomod
+    comparability 11
+variable amounts[..]
+    var-kind array
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    enclosing-var amounts
+    flags is_param non_null is_readonly nomod
+    comparability 5[11]
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt BURN.transferFrom(address,address,uint256):::ENTER
+ppt-type enter
+parent parent BURN:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type BURN
+  rep-type hashcode
+  flags is_param nomod
+  parent BURN:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed
+    var-kind field _allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowed[..]
+    var-kind array
+    enclosing-var this._allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this.basePercent
+    var-kind field basePercent
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._burnStopAmount
+    var-kind field _burnStopAmount
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._lastTokenSupply
+    var-kind field _lastTokenSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable from
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable to
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt BURN.transferFrom(address,address,uint256):::EXIT1
+ppt-type subexit
+parent parent BURN:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type BURN
+  rep-type hashcode
+  flags is_param nomod
+  parent BURN:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed
+    var-kind field _allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowed[..]
+    var-kind array
+    enclosing-var this._allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this.basePercent
+    var-kind field basePercent
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._burnStopAmount
+    var-kind field _burnStopAmount
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._lastTokenSupply
+    var-kind field _lastTokenSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable from
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable to
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt BURN.transferFrom(address,address,uint256):::EXIT2
+ppt-type subexit
+parent parent BURN:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type BURN
+  rep-type hashcode
+  flags is_param nomod
+  parent BURN:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed
+    var-kind field _allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowed[..]
+    var-kind array
+    enclosing-var this._allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this.basePercent
+    var-kind field basePercent
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._burnStopAmount
+    var-kind field _burnStopAmount
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._lastTokenSupply
+    var-kind field _lastTokenSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable from
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable to
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt BURN.increaseAllowance(address,uint256):::ENTER
+ppt-type enter
+parent parent BURN:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type BURN
+  rep-type hashcode
+  flags is_param nomod
+  parent BURN:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed
+    var-kind field _allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowed[..]
+    var-kind array
+    enclosing-var this._allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this.basePercent
+    var-kind field basePercent
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._burnStopAmount
+    var-kind field _burnStopAmount
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._lastTokenSupply
+    var-kind field _lastTokenSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable spender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable addedValue
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt BURN.increaseAllowance(address,uint256):::EXIT1
+ppt-type subexit
+parent parent BURN:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type BURN
+  rep-type hashcode
+  flags is_param nomod
+  parent BURN:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed
+    var-kind field _allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowed[..]
+    var-kind array
+    enclosing-var this._allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this.basePercent
+    var-kind field basePercent
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._burnStopAmount
+    var-kind field _burnStopAmount
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._lastTokenSupply
+    var-kind field _lastTokenSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable spender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable addedValue
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt BURN.increaseAllowance(address,uint256):::EXIT2
+ppt-type subexit
+parent parent BURN:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type BURN
+  rep-type hashcode
+  flags is_param nomod
+  parent BURN:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed
+    var-kind field _allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowed[..]
+    var-kind array
+    enclosing-var this._allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this.basePercent
+    var-kind field basePercent
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._burnStopAmount
+    var-kind field _burnStopAmount
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._lastTokenSupply
+    var-kind field _lastTokenSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable spender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable addedValue
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt BURN.burn(uint256):::ENTER
+ppt-type enter
+parent parent BURN:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type BURN
+  rep-type hashcode
+  flags is_param nomod
+  parent BURN:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed
+    var-kind field _allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowed[..]
+    var-kind array
+    enclosing-var this._allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this.basePercent
+    var-kind field basePercent
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._burnStopAmount
+    var-kind field _burnStopAmount
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._lastTokenSupply
+    var-kind field _lastTokenSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable amount
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt BURN.burn(uint256):::EXIT1
+ppt-type subexit
+parent parent BURN:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type BURN
+  rep-type hashcode
+  flags is_param nomod
+  parent BURN:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed
+    var-kind field _allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowed[..]
+    var-kind array
+    enclosing-var this._allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this.basePercent
+    var-kind field basePercent
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._burnStopAmount
+    var-kind field _burnStopAmount
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._lastTokenSupply
+    var-kind field _lastTokenSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable amount
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt BURN.burn(uint256):::EXIT2
+ppt-type subexit
+parent parent BURN:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type BURN
+  rep-type hashcode
+  flags is_param nomod
+  parent BURN:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed
+    var-kind field _allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowed[..]
+    var-kind array
+    enclosing-var this._allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this.basePercent
+    var-kind field basePercent
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._burnStopAmount
+    var-kind field _burnStopAmount
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._lastTokenSupply
+    var-kind field _lastTokenSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable amount
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt BURN.burnFrom(address,uint256):::ENTER
+ppt-type enter
+parent parent BURN:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type BURN
+  rep-type hashcode
+  flags is_param nomod
+  parent BURN:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed
+    var-kind field _allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowed[..]
+    var-kind array
+    enclosing-var this._allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this.basePercent
+    var-kind field basePercent
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._burnStopAmount
+    var-kind field _burnStopAmount
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._lastTokenSupply
+    var-kind field _lastTokenSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable account
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable amount
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt BURN.burnFrom(address,uint256):::EXIT1
+ppt-type subexit
+parent parent BURN:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type BURN
+  rep-type hashcode
+  flags is_param nomod
+  parent BURN:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed
+    var-kind field _allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowed[..]
+    var-kind array
+    enclosing-var this._allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this.basePercent
+    var-kind field basePercent
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._burnStopAmount
+    var-kind field _burnStopAmount
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._lastTokenSupply
+    var-kind field _lastTokenSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable account
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable amount
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt BURN.burnFrom(address,uint256):::EXIT2
+ppt-type subexit
+parent parent BURN:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type BURN
+  rep-type hashcode
+  flags is_param nomod
+  parent BURN:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed
+    var-kind field _allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowed[..]
+    var-kind array
+    enclosing-var this._allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this.basePercent
+    var-kind field basePercent
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._burnStopAmount
+    var-kind field _burnStopAmount
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._lastTokenSupply
+    var-kind field _lastTokenSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable account
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable amount
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt BURN.decreaseAllowance(address,uint256):::ENTER
+ppt-type enter
+parent parent BURN:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type BURN
+  rep-type hashcode
+  flags is_param nomod
+  parent BURN:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed
+    var-kind field _allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowed[..]
+    var-kind array
+    enclosing-var this._allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this.basePercent
+    var-kind field basePercent
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._burnStopAmount
+    var-kind field _burnStopAmount
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._lastTokenSupply
+    var-kind field _lastTokenSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable spender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable subtractedValue
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt BURN.decreaseAllowance(address,uint256):::EXIT1
+ppt-type subexit
+parent parent BURN:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type BURN
+  rep-type hashcode
+  flags is_param nomod
+  parent BURN:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed
+    var-kind field _allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowed[..]
+    var-kind array
+    enclosing-var this._allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this.basePercent
+    var-kind field basePercent
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._burnStopAmount
+    var-kind field _burnStopAmount
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._lastTokenSupply
+    var-kind field _lastTokenSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable spender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable subtractedValue
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt BURN.decreaseAllowance(address,uint256):::EXIT2
+ppt-type subexit
+parent parent BURN:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type BURN
+  rep-type hashcode
+  flags is_param nomod
+  parent BURN:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed
+    var-kind field _allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowed[..]
+    var-kind array
+    enclosing-var this._allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this.basePercent
+    var-kind field basePercent
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._burnStopAmount
+    var-kind field _burnStopAmount
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._lastTokenSupply
+    var-kind field _lastTokenSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable spender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable subtractedValue
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt BURN.transfer(address,uint256):::ENTER
+ppt-type enter
+parent parent BURN:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type BURN
+  rep-type hashcode
+  flags is_param nomod
+  parent BURN:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed
+    var-kind field _allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowed[..]
+    var-kind array
+    enclosing-var this._allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this.basePercent
+    var-kind field basePercent
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._burnStopAmount
+    var-kind field _burnStopAmount
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._lastTokenSupply
+    var-kind field _lastTokenSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable to
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt BURN.transfer(address,uint256):::EXIT1
+ppt-type subexit
+parent parent BURN:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type BURN
+  rep-type hashcode
+  flags is_param nomod
+  parent BURN:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed
+    var-kind field _allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowed[..]
+    var-kind array
+    enclosing-var this._allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this.basePercent
+    var-kind field basePercent
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._burnStopAmount
+    var-kind field _burnStopAmount
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._lastTokenSupply
+    var-kind field _lastTokenSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable to
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+
+
+ppt BURN.transfer(address,uint256):::EXIT2
+ppt-type subexit
+parent parent BURN:::Object 1
+ppt-type object
+variable this
+  var-kind variable
+  dec-type BURN
+  rep-type hashcode
+  flags is_param nomod
+  parent BURN:::Object 1
+variable this._decimals
+    var-kind field _decimals
+    enclosing-var this
+    dec-type uint8
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._balances
+    var-kind field _balances
+    enclosing-var this
+    dec-type mapping(address_=>_uint256)
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._balances[..]
+    var-kind array
+    enclosing-var this._balances
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._balances[..].getValue()
+    var-kind function getValue()
+    enclosing-var this._balances[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed
+    var-kind field _allowed
+    enclosing-var this
+    dec-type mapping(address_=>_mapping(address_=>_uint256))
+    rep-type hashcode
+    flags non_null
+    comparability 10
+variable this._allowed[..]
+    var-kind array
+    enclosing-var this._allowed
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubLength()
+    var-kind function getSubLength()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type int[]
+    rep-type int[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubKey()
+    var-kind function getSubKey()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type address[]
+    rep-type java.lang.String[]
+    flags non_null
+    comparability 8[11]
+    parent BURN:::Object 1
+variable this._allowed[..].getSubValue()
+    var-kind function getSubValue()
+    enclosing-var this._allowed[..]
+    array 1
+    dec-type uint256[]
+    rep-type java.math.BigInteger[]
+    flags non_null
+    comparability 5[11]
+    parent BURN:::Object 1
+variable this._totalSupply
+    var-kind field _totalSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this.basePercent
+    var-kind field basePercent
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._burnStopAmount
+    var-kind field _burnStopAmount
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable this._lastTokenSupply
+    var-kind field _lastTokenSupply
+    enclosing-var this
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags non_null
+    comparability 5
+    parent BURN:::Object 1
+variable to
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable value
+    var-kind variable
+    dec-type uint256
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable msg.sender
+    var-kind variable
+    dec-type address
+    rep-type java.lang.String
+    flags is_param non_null is_readonly nomod
+    comparability 8
+variable msg.value
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+variable block.timestamp
+    var-kind variable
+    dec-type uint
+    rep-type java.math.BigInteger
+    flags is_param non_null is_readonly nomod
+    comparability 5
+

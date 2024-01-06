@@ -1,0 +1,9 @@
+original result: 6 invariants, smt-simplified result: 6 invariants
+setApprovalForAll(to,approved):
+Requires		msg.sender != address(0)
+Requires		msg.sender != to
+Ensures		_operatorApprovals[msg.sender][to] == approved
+transferFrom(from,to,tokenId):
+Requires		from != address(0)
+Requires		msg.sender != address(0)
+Requires		to != address(0)

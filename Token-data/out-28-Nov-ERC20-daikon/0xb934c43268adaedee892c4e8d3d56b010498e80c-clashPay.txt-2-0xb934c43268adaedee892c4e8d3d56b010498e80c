@@ -1,0 +1,346 @@
+Invariants with True value:0
+Invariants with False value:340
+
+True Invariants:
+
+False Invariants:
+mint(_to,_value): Ensures totalSupply == VeriSol.Old(VeriSol.SumMapping(balanceOf)) => _value == VeriSol.Old(_value) || VeriSol.Old(balanceOf[_to]) >= 0
+mint(_to,_value): Ensures _value == VeriSol.Old(_value) || VeriSol.Old(balanceOf[_to]) >= 0
+mint(_to,_value): Ensures totalSupply == VeriSol.Old(VeriSol.SumMapping(balanceOf)) => VeriSol.Old(balanceOf[_to]) >= 0 || MaxSupply < _value
+mint(_to,_value): Ensures VeriSol.Old(balanceOf[_to]) >= 0 || MaxSupply < _value
+mint(_to,_value): Ensures totalSupply == VeriSol.Old(VeriSol.SumMapping(balanceOf)) => MaxSupply < _value || MaxSupply < VeriSol.Old(_value)
+mint(_to,_value): Ensures MaxSupply < _value || MaxSupply < VeriSol.Old(_value)
+mint(_to,_value): Ensures totalSupply == VeriSol.Old(VeriSol.SumMapping(balanceOf)) => MaxSupply < VeriSol.Old(_value) || MaxSupply < VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(_value) || MaxSupply < VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures totalSupply == VeriSol.Old(VeriSol.SumMapping(balanceOf)) => MaxSupply < VeriSol.SumMapping(balanceOf) || MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf))
+mint(_to,_value): Ensures MaxSupply < VeriSol.SumMapping(balanceOf) || MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf))
+mint(_to,_value): Ensures totalSupply == VeriSol.Old(VeriSol.SumMapping(balanceOf)) => MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) || MaxSupply < balanceOf[_to]
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) || MaxSupply < balanceOf[_to]
+mint(_to,_value): Ensures totalSupply == VeriSol.Old(VeriSol.SumMapping(balanceOf)) => MaxSupply < balanceOf[_to] || MaxSupply <= VeriSol.Old(balanceOf[_to])
+mint(_to,_value): Ensures MaxSupply < balanceOf[_to] || MaxSupply <= VeriSol.Old(balanceOf[_to])
+mint(_to,_value): Ensures totalSupply == VeriSol.Old(VeriSol.SumMapping(balanceOf)) => MaxSupply <= VeriSol.Old(balanceOf[_to]) || _value < VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures MaxSupply <= VeriSol.Old(balanceOf[_to]) || _value < VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures totalSupply == VeriSol.Old(VeriSol.SumMapping(balanceOf)) => _value < VeriSol.SumMapping(balanceOf) || _value < VeriSol.Old(VeriSol.SumMapping(balanceOf))
+mint(_to,_value): Ensures _value < VeriSol.SumMapping(balanceOf) || _value < VeriSol.Old(VeriSol.SumMapping(balanceOf))
+mint(_to,_value): Ensures totalSupply == VeriSol.Old(VeriSol.SumMapping(balanceOf)) => _value < VeriSol.Old(VeriSol.SumMapping(balanceOf)) || _value <= balanceOf[_to]
+mint(_to,_value): Ensures _value < VeriSol.Old(VeriSol.SumMapping(balanceOf)) || _value <= balanceOf[_to]
+mint(_to,_value): Ensures totalSupply == VeriSol.Old(VeriSol.SumMapping(balanceOf)) => _value <= balanceOf[_to] || VeriSol.Old(MaxSupply) < VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures _value <= balanceOf[_to] || VeriSol.Old(MaxSupply) < VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures totalSupply == VeriSol.Old(VeriSol.SumMapping(balanceOf)) => VeriSol.Old(MaxSupply) < VeriSol.SumMapping(balanceOf) || VeriSol.Old(MaxSupply) < balanceOf[_to]
+mint(_to,_value): Ensures VeriSol.Old(MaxSupply) < VeriSol.SumMapping(balanceOf) || VeriSol.Old(MaxSupply) < balanceOf[_to]
+mint(_to,_value): Ensures totalSupply == VeriSol.Old(VeriSol.SumMapping(balanceOf)) => VeriSol.Old(MaxSupply) < balanceOf[_to] || VeriSol.Old(_value) < VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures VeriSol.Old(MaxSupply) < balanceOf[_to] || VeriSol.Old(_value) < VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures totalSupply == VeriSol.Old(VeriSol.SumMapping(balanceOf)) => VeriSol.Old(_value) < VeriSol.SumMapping(balanceOf) || VeriSol.Old(_value) <= balanceOf[_to]
+mint(_to,_value): Ensures VeriSol.Old(_value) < VeriSol.SumMapping(balanceOf) || VeriSol.Old(_value) <= balanceOf[_to]
+mint(_to,_value): Ensures totalSupply == VeriSol.Old(VeriSol.SumMapping(balanceOf)) => VeriSol.Old(_value) <= balanceOf[_to] || _value - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) == 0
+mint(_to,_value): Ensures VeriSol.Old(_value) <= balanceOf[_to] || _value - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) == 0
+mint(_to,_value): Ensures totalSupply == VeriSol.Old(VeriSol.SumMapping(balanceOf)) => _value - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) == 0 || _value - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) == 0
+mint(_to,_value): Ensures _value - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) == 0 || _value - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) == 0
+mint(_to,_value): Ensures totalSupply == VeriSol.Old(VeriSol.SumMapping(balanceOf)) => _value - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) == 0 || VeriSol.Old(_value) - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) == 0
+mint(_to,_value): Ensures _value - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) == 0 || VeriSol.Old(_value) - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) == 0
+mint(_to,_value): Ensures totalSupply == VeriSol.Old(VeriSol.SumMapping(balanceOf)) => VeriSol.Old(_value) - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) == 0 || VeriSol.Old(_value) - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) == 0
+mint(_to,_value): Ensures VeriSol.Old(_value) - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) == 0 || VeriSol.Old(_value) - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) == 0
+mint(_to,_value): Ensures totalSupply == VeriSol.Old(VeriSol.SumMapping(balanceOf)) => VeriSol.Old(_value) - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) == 0 || _value != VeriSol.Old(_value)
+mint(_to,_value): Ensures VeriSol.Old(_value) - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) == 0 || _value != VeriSol.Old(_value)
+mint(_to,_value): Ensures totalSupply == VeriSol.Old(VeriSol.SumMapping(balanceOf)) => _value != VeriSol.Old(_value) || _value - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0
+mint(_to,_value): Ensures _value != VeriSol.Old(_value) || _value - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0
+mint(_to,_value): Ensures totalSupply == VeriSol.Old(VeriSol.SumMapping(balanceOf)) => _value - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0 || _value - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) != 0
+mint(_to,_value): Ensures _value - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0 || _value - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) != 0
+mint(_to,_value): Ensures totalSupply == VeriSol.Old(VeriSol.SumMapping(balanceOf)) => _value - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) != 0 || VeriSol.Old(_value) - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0
+mint(_to,_value): Ensures _value - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) != 0 || VeriSol.Old(_value) - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0
+mint(_to,_value): Ensures totalSupply == VeriSol.Old(VeriSol.SumMapping(balanceOf)) => VeriSol.Old(_value) - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0 || VeriSol.Old(_value) - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) != 0
+mint(_to,_value): Ensures VeriSol.Old(_value) - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0 || VeriSol.Old(_value) - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) != 0
+mint(_to,_value): Ensures totalSupply == VeriSol.Old(VeriSol.SumMapping(balanceOf)) && MaxSupply == 0 => VeriSol.Old(_value) - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) != 0
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => totalSupply == VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => _value == VeriSol.Old(_value)
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => VeriSol.Old(balanceOf[_to]) >= 0
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => _value < VeriSol.Old(totalSupply)
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => _value < VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => _value < VeriSol.Old(VeriSol.SumMapping(balanceOf))
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => _value <= balanceOf[_to]
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => VeriSol.Old(totalSupply) < VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => VeriSol.Old(_value) < VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => VeriSol.Old(_value) <= balanceOf[_to]
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => - totalSupply + _value + VeriSol.Old(totalSupply) == 0
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => - totalSupply + _value + VeriSol.Old(VeriSol.SumMapping(balanceOf)) == 0
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => - totalSupply + VeriSol.Old(totalSupply) + VeriSol.Old(_value) == 0
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => - totalSupply + VeriSol.Old(_value) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) == 0
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => - _value - VeriSol.Old(totalSupply) + VeriSol.SumMapping(balanceOf) == 0
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => _value - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) == 0
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => _value - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) == 0
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => - VeriSol.Old(totalSupply) - VeriSol.Old(_value) + VeriSol.SumMapping(balanceOf) == 0
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => VeriSol.Old(_value) - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) == 0
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => VeriSol.Old(_value) - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) == 0
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => totalSupply != VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => _value != VeriSol.Old(_value)
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => - totalSupply + _value + VeriSol.Old(totalSupply) != 0
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => - totalSupply + _value + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => - totalSupply + VeriSol.Old(totalSupply) + VeriSol.Old(_value) != 0
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => - totalSupply + VeriSol.Old(_value) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => - _value - VeriSol.Old(totalSupply) + VeriSol.SumMapping(balanceOf) != 0
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => _value - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => _value - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) != 0
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => - VeriSol.Old(totalSupply) - VeriSol.Old(_value) + VeriSol.SumMapping(balanceOf) != 0
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => VeriSol.Old(_value) - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0
+mint(_to,_value): Ensures MaxSupply == 0 && MaxSupply < _value => VeriSol.Old(_value) - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) != 0
+mint(_to,_value): Ensures MaxSupply < _value && MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => totalSupply == VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures MaxSupply < _value && MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => _value == VeriSol.Old(_value)
+mint(_to,_value): Ensures MaxSupply < _value && MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => VeriSol.Old(balanceOf[_to]) >= 0
+mint(_to,_value): Ensures MaxSupply < _value && _value < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => MaxSupply < VeriSol.Old(totalSupply)
+mint(_to,_value): Ensures MaxSupply < _value && _value < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => MaxSupply < VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures MaxSupply < _value && _value < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf))
+mint(_to,_value): Ensures MaxSupply < _value && _value < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => MaxSupply < balanceOf[_to]
+mint(_to,_value): Ensures MaxSupply < _value && _value < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => MaxSupply <= VeriSol.Old(balanceOf[_to])
+mint(_to,_value): Ensures MaxSupply < _value && _value < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => _value < VeriSol.Old(totalSupply)
+mint(_to,_value): Ensures MaxSupply < _value && _value < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => _value < VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures MaxSupply < _value && _value < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => _value < VeriSol.Old(VeriSol.SumMapping(balanceOf))
+mint(_to,_value): Ensures MaxSupply < _value && _value < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => _value <= balanceOf[_to]
+mint(_to,_value): Ensures MaxSupply < _value && _value < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => VeriSol.Old(totalSupply) < VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures MaxSupply < _value && _value < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => VeriSol.Old(MaxSupply) < VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures MaxSupply < _value && _value < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => VeriSol.Old(MaxSupply) < balanceOf[_to]
+mint(_to,_value): Ensures MaxSupply < _value && _value < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => VeriSol.Old(_value) < VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures MaxSupply < _value && _value < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => VeriSol.Old(_value) <= balanceOf[_to]
+mint(_to,_value): Ensures MaxSupply < _value && _value < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => - totalSupply + _value + VeriSol.Old(totalSupply) == 0
+mint(_to,_value): Ensures MaxSupply < _value && _value < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => - totalSupply + _value + VeriSol.Old(VeriSol.SumMapping(balanceOf)) == 0
+mint(_to,_value): Ensures MaxSupply < _value && _value < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => - totalSupply + VeriSol.Old(totalSupply) + VeriSol.Old(_value) == 0
+mint(_to,_value): Ensures MaxSupply < _value && _value < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => - totalSupply + VeriSol.Old(_value) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) == 0
+mint(_to,_value): Ensures MaxSupply < _value && _value < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => - _value - VeriSol.Old(totalSupply) + VeriSol.SumMapping(balanceOf) == 0
+mint(_to,_value): Ensures MaxSupply < _value && _value < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => _value - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) == 0
+mint(_to,_value): Ensures MaxSupply < _value && _value < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => _value - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) == 0
+mint(_to,_value): Ensures MaxSupply < _value && _value < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => - VeriSol.Old(totalSupply) - VeriSol.Old(_value) + VeriSol.SumMapping(balanceOf) == 0
+mint(_to,_value): Ensures MaxSupply < _value && _value < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => VeriSol.Old(_value) - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) == 0
+mint(_to,_value): Ensures MaxSupply < _value && _value < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => VeriSol.Old(_value) - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) == 0
+mint(_to,_value): Ensures MaxSupply < _value && _value < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => totalSupply != VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures MaxSupply < _value => _value != VeriSol.Old(_value) || totalSupply == VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures _value != VeriSol.Old(_value) || totalSupply == VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures MaxSupply < _value => - totalSupply + _value + VeriSol.Old(totalSupply) != 0 || _value == VeriSol.Old(_value)
+mint(_to,_value): Ensures - totalSupply + _value + VeriSol.Old(totalSupply) != 0 || _value == VeriSol.Old(_value)
+mint(_to,_value): Ensures MaxSupply < _value => - totalSupply + _value + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0 || VeriSol.Old(balanceOf[_to]) >= 0
+mint(_to,_value): Ensures - totalSupply + _value + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0 || VeriSol.Old(balanceOf[_to]) >= 0
+mint(_to,_value): Ensures MaxSupply < _value => - totalSupply + VeriSol.Old(totalSupply) + VeriSol.Old(_value) != 0 || MaxSupply < VeriSol.Old(totalSupply)
+mint(_to,_value): Ensures - totalSupply + VeriSol.Old(totalSupply) + VeriSol.Old(_value) != 0 || MaxSupply < VeriSol.Old(totalSupply)
+mint(_to,_value): Ensures MaxSupply < _value => - totalSupply + VeriSol.Old(_value) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0 || MaxSupply < VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures - totalSupply + VeriSol.Old(_value) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0 || MaxSupply < VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures MaxSupply < _value => - _value - VeriSol.Old(totalSupply) + VeriSol.SumMapping(balanceOf) != 0 || MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf))
+mint(_to,_value): Ensures - _value - VeriSol.Old(totalSupply) + VeriSol.SumMapping(balanceOf) != 0 || MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf))
+mint(_to,_value): Ensures MaxSupply < _value => _value - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0 || MaxSupply < balanceOf[_to]
+mint(_to,_value): Ensures _value - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0 || MaxSupply < balanceOf[_to]
+mint(_to,_value): Ensures MaxSupply < _value => _value - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) != 0 || MaxSupply <= VeriSol.Old(balanceOf[_to])
+mint(_to,_value): Ensures _value - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) != 0 || MaxSupply <= VeriSol.Old(balanceOf[_to])
+mint(_to,_value): Ensures MaxSupply < _value => - VeriSol.Old(totalSupply) - VeriSol.Old(_value) + VeriSol.SumMapping(balanceOf) != 0 || _value < VeriSol.Old(totalSupply)
+mint(_to,_value): Ensures - VeriSol.Old(totalSupply) - VeriSol.Old(_value) + VeriSol.SumMapping(balanceOf) != 0 || _value < VeriSol.Old(totalSupply)
+mint(_to,_value): Ensures MaxSupply < _value => VeriSol.Old(_value) - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0 || _value < VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures VeriSol.Old(_value) - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0 || _value < VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures MaxSupply < _value => VeriSol.Old(_value) - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) != 0 || _value < VeriSol.Old(VeriSol.SumMapping(balanceOf))
+mint(_to,_value): Ensures VeriSol.Old(_value) - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) != 0 || _value < VeriSol.Old(VeriSol.SumMapping(balanceOf))
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => totalSupply == VeriSol.SumMapping(balanceOf) || _value < VeriSol.Old(VeriSol.SumMapping(balanceOf))
+mint(_to,_value): Ensures totalSupply == VeriSol.SumMapping(balanceOf) || _value < VeriSol.Old(VeriSol.SumMapping(balanceOf))
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => _value == VeriSol.Old(_value) || _value <= balanceOf[_to]
+mint(_to,_value): Ensures _value == VeriSol.Old(_value) || _value <= balanceOf[_to]
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => VeriSol.Old(balanceOf[_to]) >= 0 || VeriSol.Old(totalSupply) < VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures VeriSol.Old(balanceOf[_to]) >= 0 || VeriSol.Old(totalSupply) < VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => _value < VeriSol.Old(totalSupply) || VeriSol.Old(_value) < VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures _value < VeriSol.Old(totalSupply) || VeriSol.Old(_value) < VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => _value < VeriSol.SumMapping(balanceOf) || VeriSol.Old(_value) <= balanceOf[_to]
+mint(_to,_value): Ensures _value < VeriSol.SumMapping(balanceOf) || VeriSol.Old(_value) <= balanceOf[_to]
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => _value < VeriSol.Old(VeriSol.SumMapping(balanceOf)) || - totalSupply + _value + VeriSol.Old(totalSupply) == 0
+mint(_to,_value): Ensures _value < VeriSol.Old(VeriSol.SumMapping(balanceOf)) || - totalSupply + _value + VeriSol.Old(totalSupply) == 0
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => _value <= balanceOf[_to] || - totalSupply + _value + VeriSol.Old(VeriSol.SumMapping(balanceOf)) == 0
+mint(_to,_value): Ensures _value <= balanceOf[_to] || - totalSupply + _value + VeriSol.Old(VeriSol.SumMapping(balanceOf)) == 0
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => VeriSol.Old(totalSupply) < VeriSol.SumMapping(balanceOf) || - totalSupply + VeriSol.Old(totalSupply) + VeriSol.Old(_value) == 0
+mint(_to,_value): Ensures VeriSol.Old(totalSupply) < VeriSol.SumMapping(balanceOf) || - totalSupply + VeriSol.Old(totalSupply) + VeriSol.Old(_value) == 0
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => VeriSol.Old(_value) < VeriSol.SumMapping(balanceOf) || - totalSupply + VeriSol.Old(_value) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) == 0
+mint(_to,_value): Ensures VeriSol.Old(_value) < VeriSol.SumMapping(balanceOf) || - totalSupply + VeriSol.Old(_value) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) == 0
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => VeriSol.Old(_value) <= balanceOf[_to] || - _value - VeriSol.Old(totalSupply) + VeriSol.SumMapping(balanceOf) == 0
+mint(_to,_value): Ensures VeriSol.Old(_value) <= balanceOf[_to] || - _value - VeriSol.Old(totalSupply) + VeriSol.SumMapping(balanceOf) == 0
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => - totalSupply + _value + VeriSol.Old(totalSupply) == 0 || _value - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) == 0
+mint(_to,_value): Ensures - totalSupply + _value + VeriSol.Old(totalSupply) == 0 || _value - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) == 0
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => - totalSupply + _value + VeriSol.Old(VeriSol.SumMapping(balanceOf)) == 0 || _value - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) == 0
+mint(_to,_value): Ensures - totalSupply + _value + VeriSol.Old(VeriSol.SumMapping(balanceOf)) == 0 || _value - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) == 0
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => - totalSupply + VeriSol.Old(totalSupply) + VeriSol.Old(_value) == 0 || - VeriSol.Old(totalSupply) - VeriSol.Old(_value) + VeriSol.SumMapping(balanceOf) == 0
+mint(_to,_value): Ensures - totalSupply + VeriSol.Old(totalSupply) + VeriSol.Old(_value) == 0 || - VeriSol.Old(totalSupply) - VeriSol.Old(_value) + VeriSol.SumMapping(balanceOf) == 0
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => - totalSupply + VeriSol.Old(_value) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) == 0 || VeriSol.Old(_value) - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) == 0
+mint(_to,_value): Ensures - totalSupply + VeriSol.Old(_value) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) == 0 || VeriSol.Old(_value) - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) == 0
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) => - _value - VeriSol.Old(totalSupply) + VeriSol.SumMapping(balanceOf) == 0 || VeriSol.Old(_value) - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) == 0
+mint(_to,_value): Ensures - _value - VeriSol.Old(totalSupply) + VeriSol.SumMapping(balanceOf) == 0 || VeriSol.Old(_value) - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) == 0
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) && totalSupply != VeriSol.Old(VeriSol.SumMapping(balanceOf)) => _value - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) == 0
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) && totalSupply != VeriSol.Old(VeriSol.SumMapping(balanceOf)) => _value - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) == 0
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) && MaxSupply != 0 => - VeriSol.Old(totalSupply) - VeriSol.Old(_value) + VeriSol.SumMapping(balanceOf) == 0
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) && MaxSupply != 0 => VeriSol.Old(_value) - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) == 0
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) && MaxSupply != 0 => VeriSol.Old(_value) - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) == 0
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) && MaxSupply != 0 => totalSupply != VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) && MaxSupply != 0 => _value != VeriSol.Old(_value)
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) && MaxSupply != 0 => - totalSupply + _value + VeriSol.Old(totalSupply) != 0
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) && MaxSupply != 0 => - totalSupply + _value + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) && MaxSupply != 0 => - totalSupply + VeriSol.Old(totalSupply) + VeriSol.Old(_value) != 0
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) && MaxSupply != 0 => - totalSupply + VeriSol.Old(_value) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) && MaxSupply != 0 => - _value - VeriSol.Old(totalSupply) + VeriSol.SumMapping(balanceOf) != 0
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) && MaxSupply != 0 => _value - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) && MaxSupply != 0 => _value - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) != 0
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) && MaxSupply != 0 => - VeriSol.Old(totalSupply) - VeriSol.Old(_value) + VeriSol.SumMapping(balanceOf) != 0
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) && MaxSupply != 0 => VeriSol.Old(_value) - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0
+mint(_to,_value): Ensures MaxSupply < VeriSol.Old(VeriSol.SumMapping(balanceOf)) && MaxSupply != 0 => VeriSol.Old(_value) - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) != 0
+mint(_to,_value): Ensures MaxSupply <= balanceOf[_to] => totalSupply == VeriSol.SumMapping(balanceOf) || totalSupply != VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures totalSupply == VeriSol.SumMapping(balanceOf) || totalSupply != VeriSol.SumMapping(balanceOf)
+mint(_to,_value): Ensures MaxSupply <= balanceOf[_to] => _value == VeriSol.Old(_value) || _value != VeriSol.Old(_value)
+mint(_to,_value): Ensures _value == VeriSol.Old(_value) || _value != VeriSol.Old(_value)
+mint(_to,_value): Ensures MaxSupply <= balanceOf[_to] => VeriSol.Old(balanceOf[_to]) >= 0 || - totalSupply + _value + VeriSol.Old(totalSupply) != 0
+mint(_to,_value): Ensures VeriSol.Old(balanceOf[_to]) >= 0 || - totalSupply + _value + VeriSol.Old(totalSupply) != 0
+mint(_to,_value): Ensures MaxSupply <= balanceOf[_to] => MaxSupply < balanceOf[_to] || - totalSupply + _value + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0
+mint(_to,_value): Ensures MaxSupply < balanceOf[_to] || - totalSupply + _value + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0
+mint(_to,_value): Ensures MaxSupply <= balanceOf[_to] => MaxSupply <= VeriSol.Old(balanceOf[_to]) || - totalSupply + VeriSol.Old(totalSupply) + VeriSol.Old(_value) != 0
+mint(_to,_value): Ensures MaxSupply <= VeriSol.Old(balanceOf[_to]) || - totalSupply + VeriSol.Old(totalSupply) + VeriSol.Old(_value) != 0
+mint(_to,_value): Ensures MaxSupply <= balanceOf[_to] => _value < VeriSol.Old(totalSupply) || - totalSupply + VeriSol.Old(_value) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0
+mint(_to,_value): Ensures _value < VeriSol.Old(totalSupply) || - totalSupply + VeriSol.Old(_value) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0
+mint(_to,_value): Ensures MaxSupply <= balanceOf[_to] => _value < VeriSol.SumMapping(balanceOf) || - _value - VeriSol.Old(totalSupply) + VeriSol.SumMapping(balanceOf) != 0
+mint(_to,_value): Ensures _value < VeriSol.SumMapping(balanceOf) || - _value - VeriSol.Old(totalSupply) + VeriSol.SumMapping(balanceOf) != 0
+mint(_to,_value): Ensures MaxSupply <= balanceOf[_to] => _value < VeriSol.Old(VeriSol.SumMapping(balanceOf)) || _value - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0
+mint(_to,_value): Ensures _value < VeriSol.Old(VeriSol.SumMapping(balanceOf)) || _value - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0
+mint(_to,_value): Ensures MaxSupply <= balanceOf[_to] => _value <= balanceOf[_to] || _value - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) != 0
+mint(_to,_value): Ensures _value <= balanceOf[_to] || _value - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) != 0
+mint(_to,_value): Ensures MaxSupply <= balanceOf[_to] => VeriSol.Old(totalSupply) < VeriSol.SumMapping(balanceOf) || - VeriSol.Old(totalSupply) - VeriSol.Old(_value) + VeriSol.SumMapping(balanceOf) != 0
+mint(_to,_value): Ensures VeriSol.Old(totalSupply) < VeriSol.SumMapping(balanceOf) || - VeriSol.Old(totalSupply) - VeriSol.Old(_value) + VeriSol.SumMapping(balanceOf) != 0
+mint(_to,_value): Ensures MaxSupply <= balanceOf[_to] => VeriSol.Old(MaxSupply) < balanceOf[_to] || VeriSol.Old(_value) - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0
+mint(_to,_value): Ensures VeriSol.Old(MaxSupply) < balanceOf[_to] || VeriSol.Old(_value) - VeriSol.SumMapping(balanceOf) + VeriSol.Old(VeriSol.SumMapping(balanceOf)) != 0
+mint(_to,_value): Ensures MaxSupply <= balanceOf[_to] => VeriSol.Old(_value) < VeriSol.SumMapping(balanceOf) || VeriSol.Old(_value) - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) != 0
+mint(_to,_value): Ensures VeriSol.Old(_value) < VeriSol.SumMapping(balanceOf) || VeriSol.Old(_value) - balanceOf[_to] + VeriSol.Old(balanceOf[_to]) != 0
+transfer(_to,_value): Ensures _value < balanceOf[msg.sender] => VeriSol.SumMapping(balanceOf) == VeriSol.Old(VeriSol.SumMapping(balanceOf)) || _value < VeriSol.Old(balanceOf[msg.sender])
+transfer(_to,_value): Ensures VeriSol.SumMapping(balanceOf) == VeriSol.Old(VeriSol.SumMapping(balanceOf)) || _value < VeriSol.Old(balanceOf[msg.sender])
+transfer(_to,_value): Ensures _value < balanceOf[msg.sender] => _value < VeriSol.Old(balanceOf[msg.sender]) || balanceOf[msg.sender] < VeriSol.Old(balanceOf[msg.sender])
+transfer(_to,_value): Ensures _value < VeriSol.Old(balanceOf[msg.sender]) || balanceOf[msg.sender] < VeriSol.Old(balanceOf[msg.sender])
+transfer(_to,_value): Ensures _value < balanceOf[msg.sender] => balanceOf[msg.sender] < VeriSol.Old(balanceOf[msg.sender]) || _value + balanceOf[msg.sender] - VeriSol.Old(balanceOf[msg.sender]) == 0
+transfer(_to,_value): Ensures balanceOf[msg.sender] < VeriSol.Old(balanceOf[msg.sender]) || _value + balanceOf[msg.sender] - VeriSol.Old(balanceOf[msg.sender]) == 0
+transfer(_to,_value): Ensures _value < balanceOf[msg.sender] => _value + balanceOf[msg.sender] - VeriSol.Old(balanceOf[msg.sender]) == 0 || VeriSol.Old(_value) + balanceOf[msg.sender] - VeriSol.Old(balanceOf[msg.sender]) == 0
+transfer(_to,_value): Ensures _value + balanceOf[msg.sender] - VeriSol.Old(balanceOf[msg.sender]) == 0 || VeriSol.Old(_value) + balanceOf[msg.sender] - VeriSol.Old(balanceOf[msg.sender]) == 0
+transfer(_to,_value): Ensures _value < balanceOf[msg.sender] => VeriSol.Old(_value) + balanceOf[msg.sender] - VeriSol.Old(balanceOf[msg.sender]) == 0 || VeriSol.SumMapping(balanceOf) != VeriSol.Old(VeriSol.SumMapping(balanceOf))
+transfer(_to,_value): Ensures VeriSol.Old(_value) + balanceOf[msg.sender] - VeriSol.Old(balanceOf[msg.sender]) == 0 || VeriSol.SumMapping(balanceOf) != VeriSol.Old(VeriSol.SumMapping(balanceOf))
+transfer(_to,_value): Ensures _value < balanceOf[msg.sender] => VeriSol.SumMapping(balanceOf) != VeriSol.Old(VeriSol.SumMapping(balanceOf)) || _value + balanceOf[msg.sender] - VeriSol.Old(balanceOf[msg.sender]) != 0
+transfer(_to,_value): Ensures VeriSol.SumMapping(balanceOf) != VeriSol.Old(VeriSol.SumMapping(balanceOf)) || _value + balanceOf[msg.sender] - VeriSol.Old(balanceOf[msg.sender]) != 0
+transfer(_to,_value): Ensures _value < balanceOf[msg.sender] => _value + balanceOf[msg.sender] - VeriSol.Old(balanceOf[msg.sender]) != 0 || VeriSol.Old(_value) + balanceOf[msg.sender] - VeriSol.Old(balanceOf[msg.sender]) != 0
+transfer(_to,_value): Ensures _value + balanceOf[msg.sender] - VeriSol.Old(balanceOf[msg.sender]) != 0 || VeriSol.Old(_value) + balanceOf[msg.sender] - VeriSol.Old(balanceOf[msg.sender]) != 0
+transfer(_to,_value): Ensures _value < balanceOf[msg.sender] => VeriSol.Old(_value) + balanceOf[msg.sender] - VeriSol.Old(balanceOf[msg.sender]) != 0 || VeriSol.SumMapping(balanceOf) == VeriSol.Old(VeriSol.SumMapping(balanceOf))
+transfer(_to,_value): Ensures VeriSol.Old(_value) + balanceOf[msg.sender] - VeriSol.Old(balanceOf[msg.sender]) != 0 || VeriSol.SumMapping(balanceOf) == VeriSol.Old(VeriSol.SumMapping(balanceOf))
+transfer(_to,_value): Ensures _value < balanceOf[msg.sender] => VeriSol.SumMapping(balanceOf) == VeriSol.Old(VeriSol.SumMapping(balanceOf)) || _value < VeriSol.Old(balanceOf[msg.sender])
+transfer(_to,_value): Ensures VeriSol.SumMapping(balanceOf) == VeriSol.Old(VeriSol.SumMapping(balanceOf)) || _value < VeriSol.Old(balanceOf[msg.sender])
+transfer(_to,_value): Ensures _value < balanceOf[msg.sender] => _value < VeriSol.Old(balanceOf[msg.sender]) || balanceOf[msg.sender] < VeriSol.Old(balanceOf[msg.sender])
+transfer(_to,_value): Ensures _value < VeriSol.Old(balanceOf[msg.sender]) || balanceOf[msg.sender] < VeriSol.Old(balanceOf[msg.sender])
+transfer(_to,_value): Ensures _value < balanceOf[msg.sender] => balanceOf[msg.sender] < VeriSol.Old(balanceOf[msg.sender]) || _value + balanceOf[msg.sender] - VeriSol.Old(balanceOf[msg.sender]) == 0
+transfer(_to,_value): Ensures balanceOf[msg.sender] < VeriSol.Old(balanceOf[msg.sender]) || _value + balanceOf[msg.sender] - VeriSol.Old(balanceOf[msg.sender]) == 0
+transfer(_to,_value): Ensures _value < balanceOf[msg.sender] => _value + balanceOf[msg.sender] - VeriSol.Old(balanceOf[msg.sender]) == 0 || VeriSol.Old(_value) + balanceOf[msg.sender] - VeriSol.Old(balanceOf[msg.sender]) == 0
+transfer(_to,_value): Ensures _value + balanceOf[msg.sender] - VeriSol.Old(balanceOf[msg.sender]) == 0 || VeriSol.Old(_value) + balanceOf[msg.sender] - VeriSol.Old(balanceOf[msg.sender]) == 0
+transfer(_to,_value): Ensures _value < balanceOf[msg.sender] => VeriSol.Old(_value) + balanceOf[msg.sender] - VeriSol.Old(balanceOf[msg.sender]) == 0 || VeriSol.SumMapping(balanceOf) != VeriSol.Old(VeriSol.SumMapping(balanceOf))
+transfer(_to,_value): Ensures VeriSol.Old(_value) + balanceOf[msg.sender] - VeriSol.Old(balanceOf[msg.sender]) == 0 || VeriSol.SumMapping(balanceOf) != VeriSol.Old(VeriSol.SumMapping(balanceOf))
+transfer(_to,_value): Ensures _value < balanceOf[msg.sender] => VeriSol.SumMapping(balanceOf) != VeriSol.Old(VeriSol.SumMapping(balanceOf)) || _value + balanceOf[msg.sender] - VeriSol.Old(balanceOf[msg.sender]) != 0
+transfer(_to,_value): Ensures VeriSol.SumMapping(balanceOf) != VeriSol.Old(VeriSol.SumMapping(balanceOf)) || _value + balanceOf[msg.sender] - VeriSol.Old(balanceOf[msg.sender]) != 0
+transfer(_to,_value): Ensures _value < balanceOf[msg.sender] => _value + balanceOf[msg.sender] - VeriSol.Old(balanceOf[msg.sender]) != 0 || VeriSol.Old(_value) + balanceOf[msg.sender] - VeriSol.Old(balanceOf[msg.sender]) != 0
+transfer(_to,_value): Ensures _value + balanceOf[msg.sender] - VeriSol.Old(balanceOf[msg.sender]) != 0 || VeriSol.Old(_value) + balanceOf[msg.sender] - VeriSol.Old(balanceOf[msg.sender]) != 0
+transferFrom(_from,_to,_value): Ensures _value <= balanceOf[_from] => balanceOf[_from] >= 0 || VeriSol.Old(allowance[_from][_to]) == 0
+transferFrom(_from,_to,_value): Ensures balanceOf[_from] >= 0 || VeriSol.Old(allowance[_from][_to]) == 0
+transferFrom(_from,_to,_value): Ensures _value <= balanceOf[_from] => VeriSol.Old(allowance[_from][_to]) == 0 || _value <= VeriSol.Old(balanceOf[_from])
+transferFrom(_from,_to,_value): Ensures VeriSol.Old(allowance[_from][_to]) == 0 || _value <= VeriSol.Old(balanceOf[_from])
+transferFrom(_from,_to,_value): Ensures _value <= balanceOf[_from] => _value <= VeriSol.Old(balanceOf[_from]) || _value < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures _value <= VeriSol.Old(balanceOf[_from]) || _value < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures _value <= balanceOf[_from] => _value < allowance[_from][msg.sender] || _value < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures _value < allowance[_from][msg.sender] || _value < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures _value <= balanceOf[_from] => _value < VeriSol.Old(allowance[_from][msg.sender]) || VeriSol.Old(_value) < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures _value < VeriSol.Old(allowance[_from][msg.sender]) || VeriSol.Old(_value) < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures _value <= balanceOf[_from] => VeriSol.Old(_value) < allowance[_from][msg.sender] || VeriSol.SumMapping(balanceOf) < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures VeriSol.Old(_value) < allowance[_from][msg.sender] || VeriSol.SumMapping(balanceOf) < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures _value <= balanceOf[_from] => VeriSol.SumMapping(balanceOf) < allowance[_from][msg.sender] || VeriSol.SumMapping(balanceOf) < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures VeriSol.SumMapping(balanceOf) < allowance[_from][msg.sender] || VeriSol.SumMapping(balanceOf) < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures _value <= balanceOf[_from] => VeriSol.SumMapping(balanceOf) < VeriSol.Old(allowance[_from][msg.sender]) || VeriSol.Old(VeriSol.SumMapping(balanceOf)) < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures VeriSol.SumMapping(balanceOf) < VeriSol.Old(allowance[_from][msg.sender]) || VeriSol.Old(VeriSol.SumMapping(balanceOf)) < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures _value <= balanceOf[_from] => VeriSol.Old(VeriSol.SumMapping(balanceOf)) < allowance[_from][msg.sender] || VeriSol.Old(VeriSol.SumMapping(balanceOf)) < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures VeriSol.Old(VeriSol.SumMapping(balanceOf)) < allowance[_from][msg.sender] || VeriSol.Old(VeriSol.SumMapping(balanceOf)) < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures _value <= balanceOf[_from] => VeriSol.Old(VeriSol.SumMapping(balanceOf)) < VeriSol.Old(allowance[_from][msg.sender]) || balanceOf[_from] < VeriSol.Old(balanceOf[_from])
+transferFrom(_from,_to,_value): Ensures VeriSol.Old(VeriSol.SumMapping(balanceOf)) < VeriSol.Old(allowance[_from][msg.sender]) || balanceOf[_from] < VeriSol.Old(balanceOf[_from])
+transferFrom(_from,_to,_value): Ensures _value <= balanceOf[_from] => balanceOf[_from] < VeriSol.Old(balanceOf[_from]) || balanceOf[_from] < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures balanceOf[_from] < VeriSol.Old(balanceOf[_from]) || balanceOf[_from] < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures _value <= balanceOf[_from] => balanceOf[_from] < allowance[_from][msg.sender] || balanceOf[_from] < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures balanceOf[_from] < allowance[_from][msg.sender] || balanceOf[_from] < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures _value <= balanceOf[_from] => balanceOf[_from] < VeriSol.Old(allowance[_from][msg.sender]) || balanceOf[_to] < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures balanceOf[_from] < VeriSol.Old(allowance[_from][msg.sender]) || balanceOf[_to] < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures _value <= balanceOf[_from] => balanceOf[_to] < allowance[_from][msg.sender] || balanceOf[_to] < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures balanceOf[_to] < allowance[_from][msg.sender] || balanceOf[_to] < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures _value <= balanceOf[_from] => balanceOf[_to] < VeriSol.Old(allowance[_from][msg.sender]) || VeriSol.Old(balanceOf[_from]) < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures balanceOf[_to] < VeriSol.Old(allowance[_from][msg.sender]) || VeriSol.Old(balanceOf[_from]) < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures _value <= balanceOf[_from] => VeriSol.Old(balanceOf[_from]) < allowance[_from][msg.sender] || VeriSol.Old(balanceOf[_from]) < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures VeriSol.Old(balanceOf[_from]) < allowance[_from][msg.sender] || VeriSol.Old(balanceOf[_from]) < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures _value <= balanceOf[_from] => VeriSol.Old(balanceOf[_from]) < VeriSol.Old(allowance[_from][msg.sender]) || VeriSol.Old(balanceOf[_to]) < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures VeriSol.Old(balanceOf[_from]) < VeriSol.Old(allowance[_from][msg.sender]) || VeriSol.Old(balanceOf[_to]) < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures _value <= balanceOf[_from] => VeriSol.Old(balanceOf[_to]) < allowance[_from][msg.sender] || VeriSol.Old(balanceOf[_to]) < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures VeriSol.Old(balanceOf[_to]) < allowance[_from][msg.sender] || VeriSol.Old(balanceOf[_to]) < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures _value <= balanceOf[_from] => VeriSol.Old(balanceOf[_to]) < VeriSol.Old(allowance[_from][msg.sender]) || allowance[_from][msg.sender] > VeriSol.Old(allowance[_from][_to])
+transferFrom(_from,_to,_value): Ensures VeriSol.Old(balanceOf[_to]) < VeriSol.Old(allowance[_from][msg.sender]) || allowance[_from][msg.sender] > VeriSol.Old(allowance[_from][_to])
+transferFrom(_from,_to,_value): Ensures _value <= balanceOf[_from] => allowance[_from][msg.sender] > VeriSol.Old(allowance[_from][_to]) || allowance[_from][msg.sender] < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures allowance[_from][msg.sender] > VeriSol.Old(allowance[_from][_to]) || allowance[_from][msg.sender] < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures _value <= balanceOf[_from] => allowance[_from][msg.sender] < VeriSol.Old(allowance[_from][msg.sender]) || VeriSol.Old(allowance[_from][_to]) < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures allowance[_from][msg.sender] < VeriSol.Old(allowance[_from][msg.sender]) || VeriSol.Old(allowance[_from][_to]) < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures _value <= balanceOf[_from] => VeriSol.Old(allowance[_from][_to]) < VeriSol.Old(allowance[_from][msg.sender]) || _value + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) == 0
+transferFrom(_from,_to,_value): Ensures VeriSol.Old(allowance[_from][_to]) < VeriSol.Old(allowance[_from][msg.sender]) || _value + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) == 0
+transferFrom(_from,_to,_value): Ensures _value <= balanceOf[_from] => _value + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) == 0 || VeriSol.Old(_value) + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) == 0
+transferFrom(_from,_to,_value): Ensures _value + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) == 0 || VeriSol.Old(_value) + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) == 0
+transferFrom(_from,_to,_value): Ensures _value <= balanceOf[_from] => VeriSol.Old(_value) + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) == 0 || VeriSol.Old(allowance[_from][_to]) != 0
+transferFrom(_from,_to,_value): Ensures VeriSol.Old(_value) + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) == 0 || VeriSol.Old(allowance[_from][_to]) != 0
+transferFrom(_from,_to,_value): Ensures _value <= balanceOf[_from] => VeriSol.Old(allowance[_from][_to]) != 0 || _value + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) != 0
+transferFrom(_from,_to,_value): Ensures VeriSol.Old(allowance[_from][_to]) != 0 || _value + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) != 0
+transferFrom(_from,_to,_value): Ensures _value <= balanceOf[_from] => _value + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) != 0 || VeriSol.Old(_value) + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) != 0
+transferFrom(_from,_to,_value): Ensures _value + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) != 0 || VeriSol.Old(_value) + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) != 0
+transferFrom(_from,_to,_value): Ensures _value <= balanceOf[_from] && _value < allowance[_from][msg.sender] => VeriSol.Old(_value) + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) != 0
+transferFrom(_from,_to,_value): Ensures _value < allowance[_from][msg.sender] && _value <= balanceOf[_from] => balanceOf[_from] >= 0
+transferFrom(_from,_to,_value): Ensures _value < allowance[_from][msg.sender] => VeriSol.Old(allowance[_from][_to]) == 0 || balanceOf[_from] >= 0
+transferFrom(_from,_to,_value): Ensures VeriSol.Old(allowance[_from][_to]) == 0 || balanceOf[_from] >= 0
+transferFrom(_from,_to,_value): Ensures _value < allowance[_from][msg.sender] => _value <= VeriSol.Old(balanceOf[_from]) || VeriSol.Old(allowance[_from][_to]) == 0
+transferFrom(_from,_to,_value): Ensures _value <= VeriSol.Old(balanceOf[_from]) || VeriSol.Old(allowance[_from][_to]) == 0
+transferFrom(_from,_to,_value): Ensures _value < allowance[_from][msg.sender] => _value < allowance[_from][msg.sender] || _value <= VeriSol.Old(balanceOf[_from])
+transferFrom(_from,_to,_value): Ensures _value < allowance[_from][msg.sender] || _value <= VeriSol.Old(balanceOf[_from])
+transferFrom(_from,_to,_value): Ensures _value < allowance[_from][msg.sender] => _value < VeriSol.Old(allowance[_from][msg.sender]) || _value < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures _value < VeriSol.Old(allowance[_from][msg.sender]) || _value < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures _value < allowance[_from][msg.sender] => VeriSol.Old(_value) < allowance[_from][msg.sender] || _value < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures VeriSol.Old(_value) < allowance[_from][msg.sender] || _value < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures _value < allowance[_from][msg.sender] => VeriSol.SumMapping(balanceOf) < allowance[_from][msg.sender] || VeriSol.Old(_value) < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures VeriSol.SumMapping(balanceOf) < allowance[_from][msg.sender] || VeriSol.Old(_value) < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures _value < allowance[_from][msg.sender] => VeriSol.SumMapping(balanceOf) < VeriSol.Old(allowance[_from][msg.sender]) || VeriSol.SumMapping(balanceOf) < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures VeriSol.SumMapping(balanceOf) < VeriSol.Old(allowance[_from][msg.sender]) || VeriSol.SumMapping(balanceOf) < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures _value < allowance[_from][msg.sender] => VeriSol.Old(VeriSol.SumMapping(balanceOf)) < allowance[_from][msg.sender] || VeriSol.SumMapping(balanceOf) < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures VeriSol.Old(VeriSol.SumMapping(balanceOf)) < allowance[_from][msg.sender] || VeriSol.SumMapping(balanceOf) < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures _value < allowance[_from][msg.sender] => VeriSol.Old(VeriSol.SumMapping(balanceOf)) < VeriSol.Old(allowance[_from][msg.sender]) || VeriSol.Old(VeriSol.SumMapping(balanceOf)) < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures VeriSol.Old(VeriSol.SumMapping(balanceOf)) < VeriSol.Old(allowance[_from][msg.sender]) || VeriSol.Old(VeriSol.SumMapping(balanceOf)) < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures _value < allowance[_from][msg.sender] => balanceOf[_from] < VeriSol.Old(balanceOf[_from]) || VeriSol.Old(VeriSol.SumMapping(balanceOf)) < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures balanceOf[_from] < VeriSol.Old(balanceOf[_from]) || VeriSol.Old(VeriSol.SumMapping(balanceOf)) < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures _value < allowance[_from][msg.sender] => balanceOf[_from] < allowance[_from][msg.sender] || balanceOf[_from] < VeriSol.Old(balanceOf[_from])
+transferFrom(_from,_to,_value): Ensures balanceOf[_from] < allowance[_from][msg.sender] || balanceOf[_from] < VeriSol.Old(balanceOf[_from])
+transferFrom(_from,_to,_value): Ensures _value < allowance[_from][msg.sender] => balanceOf[_from] < VeriSol.Old(allowance[_from][msg.sender]) || balanceOf[_from] < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures balanceOf[_from] < VeriSol.Old(allowance[_from][msg.sender]) || balanceOf[_from] < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures _value < allowance[_from][msg.sender] => balanceOf[_to] < allowance[_from][msg.sender] || balanceOf[_from] < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures balanceOf[_to] < allowance[_from][msg.sender] || balanceOf[_from] < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures _value < allowance[_from][msg.sender] => balanceOf[_to] < VeriSol.Old(allowance[_from][msg.sender]) || balanceOf[_to] < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures balanceOf[_to] < VeriSol.Old(allowance[_from][msg.sender]) || balanceOf[_to] < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures _value < allowance[_from][msg.sender] => VeriSol.Old(balanceOf[_from]) < allowance[_from][msg.sender] || balanceOf[_to] < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures VeriSol.Old(balanceOf[_from]) < allowance[_from][msg.sender] || balanceOf[_to] < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures _value < allowance[_from][msg.sender] => VeriSol.Old(balanceOf[_from]) < VeriSol.Old(allowance[_from][msg.sender]) || VeriSol.Old(balanceOf[_from]) < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures VeriSol.Old(balanceOf[_from]) < VeriSol.Old(allowance[_from][msg.sender]) || VeriSol.Old(balanceOf[_from]) < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures _value < allowance[_from][msg.sender] => VeriSol.Old(balanceOf[_to]) < allowance[_from][msg.sender] || VeriSol.Old(balanceOf[_from]) < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures VeriSol.Old(balanceOf[_to]) < allowance[_from][msg.sender] || VeriSol.Old(balanceOf[_from]) < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures _value < allowance[_from][msg.sender] => VeriSol.Old(balanceOf[_to]) < VeriSol.Old(allowance[_from][msg.sender]) || VeriSol.Old(balanceOf[_to]) < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures VeriSol.Old(balanceOf[_to]) < VeriSol.Old(allowance[_from][msg.sender]) || VeriSol.Old(balanceOf[_to]) < allowance[_from][msg.sender]
+transferFrom(_from,_to,_value): Ensures _value < allowance[_from][msg.sender] => allowance[_from][msg.sender] > VeriSol.Old(allowance[_from][_to]) || VeriSol.Old(balanceOf[_to]) < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures allowance[_from][msg.sender] > VeriSol.Old(allowance[_from][_to]) || VeriSol.Old(balanceOf[_to]) < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures _value < allowance[_from][msg.sender] => allowance[_from][msg.sender] < VeriSol.Old(allowance[_from][msg.sender]) || allowance[_from][msg.sender] > VeriSol.Old(allowance[_from][_to])
+transferFrom(_from,_to,_value): Ensures allowance[_from][msg.sender] < VeriSol.Old(allowance[_from][msg.sender]) || allowance[_from][msg.sender] > VeriSol.Old(allowance[_from][_to])
+transferFrom(_from,_to,_value): Ensures _value < allowance[_from][msg.sender] => VeriSol.Old(allowance[_from][_to]) < VeriSol.Old(allowance[_from][msg.sender]) || allowance[_from][msg.sender] < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures VeriSol.Old(allowance[_from][_to]) < VeriSol.Old(allowance[_from][msg.sender]) || allowance[_from][msg.sender] < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures _value < allowance[_from][msg.sender] => _value + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) == 0 || VeriSol.Old(allowance[_from][_to]) < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures _value + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) == 0 || VeriSol.Old(allowance[_from][_to]) < VeriSol.Old(allowance[_from][msg.sender])
+transferFrom(_from,_to,_value): Ensures _value < allowance[_from][msg.sender] => VeriSol.Old(_value) + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) == 0 || _value + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) == 0
+transferFrom(_from,_to,_value): Ensures VeriSol.Old(_value) + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) == 0 || _value + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) == 0
+transferFrom(_from,_to,_value): Ensures _value < allowance[_from][msg.sender] => VeriSol.Old(allowance[_from][_to]) != 0 || VeriSol.Old(_value) + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) == 0
+transferFrom(_from,_to,_value): Ensures VeriSol.Old(allowance[_from][_to]) != 0 || VeriSol.Old(_value) + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) == 0
+transferFrom(_from,_to,_value): Ensures _value < allowance[_from][msg.sender] => _value + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) != 0 || VeriSol.Old(allowance[_from][_to]) != 0
+transferFrom(_from,_to,_value): Ensures _value + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) != 0 || VeriSol.Old(allowance[_from][_to]) != 0
+transferFrom(_from,_to,_value): Ensures _value < allowance[_from][msg.sender] => VeriSol.Old(_value) + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) != 0 || _value + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) != 0
+transferFrom(_from,_to,_value): Ensures VeriSol.Old(_value) + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) != 0 || _value + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) != 0
+transferFrom(_from,_to,_value): Ensures _value <= balanceOf[_from] => balanceOf[_from] >= 0 || VeriSol.Old(_value) + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) != 0
+transferFrom(_from,_to,_value): Ensures balanceOf[_from] >= 0 || VeriSol.Old(_value) + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) != 0
+transferFrom(_from,_to,_value): Ensures _value < allowance[_from][msg.sender] => balanceOf[_from] >= 0 || VeriSol.Old(_value) + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) != 0
+transferFrom(_from,_to,_value): Ensures balanceOf[_from] >= 0 || VeriSol.Old(_value) + balanceOf[_from] - VeriSol.Old(balanceOf[_from]) != 0

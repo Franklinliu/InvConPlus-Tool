@@ -1,0 +1,33 @@
+[
+    {
+        "func": "transfer(to,value)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "VeriSol.Requires(msg.sender != address(0))",
+            "VeriSol.Requires(to != address(0))",
+            "VeriSol.Requires(VeriSol.Old(_paused) == false)"
+        ],
+        "postconditions": [
+            "VeriSol.Ensures(_paused == false)",
+            "VeriSol.Ensures(VeriSol.Old(_totalSupply) == _totalSupply)",
+            "VeriSol.Ensures(VeriSol.SumMapping(_balances) == VeriSol.Old(VeriSol.SumMapping(_balances)))",
+            "VeriSol.Ensures(!(value == VeriSol.Old(VeriSol.SumMapping(_balances)) ) || ( value == VeriSol.SumMapping(_balances)))",
+            "VeriSol.Ensures(!(value < VeriSol.Old(VeriSol.SumMapping(_balances)) ) || ( VeriSol.SumMapping(_balances) > 0))"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    },
+    {
+        "func": null,
+        "type": "PptType.CONTRACT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": [
+            "VeriSol.Ensures(_decimals == 18)",
+            "VeriSol.Ensures(VeriSol.SumMapping(_balances) == _totalSupply)"
+        ],
+        "falsified_preconditions": [],
+        "falsified_postconditions": []
+    }
+]
