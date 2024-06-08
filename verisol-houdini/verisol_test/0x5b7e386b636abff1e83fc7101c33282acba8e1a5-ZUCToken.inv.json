@@ -1,0 +1,161 @@
+[
+    {
+        "func": "approve(spender,value)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": []
+    },
+    {
+        "func": "approve(spender,value)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": []
+    },
+    {
+        "func": "transferFrom(sender,recipient,amount)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": []
+    },
+    {
+        "func": "transferFrom(sender,recipient,amount)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": []
+    },
+    {
+        "func": "increaseAllowance(spender,addedValue)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": []
+    },
+    {
+        "func": "increaseAllowance(spender,addedValue)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": []
+    },
+    {
+        "func": "burn(amount)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": []
+    },
+    {
+        "func": "burn(amount)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": []
+    },
+    {
+        "func": "burnFrom(account,amount)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": []
+    },
+    {
+        "func": "burnFrom(account,amount)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": []
+    },
+    {
+        "func": "decreaseAllowance(spender,subtractedValue)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [],
+        "postconditions": []
+    },
+    {
+        "func": "decreaseAllowance(spender,subtractedValue)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": []
+    },
+    {
+        "func": "transfer(recipient,amount)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "VeriSol.Requires(amount>0)",
+            "VeriSol.Requires(msg.value==0)",
+            "VeriSol.Requires(VeriSol.SumMapping(_balances)>0)",
+            "VeriSol.Requires(_totalSupply>0)",
+            "VeriSol.Requires(_totalSupply==750000000000000000000000000)",
+            "VeriSol.Requires(recipient!=address(0))",
+            "VeriSol.Requires(msg.sender!=address(0))",
+            "VeriSol.Requires(amount >= msg.value)",
+            "VeriSol.Requires(amount > msg.value)",
+            "VeriSol.Requires(amount != msg.value)",
+            "VeriSol.Requires(amount <= VeriSol.Old(VeriSol.SumMapping(_balances)))",
+            "VeriSol.Requires(amount <= VeriSol.Old(_totalSupply))",
+            "VeriSol.Requires(msg.value <= VeriSol.Old(VeriSol.SumMapping(_balances)))",
+            "VeriSol.Requires(msg.value < VeriSol.Old(VeriSol.SumMapping(_balances)))",
+            "VeriSol.Requires(msg.value != VeriSol.Old(VeriSol.SumMapping(_balances)))",
+            "VeriSol.Requires(msg.value <= VeriSol.Old(_totalSupply))",
+            "VeriSol.Requires(msg.value < VeriSol.Old(_totalSupply))",
+            "VeriSol.Requires(msg.value != VeriSol.Old(_totalSupply))",
+            "VeriSol.Requires(VeriSol.Old(VeriSol.SumMapping(_balances)) <= VeriSol.Old(_totalSupply))",
+            "VeriSol.Requires(recipient != msg.sender)"
+        ],
+        "postconditions": [
+            "VeriSol.Ensures(VeriSol.SumMapping(_balances)>0)",
+            "VeriSol.Ensures(_totalSupply>0)",
+            "VeriSol.Ensures(_totalSupply==750000000000000000000000000)",
+            "VeriSol.Ensures(amount <= VeriSol.SumMapping(_balances))",
+            "VeriSol.Ensures(amount <= _totalSupply)",
+            "VeriSol.Ensures(msg.value <= VeriSol.SumMapping(_balances))",
+            "VeriSol.Ensures(msg.value < VeriSol.SumMapping(_balances))",
+            "VeriSol.Ensures(msg.value != VeriSol.SumMapping(_balances))",
+            "VeriSol.Ensures(msg.value <= _totalSupply)",
+            "VeriSol.Ensures(msg.value < _totalSupply)",
+            "VeriSol.Ensures(msg.value != _totalSupply)",
+            "VeriSol.Ensures(VeriSol.Old(VeriSol.SumMapping(_balances)) <= _totalSupply)",
+            "VeriSol.Ensures(VeriSol.SumMapping(_balances) <= VeriSol.Old(_totalSupply))",
+            "VeriSol.Ensures(VeriSol.SumMapping(_balances) <= _totalSupply)",
+            "VeriSol.Ensures(VeriSol.Old(_totalSupply) == _totalSupply)",
+            "VeriSol.Ensures(VeriSol.Old(_totalSupply) >= _totalSupply)",
+            "VeriSol.Ensures(VeriSol.Old(_totalSupply) <= _totalSupply)"
+        ]
+    },
+    {
+        "func": "transfer(recipient,amount)",
+        "type": "PptType.EXIT",
+        "executionType": "TxType.REVERSION",
+        "preconditions": [],
+        "postconditions": []
+    },
+    {
+        "func": null,
+        "type": "PptType.CONTRACT",
+        "executionType": "TxType.NORMAL",
+        "preconditions": [
+            "VeriSol.Requires(VeriSol.SumMapping(_balances)>0)",
+            "VeriSol.Requires(_totalSupply>0)",
+            "VeriSol.Requires(_totalSupply==750000000000000000000000000)",
+            "VeriSol.Requires(VeriSol.Old(VeriSol.SumMapping(_balances)) <= VeriSol.Old(_totalSupply))"
+        ],
+        "postconditions": [
+            "VeriSol.Ensures(VeriSol.SumMapping(_balances)>0)",
+            "VeriSol.Ensures(_totalSupply>0)",
+            "VeriSol.Ensures(_totalSupply==750000000000000000000000000)",
+            "VeriSol.Ensures(VeriSol.Old(VeriSol.SumMapping(_balances)) <= _totalSupply)",
+            "VeriSol.Ensures(VeriSol.SumMapping(_balances) <= VeriSol.Old(_totalSupply))",
+            "VeriSol.Ensures(VeriSol.SumMapping(_balances) <= _totalSupply)",
+            "VeriSol.Ensures(VeriSol.Old(_totalSupply) == _totalSupply)",
+            "VeriSol.Ensures(VeriSol.Old(_totalSupply) >= _totalSupply)",
+            "VeriSol.Ensures(VeriSol.Old(_totalSupply) <= _totalSupply)"
+        ]
+    }
+]

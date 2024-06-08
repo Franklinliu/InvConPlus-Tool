@@ -1,0 +1,34 @@
+Single threaded program detected
+Verifying program while tracking: {assertsPassed}
+Program has a potential bug: False bug
+Verifying program while tracking: {assertsPassed, M_Ref_int, balanceOf_TokenERC20, totalSupply_TokenERC20}
+Program has a potential bug: True bug
+(1,1): error PF5001: This assertion can fail
+
+Execution trace:
+0x0148650ef8e216e8d0999fe8d4b5c1871b71771a.etherscan.io-TokenERC20.sol(21,1): Trace: Thread=1  (CALL FreshRefGenerator, RETURN from FreshRefGenerator , CALL TokenERC20_TokenERC20, _verisolFirstArg = false, this = T@Ref!val!1, msg.sender = T@Ref!val!7, msg.value = 24, initialSupply = 3503, tokenName = -412036516, tokenSymbol = -412035282, _verisolLastArg = true, CALL TokenERC20_TokenERC20_NoBaseCtor, CALL FreshRefGenerator, RETURN from FreshRefGenerator , CALL FreshRefGenerator, RETURN from FreshRefGenerator , CALL HavocAllocMany, RETURN from HavocAllocMany , _verisolFirstArg = false, this = T@Ref!val!1, msg.sender = T@Ref!val!7, msg.value = 24, initialSupply = 3503, tokenName = -412036516, tokenSymbol = -412035282, _verisolLastArg = true)
+0x0148650ef8e216e8d0999fe8d4b5c1871b71771a.etherscan.io-TokenERC20.sol(22,1): Trace: Thread=1  ()
+0x0148650ef8e216e8d0999fe8d4b5c1871b71771a.etherscan.io-TokenERC20.sol(22,1): Trace: Thread=1  (totalSupply = 63054)
+0x0148650ef8e216e8d0999fe8d4b5c1871b71771a.etherscan.io-TokenERC20.sol(23,1): Trace: Thread=1  ()
+0x0148650ef8e216e8d0999fe8d4b5c1871b71771a.etherscan.io-TokenERC20.sol(23,1): Trace: Thread=1  (balanceOf[msg.sender] = 63054)
+0x0148650ef8e216e8d0999fe8d4b5c1871b71771a.etherscan.io-TokenERC20.sol(24,1): Trace: Thread=1  ()
+0x0148650ef8e216e8d0999fe8d4b5c1871b71771a.etherscan.io-TokenERC20.sol(24,1): Trace: Thread=1  (name = -412036516)
+0x0148650ef8e216e8d0999fe8d4b5c1871b71771a.etherscan.io-TokenERC20.sol(25,1): Trace: Thread=1  ()
+0x0148650ef8e216e8d0999fe8d4b5c1871b71771a.etherscan.io-TokenERC20.sol(25,1): Trace: Thread=1  (symbol = -412035282)
+0x0148650ef8e216e8d0999fe8d4b5c1871b71771a.etherscan.io-TokenERC20.sol(25,1): Trace: Thread=1  (RETURN from TokenERC20_TokenERC20_NoBaseCtor , RETURN from TokenERC20_TokenERC20 )
+0x0148650ef8e216e8d0999fe8d4b5c1871b71771a.etherscan.io-TokenERC20.sol(25,1): Trace: Thread=1  ()
+0x0148650ef8e216e8d0999fe8d4b5c1871b71771a.etherscan.io-TokenERC20.sol(25,1): Trace: Thread=1  (CALL CorralChoice_TokenERC20)
+0x0148650ef8e216e8d0999fe8d4b5c1871b71771a.etherscan.io-TokenERC20.sol(25,1): Trace: Thread=1  (ASSERTION FAILS assume {:partition} choice == 5;
+ : Requires, RETURN from CorralChoice_TokenERC20 )
+0x0148650ef8e216e8d0999fe8d4b5c1871b71771a.etherscan.io-TokenERC20.sol(25,1): Trace: Thread=1  (Done)
+
+Boogie verification time: 0.29 s
+Time spent reading-writing programs: 0.09 s
+
+Time spent checking a program (2): 0.27 s
+Time spent checking a path (4): 0.29 s
+
+Number of procedures inlined: 18
+Number of variables tracked: 4
+Total Time: 0.7375829 s
+Total User CPU time: 0.625 s
